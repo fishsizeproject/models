@@ -24,7 +24,8 @@ The open access [**publication**](https://www.journals.uchicago.edu/doi/full/10.
 
 This model is easy to modify and explore, and you are welcome to use it in your research and teaching. If you would like to suggest or implement new model modifications and publish them, please contact us at *lydekaipaliepus@gamtc.lt*
 
-![Vendace drawing by Amy Rose Coghlan](images/vendace.png){width="70%" height="200" fig-align="center"}
+[Vendace drawing by Amy Rose Coghlan]{.aside}
+![](images/vendace.png){width="70%" height="200" fig-align="center"}
 
 
 

@@ -11,15 +11,30 @@ It uses catch and relative abundance time series and requires prior information 
 
 You can find all information in the developers' [**vignette**]
 
-![](images/BBmsy_Roach.png){width="50%" height="50%"} 
+![](images/BBmsy_Roach.png){width="50%" fig-align="center"} 
 
 ## Model code 
 
 [**Here**](scripts/jabba.Rmd) is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania). 
 
+::: grid
+<!-- GLM's -->
 
-![](images/Kobe_Roach.png){width="40%" height="40%"} 
-![](images/Posteriors_Roach.png){width="50%" height="50%"} EGLE: need to add Rmd scripts
+::: g-col-5
+![](images/Kobe_Roach.png){width="100%" fig-align="center"} 
+:::
+
+::: g-col-7
+![](images/Posteriors_Roach.png){width="100%" fig-align="center"} 
+:::
+
+
+:::
+
+**EGLE**: need to add Rmd scripts
+
+
+
 
 
 ## Application of the model
@@ -27,5 +42,5 @@ You can find all information in the developers' [**vignette**]
 To learn more about surplus production modeling to Curonian Lagoon and Kaunas Water Reservoir fish stocks and results that could be of interest to managers, you can read [this](resources/KM_jabba_rez.pdf) and [this](resources/Kaunas_jabba_rez.pdf) summary or watch [**this conference talk**](youtube%20link).
 
 
-![](images/Pikeperchprojection.tiff){width="50%" height="50%"}
+![](images/Pikeperchprojection.png){width="75%" fig-align="center"}
 

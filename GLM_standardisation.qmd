@@ -20,7 +20,8 @@ We have developed GLM based models for CPUE standardisation of five fish species
 
 To apply our GLM based standardisation model you can use [**this code**](scripts/GLM_cpue.Rmd) where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below.
 
-![](images/example_stand_cpue1.jpeg){width="50%" height="50%"} EGLE: need to add Rmd scripts
+![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} **EGLE**: need to add Rmd scripts
+
 
 ## Application of the model
 
@@ -30,4 +31,4 @@ You can also watch [**this conference talk**](youtube%20link) to learn more abou
 
 Once you conduct your CPUE standardisation, you can use the standardised values in [**surplus production models**](jabba_models.qmd), as explained on this website.
 
-![](images/cpue_glm1.jpg){width="50%" height="350"}
+![](images/cpue_glm1.jpg){width="60%" fig-align="center"}

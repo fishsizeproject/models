@@ -60,7 +60,7 @@
     "href": "growth_change.html",
     "title": "Detecting changes in fish growth through time",
     "section": "",
-    "text": "Although temperature can have large impacts on fish growth, it can be hard to detect it in size and age data, due to inherent noise and variability in growth. To separate temperature signals from other growth variation we need model that will estimate temperature impacts on fish size at age. Here we develop such model and apply it to the long term fish growth observation dataset in Drūkšiai Lake in Lithuania. Drūkšiai lake presents a unique system because during 1994-2010 the lake served as nuclear power plant cooling lake and was heated by nearly 2C. Since 2010 the power plant has been closed and the lake temperature returned to natural levels. Nature Research Centre has been conducting long term monitoring of fish growth has been conducted in Drūkšiai Lake, and now we can use these datasets to estimate how temperature changes affected growth in five fish species."
+    "text": "Although temperature can have large impacts on fish growth, it can be hard to detect it in size and age data, due to inherent noise and variability in growth. To separate temperature signals from other growth variation we need model that will estimate temperature impacts on fish size at age. Here we develop such model and apply it to the long term fish growth observation dataset in Drūkšiai Lake in Lithuania. Drūkšiai lake presents a unique system because during 1994-2010 the lake served as nuclear power plant cooling lake and was heated by nearly 2C. Since 2010 the power plant has been closed and the lake temperature returned to natural levels. Nature Research Centre has been conducting long term monitoring of fish growth has been conducted in Drūkšiai Lake, and now we can use these datasets to estimate how temperature changes affected growth in five fish species.\n Left: Drūkšiai Lake, LithuaniaRight: Water temperature timeseries"
   },
   {
     "objectID": "growth_change.html#model-code",
@@ -74,7 +74,7 @@
     "href": "growth_change.html#application-of-the-model",
     "title": "Detecting changes in fish growth through time",
     "section": "Application of the model",
-    "text": "Application of the model\nThis model and its results have been presented at the ICES annual conference as an in September 2022 - see video here.\nIt also was presented at the 151st American Fisheries Society Annual Meeting in November 2021 - see video here\nIf you would like to suggest or implement new model modifications and publish them, please contact us at lydekaipaliepus@gamtc.lt\n\n\n\nPerch drawing by Amy Rose Coghlan"
+    "text": "Application of the model\nThis model and its results have been presented at the ICES annual conference as an in September 2022 - see video here.\nIt also was presented at the 151st American Fisheries Society Annual Meeting in November 2021 - see video here\nIf you would like to suggest or implement new model modifications and publish them, please contact us at lydekaipaliepus@gamtc.lt\nPerch drawing by Amy Rose Coghlan"
   },
   {
     "objectID": "index.html",
@@ -95,7 +95,7 @@
     "href": "jabba_models.html#model-code",
     "title": "Surplus production models",
     "section": "Model code",
-    "text": "Model code\nHere is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania).\n  EGLE: need to add Rmd scripts"
+    "text": "Model code\nHere is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEGLE: need to add Rmd scripts"
   },
   {
     "objectID": "jabba_models.html#application-of-the-model",
@@ -137,7 +137,7 @@
     "href": "ML_fish_species.html#model-code",
     "title": "Machine learning based image collection, annotation and classification of fish species",
     "section": "Model code",
-    "text": "Model code\nTo use our models it is very important that fish species (or ecotypes or any other classes you want your model to identify) in your dataset are identified correctly, otherwise your model will not be very useful (you might have heard the expression “garbage in - garbage out”). You can upload images (in JPEG or PNG format) to your Google drive by species (i.e. one species per folder - please make sure these are correctly identified), following this directory structure:\ndataset\n|__ perch\n    |______ 100080576_f52e8ee070_n.PNG\n    |______ 14167534527_781ceb1b7a_n.PNG\n    |______ ...\n|__ striped_bass\n    |______ 10043234166_e6dd915111_n.PNG\n    |______ 1426682852_e62169221f_m.PNG\n    |______ ...\n|__ trout\n    |______ 102501987_3cdb8e5394_n.PNG\n    |______ 14982802401_a3dfb22afb.PNG\n    |______ ...\n|__ ...\n\nTo apply our model you can use this code:\n\n\n\nOpen In Colab"
+    "text": "Model code\nTo use our models it is very important that fish species (or ecotypes or any other classes you want your model to identify) in your dataset are identified correctly, otherwise your model will not be very useful (you might have heard the expression “garbage in - garbage out”). You can upload images (in JPEG or PNG format) to your Google drive by species (i.e. one species per folder - please make sure these are correctly identified), following this directory structure:\ndataset\n|__ perch\n    |______ 100080576_f52e8ee070_n.PNG\n    |______ 14167534527_781ceb1b7a_n.PNG\n    |______ ...\n|__ striped_bass\n    |______ 10043234166_e6dd915111_n.PNG\n    |______ 1426682852_e62169221f_m.PNG\n    |______ ...\n|__ trout\n    |______ 102501987_3cdb8e5394_n.PNG\n    |______ 14982802401_a3dfb22afb.PNG\n    |______ ...\n|__ ...\n\nTo apply our model you can use this code:"
   },
   {
     "objectID": "ML_fish_species.html#application-of-the-model",
@@ -312,7 +312,7 @@
     "href": "temperature_growth.html#application-of-the-model",
     "title": "Model to explore temperature impacts on fish growth",
     "section": "Application of the model",
-    "text": "Application of the model\nThe open access publication presenting this model is published in a special issue of The Biological Bulletin. If you want to learn more about the role of temperature and oxygen on fish growth, please also check out this overview publication in the same special issue.\nThis model is easy to modify and explore, and you are welcome to use it in your research and teaching. If you would like to suggest or implement new model modifications and publish them, please contact us at lydekaipaliepus@gamtc.lt\n\n\n\nVendace drawing by Amy Rose Coghlan"
+    "text": "Application of the model\nThe open access publication presenting this model is published in a special issue of The Biological Bulletin. If you want to learn more about the role of temperature and oxygen on fish growth, please also check out this overview publication in the same special issue.\nThis model is easy to modify and explore, and you are welcome to use it in your research and teaching. If you would like to suggest or implement new model modifications and publish them, please contact us at lydekaipaliepus@gamtc.lt\n Vendace drawing by Amy Rose Coghlan"
   },
   {
     "objectID": "to_do_list.html",
