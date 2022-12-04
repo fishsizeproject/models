@@ -27,7 +27,7 @@ To apply our GLM based standardisation model you can use [**this code**](scripts
 
 To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our [**publication**](https://www.mdpi.com/2410-3888/7/5/232) in journal *Fishes*.
 
-You can also watch [**this conference talk**](youtube%20link) to learn more about this analysis.
+You can also watch [**this conference talk**](broken link) to learn more about this analysis.
 
 Once you conduct your CPUE standardisation, you can use the standardised values in [**surplus production models**](jabba_models.qmd), as explained on this website.
 
