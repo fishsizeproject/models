@@ -16,11 +16,11 @@ Although temperature can have large impacts on fish growth, it can be hard to de
 ::: {.grid}
 
 ::: {.g-col-6 style="justify-items: center; align-content: center;"}
-![](images/IgnalinaAE.jpg){width="100%" height="300"}
+![](images/IgnalinaAE.jpg){width="100%"}
 :::
 
 ::: {.g-col-6 style="justify-items: center; align-content: center;"}
-![](images/DruksiaiTemp.png){width="100%" height="300"}
+![](images/DruksiaiTemp.png){width="100%"}
 :::
 
 :::

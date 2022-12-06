@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs # required, as github pages will read from docs folder
+
 
 website:
   title: "Sustainable Inland Fisheries" # left of coloured top naviation bar
@@ -9,6 +9,11 @@ website:
   navbar: 
     logo: images/sif_sm.png  # logo displayed at the top left of the webpage
     background: "white" # colour of the top navigation bar (can use hex)
+    right:
+      - href: ../lt
+        text: lietuvių kalba
+      - href: ../en
+        text: English
   sidebar:
     style: "docked"
     contents:
@@ -68,5 +73,6 @@ format:
     css: styles.css
     toc: true
 
-editor: visual
-
+profile:
+  default: english
+  group: [english, lithuanian]

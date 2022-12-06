@@ -16,7 +16,7 @@ However, the mechanisms behind this growth remain unclear. In this model we prop
 
 The model is written in Microsoft Excel and [R](https://www.r-project.org/) environment. All model code and details are available on this [**GitHub repository**](https://github.com/astaaudzi/TSRmodel). The main model Excel file can also be downloaded [**here**](resources/EmergentTSRgrowth_Optimisation.xlsx). In this Excel file you can modify temperature response parameters and their size dependency, optimise the model using Solver option built in Excel and see the resulting growth and reproduction curves, as shown in the figure below. 
 
-![](images/TempModelExcel.png){width="100%" height="500"}
+![](images/TempModelExcel.png){width="100%"}
 
 ## Application of the model 
 
