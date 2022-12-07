@@ -1,12 +1,37 @@
 ---
-title: "MQMF"
+title: ""
 editor: source
 ---
 
-About the model
+
+<!-- start para ------------------------------------------------------------- -->
+
+::: {.content-visible when-profile="english"}
+
+# ENGLISH TITLE MIZER
+
+About the model (english)
 
 A link to the [code](https://www.github.com)
 
 A link for [more info](https://www.google.com)
 
 A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
+
+:::
+
+::: {.content-visible when-profile="english"}
+
+# LITH TITLE MIZER
+
+About the model (Lithuanian)
+
+A link to the [code](https://www.github.com)
+
+A link for [more info](https://www.google.com)
+
+A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
+
+:::
+
+<!-- end para ------------------------------------------------------------- -->

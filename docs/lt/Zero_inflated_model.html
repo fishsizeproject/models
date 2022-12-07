@@ -246,9 +246,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
-  <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
+  <li><a href="#lith-application-of-the-model" id="toc-lith-application-of-the-model" class="nav-link active" data-scroll-target="#lith-application-of-the-model">LITH: Application of the model</a></li>
   </ul>
 </nav>
     </div>
@@ -278,24 +276,18 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Most fisheries datasets (scientific, commercial, recreational) have a lot of zero catches. These are fishing trips were no fish was caught. These zero catches are important but we need to fit appropriate models to accommodate them. Here we are introducing a model for zero inflated data. This model is coded in <a href="https://www.r-project.org/">R</a> language, so you will need R and <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> to run it. If you need a brief introduction into R, check <a href="https://course.mizer.sizespectrum.org/prepare/install-tools.html">this introductory page</a> from an online course on size based modelling.</p>
-<p>For a basic introduction into the model and data, check out <a href="resources/ZeroInflatedModels.pdf"><strong>these slides</strong></a>. However, if you want to use the model we strongly recommend that you watch at least <a href="https://fishsizeproject.github.io/CPUEcourse/4-hilsha.html"><strong>part 4</strong></a> of our CPUE standardisation course, where the model and approach were presented in more detail.</p>
-<p>Before proceeding with CPUE standardisation, first make sure you carefully <em>assess and explore your data</em>. We have prepared two courses and different scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
-</section>
-<section id="model-code" class="level2">
-<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
-<p>The main model code is available in this <a href="scripts/Hilsha.zip"><strong>R markdown script</strong></a> and is demonstrated using <a href="scripts/hilsa.csv"><strong>this dataset</strong></a>. You can download the model and modify the script according to your needs. To look at the model code and outputs without having to run the code, you can click <a href="resources/ZeroInflated.html"><strong>here</strong></a>. After applying the model you should be able to plot predicted catches as a function of fishing time (or other estimate of effort) and month or season, like in the plot below.</p>
+<!-- next para ------------------------------------------------------------- -->
+<!-- next para ------------------------------------------------------------- -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/zero_infl1.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
+<!-- next para ------------------------------------------------------------- -->
+<section id="lith-application-of-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="lith-application-of-the-model">LITH: Application of the model</h2>
+<p>LITH:To better understand this model and its applications, we strongly recommend that you go through our <a href="https://fishsizeproject.github.io/CPUEcourse/"><strong>CPUE standardisation course</strong></a> material, where we discuss different models and their strengths in greater detail. The course also explains how to simulate new datasets using estimated model parameters to assess the probability of obtaining as many zero entries as you have in your dataset (example output of these simulations is shown in the plot below).</p>
 </section>
-<section id="application-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
-<p>To better understand this model and its applications, we strongly recommend that you go through our <a href="https://fishsizeproject.github.io/CPUEcourse/"><strong>CPUE standardisation course</strong></a> material, where we discuss different models and their strengths in greater detail. The course also explains how to simulate new datasets using estimated model parameters to assess the probability of obtaining as many zero entries as you have in your dataset (example output of these simulations is shown in the plot below).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/simulateZeros.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
@@ -303,7 +295,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

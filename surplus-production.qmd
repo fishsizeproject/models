@@ -3,7 +3,23 @@ title: "Surplus production models"
 editor: source
 ---
 
+
+
+
+::: {.content-visible when-profile="english"}
+
 Blah spm info
 
 
 [**Here**](https://fishsize.shinyapps.io/surplus-production/) is a link to the shiny app
+
+:::
+
+::: {.content-visible when-profile="english"}
+
+Lithuanian language here
+
+
+[**Here**](https://fishsize.shinyapps.io/surplus-production/) is a link to the shiny app
+
+:::

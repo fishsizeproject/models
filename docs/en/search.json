@@ -23,44 +23,37 @@
   {
     "objectID": "curonian_mizer.html",
     "href": "curonian_mizer.html",
-    "title": "MQMF",
+    "title": "ENGLISH TITLE MIZER",
     "section": "",
-    "text": "About the model\nA link to the code\nA link for more info\nA link to the model"
+    "text": "ENGLISH TITLE MIZER\nAbout the model (english)\nA link to the code\nA link for more info\nA link to the model\n\n\nLITH TITLE MIZER\nAbout the model (Lithuanian)\nA link to the code\nA link for more info\nA link to the model"
   },
   {
     "objectID": "detecting_size.html",
     "href": "detecting_size.html",
     "title": "MQMF",
     "section": "",
-    "text": "About the model\nA link to the code\nA link for more info\nA link to the model"
+    "text": "About the model (english)\nA link to the code\nA link for more info\nA link to the model\n\n\nAbout the model (Lithuanian)\nA link to the code\nA link for more info\nA link to the model"
   },
   {
     "objectID": "GLM_standardisation.html",
     "href": "GLM_standardisation.html",
     "title": "Standardising catch per unit effort (CPUE) using generalised linear models",
     "section": "",
-    "text": "Before proceeding with CPUE standardisation, first make sure you carefully assess and explore your data. We have prepared the courses and scripts for data exploration, which you can find on our CPUE standardisation course webpage.\nOne commonly used approach for CPUE data standardisation applies generalized linear models (GLM). Here we model all variables that could impact our catches and extract annual deviations and their uncertainty. From this we can plot a standardized time series of population abundance.\nIn this set of slides you will find main points about GLM based CPUE standardisation.\nFor examples on how this method has been applied to other stocks, see references here and here"
-  },
-  {
-    "objectID": "GLM_standardisation.html#model-code",
-    "href": "GLM_standardisation.html#model-code",
-    "title": "Standardising catch per unit effort (CPUE) using generalised linear models",
-    "section": "Model code",
-    "text": "Model code\nWe have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use this code to covert your data table into a suitable format.\nTo apply our GLM based standardisation model you can use this code where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below.\n EGLE: need to add Rmd scripts"
+    "text": "Before proceeding with CPUE standardisation, first make sure you carefully assess and explore your data. We have prepared the courses and scripts for data exploration, which you can find on our CPUE standardisation course webpage.\nOne commonly used approach for CPUE data standardisation applies generalized linear models (GLM). Here we model all variables that could impact our catches and extract annual deviations and their uncertainty. From this we can plot a standardized time series of population abundance.\nIn this set of slides you will find main points about GLM based CPUE standardisation.\nFor examples on how this method has been applied to other stocks, see references here and here\nEGLE: need to add Rmd scripts ::: {.content-visible when-profile=“english”}"
   },
   {
     "objectID": "GLM_standardisation.html#application-of-the-model",
     "href": "GLM_standardisation.html#application-of-the-model",
     "title": "Standardising catch per unit effort (CPUE) using generalised linear models",
     "section": "Application of the model",
-    "text": "Application of the model\nTo learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our publication in journal Fishes.\nYou can also watch this conference talk to learn more about this analysis.\nOnce you conduct your CPUE standardisation, you can use the standardised values in surplus production models, as explained on this website."
+    "text": "Application of the model\nTo learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our publication in journal Fishes.\nYou can also watch this conference talk to learn more about this analysis.\nOnce you conduct your CPUE standardisation, you can use the standardised values in surplus production models, as explained on this website.\n:::"
   },
   {
     "objectID": "growth_change.html",
     "href": "growth_change.html",
     "title": "Detecting changes in fish growth through time",
     "section": "",
-    "text": "Although temperature can have large impacts on fish growth, it can be hard to detect it in size and age data, due to inherent noise and variability in growth. To separate temperature signals from other growth variation we need model that will estimate temperature impacts on fish size at age. Here we develop such model and apply it to the long term fish growth observation dataset in Drūkšiai Lake in Lithuania. Drūkšiai lake presents a unique system because during 1994-2010 the lake served as nuclear power plant cooling lake and was heated by nearly 2C. Since 2010 the power plant has been closed and the lake temperature returned to natural levels. Nature Research Centre has been conducting long term monitoring of fish growth has been conducted in Drūkšiai Lake, and now we can use these datasets to estimate how temperature changes affected growth in five fish species.\n Left: Drūkšiai Lake, LithuaniaRight: Water temperature timeseries"
+    "text": "Although temperature can have large impacts on fish growth, it can be hard to detect it in size and age data, due to inherent noise and variability in growth. To separate temperature signals from other growth variation we need model that will estimate temperature impacts on fish size at age. Here we develop such model and apply it to the long term fish growth observation dataset in Drūkšiai Lake in Lithuania. Drūkšiai lake presents a unique system because during 1994-2010 the lake served as nuclear power plant cooling lake and was heated by nearly 2C. Since 2010 the power plant has been closed and the lake temperature returned to natural levels. Nature Research Centre has been conducting long term monitoring of fish growth has been conducted in Drūkšiai Lake, and now we can use these datasets to estimate how temperature changes affected growth in five fish species."
   },
   {
     "objectID": "growth_change.html#model-code",
@@ -88,14 +81,14 @@
     "href": "jabba_models.html",
     "title": "Surplus production models",
     "section": "",
-    "text": "JABBA is a Bayesian State-Space Surplus Production Model framework developed by Winker et al. 2018.\nIt uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series.\nYou can find all information in the developers’ [vignette]"
+    "text": "JABBA is a Bayesian State-Space Surplus Production Model framework developed by Winker et al. 2018.\nIt uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series.\nYou can find all information in the developers’ [vignette]\nEGLE: need to add Rmd scripts"
   },
   {
     "objectID": "jabba_models.html#model-code",
     "href": "jabba_models.html#model-code",
     "title": "Surplus production models",
     "section": "Model code",
-    "text": "Model code\nHere is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEGLE: need to add Rmd scripts"
+    "text": "Model code\nHere is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania)."
   },
   {
     "objectID": "jabba_models.html#application-of-the-model",
@@ -130,7 +123,7 @@
     "href": "ML_fish_species.html",
     "title": "Machine learning based image collection, annotation and classification of fish species",
     "section": "",
-    "text": "Here we present a scalable user-friendly artificial intelligence (AI) framework to develop fish species identification models. We have prepared a course and scripts for data pre-processing, image processing and machine learning model development, which you can find on our Online course webpage.\nIn this publication in the journal Sustainability you will find a detailed description of the framework, a pilot case-study where we demonstrate potential use for recreational fisheries research, a summary of the knowledge gained from the case study application and an outline of the main challenges and potential future development. You can also find all the scripts used in the framework in our Github page.\n Open-source modular framework for large scale image storage, handling, annotation and automatic classification"
+    "text": "Here we present a scalable user-friendly artificial intelligence (AI) framework to develop fish species identification models. We have prepared a course and scripts for data pre-processing, image processing and machine learning model development, which you can find on our Online course webpage.\nIn this publication in the journal Sustainability you will find a detailed description of the framework, a pilot case-study where we demonstrate potential use for recreational fisheries research, a summary of the knowledge gained from the case study application and an outline of the main challenges and potential future development. You can also find all the scripts used in the framework in our Github page.\nOpen-source modular framework for large scale image storage, handling, annotation and automatic classification"
   },
   {
     "objectID": "ML_fish_species.html#model-code",
@@ -200,14 +193,14 @@
     "href": "satelite_chla.html",
     "title": "MQMF",
     "section": "",
-    "text": "About the model\nA link to the code\nA link for more info\nA link to the model"
+    "text": "ENGLISH TITLE\nAbout the model (english)\nA link to the code\nA link for more info\nA link to the model\n\n\nLITH TITLE\nAbout the model (Lithuanian)\nA link to the code\nA link for more info\nA link to the model"
   },
   {
     "objectID": "satelite_temp.html",
     "href": "satelite_temp.html",
-    "title": "MQMF",
+    "title": "ENGLISH TITLE",
     "section": "",
-    "text": "About the model\nA link to the code\nA link for more info\nA link to the model"
+    "text": "ENGLISH TITLE\nAbout the model (english)\nA link to the code\nA link for more info\nA link to the model\n\n\nLITH TITLE\nAbout the model (Lithuanian)\nA link to the code\nA link for more info\nA link to the model"
   },
   {
     "objectID": "scripts/BayesianINLA.html",
@@ -284,7 +277,7 @@
     "href": "surplus-production.html",
     "title": "Surplus production models",
     "section": "",
-    "text": "Blah spm info\nHere is a link to the shiny app"
+    "text": "Blah spm info\nHere is a link to the shiny app\n\n\nLithuanian language here\nHere is a link to the shiny app"
   },
   {
     "objectID": "temperature_growth.html",
@@ -326,7 +319,7 @@
     "href": "von-bertalanffy.html",
     "title": "von Bertalanffy Growth models",
     "section": "",
-    "text": "blah von Bert info\nHere is a link to the shiny app"
+    "text": "von Bert info (english)\nHere is a link to the shiny app\n\n\nvon Bert info (lithuanian)\nHere is a link to the shiny app"
   },
   {
     "objectID": "Zero_inflated_model.html",
@@ -336,11 +329,25 @@
     "text": "Most fisheries datasets (scientific, commercial, recreational) have a lot of zero catches. These are fishing trips were no fish was caught. These zero catches are important but we need to fit appropriate models to accommodate them. Here we are introducing a model for zero inflated data. This model is coded in R language, so you will need R and RStudio to run it. If you need a brief introduction into R, check this introductory page from an online course on size based modelling.\nFor a basic introduction into the model and data, check out these slides. However, if you want to use the model we strongly recommend that you watch at least part 4 of our CPUE standardisation course, where the model and approach were presented in more detail.\nBefore proceeding with CPUE standardisation, first make sure you carefully assess and explore your data. We have prepared two courses and different scripts for data exploration, which you can find on our CPUE standardisation course webpage."
   },
   {
+    "objectID": "Zero_inflated_model.html#lithintroduction",
+    "href": "Zero_inflated_model.html#lithintroduction",
+    "title": "Zero inflated model for CPUE standardisation",
+    "section": "LITH:Introduction",
+    "text": "LITH:Introduction\nLITH:Most fisheries datasets (scientific, commercial, recreational) have a lot of zero catches. These are fishing trips were no fish was caught. These zero catches are important but we need to fit appropriate models to accommodate them. Here we are introducing a model for zero inflated data. This model is coded in R language, so you will need R and RStudio to run it. If you need a brief introduction into R, check this introductory page from an online course on size based modelling.\nFor a basic introduction into the model and data, check out these slides. However, if you want to use the model we strongly recommend that you watch at least part 4 of our CPUE standardisation course, where the model and approach were presented in more detail.\nBefore proceeding with CPUE standardisation, first make sure you carefully assess and explore your data. We have prepared two courses and different scripts for data exploration, which you can find on our CPUE standardisation course webpage."
+  },
+  {
     "objectID": "Zero_inflated_model.html#model-code",
     "href": "Zero_inflated_model.html#model-code",
     "title": "Zero inflated model for CPUE standardisation",
     "section": "Model code",
     "text": "Model code\nThe main model code is available in this R markdown script and is demonstrated using this dataset. You can download the model and modify the script according to your needs. To look at the model code and outputs without having to run the code, you can click here. After applying the model you should be able to plot predicted catches as a function of fishing time (or other estimate of effort) and month or season, like in the plot below."
+  },
+  {
+    "objectID": "Zero_inflated_model.html#lithmodel-code",
+    "href": "Zero_inflated_model.html#lithmodel-code",
+    "title": "Zero inflated model for CPUE standardisation",
+    "section": "LITH:Model code",
+    "text": "LITH:Model code\nLITH:The main model code is available in this R markdown script and is demonstrated using this dataset. You can download the model and modify the script according to your needs. To look at the model code and outputs without having to run the code, you can click here. After applying the model you should be able to plot predicted catches as a function of fishing time (or other estimate of effort) and month or season, like in the plot below."
   },
   {
     "objectID": "Zero_inflated_model.html#application-of-the-model",

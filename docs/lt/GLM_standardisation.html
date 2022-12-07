@@ -246,9 +246,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
+  <li><a href="#lt-lang-introduction" id="toc-lt-lang-introduction" class="nav-link active" data-scroll-target="#lt-lang-introduction">LT lang: Introduction</a></li>
+  <li><a href="#lt-langmodel-code" id="toc-lt-langmodel-code" class="nav-link" data-scroll-target="#lt-langmodel-code">LT lang:Model code</a></li>
   <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
+  <li><a href="#lt-langapplication-of-the-model" id="toc-lt-langapplication-of-the-model" class="nav-link" data-scroll-target="#lt-langapplication-of-the-model">LT lang:Application of the model</a></li>
   </ul>
 </nav>
     </div>
@@ -278,24 +279,32 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Before proceeding with CPUE standardisation, first make sure you carefully <strong>assess and explore your data</strong>. We have prepared the courses and scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
+<section id="lt-lang-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="lt-lang-introduction">LT lang: Introduction</h2>
+<p>LT lang:Before proceeding with CPUE standardisation, first make sure you carefully <strong>assess and explore your data</strong>. We have prepared the courses and scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
 <p>One commonly used approach for CPUE data standardisation applies generalized linear models (GLM). Here we model all variables that could impact our catches and extract annual deviations and their uncertainty. From this we can plot a standardized time series of population abundance.</p>
 <p>In this set of <a href="resources/CPUEstandartisation_GLM.pdf"><strong>slides</strong></a> you will find main points about GLM based CPUE standardisation.</p>
 <p>For examples on how this method has been applied to other stocks, see references <a href="resources/Maunder2004.pdf">here</a> and <a href="resources/Forrestal_2018.pdf">here</a></p>
 </section>
-<section id="model-code" class="level2">
-<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
-<p>We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use <a href="scripts/dataConversion.Rmd"><strong>this code</strong></a> to covert your data table into a suitable format.</p>
+<section id="lt-langmodel-code" class="level2">
+<h2 class="anchored" data-anchor-id="lt-langmodel-code">LT lang:Model code</h2>
+<p>LT lang:We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use <a href="scripts/dataConversion.Rmd"><strong>this code</strong></a> to covert your data table into a suitable format.</p>
 <p>To apply our GLM based standardisation model you can use <a href="scripts/GLM_cpue.Rmd"><strong>this code</strong></a> where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below.</p>
-<p><img src="images/example_stand_cpue1.jpeg" class="img-fluid" style="width:50.0%" data-fig-align="center"> <strong>EGLE</strong>: need to add Rmd scripts</p>
 </section>
+<p><img src="images/example_stand_cpue1.jpeg" class="img-fluid" style="width:50.0%" data-fig-align="center"> <strong>EGLE</strong>: need to add Rmd scripts ::: {.content-visible when-profile=“english”}</p>
 <section id="application-of-the-model" class="level2">
 <h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
 <p>To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our <a href="https://www.mdpi.com/2410-3888/7/5/232"><strong>publication</strong></a> in journal <em>Fishes</em>.</p>
 <p>You can also watch <a href="broken link"><strong>this conference talk</strong></a> to learn more about this analysis.</p>
 <p>Once you conduct your CPUE standardisation, you can use the standardised values in <a href="./jabba_models.html"><strong>surplus production models</strong></a>, as explained on this website.</p>
+<p>:::</p>
+</section>
+<section id="lt-langapplication-of-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="lt-langapplication-of-the-model">LT lang:Application of the model</h2>
+<p>LT lang:To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our <a href="https://www.mdpi.com/2410-3888/7/5/232"><strong>publication</strong></a> in journal <em>Fishes</em>.</p>
+<p>You can also watch <a href="broken link"><strong>this conference talk</strong></a> to learn more about this analysis.</p>
+<p>Once you conduct your CPUE standardisation, you can use the standardised values in <a href="./jabba_models.html"><strong>surplus production models</strong></a>, as explained on this website.</p>
+</section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/cpue_glm1.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
@@ -303,7 +312,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

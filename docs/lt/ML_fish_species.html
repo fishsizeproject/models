@@ -246,9 +246,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
-  <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
+  <li><a href="#lt-introduction" id="toc-lt-introduction" class="nav-link active" data-scroll-target="#lt-introduction">lt: Introduction</a></li>
+  <li><a href="#lt-model-code" id="toc-lt-model-code" class="nav-link" data-scroll-target="#lt-model-code">lt : Model code</a></li>
+  <li><a href="#application-of-the-model-1" id="toc-application-of-the-model-1" class="nav-link" data-scroll-target="#application-of-the-model-1">Application of the model</a></li>
   </ul>
 </nav>
     </div>
@@ -278,15 +278,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Here we present a <strong>scalable user-friendly artificial intelligence (AI) framework to develop fish species identification models</strong>. We have prepared a course and scripts for data pre-processing, image processing and machine learning model development, which you can find on our <a href="https://fishsizeproject.github.io/Course-MLforImageProcessing/">Online course</a> webpage.</p>
+<!-- start para ------------------------------------------------------------- -->
+<section id="lt-introduction" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="lt-introduction">lt: Introduction</h2>
+<p>lr: Here we present a <strong>scalable user-friendly artificial intelligence (AI) framework to develop fish species identification models</strong>. We have prepared a course and scripts for data pre-processing, image processing and machine learning model development, which you can find on our <a href="https://fishsizeproject.github.io/Course-MLforImageProcessing/">Online course</a> webpage.</p>
 <p>In this <a href="https://www.mdpi.com/2071-1050/14/21/14324"><strong>publication</strong></a> in the journal <em>Sustainability</em> you will find a detailed description of the framework, a pilot case-study where we demonstrate potential use for recreational fisheries research, a summary of the knowledge gained from the case study application and an outline of the main challenges and potential future development. You can also find all the scripts used in the framework in our <a href="https://github.com/fishsizeproject/ML-framework-for-image-processing">Github page</a>.</p>
-<div class="page-columns page-full"><p><img src="images/framework.png" class="img-fluid" style="width:75.0%" data-fig-align="center"> </p><div class="no-row-height column-margin column-container"><span class="">Open-source modular framework for large scale image storage, handling, annotation and automatic classification</span></div></div>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">Open-source modular framework for large scale image storage, handling, annotation and automatic classification</span></div></div>
 </section>
-<section id="model-code" class="level2">
-<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
-<p>To use our models it is very important that fish species (or ecotypes or any other classes you want your model to identify) in your dataset are identified correctly, otherwise your model will not be very useful (you might have heard the expression “garbage in - garbage out”). You can upload images (in JPEG or PNG format) to your Google drive by species (i.e.&nbsp;one species per folder - please make sure these are correctly identified), following this directory structure:</p>
+<!-- end para ------------------------------------------------------------- -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/framework.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
+<!-- start para ------------------------------------------------------------- -->
+<section id="lt-model-code" class="level2">
+<h2 class="anchored" data-anchor-id="lt-model-code">lt : Model code</h2>
+<p>lt: To use our models it is very important that fish species (or ecotypes or any other classes you want your model to identify) in your dataset are identified correctly, otherwise your model will not be very useful (you might have heard the expression “garbage in - garbage out”). You can upload images (in JPEG or PNG format) to your Google drive by species (i.e.&nbsp;one species per folder - please make sure these are correctly identified), following this directory structure:</p>
 <pre><b>dataset</b>
 |__ <b>perch</b>
     |______ 100080576_f52e8ee070_n.PNG
@@ -303,18 +311,21 @@ ul.task-list li input[type="checkbox"] {
 |__ ...
 </pre>
 <p>To apply our model you can use this code:</p>
+</section>
+<!-- end para ------------------------------------------------------------- -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://colab.research.google.com/drive/1YgIrWWiaex8ObtAbAJOAXlRRGUbElkYj?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-</section>
-<section id="application-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
+<!-- start para ------------------------------------------------------------- -->
+<section id="application-of-the-model-1" class="level2">
+<h2 class="anchored" data-anchor-id="application-of-the-model-1">Application of the model</h2>
 <p>You can also watch <a href="https://youtu.be/mHw8-tUgCkI?t=1886"><strong>this talk</strong></a> for the “Online workshop: Machine learning, fishing and citizen science” and <a href="https://youtu.be/iujl9R3lEaQ?t=5293"><strong>this talk</strong></a> for the “Online seminar: Recreational angling effort and engagement in the digital age” to learn more about this model.</p>
-
-
 </section>
+<!-- end para ------------------------------------------------------------- -->
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -240,15 +240,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
-  <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -276,26 +268,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Fisheries catches through time are usually correlated. Catch in one year is not independent of the catch in the previous year. In CPUE standardisation models we should ideally account for this autocorrelation. The <a href="./GLM_standardisation.html">GLM based models</a> don’t really do that, despite being a popular approach. Therefore here we will develop and apply a different model which accounts for spatial and temporal correlation in our catches.</p>
-<p>In this model we will estimate model parameters using approximate Bayesian inference as implemented in the <a href="https://www.r-inla.org/">INLA package</a>. The approximate Bayesian inference runs much faster than full inference using MCMC approach and with INLA package it can be applied to a wide range of distributions. For a basic introduction into the Bayesian approach and why it is useful, check out <a href="resources/BayesianModels.pdf"><strong>these slides</strong></a>.</p>
-<p>The slides and the model, together with a detailed description of all the modelling steps have been presented in the last lecture of the <a href="https://fishsizeproject.github.io/CPUEcourse/5-zander.html">CPUE standardisation course</a>, so we recommend you watch the lecture before applying the model. Also, before proceeding with CPUE standardisation, make sure you carefully <em>assess and explore your data</em>. We have prepared two courses and different scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
-<p>The model is coded in <a href="https://www.r-project.org/">R</a> language, so you will need R and <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> to run it. If you need a brief introduction into R, check <a href="https://course.mizer.sizespectrum.org/prepare/install-tools.html">this introductory page</a> from an online course on size based modelling.</p>
-</section>
-<section id="model-code" class="level2">
-<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
-<p>The main model code is available in this <a href="scripts/BayesianINLA.zip"><strong>R markdown script</strong></a> and is demonstrated using <a href="scripts/pikeperch.csv"><strong>this dataset</strong></a> from 22 years of commercial pikeperch (<em>Sander lucioperca</em>) catches in the Baltic Sea. You can download the model and modify the script according to your needs. Before you run the model you will need to install all the R packages, as is explained in this <a href="scripts/model_packages.R"><strong>R script</strong></a>.</p>
-<p>To look at the model code and outputs without having to run the code, you can click <a href="resources/BayesianINLA.html"><strong>here</strong></a>. After applying the model you should be able to plot predicted CPUE and its uncertainty through time, like in the plot below.</p>
+<!-- next para ------------------------------------------------------------- -->
+<!-- next para ------------------------------------------------------------- -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/cpue_inla.png" class="img-fluid figure-img" style="width:75.0%"></p>
 </figure>
 </div>
-</section>
-<section id="application-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
-<p>We are currently working on applying this model to CPUE standardisation of the <a href="https://www.sciencedirect.com/science/article/pii/S2352340922002013">long term data set</a> from the Curonian Lagoon and Kaunas Water Reservoir in Lithuania. Stay tuned for more outputs. If you are interested to learn more, please contact us as <em>lydekaipaliepus@gamtc.lt</em></p>
+<!-- next para ------------------------------------------------------------- -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/EffortCatchINLA.png" class="img-fluid figure-img" style="width:75.0%"></p>
@@ -303,7 +283,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

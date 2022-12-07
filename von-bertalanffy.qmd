@@ -3,7 +3,22 @@ title: "von Bertalanffy Growth models"
 editor: source
 ---
 
-blah von Bert info
+
+::: {.content-visible when-profile="english"}
+
+von Bert info (english)
 
 
 [**Here**](https://fishsize.shinyapps.io/von-bertalanffy/) is a link to the shiny app
+
+:::
+
+::: {.content-visible when-profile="english"}
+
+von Bert info (lithuanian)
+
+
+[**Here**](https://fishsize.shinyapps.io/von-bertalanffy/) is a link to the shiny app
+
+:::
+

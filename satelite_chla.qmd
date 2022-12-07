@@ -3,10 +3,34 @@ title: "MQMF"
 editor: source
 ---
 
-About the model
+<!-- start para ------------------------------------------------------------- -->
+
+::: {.content-visible when-profile="english"}
+
+# ENGLISH TITLE
+
+About the model (english)
 
 A link to the [code](https://www.github.com)
 
 A link for [more info](https://www.google.com)
 
 A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
+
+:::
+
+::: {.content-visible when-profile="english"}
+
+# LITH TITLE
+
+About the model (Lithuanian)
+
+A link to the [code](https://www.github.com)
+
+A link for [more info](https://www.google.com)
+
+A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
+
+:::
+
+<!-- end para ------------------------------------------------------------- -->
