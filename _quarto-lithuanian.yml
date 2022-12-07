@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: ./docs/lt # required, as github pages will read from docs folder
 
-lang: lt
+lang: de
 
 website:
   title: "Sustainable Inland Fisheries" # left of coloured top naviation bar
@@ -22,11 +22,11 @@ website:
 #      - href: index.qmd
 #        text: "Home" 
         - href: models.qmd
-          text: "Overview of models" 
+          text: "LITHUANIAN: Overview of models" 
         - section: "CPUE standardisation"
           #href: CPUEstandard.qmd
           contents:
-            - text: "1. GLM based standardisation" 
+            - text: "1. LITHUANIAN: GLM based standardisation" 
               href: GLM_standardisation.qmd 
             - text: "2. Zero inflated model for catch" 
               href: Zero_inflated_model.qmd 
