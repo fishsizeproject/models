@@ -147,6 +147,20 @@
     "text": "Application of the model\nYou can also watch this talk for the “Online workshop: Machine learning, fishing and citizen science” and this talk for the “Online seminar: Recreational angling effort and engagement in the digital age” to learn more about this model."
   },
   {
+    "objectID": "models.html",
+    "href": "models.html",
+    "title": "Overview of models",
+    "section": "",
+    "text": "::: grid\n:::  :::\n::: grid\n:::\n:::  :::\n::: grid\n:::\n:::  :::\n:::"
+  },
+  {
+    "objectID": "models.html#size-based-ecosystem-models",
+    "href": "models.html#size-based-ecosystem-models",
+    "title": "Overview of models",
+    "section": "Size based ecosystem models",
+    "text": "Size based ecosystem models\nSize based community and ecosystem models represent a powerful tool to explore potential outcomes of different fisheries management strategies, species interactions, climate change and a lot more. In this project we are developing a size based model for the Curonian lagoon ecosystem.\n\n\n\n\n\n\n14. Sized based models for Curonian lagoon and Baltic Sea  Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package mizer."
+  },
+  {
     "objectID": "mqmf.html",
     "href": "mqmf.html",
     "title": "MQMF",
