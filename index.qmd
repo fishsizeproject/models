@@ -13,7 +13,7 @@ This page and models presented here have been created by Asta Audzijonyte, Carl 
 
 If you have questions and suggestions please contact us at *lydekaipaliepus\@gamtc.lt*
 
-[**Start exploring models**](/en/models.html)
+[**Start exploring models**](https://fishsizeproject.github.io/models/en/models.html)
 
 Go [**back**](https://en.sif.lt) to the project website.
 :::
@@ -26,7 +26,7 @@ This page and models presented here have been created by Asta Audzijonyte, Carl 
 
 If you have questions and suggestions please contact us at *lydekaipaliepus\@gamtc.lt*
 
-[**Start exploring models**](/en/models.html)
+[**Start exploring models**](https://fishsizeproject.github.io/models/en/models.html)
 
 Go [**back**](https://en.sif.lt) to the project website.
 :::
@@ -48,7 +48,7 @@ Freddie Heather, Steve Midway and Gustav Delius.
 
 If you have questions and suggestions please contact us at *lydekaipaliepus\@gamtc.lt*
 
-[**Start exploring models**](./en/models.html)
+[**Start exploring models**](https://fishsizeproject.github.io/models/lt/models.html)
 
 Go [**back**](https://en.sif.lt) to the project website.
 

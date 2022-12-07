@@ -147,20 +147,6 @@
     "text": "Application of the model\nYou can also watch this talk for the “Online workshop: Machine learning, fishing and citizen science” and this talk for the “Online seminar: Recreational angling effort and engagement in the digital age” to learn more about this model."
   },
   {
-    "objectID": "models.html",
-    "href": "models.html",
-    "title": "Overview of models",
-    "section": "",
-    "text": "3. Bayesian model with INLA  This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the INLA package."
-  },
-  {
-    "objectID": "models.html#surplus-production-models-for-stock-assessments",
-    "href": "models.html#surplus-production-models-for-stock-assessments",
-    "title": "Overview of models",
-    "section": "Surplus production models for stock assessments",
-    "text": "Surplus production models for stock assessments\nSurplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.\n\n\n\n\n\n\n4. Understand SP models  This little model lets you explore key assumptions behind surplus production population models. See how sustainable yield will depend on population regeneration and fishing mortality rate. See how catching more fish sometimes can give you less long term yield.\n\n\n\n\n\n\n\n\n\n\n5. Apply SP models with JABBA  JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir."
-  },
-  {
     "objectID": "models.html#fish-growth-models",
     "href": "models.html#fish-growth-models",
     "title": "Overview of models",
