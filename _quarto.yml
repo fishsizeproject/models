@@ -74,5 +74,5 @@ format:
     toc: true
 
 profile:
-  default: english
-  group: [english, lithuanian]
+  default: basic
+  group: [english, lithuanian, basic]
