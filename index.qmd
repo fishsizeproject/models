@@ -16,7 +16,7 @@ Go [**back**](https://en.sif.lt) to the project website.
 
 
 
-::: {when-profile="english"}
+::: {.content-visible when-profile="english"}
 Postdoc at the [Digital Society Initiative](https://www.dsi.uzh.ch/de.html) of the University of Zürich
 
 Urban sustainability transformations \
@@ -29,7 +29,7 @@ Project lead [SDGnets\@ZH](https://www.sdgnets.ch/)
 Project member ["Government as/is a platform"](https://dizh.ch/en/2022/06/07/government-as-is-a-platform-2/)
 :::
 
-::: {when-profile="lithuanian"}
+::: {.content-visible when-profile="lithuanian"}
 Postdoc, [Digitalisierungsinitiative der Universität Zürich](https://www.dsi.uzh.ch/de.html)
 
 
