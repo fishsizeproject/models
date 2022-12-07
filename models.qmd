@@ -16,7 +16,7 @@ LT---- We have developed and applied a range of statistical and mechanistic mode
 
 ## Models for catch per unit effort (CPUE) standardisation
 
-Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.
+LITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.
 :::
 
 ::: grid
@@ -32,7 +32,7 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[1. Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) <br> This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
+[1. Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) <br> LITHUANIAN: This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
 :::
 :::
 
@@ -47,7 +47,7 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 [2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
+[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> LITHUANIAN: If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
 :::
 :::
 
@@ -63,7 +63,7 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[3. Bayesian model with INLA](Bayesian_inla.qmd) <br> This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
+[3. Bayesian model with INLA](Bayesian_inla.qmd) <br> LITHUANIAN: This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
 :::
 :::
 :::
@@ -77,7 +77,7 @@ Surplus production (SP) models are commonly used to assess data-poor fish stocks
 ::: {.content-visible when-profile="lithuanian"}
 ## LT--Surplus production models for stock assessments
 
-LT--Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.
+LITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.
 :::
 
 ::: grid
@@ -93,7 +93,7 @@ LT--Surplus production (SP) models are commonly used to assess data-poor fish st
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[4. Understand SP models](surplus-production.qmd) <br> This little model lets you explore key assumptions behind surplus production population models. See how sustainable yield will depend on population regeneration and fishing mortality rate. See how catching more fish sometimes can give you less long term yield.
+[4. Understand SP models](surplus-production.qmd) <br> LITHUANIAN: This little model lets you explore key assumptions behind surplus production population models. See how sustainable yield will depend on population regeneration and fishing mortality rate. See how catching more fish sometimes can give you less long term yield.
 :::
 
 :::
@@ -105,11 +105,12 @@ LT--Surplus production (SP) models are commonly used to assess data-poor fish st
 :::
 
 ::: {.g-col-8 style="justify-items: left;"} 
-::: {.content-visible when-profile="english"} [5. Apply SP models with JABBA](jabba_models.qmd) <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.
+::: {.content-visible when-profile="english"} 
+[5. Apply SP models with JABBA](jabba_models.qmd) <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[5. Apply SP models with JABBA](jabba_models.qmd) <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.
+[5. Apply SP models with JABBA](jabba_models.qmd) <br> LITHUANIAN: JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.
 :::
 
 :::
@@ -139,7 +140,7 @@ Fish growth and therefore body sizes are highly variable, as it depends on tempe
 [6. Von-Bertalanffy growth](von-bertalanffy.qmd) <br> With this model you can explore Von-Bertalanffy function parameters and asses how well it fits your data. You can also visualise how variation in growth will make size classes indistinguishable as fish get older.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[6. Von-Bertalanffy growth](von-bertalanffy.qmd) <br> With this model you can explore Von-Bertalanffy function parameters and asses how well it fits your data. You can also visualise how variation in growth will make size classes indistinguishable as fish get older.
+[6. Von-Bertalanffy growth](von-bertalanffy.qmd) <br> LITHUANIAN: With this model you can explore Von-Bertalanffy function parameters and asses how well it fits your data. You can also visualise how variation in growth will make size classes indistinguishable as fish get older.
 :::
 
 :::
@@ -155,7 +156,7 @@ Fish growth and therefore body sizes are highly variable, as it depends on tempe
 [7. Temperature impacts on growth](temperature_growth.qmd) <br> Mechanistic life-history optimisation based model to assess how temperature driven changes in intake, metabolism and reproduction can affect growth. You can run this model in Excel or R.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[7. Temperature impacts on growth](temperature_growth.qmd) <br> Mechanistic life-history optimisation based model to assess how temperature driven changes in intake, metabolism and reproduction can affect growth. You can run this model in Excel or R.
+[7. Temperature impacts on growth](temperature_growth.qmd) <br> LITHUANIAN: Mechanistic life-history optimisation based model to assess how temperature driven changes in intake, metabolism and reproduction can affect growth. You can run this model in Excel or R.
 :::
 :::
 
@@ -170,7 +171,7 @@ Fish growth and therefore body sizes are highly variable, as it depends on tempe
 [8. Detecting growth changes](growth_change.qmd) <br> Bayesian model to estimate changes in growth parameters from a time series of age-length data. The model is applied to fish growth data from a nuclear power plant heated lake in Lithuania.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[8. Detecting growth changes](growth_change.qmd) <br> Bayesian model to estimate changes in growth parameters from a time series of age-length data. The model is applied to fish growth data from a nuclear power plant heated lake in Lithuania.
+[8. Detecting growth changes](growth_change.qmd) <br> LITHUANIAN: Bayesian model to estimate changes in growth parameters from a time series of age-length data. The model is applied to fish growth data from a nuclear power plant heated lake in Lithuania.
 :::
 
 :::
@@ -186,7 +187,7 @@ Fish growth and therefore body sizes are highly variable, as it depends on tempe
 [9. Detecting size changes](detecting_size.qmd) <br> Bayesian model to estimate long term changes in average fish size using long term monitoring datasets from multiple locations.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[9. Detecting size changes](detecting_size.qmd) <br> Bayesian model to estimate long term changes in average fish size using long term monitoring datasets from multiple locations.
+[9. Detecting size changes](detecting_size.qmd) <br> LITHUANIAN: Bayesian model to estimate long term changes in average fish size using long term monitoring datasets from multiple locations.
 :::
 :::
 :::
@@ -200,7 +201,7 @@ Machine learning (ML) enables rapid analyses of large image and datasets and is 
 ::: {.content-visible when-profile="lithuanian"}
 ## Machine learning models
 
-Machine learning (ML) enables rapid analyses of large image and datasets and is an important step to facilitate citizen science driven data collection techniques. During our project we have developed two machine learning models for fish species and size identification.
+LITHUANIAN: Machine learning (ML) enables rapid analyses of large image and datasets and is an important step to facilitate citizen science driven data collection techniques. During our project we have developed two machine learning models for fish species and size identification.
 :::
 
 ::: grid
@@ -215,11 +216,8 @@ Machine learning (ML) enables rapid analyses of large image and datasets and is 
 [10. ML for species identification](ML_fish_species.qmd) <br> Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[10. ML for species identification](ML_fish_species.qmd) <br> Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
+[10. ML for species identification](ML_fish_species.qmd) <br> LITHUANIAN: Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
 :::
-:::
-
-::: {.g-col-8 style="justify-items: left;"} 
 :::
 
 <!-- ML size estimation -->
@@ -234,7 +232,7 @@ Machine learning (ML) enables rapid analyses of large image and datasets and is 
 [11. ML for fish size estimation](ML_fish_size.qmd) <br> Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[11. ML for fish size estimation](ML_fish_size.qmd) <br> Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
+[11. ML for fish size estimation](ML_fish_size.qmd) <br> LITHUANIAN: Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
 :::
 :::
 :::

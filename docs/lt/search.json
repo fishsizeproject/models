@@ -151,14 +151,14 @@
     "href": "models.html",
     "title": "Overview of models",
     "section": "",
-    "text": "LT—- We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).\n\n\nScientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.\n:::"
+    "text": "LT—- We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).\n\n\nLITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity."
   },
   {
     "objectID": "models.html#ltsurplus-production-models-for-stock-assessments",
     "href": "models.html#ltsurplus-production-models-for-stock-assessments",
     "title": "Overview of models",
     "section": "LT–Surplus production models for stock assessments",
-    "text": "LT–Surplus production models for stock assessments\nLT–Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable."
+    "text": "LT–Surplus production models for stock assessments\nLITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable."
   },
   {
     "objectID": "models.html#fish-growth-models-1",
@@ -172,7 +172,7 @@
     "href": "models.html#machine-learning-models-1",
     "title": "Overview of models",
     "section": "Machine learning models",
-    "text": "Machine learning models\nMachine learning (ML) enables rapid analyses of large image and datasets and is an important step to facilitate citizen science driven data collection techniques. During our project we have developed two machine learning models for fish species and size identification."
+    "text": "Machine learning models\nLITHUANIAN: Machine learning (ML) enables rapid analyses of large image and datasets and is an important step to facilitate citizen science driven data collection techniques. During our project we have developed two machine learning models for fish species and size identification."
   },
   {
     "objectID": "models.html#satellite-data-analysis-1",
