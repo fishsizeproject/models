@@ -3,4 +3,4 @@ project:
 
 profile:
   default: basic
-  group: [english, german, basic]
+  group: [english, lithuanian, basic]
