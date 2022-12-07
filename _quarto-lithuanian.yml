@@ -13,7 +13,7 @@ website:
     background: "white" # colour of the top navigation bar (can use hex)
     right:
       - href: ../lt
-        text: lietuvių kalba
+        text: Lietuvių
       - href: ../en
         text: English
   sidebar:

@@ -10,7 +10,7 @@ This page and models presented here have been created by Asta Audzijonyte, Carl 
 
 If you have questions and suggestions please contact us at *lydekaipaliepus\@gamtc.lt*
 
-[**Start exploring models**](models.qmd)
+[**Start exploring models**](./en/models.html)
 
 Go [**back**](https://en.sif.lt) to the project website.
 
