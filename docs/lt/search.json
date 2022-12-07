@@ -161,11 +161,11 @@
     "text": "LT–Surplus production models for stock assessments\nLITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable."
   },
   {
-    "objectID": "models.html#fish-growth-models-1",
-    "href": "models.html#fish-growth-models-1",
+    "objectID": "models.html#lithuanian-fish-growth-models",
+    "href": "models.html#lithuanian-fish-growth-models",
     "title": "Overview of models",
-    "section": "Fish growth models",
-    "text": "Fish growth models\nFish growth and therefore body sizes are highly variable, as it depends on temperature, food availability and many other processes. Understanding and modelling how and why growth can change is therefore an important part of fisheries research."
+    "section": "LITHUANIAN Fish growth models",
+    "text": "LITHUANIAN Fish growth models\nLITHUANIAN Fish growth and therefore body sizes are highly variable, as it depends on temperature, food availability and many other processes. Understanding and modelling how and why growth can change is therefore an important part of fisheries research."
   },
   {
     "objectID": "models.html#machine-learning-models-1",

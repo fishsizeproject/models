@@ -123,9 +123,9 @@ Fish growth and therefore body sizes are highly variable, as it depends on tempe
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## Fish growth models
+## LITHUANIAN Fish growth models
 
-Fish growth and therefore body sizes are highly variable, as it depends on temperature, food availability and many other processes. Understanding and modelling how and why growth can change is therefore an important part of fisheries research.
+LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depends on temperature, food availability and many other processes. Understanding and modelling how and why growth can change is therefore an important part of fisheries research.
 :::
 
 ::: grid
