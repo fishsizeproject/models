@@ -239,7 +239,13 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#size-based-ecosystem-models" id="toc-size-based-ecosystem-models" class="nav-link active" data-scroll-target="#size-based-ecosystem-models">Size based ecosystem models</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -330,13 +336,11 @@ ul.task-list li input[type="checkbox"] {
 <p>::: {.g-col-8 style=“justify-items: left;”} ::: {.content-visible when-profile=“english”} <a href="./detecting_size.html">9. Detecting size changes</a> <br> Bayesian model to estimate long term changes in average fish size using long term monitoring datasets from multiple locations.</p>
 </div>
 <p>::: <!-- end of .grid-col-8 --> ::: <!-- end of .grid --></p>
-<div class="grid">
-<!-- ML species ID -->
+<p>::: grid <!-- ML species ID --></p>
 <div class="g-col-4" style="justify-items: center;">
 <p><img src="images/fish_detected.png" class="img-fluid"></p>
 </div>
-<p>::: {.g-col-8 style=“justify-items: left;”} ::: {.content-visible when-profile=“english”} <a href="./ML_fish_species.html">10. ML for species identification</a> <br> Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.</p>
-</div>
+<div class="g-col-8" style="justify-items: left;">
 <p>::: <!-- end of .grid-col-8 --></p>
 <div class="g-col-8" style="justify-items: left;">
 
@@ -349,24 +353,23 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
-<div class="g-col-8" style="justify-items: left;">
+<p>::: {.g-col-8 style=“justify-items: left;”} ::: {.content-visible when-profile=“english”} <a href="./ML_fish_size.html">11. ML for fish size estimation</a> <br> Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.</p>
+</div>
 <p>::: <!-- end of .grid-col-8 --> ::: <!-- end of .grid --></p>
 <div class="grid">
 <!-- Satellite temperature -->
 <div class="g-col-4" style="justify-items: center;">
 <p><img src="images/satelliteTemp.png" class="img-fluid"></p>
 </div>
-<div class="g-col-8" style="justify-items: left;">
-<p><a href="./satelite_temp.html">12. Satellite based temperature data</a> <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.</p>
+<p>::: {.g-col-8 style=“justify-items: left;”} ::: {.content-visible when-profile=“english”} <a href="./satelite_temp.html">12. Satellite based temperature data</a> <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.</p>
 </div>
+<p>::: <!-- end of .grid-col-8 --></p>
 <!-- Satellite cholorphyll -->
 <div class="g-col-4" style="justify-items: center;">
-<p><img src="images/satelliteTemp.png" class="img-fluid"></p>
+<p><img src="images/satelliteTemp.png" class="img-fluid"> ::: <!-- end of .grid-col-4 --></p>
+<p>::: {.g-col-8 style=“justify-items: left;”} ::: {.content-visible when-profile=“english”} <a href="./satelite_chla.html">13. Satellite based chlorophyll A data</a> <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.</p>
 </div>
-<div class="g-col-8" style="justify-items: left;">
-<p><a href="./satelite_chla.html">13. Satellite based chlorophyll A data</a> <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.</p>
-</div>
-</div>
+<p>::: <!-- end of .grid-col-8 --> ::: <!-- end of .grid --></p>
 <section id="size-based-ecosystem-models" class="level2">
 <h2 class="anchored" data-anchor-id="size-based-ecosystem-models">Size based ecosystem models</h2>
 <p>Size based community and ecosystem models represent a powerful tool to explore potential outcomes of different fisheries management strategies, species interactions, climate change and a lot more. In this project we are developing a size based model for the Curonian lagoon ecosystem.</p>
@@ -375,16 +378,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="g-col-4" style="justify-items: center;">
 <p><img src="images/mizer.png" class="img-fluid"></p>
 </div>
-<div class="g-col-8" style="justify-items: left;">
-<p><a href="./curonian_mizer.html">14. Sized based models for Curonian lagoon and Baltic Sea</a> <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package <em>mizer</em>.</p>
+<p>::: {.g-col-8 style=“justify-items: left;”} ::: {.content-visible when-profile=“english”} <a href="./curonian_mizer.html">14. Sized based models for Curonian lagoon and Baltic Sea</a> <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package <em>mizer</em>.</p>
 </div>
-</div>
+<p>::: <!-- end of .grid-col-8 --> ::: <!-- end of .grid --></p>
+
+
 </section>
-</div>
-<!-- LITHUANIAN CONTENT ---------------------------------------------------- -->
-<!-- this is how we put comments and notes -->
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
