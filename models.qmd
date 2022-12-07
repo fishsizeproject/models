@@ -3,11 +3,22 @@ title: "Overview of models"
 toc: true
 ---
 
+::: {.content-visible when-profile="english"}
 We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).
 
 ## Models for catch per unit effort (CPUE) standardisation
 
 Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.
+:::
+::: {.content-visible when-profile="lithuanian"}
+THIS IS LITHUANIAN TEXT
+We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).
+
+## Models for catch per unit effort (CPUE) standardisation
+
+Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.
+:::
+
 
 ::: grid
 <!-- GLM's -->
@@ -16,9 +27,21 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 ![](images/course_image.png)
 :::
 
+::: {.content-visible when-profile="english"}
 ::: g-col-8
-[1. Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) <br> This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
+[1. Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) 
+<br> 
+This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
 :::
+:::
+::: {.content-visible when-profile="lithuanian"}
+::: g-col-8
+[1. LT TEXT: Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) 
+<br> 
+LT TEXT: This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
+:::
+:::
+
 
 <!-- Zero-inflated models -->
 
@@ -26,9 +49,22 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 ![](images/zero_inflated.png)
 :::
 
+
+::: {.content-visible when-profile="english"}
 ::: g-col-8
-[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
+[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd)
+<br>
+If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
 :::
+:::
+::: {.content-visible when-profile="lithuanian"}
+::: g-col-8
+[2. LT TEXT: Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) 
+<br>
+LT TEXT: If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
+:::
+:::
+
 
 <!-- BAYESIAN MODELS -->
 
@@ -36,14 +72,40 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 ![](images/cpue_inla.png)
 :::
 
+
+
+
+::: {.content-visible when-profile="english"}
 ::: g-col-8
-[3. Bayesian model with INLA](Bayesian_inla.qmd) <br> This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
+[3. Bayesian model with INLA](Bayesian_inla.qmd)
+<br> 
+This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
+:::
+:::
+::: {.content-visible when-profile="lithuanian"}
+::: g-col-8
+[3. LT: Bayesian model with INLA](Bayesian_inla.qmd)
+<br> 
+LT: This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
 :::
 :::
 
+
+:::
+
+
+
+::: {.content-visible when-profile="english"}
 ## Surplus production models for stock assessments
 
 Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.
+:::
+::: {.content-visible when-profile="lithuanian"}
+## LT: Surplus production models for stock assessments
+
+LT: Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.
+:::
+
 
 ::: grid
 <!-- Surplus production models -->
@@ -52,9 +114,27 @@ Surplus production (SP) models are commonly used to assess data-poor fish stocks
 ![](images/roach.png)
 :::
 
+
+
+::: {.content-visible when-profile="english"}
 ::: g-col-8
-[4. Understand SP models](surplus-production.qmd) <br> This little model lets you explore key assumptions behind surplus production population models. See how sustainable yield will depend on population regeneration and fishing mortality rate. See how catching more fish sometimes can give you less long term yield.
+[4. Understand SP models](surplus-production.qmd) 
+<br> 
+This little model lets you explore key assumptions behind surplus production population models. 
+See how sustainable yield will depend on population regeneration and fishing mortality rate. 
+See how catching more fish sometimes can give you less long term yield.
 :::
+:::
+::: {.content-visible when-profile="lithuanian"}
+::: g-col-8
+[4. LT: Understand SP models](surplus-production.qmd) 
+<br> 
+LT: This little model lets you explore key assumptions behind surplus production population models. 
+See how sustainable yield will depend on population regeneration and fishing mortality rate. 
+See how catching more fish sometimes can give you less long term yield.
+:::
+:::
+
 
 <!-- Zero-inflated models -->
 

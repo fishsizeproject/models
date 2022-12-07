@@ -243,8 +243,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#models-for-catch-per-unit-effort-cpue-standardisation" id="toc-models-for-catch-per-unit-effort-cpue-standardisation" class="nav-link active" data-scroll-target="#models-for-catch-per-unit-effort-cpue-standardisation">Models for catch per unit effort (CPUE) standardisation</a></li>
-  <li><a href="#surplus-production-models-for-stock-assessments" id="toc-surplus-production-models-for-stock-assessments" class="nav-link" data-scroll-target="#surplus-production-models-for-stock-assessments">Surplus production models for stock assessments</a></li>
+  <li><a href="#surplus-production-models-for-stock-assessments" id="toc-surplus-production-models-for-stock-assessments" class="nav-link active" data-scroll-target="#surplus-production-models-for-stock-assessments">Surplus production models for stock assessments</a></li>
   <li><a href="#fish-growth-models" id="toc-fish-growth-models" class="nav-link" data-scroll-target="#fish-growth-models">Fish growth models</a></li>
   <li><a href="#machine-learning-models" id="toc-machine-learning-models" class="nav-link" data-scroll-target="#machine-learning-models">Machine learning models</a></li>
   <li><a href="#satellite-data-analysis" id="toc-satellite-data-analysis" class="nav-link" data-scroll-target="#satellite-data-analysis">Satellite data analysis</a></li>
@@ -272,24 +271,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).</p>
-<section id="models-for-catch-per-unit-effort-cpue-standardisation" class="level2">
-<h2 class="anchored" data-anchor-id="models-for-catch-per-unit-effort-cpue-standardisation">Models for catch per unit effort (CPUE) standardisation</h2>
-<p>Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.</p>
 <div class="grid">
 <!-- GLM's -->
 <div class="g-col-4">
 <p><img src="images/course_image.png" class="img-fluid"></p>
 </div>
-<div class="g-col-8">
-<p><a href="./GLM_standardisation.html">1. Generalized linear model (GLM) based standardisation</a> <br> This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.</p>
-</div>
 <!-- Zero-inflated models -->
 <div class="g-col-4" style="justify-items: center;">
 <p><img src="images/zero_inflated.png" class="img-fluid"></p>
-</div>
-<div class="g-col-8">
-<p><a href="./Zero_inflated_model.html">2. Zero inflated models for CPUE standardisation</a> <br> If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.</p>
 </div>
 <!-- BAYESIAN MODELS -->
 <div class="g-col-4" style="justify-items: center;">
@@ -299,7 +288,6 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="./Bayesian_inla.html">3. Bayesian model with INLA</a> <br> This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the <a href="https://www.r-inla.org/">INLA package</a>.</p>
 </div>
 </div>
-</section>
 <section id="surplus-production-models-for-stock-assessments" class="level2">
 <h2 class="anchored" data-anchor-id="surplus-production-models-for-stock-assessments">Surplus production models for stock assessments</h2>
 <p>Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.</p>

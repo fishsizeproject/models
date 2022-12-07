@@ -151,14 +151,7 @@
     "href": "models.html",
     "title": "Overview of models",
     "section": "",
-    "text": "We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website)."
-  },
-  {
-    "objectID": "models.html#models-for-catch-per-unit-effort-cpue-standardisation",
-    "href": "models.html#models-for-catch-per-unit-effort-cpue-standardisation",
-    "title": "Overview of models",
-    "section": "Models for catch per unit effort (CPUE) standardisation",
-    "text": "Models for catch per unit effort (CPUE) standardisation\nScientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.\n\n\n\n\n\n\n1. Generalized linear model (GLM) based standardisation  This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.\n\n\n\n\n\n\n2. Zero inflated models for CPUE standardisation  If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.\n\n\n\n\n\n\n3. Bayesian model with INLA  This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the INLA package."
+    "text": "3. Bayesian model with INLA  This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the INLA package."
   },
   {
     "objectID": "models.html#surplus-production-models-for-stock-assessments",
