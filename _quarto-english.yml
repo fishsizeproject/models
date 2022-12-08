@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: ./docs/en # required, as github pages will read from docs folder
+  output-dir: ./docs # required, as github pages will read from docs folder
 
 lang: en
 
@@ -12,9 +12,9 @@ website:
     logo: images/sif_sm.png  # logo displayed at the top left of the webpage
     background: "white" # colour of the top navigation bar (can use hex)
     right:
-      - href: https://fishsizeproject.github.io/models/lt/index.html
+      - href: ../de
         text: Lietuvių
-      - href: https://fishsizeproject.github.io/models/en/index.html
+      - href: ./
         text: English
   sidebar:
     style: "docked"

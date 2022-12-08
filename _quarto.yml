@@ -2,5 +2,5 @@ project:
     type: website
 
 profile:
-  default: basic
-  group: [english, lithuanian, basic]
+  default: english
+  group: [english, lithuanian]
