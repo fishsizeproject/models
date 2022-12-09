@@ -12,7 +12,7 @@ website:
     logo: images/sif_sm.png  # logo displayed at the top left of the webpage
     background: "white" # colour of the top navigation bar (can use hex)
     right:
-      - href: ./de
+      - href: ../lt
         text: Lietuvių
       - href: ./
         text: English
