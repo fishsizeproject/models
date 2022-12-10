@@ -15,7 +15,7 @@ If you have questions and suggestions please contact us at *lydekaipaliepus\@gam
 
 [**Start exploring models**](https://fishsizeproject.github.io/models/models.html)
 
-Go [**back**](https://en.sif.lt) to the project website.
+Go [**back**](https://en.sif.lt/home-en/) to the project website.
 :::
 
 
@@ -33,7 +33,7 @@ Kei jums iškilo klausimų arba jei turite pasiūlymų susisiekite su mumis adre
 
 [**Pradėti naršyti modelių puslapius**](https://fishsizeproject.github.io/models/lt/models.html)
 
-Grįžti [**atgal**](https://en.sif.lt) į projekto tinklapį.
+Grįžti [**atgal**](https://sif.lt) į projekto tinklapį.
 
 :::
 
