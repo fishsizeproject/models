@@ -28,15 +28,28 @@ In this set of [slides](resources/CPUEstandartisation_GLM.pdf) you will find mai
 For examples on how this method has been applied to other stocks, see references [here](resources/Maunder2004.pdf) and [here](resources/Forrestal_2018.pdf)
 :::
 
+
+<!-- next para ------------------------------------------------------------- -->
+
+::: {.content-visible when-profile="english"}
+## Model code
+
+We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use [**this code**](scripts/dataConversion.Rmd) to covert your data table into a suitable format.
+
+To apply our GLM based standardisation model you can use [this code](scripts/CPUEstand_example.zip) where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below. To look at the model code and outputs without having to run the code, you can click [**here**](resources/CPUEstand_example.html).
+:::
+
 ::: {.content-visible when-profile="lithuanian"}
 ## LT lang:Model code
 
-LT lang:We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use [**this code**](scripts/dataConversion.Rmd) to covert your data table into a suitable format.
+We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use [**this code**](scripts/dataConversion.Rmd) to covert your data table into a suitable format.
 
-To apply our GLM based standardisation model you can use [this code](scripts/CPUEstand_example.Rmd) where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below.
+To apply our GLM based standardisation model you can use [this code](scripts/CPUEstand_example.zip) where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below. To look at the model code and outputs without having to run the code, you can click [**here**](resources/CPUEstand_example.html).
 :::
 
+
 ![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} 
+<!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
 ## Application of the model
@@ -50,7 +63,7 @@ Once you conduct your CPUE standardisation, you can use the standardised values 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LT lang:Application of the model
+## Modelio taikymas
 
 LT lang:To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our [**publication**](https://www.mdpi.com/2410-3888/7/5/232) in journal *Fishes*.
 
