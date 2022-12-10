@@ -36,8 +36,9 @@ LT lang:We have developed GLM based models for CPUE standardisation of five fish
 To apply our GLM based standardisation model you can use [this code](scripts/CPUEstand_example.Rmd) where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below.
 :::
 
-![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} ::: {.content-visible when-profile="english"}
+![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} 
 
+::: {.content-visible when-profile="english"}
 ## Application of the model
 
 To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our [publication](https://www.mdpi.com/2410-3888/7/5/232) in journal *Fishes*.

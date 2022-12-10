@@ -1,6 +1,6 @@
 ---
 title: "Bayesian CPUE standardisation using INLA"
-author: Carl Smith
+author: Carl Smith, Egle Jakubavičiūtė, Asta Audzijonyte
 editor: source
 ---
 
