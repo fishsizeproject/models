@@ -48,26 +48,26 @@ website:
               href: temperature_growth.qmd 
             - text: "8. Detecting growth changes" 
               href: growth_change.qmd 
-            - text: "9. Detecting size changes" 
-              href: detecting_size.qmd 
+          #  - text: "9. Detecting size changes" 
+          #    href: detecting_size.qmd 
         - section: "Machine learning (ML) models"
           #href: machine_learning.qmd
           contents:
-            - text: "10. ML for species identification" 
+            - text: "9. ML for species identification" 
               href: ML_fish_species.qmd 
-            - text: "11. ML for fish size estimation" 
+            - text: "10. ML for fish size estimation" 
               href: ML_fish_size.qmd 
         - section: "Satellite data analysis"
           #href: satelite_data.qmd
           contents:
-            - text: "12. Getting temperature data" 
+            - text: "11. Getting temperature data" 
               href: satelite_temp.qmd 
-            - text: "13. Getting chlA data" 
+            - text: "12. Getting chlA data" 
               href: satelite_chla.qmd 
         - section: "Size based ecosystem models"
           #href: curonian_model.qmd 
           contents:
-            - text: "14. Curonian lagoon model" 
+            - text: "13. Curonian lagoon model" 
               href: curonian_mizer.qmd 
 format:
   html:

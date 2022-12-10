@@ -34,7 +34,7 @@ To learn more about the principles of surplus production models, we recommend th
 <!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
-##Model 
+## Model 
 
 Before applying surplus production models to our stocks it is important to understand how they work and what assumptions they make. To help you explore these assumptions and outcomes, we have developed this user friendly tool which you can access [**here**](https://fishsize.shinyapps.io/surplus-production/).
 
@@ -43,7 +43,7 @@ Before applying surplus production models to our stocks it is important to under
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-##Modelis 
+## Modelis 
 
 lietuviškas vertimas
 [**čia**](https://fishsize.shinyapps.io/surplus-production/) 

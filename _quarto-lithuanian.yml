@@ -5,7 +5,7 @@ project:
 language: custom.yml
 
 website:
-  title: "Sustainable Inland Fisheries" # left of coloured top naviation bar
+  title: "Lydekai paliepus: tvari vidaus vandenų žvejyba" # left of coloured top naviation bar
   page-navigation: true
   search: false # you can toggle this to true/false for the search bar (personally i dont mind it to search within the website/pages) - Freddie
   navbar: 
@@ -22,52 +22,52 @@ website:
 #      - href: index.qmd
 #        text: "Home" 
         - href: models.qmd
-          text: "LITHUANIAN: Overview of models" 
-        - section: "CPUE standardisation"
+          text: "Modelių apžvalga" 
+        - section: "Sugavimų standartizacijos modeliai"
           #href: CPUEstandard.qmd
           contents:
-            - text: "1. LITHUANIAN: GLM based standardisation" 
+            - text: "1. Linijiniais modeliais paremta sugavimų standartizacija" 
               href: GLM_standardisation.qmd 
-            - text: "2. Zero inflated model for catch" 
+            - text: "2. Sugavimų modeliai su daug nulinių stebėjimų" 
               href: Zero_inflated_model.qmd 
-            - text: "3. Bayesian model" 
+            - text: "3. Bajeso metodu paremtas standartizacijos modelis" 
               href: Bayesian_inla.qmd 
-        - section: "Surplus production (SP) models"
+        - section: "Pridėtinės produkcijos modeliai"
           #href: SP_introduction.qmd
           contents:
-            - text: "4. Understand SP models" 
+            - text: "4. Kaip veikia pridėtinės produkcijos modeliai" 
               href: surplus-production.qmd 
-            - text: "5. SP models with JABBA" 
+            - text: "5. Pridėtinės produkcijos modeliai su JABBA" 
               href: jabba_models.qmd 
-        - section: "Fish growth models"
+        - section: "Žuvų augimo modeliai"
           #href: fish_growth.qmd
           contents:
-            - text: "6. Von-Bertallanfy growth" 
+            - text: "6. Von-Bertallanfy augimo modelis" 
               href: von-bertalanffy.qmd 
-            - text: "7. Temperature impacts on growth" 
+            - text: "7. Temperatūros įtaka žuvų augimui" 
               href: temperature_growth.qmd 
-            - text: "8. Detecting growth changes" 
+            - text: "8. Modelis augimo greičio pakitimams įvertinti" 
               href: growth_change.qmd 
-            - text: "9. Detecting size changes" 
-              href: detecting_size.qmd 
-        - section: "Machine learning (ML) models"
+        #    - text: "9. Detecting size changes" 
+        #      href: detecting_size.qmd 
+        - section: "Dirbtinio intelekto (DI) modeliai"
           #href: machine_learning.qmd
           contents:
-            - text: "10. ML for species identification" 
+            - text: "9. DI modelis žuvų rūšių nustatymui" 
               href: ML_fish_species.qmd 
-            - text: "11. ML for fish size estimation" 
+            - text: "10. DI modelis žuvų dydžio nustatymui" 
               href: ML_fish_size.qmd 
-        - section: "Satellite data analysis"
+        - section: "Palydovinių duomenų analizė"
           #href: satelite_data.qmd
           contents:
-            - text: "12. Getting temperature data" 
+            - text: "11. Palydoviniai temperatūros duomenys" 
               href: satelite_temp.qmd 
-            - text: "13. Getting chlA data" 
+            - text: "12. Palydoviniai chlorofilo A duomenys" 
               href: satelite_chla.qmd 
-        - section: "Size based ecosystem models"
+        - section: "Dydžiu paremti ekosistemų modeliai"
           #href: curonian_model.qmd 
           contents:
-            - text: "14. Curonian lagoon model" 
+            - text: "13. Kuršių marių ekosistemos modelis" 
               href: curonian_mizer.qmd 
 format:
   html:

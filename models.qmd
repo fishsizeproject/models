@@ -176,21 +176,6 @@ LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depen
 
 :::
 
-<!-- Size changes models -->
-
-::: {.g-col-4 style="justify-items: center;"}
-![](images/size_change.png)
-:::
-
-::: {.g-col-8 style="justify-items: left;"} 
-::: {.content-visible when-profile="english"}
-[9. Detecting size changes](detecting_size.qmd) <br> Bayesian model to estimate long term changes in average fish size using long term monitoring datasets from multiple locations.
-:::
-::: {.content-visible when-profile="lithuanian"}
-[9. Detecting size changes](detecting_size.qmd) <br> LITHUANIAN: Bayesian model to estimate long term changes in average fish size using long term monitoring datasets from multiple locations.
-:::
-:::
-:::
 
 ::: {.content-visible when-profile="english"}
 ## Machine learning models
@@ -213,10 +198,10 @@ LITHUANIAN: Machine learning (ML) enables rapid analyses of large image and data
 
 ::: {.g-col-8 style="justify-items: left;"} 
 ::: {.content-visible when-profile="english"}
-[10. ML for species identification](ML_fish_species.qmd) <br> Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
+[9. ML for species identification](ML_fish_species.qmd) <br> Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[10. ML for species identification](ML_fish_species.qmd) <br> LITHUANIAN: Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
+[9. ML for species identification](ML_fish_species.qmd) <br> LITHUANIAN: Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
 :::
 :::
 
@@ -229,10 +214,10 @@ LITHUANIAN: Machine learning (ML) enables rapid analyses of large image and data
 
 ::: {.g-col-8 style="justify-items: left;"} 
 ::: {.content-visible when-profile="english"}
-[11. ML for fish size estimation](ML_fish_size.qmd) <br> Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
+[10. ML for fish size estimation](ML_fish_size.qmd) <br> Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[11. ML for fish size estimation](ML_fish_size.qmd) <br> LITHUANIAN: Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
+[10. ML for fish size estimation](ML_fish_size.qmd) <br> LITHUANIAN: Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
 :::
 :::
 :::
@@ -259,10 +244,10 @@ Remote sensing and satellite data is now being collected on high temporal and sp
 
 ::: {.g-col-8 style="justify-items: left;"} 
 ::: {.content-visible when-profile="english"}
-[12. Satellite based temperature data](satelite_temp.qmd) <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.
+[11. Satellite based temperature data](satelite_temp.qmd) <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[12. Satellite based temperature data](satelite_temp.qmd) <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.
+[11. Satellite based temperature data](satelite_temp.qmd) <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.
 :::
 :::
 
@@ -276,10 +261,10 @@ Remote sensing and satellite data is now being collected on high temporal and sp
 
 ::: {.g-col-8 style="justify-items: left;"} 
 ::: {.content-visible when-profile="english"}
-[13. Satellite based chlorophyll A data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
+[12. Satellite based chlorophyll A data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[13. Satellite based chlorophyll A data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
+[12. Satellite based chlorophyll A data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
 :::
 :::
 :::
@@ -298,10 +283,10 @@ Size based community and ecosystem models represent a powerful tool to explore p
 
 ::: {.g-col-8 style="justify-items: left;"} 
 ::: {.content-visible when-profile="english"}
-[14. Sized based models for Curonian lagoon and Baltic Sea](curonian_mizer.qmd) <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package *mizer*.
+[13. Sized based models for Curonian lagoon and Baltic Sea](curonian_mizer.qmd) <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package *mizer*.
 :::
 ::: {.content-visible when-profile="lithuanian"}
-[14. Sized based models for Curonian lagoon and Baltic Sea](curonian_mizer.qmd) <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package *mizer*.
+[13. Sized based models for Curonian lagoon and Baltic Sea](curonian_mizer.qmd) <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package *mizer*.
 :::
 :::
 :::

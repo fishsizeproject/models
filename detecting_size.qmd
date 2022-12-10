@@ -1,33 +1,79 @@
 ---
-title: "MQMF"
+title: "Model to detect changes in fish size through time"
+author: Stephen Midway and Asta Audzijonyte
 editor: source
 ---
 
-
 ::: {.content-visible when-profile="english"}
+## Introduction
 
-About the model (english)
+Sometimes we do not have data on fish growth, but many observations of fish sizes through time. Such observations might be collected through regular scientific monitoring surveys. In this project we analysed data from nearly 30 years of surveys in Lithuanian lakes. There are nearly 300 lakes that were studied over this period, but in most cases each lake only had had 2 to 5 surveys throughout this time. Our goal was to assess whether the average size of fish in a given species has increased or deceased through time. In 2013 all commercial fishing in Lithuanian lakes was banned, so we wanted to know whether the overall fish population status has improved. 
 
-A link to the [code](https://www.github.com)
+To conduct such an analysis we cannot simply calculate the average size of fish through time, because we need to account for the fact that different lakes were sampled at different seasons and sometimes with different gears and gillnet mesh sizes. So we need a model that will account for all these 'random' effects (day of the year, season, gillnet length, mesh size) and estimate whether there are any changes in average fish size after removing all these confounding effects. 
 
-A link for [more info](https://www.google.com)
+To do that we will use a Bayesian model coded in STAN 
 
-A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
+
+
 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
+## Įvadas
 
-About the model (Lithuanian)
-
-A link to the [code](https://www.github.com)
-
-A link for [more info](https://www.google.com)
-
-A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
+Čia bus vertimas
 
 :::
 
+![](images/PopGrowthRates.png){width="50%" fig-align="center"}
+
+<!-- next para ------------------------------------------------------------- -->
+
+::: {.content-visible when-profile="english"}
+## Model 
+
+Before applying surplus production models to our stocks it is important to understand how they work and what assumptions they make. To help you explore these assumptions and outcomes, we have developed this user friendly tool which you can access [**here**](https://fishsize.shinyapps.io/surplus-production/).
+
+![](images/SPapp_screenshot.png){width="50%" fig-align="center"}
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+## Modelis 
+
+lietuviškas vertimas
+[**čia**](https://fishsize.shinyapps.io/surplus-production/) 
+
+![](images/SPapp_screenshot.png){width="50%" fig-align="center"} 
+
+:::
+
+<!-- next para ------------------------------------------------------------- -->
+
+::: {.content-visible when-profile="english"}
+## Application of the model 
+
+Surplus production models have been applied to a wide range of populations and usually perform better than even simpler models that are based only on catch data. For a recent overview of surplus production model applications, please see [**this publication**](). Also, when data is limited, simple surplus production models can perform better than more complex models with many parameters, which cannot be effectively estimated, see example publication [**here**](). 
+
+However, it is important to remember that simple models must make simplifying assumptions. The main assumptions to keep in mind are: 
+
+1. Population abundance is mostly controlled by fishing and not other environmental parameters or species interactions. If this is not the case we need other types of models - perhaps models relating stock abundance to prey biomass, temperature, currents or other factors. 
+
+2.  All spawning stock biomass is equal. We do not care about age or size structure and assume that 1kg of mature 5 year old fish contributes the same amount of production to the stock as 1kg of mature 10 year fish.
+
+3. Population parameters, such as growth, natural mortality, carrying capacity and regeneration rate are fixed through time and space. Although this is usually not the case, most datasets do not have enough information to estimate changes in these parameters through time anyway.  
+
+:::
+
+
+::: {.content-visible when-profile="lithuanian"}
+## Modelio taikymas
+
+Čia bus vertimas 
+
+:::
+
+![](images/Tincatinca_sm.png){width="50%" fig-align="center"} 
 
 
 
