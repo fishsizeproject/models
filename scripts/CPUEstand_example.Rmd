@@ -28,7 +28,7 @@ library(ggpubr)
 library(effects)
 
 #install.packages("remotes")
-#remotes::install_github("haddonm/r4cpue")
+# remotes::install_github("haddonm/r4cpue")
 library(r4cpue)
 
 ```

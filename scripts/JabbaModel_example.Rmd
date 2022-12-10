@@ -1,12 +1,12 @@
 ---
 title: JABBA example
-subtitle: 
 author: "Egle Jakubaviciute, Asta Audzijonyte"
 geometry: margin = 1in
 output:
   html_document
 fontsize: 11pt
 ---
+
 
 ### libraries 
 
@@ -53,7 +53,7 @@ JABBA provides provides the option to use a single averaged CPUE index instead o
 ```{r, eval = T, warning = F, message = F, echo = F}
 rm(list = ls()) # clear memory
 
-all_data <- read.csv(file = "StockA1_catch_cpueSE.csv", fileEncoding="UTF-8-BOM") 
+all_data <- read.csv(file = here::here("scripts/StockA1_catch_cpueSE.csv"), fileEncoding="UTF-8-BOM") 
 
 #inspect
 head(all_data)
@@ -427,6 +427,12 @@ input_both_pella <- build_jabba(
 We will run Schaefer, Fox and Pella scenarios. They make different assumptions about density dependence. We run them with identical parameters and priors, but we expect to get different posterior estimates, because they assume a slightly different production curve
 
 ```{r}
+
+
+# creating a directory to save the output files
+dir.create(species) 
+
+
 #note this will save an .RData object 
 
 run_both_sch <- fit_jabba(
@@ -453,6 +459,7 @@ run_both_sch <- fit_jabba(
 
 ```{r}
 
+
 run_both_fox <- fit_jabba(
   input_both_fox,
   ni = 30000,
@@ -471,6 +478,8 @@ run_both_fox <- fit_jabba(
   output.dir = species,  ## make sure you create a folder in your working directory to save outputs
   quickmcmc = TRUE
 )
+
+
 ```
 
 ### Run: Pella
@@ -543,4 +552,3 @@ dev.off()
 ```
 
 ### ### END ### 
-
