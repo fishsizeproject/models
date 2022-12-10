@@ -15,7 +15,7 @@ Blah spm info
 
 :::
 
-::: {.content-visible when-profile="english"}
+::: {.content-visible when-profile="lithuanian"}
 
 Lithuanian language here
 

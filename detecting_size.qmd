@@ -16,7 +16,7 @@ A link to the [model](https://fishsize.shinyapps.io/pikeperch/)
 
 :::
 
-::: {.content-visible when-profile="english"}
+::: {.content-visible when-profile="lithuanian"}
 
 About the model (Lithuanian)
 
