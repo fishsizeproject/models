@@ -23,22 +23,17 @@ Go [**back**](https://en.sif.lt) to the project website.
 
 ::: {.content-visible when-profile="lithuanian"}
 
+Šis projektas ir tinklapio sukūrimas buvo finansuotas iš Europos regioninės plėtros fondo lėšų pagal priemonės Nr. 01.2.2-LMT-K-718 veiklą "Mokslininkų iš užsienio pritraukimas vykdyti mokslinius tyrimus” ir projektą „*Pažangūs modeliai, piliečių mokslas ir didieji duomenys tvariai vidaus vandenų maisto produkcijai ir ekosistemų paslaugoms*“ (Numeris 01.2.2-LMT-K-718-02-0006) 
 
-THIS IS LITHUANIAN TEXT
-This is a webpage of models developed during the project 
-"*Advanced models, citizen science and big data for sustainable food production and ecological services of inland aquatic ecosystems*". 
-The project has received funding from European Regional Development Fund (project No 01.2.2-LMT-K-718-02-0006) 
-under grant agreement with the Research Council of Lithuania (LMTLT).
+Šį puslapį ir jame pristatomus modelius sukūrė Asta Audzijonytė, 
+Carl Smith, Catarina Silva, Eglė Jakubavičiūtė, Dalia Grendaitė, Max Lindmark, 
+Freddie Heather, Stephen Midway ir Gustav Delius.
 
-This page and models presented here have been created by Asta Audzijonyte, 
-Carl Smith, Catarina Silva, Egle Jakubavičiūtė, Dalia Grendaitė, Max Lindmark, 
-Freddie Heather, Steve Midway and Gustav Delius.
+Kei jums iškilo klausimų arba jei turite pasiūlymų susisiekite su mumis adresu *lydekaipaliepus\@gamtc.lt*
 
-If you have questions and suggestions please contact us at *lydekaipaliepus\@gamtc.lt*
+[**Pradėti naršyti modelių puslapius**](https://fishsizeproject.github.io/models/lt/models.html)
 
-[**Start exploring models**](https://fishsizeproject.github.io/models/lt/models.html)
-
-Go [**back**](https://en.sif.lt) to the project website.
+Grįžti [**atgal**](https://en.sif.lt) į projekto tinklapį.
 
 :::
 
@@ -49,7 +44,20 @@ Go [**back**](https://en.sif.lt) to the project website.
 
 <!-- Logos -->
 
+::: {.content-visible when-profile="english"}
+
 ::: g-col-12
 ![](images/logos_english.png){fig-align="center" width="75%"}
 :::
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+::: g-col-12
+![](images/logos_lithuanian.png){fig-align="center" width="75%"}
+:::
+
+:::
+
+
 :::
