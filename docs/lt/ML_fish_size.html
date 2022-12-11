@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Catarina Silva and Asta Audzijonytė">
 
-<title>Sustainable Inland Fisheries - Estimating fish size classes using image classification and machine learning models</title>
+<title>Lydekai paliepus: tvari vidaus vandenų žvejyba - Estimating fish size classes using image classification and machine learning models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./images/sif_sm.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Sustainable Inland Fisheries</span>
+    <span class="navbar-title">Lydekai paliepus: tvari vidaus vandenų žvejyba</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -104,12 +104,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./models.html" class="sidebar-item-text sidebar-link">LITHUANIAN: Overview of models</a>
+  <a href="./models.html" class="sidebar-item-text sidebar-link">Modelių apžvalga</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">CPUE standardisation</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Sugavimų standartizacijos modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -117,24 +117,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./GLM_standardisation.html" class="sidebar-item-text sidebar-link">1. LITHUANIAN: GLM based standardisation</a>
+  <a href="./GLM_standardisation.html" class="sidebar-item-text sidebar-link">1. Linijiniais modeliais paremta sugavimų standartizacija</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Zero_inflated_model.html" class="sidebar-item-text sidebar-link">2. Zero inflated model for catch</a>
+  <a href="./Zero_inflated_model.html" class="sidebar-item-text sidebar-link">2. Sugavimų modeliai su daug nulinių stebėjimų</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Bayesian_inla.html" class="sidebar-item-text sidebar-link">3. Bayesian model</a>
+  <a href="./Bayesian_inla.html" class="sidebar-item-text sidebar-link">3. Bajeso metodu paremtas standartizacijos modelis</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Surplus production (SP) models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Pridėtinės produkcijos modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -142,19 +142,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./surplus-production.html" class="sidebar-item-text sidebar-link">4. Understand SP models</a>
+  <a href="./surplus-production.html" class="sidebar-item-text sidebar-link">4. Kaip veikia pridėtinės produkcijos modeliai</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./jabba_models.html" class="sidebar-item-text sidebar-link">5. SP models with JABBA</a>
+  <a href="./jabba_models.html" class="sidebar-item-text sidebar-link">5. Pridėtinės produkcijos modeliai su JABBA</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Fish growth models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Žuvų augimo modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -162,29 +162,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./von-bertalanffy.html" class="sidebar-item-text sidebar-link">6. Von-Bertallanfy growth</a>
+  <a href="./von-bertalanffy.html" class="sidebar-item-text sidebar-link">6. Von-Bertallanfy augimo modelis</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temperature_growth.html" class="sidebar-item-text sidebar-link">7. Temperature impacts on growth</a>
+  <a href="./temperature_growth.html" class="sidebar-item-text sidebar-link">7. Temperatūros įtaka žuvų augimui</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Detecting growth changes</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./detecting_size.html" class="sidebar-item-text sidebar-link">9. Detecting size changes</a>
+  <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Modelis augimo greičio pakitimams įvertinti</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Machine learning (ML) models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Dirbtinio intelekto (DI) modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -192,19 +187,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">10. ML for species identification</a>
+  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">9. DI modelis žuvų rūšių nustatymui</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link active">11. ML for fish size estimation</a>
+  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link active">10. DI modelis žuvų dydžio nustatymui</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Satellite data analysis</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Palydovinių duomenų analizė</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -212,19 +207,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">12. Getting temperature data</a>
+  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">11. Palydoviniai temperatūros duomenys</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">13. Getting chlA data</a>
+  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">12. Palydoviniai chlorofilo A duomenys</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Size based ecosystem models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Dydžiu paremti ekosistemų modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -232,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">14. Curonian lagoon model</a>
+  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">13. Kuršių marių ekosistemos modelis</a>
   </div>
 </li>
       </ul>
@@ -459,12 +454,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./ML_fish_species.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">10. ML for species identification</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">9. DI modelis žuvų rūšių nustatymui</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./satelite_temp.html" class="pagination-link">
-        <span class="nav-page-text">12. Getting temperature data</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">11. Palydoviniai temperatūros duomenys</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
