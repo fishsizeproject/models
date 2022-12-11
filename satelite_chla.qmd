@@ -1,5 +1,5 @@
 ---
-title: "Extracting and analysing lake surface temperature data from satellites"
+title: "Extracting and analysing optical water quality data from satellites"
 author: Dalia Grendaitė
 editor: source
 ---

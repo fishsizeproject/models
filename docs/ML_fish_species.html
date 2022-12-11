@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -27,7 +27,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <link href="./ML_fish_size.html" rel="next">
-<link href="./detecting_size.html" rel="prev">
+<link href="./growth_change.html" rel="prev">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -175,11 +175,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Detecting growth changes</a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./detecting_size.html" class="sidebar-item-text sidebar-link">9. Detecting size changes</a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -192,12 +187,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link active">10. ML for species identification</a>
+  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link active">9. ML for species identification</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">11. ML for fish size estimation</a>
+  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">10. ML for fish size estimation</a>
   </div>
 </li>
       </ul>
@@ -212,12 +207,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">12. Getting temperature data</a>
+  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">11. Getting temperature data</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">13. Getting chlA data</a>
+  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">12. Getting chlA data</a>
   </div>
 </li>
       </ul>
@@ -232,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">14. Curonian lagoon model</a>
+  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">13. Curonian lagoon model</a>
   </div>
 </li>
       </ul>
@@ -297,16 +292,16 @@ ul.task-list li input[type="checkbox"] {
 <p>To use our models it is very important that fish species (or ecotypes or any other classes you want your model to identify) in your dataset are identified correctly, otherwise your model will not be very useful (you might have heard the expression “garbage in - garbage out”). You can upload images (in JPEG or PNG format) to your Google drive by species (i.e.&nbsp;one species per folder - please make sure these are correctly identified), following this directory structure:</p>
 <pre><b>dataset</b>
 |__ <b>perch</b>
-    |______ 100080576_f52e8ee070_n.PNG
-    |______ 14167534527_781ceb1b7a_n.PNG
+    |______ perch_fig1.PNG
+    |______ another_photo.PNG
     |______ ...
 |__ <b>striped_bass</b>
-    |______ 10043234166_e6dd915111_n.PNG
-    |______ 1426682852_e62169221f_m.PNG
+    |______ photo_titles_do_not_matter.PNG
+    |______ another_striped_bass_photo.PNG
     |______ ...
 |__ <b>trout</b>
-    |______ 102501987_3cdb8e5394_n.PNG
-    |______ 14982802401_a3dfb22afb.PNG
+    |______ 1268952.PNG
+    |______ or_any_random_name.PNG
     |______ ...
 |__ ...
 </pre>
@@ -463,13 +458,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./detecting_size.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">9. Detecting size changes</span>
+      <a href="./growth_change.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">8. Detecting growth changes</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./ML_fish_size.html" class="pagination-link">
-        <span class="nav-page-text">11. ML for fish size estimation</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">10. ML for fish size estimation</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

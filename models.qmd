@@ -255,7 +255,7 @@ Remote sensing and satellite data is now being collected on high temporal and sp
 <!-- Satellite cholorphyll -->
 
 ::: {.g-col-4 style="justify-items: center;"}
-![](images/satelliteTemp.png)
+![](images/Chla_sateliteHlaf.jpg)
 :::
 
 
