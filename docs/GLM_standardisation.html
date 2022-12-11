@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -175,11 +175,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Detecting growth changes</a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./detecting_size.html" class="sidebar-item-text sidebar-link">9. Detecting size changes</a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -192,12 +187,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">10. ML for species identification</a>
+  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">9. ML for species identification</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">11. ML for fish size estimation</a>
+  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">10. ML for fish size estimation</a>
   </div>
 </li>
       </ul>
@@ -212,12 +207,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">12. Getting temperature data</a>
+  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">11. Getting temperature data</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">13. Getting chlA data</a>
+  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">12. Getting chlA data</a>
   </div>
 </li>
       </ul>
@@ -232,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">14. Curonian lagoon model</a>
+  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">13. Curonian lagoon model</a>
   </div>
 </li>
       </ul>
@@ -247,6 +242,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
   <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
   </ul>
 </nav>
@@ -284,13 +280,19 @@ ul.task-list li input[type="checkbox"] {
 <p>In this set of <a href="resources/CPUEstandartisation_GLM.pdf">slides</a> you will find main points about GLM based CPUE standardisation.</p>
 <p>For examples on how this method has been applied to other stocks, see references <a href="resources/Maunder2004.pdf">here</a> and <a href="resources/Forrestal_2018.pdf">here</a></p>
 </section>
-<p><img src="images/example_stand_cpue1.jpeg" class="img-fluid" style="width:50.0%" data-fig-align="center"> ::: {.content-visible when-profile=“english”}</p>
+<!-- next para ------------------------------------------------------------- -->
+<section id="model-code" class="level2">
+<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
+<p>We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use <a href="scripts/dataConversion.Rmd"><strong>this code</strong></a> to covert your data table into a suitable format.</p>
+<p>To apply our GLM based standardisation model you can use <a href="scripts/CPUEstand_example.zip">this code</a> where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below. To look at the model code and outputs without having to run the code, you can click <a href="resources/CPUEstand_example.html"><strong>here</strong></a>.</p>
+</section>
+<p><img src="images/example_stand_cpue1.jpeg" class="img-fluid" style="width:50.0%" data-fig-align="center"> <!-- next para ------------------------------------------------------------- --></p>
 <section id="application-of-the-model" class="level2">
 <h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
 <p>To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our <a href="https://www.mdpi.com/2410-3888/7/5/232">publication</a> in journal <em>Fishes</em>.</p>
 <p>You can also watch <a href="broken link"><strong>this conference talk</strong></a> to learn more about this analysis.</p>
 <p>Once you conduct your CPUE standardisation, you can use the standardised values in <a href="./jabba_models.html"><strong>surplus production models</strong></a>, as explained on this website.</p>
-<p>:::</p>
+</section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/cpue_glm1.jpg" class="img-fluid figure-img" style="width:60.0%"></p>
@@ -298,7 +300,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

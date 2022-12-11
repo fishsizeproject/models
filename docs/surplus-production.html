@@ -2,10 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Egle Jakubavičiūtė, Freddie Heather, Asta Audzijonyte">
 
 <title>Sustainable Inland Fisheries - Surplus production models</title>
 <style>
@@ -75,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -174,11 +175,6 @@ ul.task-list li input[type="checkbox"] {
   <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Detecting growth changes</a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./detecting_size.html" class="sidebar-item-text sidebar-link">9. Detecting size changes</a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -191,12 +187,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">10. ML for species identification</a>
+  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">9. ML for species identification</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">11. ML for fish size estimation</a>
+  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">10. ML for fish size estimation</a>
   </div>
 </li>
       </ul>
@@ -211,12 +207,12 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">12. Getting temperature data</a>
+  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">11. Getting temperature data</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">13. Getting chlA data</a>
+  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">12. Getting chlA data</a>
   </div>
 </li>
       </ul>
@@ -231,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">14. Curonian lagoon model</a>
+  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">13. Curonian lagoon model</a>
   </div>
 </li>
       </ul>
@@ -241,7 +237,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -255,6 +259,12 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Egle Jakubavičiūtė, Freddie Heather, Asta Audzijonyte </p>
+          </div>
+  </div>
     
   
     
@@ -263,9 +273,48 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div>
-<p>Blah spm info</p>
-<p><a href="https://fishsize.shinyapps.io/surplus-production/"><strong>Here</strong></a> is a link to the shiny app</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Surplus production models are widely used in assessments of data limited fisheries stocks. These models are based on the assumption that stock abundance is largely determined by fishing, population regeneration or growth rate (<strong><em>r</em></strong>) and population carrying capacity (<strong><em>K</em></strong>), which represents the unfished biomass level. If we knew the <strong><em>r</em></strong> and <strong><em>K</em></strong> exactly, and if we had good data on catches through time, we could estimate population abundance pretty well. However, since <strong><em>r</em></strong> and <strong><em>K</em></strong> are not known, we use time series of catches and population abundance index (e.g.&nbsp;standardised catch per unit effort data) to estimate most likely values of <strong><em>r</em></strong> and <strong><em>K</em></strong>, assess population status and make future projections. This means that in order to apply surplus production models to our stocks we need information about:</p>
+<ol type="1">
+<li>time series of catches,</li>
+<li>time series of standardised CPUE or other measure of population abundance index,</li>
+<li>some preliminary guesses about <strong><em>r</em></strong> and <strong><em>K</em></strong> and initial population depletion level, or how close to the carrying capacity our population was at the start of our time series.</li>
+</ol>
+<p>Also, because surplus production models estimate model parameters from available time series, they work best if the time series has sufficient contrast in catches and population abundance. If catches and CPUE remained relatively stable through time, then parameter and population status estimates will have large uncertainty ranges.</p>
+<p>The main parameter, determining population resilience to fishing is the population regeneration rate <strong><em>r</em></strong>. We usually do not <strong><em>r</em></strong> for our species and population, but we can look up estimates in the FishBase life-history tool section. Or we can use these <a href="https://studylib.net/doc/5888624/doc---fishbase">generic estimates</a> which suggest <strong><em>r</em></strong> of 0.6-1.5 for high resilience species (Von Bertalanffy growth rate K&gt;0.3, maturation age &lt; 1, high fecundity) and <strong><em>r</em></strong> of 0.2-1 for medium resilience species:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/PopGrowthRates.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+<p>To learn more about the principles of surplus production models, we recommend this excellent and freely available book by Malcolm Haddon “<a href="https://haddonm.github.io/URMQMF/surplus-production-models.html">Using R for Modelling and Quantitative Methods in Fisheries</a>”.</p>
+</section>
+<!-- next para ------------------------------------------------------------- -->
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<p>Before applying surplus production models to our stocks it is important to understand how they work and what assumptions they make. To help you explore these assumptions and outcomes, we have developed this user friendly tool which you can access <a href="https://fishsize.shinyapps.io/surplus-production/"><strong>here</strong></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/SPapp_screenshot.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
+</section>
+<!-- next para ------------------------------------------------------------- -->
+<section id="application-of-the-model" class="level2">
+<h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
+<p>Surplus production models have been applied to a wide range of populations and usually perform better than even simpler models that are based only on catch data. For a recent overview of surplus production model applications, please see <a href=""><strong>this publication</strong></a>. Also, when data is limited, simple surplus production models can perform better than more complex models with many parameters, which cannot be effectively estimated, see example publication <a href=""><strong>here</strong></a>.</p>
+<p>However, it is important to remember that simple models must make simplifying assumptions. The main assumptions to keep in mind are:</p>
+<ol type="1">
+<li><p>Population abundance is mostly controlled by fishing and not other environmental parameters or species interactions. If this is not the case we need other types of models - perhaps models relating stock abundance to prey biomass, temperature, currents or other factors.</p></li>
+<li><p>All spawning stock biomass is equal. We do not care about age or size structure and assume that 1kg of mature 5 year old fish contributes the same amount of production to the stock as 1kg of mature 10 year fish.</p></li>
+<li><p>Population parameters, such as growth, natural mortality, carrying capacity and regeneration rate are fixed through time and space. Although this is usually not the case, most datasets do not have enough information to estimate changes in these parameters through time anyway.</p></li>
+</ol>
+</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Thymallusthymallus_sm.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
 </div>
 
 
