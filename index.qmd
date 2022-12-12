@@ -44,20 +44,15 @@ Grįžti [**atgal**](https://sif.lt) į projekto tinklapį.
 
 <!-- Logos -->
 
+::: {.g-col-12 style="justify-items: center;"}
 ::: {.content-visible when-profile="english"}
-
-::: g-col-12
 ![](images/logos_english.png){fig-align="center" width="75%"}
-:::
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
 
-::: g-col-12
 ![](images/logos_lithuanian.png){fig-align="center" width="75%"}
-:::
 
 :::
-
-
+:::
 :::

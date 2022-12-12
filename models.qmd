@@ -173,7 +173,7 @@ LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depen
 ::: {.content-visible when-profile="lithuanian"}
 [8. Detecting growth changes](growth_change.qmd) <br> LITHUANIAN: Bayesian model to estimate changes in growth parameters from a time series of age-length data. The model is applied to fish growth data from a nuclear power plant heated lake in Lithuania.
 :::
-
+:::
 :::
 
 
