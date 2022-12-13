@@ -26,7 +26,9 @@ To learn more about the principles of surplus production models, we recommend th
 ::: {.content-visible when-profile="lithuanian"}
 ## Įvadas
 
-Čia bus vertimas
+Perteklinės produkcijos modeliai yra plačiai naudojami tiems žuvų ištekliams, apie kuriuos duomenys yra labai riboti. Šie modeliai pagrįsti prielaida, kad išteklių gausumą daugiausia lemia žvejyba, populiacijos atsinaujinimo ar augimo tempas (***r***) ir aplinkos talpa (***K***) - t.y., biomasės lygis, nesant žvejybos.
+
+Jei tiksliai žinotume ***r*** ir ***K*** ir turėtume patikimus duomenis apie laimikį laikui bėgant, galėtume gana gerai įvertinti populiacijos dydį. Tačiau kadangi ***r*** ir ***K*** nėra žinomi, mes naudojame sugavimų ir populiacijos gausos indekso laiko eilutes (pvz., standartizuotus duomenis apie žvejybos pastangos vienetą), kad įvertintume labiausiai tikėtinas *** vertes. r*** ir ***K***, įvertinti populiacijos būklę ir sudaryti ateities prognozes. Tai reiškia, kad norėdami pritaikyti perteklinės produkcijos modelius savo atsargoms, mums reikia informacijos apie:
 
 ![](images/PopGrowthRates.png){width="50%" fig-align="center"}
 :::
