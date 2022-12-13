@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sustainable Inland Fisheries - TO DO list</title>
+<title>Lydekai paliepus: tvari vidaus vandenų žvejyba - TO DO list</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,6 +49,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -64,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./images/sif_sm.png" alt="" class="navbar-logo">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Sustainable Inland Fisheries</span>
+    <span class="navbar-title">Lydekai paliepus: tvari vidaus vandenų žvejyba</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -73,11 +74,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -101,12 +102,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./models.html" class="sidebar-item-text sidebar-link">LITHUANIAN: Overview of models</a>
+  <a href="./models.html" class="sidebar-item-text sidebar-link">Modelių apžvalga</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">CPUE standardisation</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Sugavimų standartizacijos modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -114,24 +115,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./GLM_standardisation.html" class="sidebar-item-text sidebar-link">1. LITHUANIAN: GLM based standardisation</a>
+  <a href="./GLM_standardisation.html" class="sidebar-item-text sidebar-link">1. Linijiniais modeliais paremta sugavimų standartizacija</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Zero_inflated_model.html" class="sidebar-item-text sidebar-link">2. Zero inflated model for catch</a>
+  <a href="./Zero_inflated_model.html" class="sidebar-item-text sidebar-link">2. Sugavimų modeliai su daug nulinių stebėjimų</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Bayesian_inla.html" class="sidebar-item-text sidebar-link">3. Bayesian model</a>
+  <a href="./Bayesian_inla.html" class="sidebar-item-text sidebar-link">3. Bajeso metodu paremtas standartizacijos modelis</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Surplus production (SP) models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Pridėtinės produkcijos modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -139,19 +140,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./surplus-production.html" class="sidebar-item-text sidebar-link">4. Understand SP models</a>
+  <a href="./surplus-production.html" class="sidebar-item-text sidebar-link">4. Kaip veikia pridėtinės produkcijos modeliai</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./jabba_models.html" class="sidebar-item-text sidebar-link">5. SP models with JABBA</a>
+  <a href="./jabba_models.html" class="sidebar-item-text sidebar-link">5. Pridėtinės produkcijos modeliai su JABBA</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Fish growth models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Žuvų augimo modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -159,29 +160,24 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./von-bertalanffy.html" class="sidebar-item-text sidebar-link">6. Von-Bertallanfy growth</a>
+  <a href="./von-bertalanffy.html" class="sidebar-item-text sidebar-link">6. Von-Bertallanfy augimo modelis</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temperature_growth.html" class="sidebar-item-text sidebar-link">7. Temperature impacts on growth</a>
+  <a href="./temperature_growth.html" class="sidebar-item-text sidebar-link">7. Temperatūros įtaka žuvų augimui</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Detecting growth changes</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./detecting_size.html" class="sidebar-item-text sidebar-link">9. Detecting size changes</a>
+  <a href="./growth_change.html" class="sidebar-item-text sidebar-link">8. Modelis augimo greičio pakitimams įvertinti</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Machine learning (ML) models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Dirbtinio intelekto (DI) modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -189,19 +185,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">10. ML for species identification</a>
+  <a href="./ML_fish_species.html" class="sidebar-item-text sidebar-link">9. DI modelis žuvų rūšių nustatymui</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">11. ML for fish size estimation</a>
+  <a href="./ML_fish_size.html" class="sidebar-item-text sidebar-link">10. DI modelis žuvų dydžio nustatymui</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Satellite data analysis</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">Palydovinių duomenų analizė</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -209,19 +205,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">12. Getting temperature data</a>
+  <a href="./satelite_temp.html" class="sidebar-item-text sidebar-link">11. Palydoviniai temperatūros duomenys</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">13. Getting chlA data</a>
+  <a href="./satelite_chla.html" class="sidebar-item-text sidebar-link">12. Palydoviniai chlorofilo A duomenys</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Size based ecosystem models</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">Dydžiu paremti ekosistemų modeliai</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -229,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">14. Curonian lagoon model</a>
+  <a href="./curonian_mizer.html" class="sidebar-item-text sidebar-link">13. Kuršių marių ekosistemos modelis</a>
   </div>
 </li>
       </ul>
@@ -291,6 +287,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="section"></h2>
 <ol start="3" type="1">
 <li>Asta: get chlorophyl A image</li>
+</ol>
+<p>Under these simplest standard assumptions about density dependence, maximum sustainable yield (MSY) is obtained when the stock is at 50% of the unfished biomass level. MSY is approximately <span class="math inline">\(r/4 \cdot\)</span> unfished biomass and the fishing mortality which gives this MSY is <span class="math inline">\(r/2\)</span>. This fishing mortality is referred to as <span class="math inline">\(F_{MSY}\)</span>. This means that if for example <span class="math inline">\(r = 0.5\)</span> then the peak of the yield curve should be at about <span class="math inline">\(F_{MSY} = 0.25\)</span>. If unfished biomass is <span class="math inline">\(1000\)</span> tons, <span class="math inline">\(MSY\)</span> will be at <span class="math inline">\(125\)</span> tons.</p>
+<ol type="1">
+<li><p>Growth, natural mortality and recruitment parameters remain fixed through time and space. This is clearly incorrect and we do not always know how this assumption affects model outcomes. The reason we use this assumption is that assuming time variable parameters requires some information on HOW these parameters change through time and makes models more complex.</p></li>
+<li><p>In a surplus production model we assume that all spawning stock biomass is equal. This means that we don’t care about age or size structure, and we assume that 1kg of mature 5y old fish contributes the same amount of production to the stock (in terms of growth or recruitment) as 1kgof mature 10y fish.</p></li>
+<li><p>To use surplus production models the minimum data needed is at least one time-series of an index of relative abundance and an associated time-series of catch data. The catch data can cover more yearsthan the index data. The index of relative stock abundance used is often catch-per-unit-effort (cpue) or some fishery-independent abundance index (e.g., from trawl surveys, acoustic surveys). Both could also be used.</p></li>
+<li><p>An important assumption here is that the quality or effectiveness of effort remains the same through time. This is not always the case if new technological improvements are used to increase efficiency of catches per one unit of effort. As a result technological changes in fishing gear, changes in fishing behaviour or methods, or other changes in fishing efficiency is a problem for assessments that rely on cpue as an index of relative abundance. Statistical standardization of cpue can address some of these changes, but only if information and data about efficiency changes (e.g.&nbsp;which vessels started using different efficiency gear or GPS) is available.</p></li>
+<li><p>Although this is not an assumption of models, it must be emphasised that surplus production models aim to estimate how stock biomass changes in response to changes in fishing levels. This means that for them to provide reasonable estimates, the data available should have some contrasts of effort, catches and stock biomasses. If the time series consists of same catch and cpue levels, this means that fishing catch and effort information is only available for a limited range of stock abundance levels and limited fishing intensity levels. Therefore our ability to assess responses to different fishing intensity levels will also be limited. A lack of such contrast can also arise when the stock dynamics are driven more by environmental factors than by the catches so that the stock can appear to respond to the fishery in unexpected ways (e.g.&nbsp;large changes to the stock despite no changes in catch or effort). This is discussed in assumption 2.</p></li>
 </ol>
 
 
