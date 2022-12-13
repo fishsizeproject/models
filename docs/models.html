@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -74,11 +74,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -290,7 +290,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="g-col-8" style="justify-items: left;">
 <div>
-<p><a href="./Zero_inflated_model.html">2. Zero inflated models for CPUE standardisation</a> <br> If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.</p>
+<p><a href="./Zero_inflated_model.html">2. Zero inflated models for CPUE standardisation</a> <br> If catch data has a lot of zero values, they will violate standard statistical model assumptions. For such data we need models (GLMs) with adjustments for zero inflation.</p>
 </div>
 </div>
 <!-- BAYESIAN MODELS -->
@@ -299,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="g-col-8" style="justify-items: left;">
 <div>
-<p><a href="./Bayesian_inla.html">3. Bayesian model with INLA</a> <br> This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the <a href="https://www.r-inla.org/">INLA package</a>.</p>
+<p><a href="./Bayesian_inla.html">3. Bayesian model with INLA</a> <br> This is a Bayesian model that account for autocorrelation in catches across time and space. This model uses approximate Bayesian inference, implemented in the <a href="https://www.r-inla.org/">INLA package</a>.</p>
 </div>
 </div>
 </div>
@@ -327,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="g-col-8" style="justify-items: left;">
 <div>
-<p><a href="./jabba_models.html">5. Apply SP models with JABBA</a> <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.</p>
+<p><a href="./jabba_models.html">5. Apply SP models with JABBA</a> <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian freshwater fish species or apply the codes for your own fish data.</p>
 </div>
 </div>
 </div>
@@ -394,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="satellite-data-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="satellite-data-analysis">Satellite data analysis</h2>
-<p>Remote sensing and satellite data is now being collected on high temporal and spatial resolution. However, it is often challenging to access and process these data. We have developed some models and tools to aid with satellite based water surface temperature and chlorophyll A data acquisition and analysis.</p>
+<p>Remote sensing and satellite data is now being collected on high temporal and spatial resolution. However, it is often challenging to access and process these data. We have developed some models and tools to aid with satellite based water surface temperature and optical (chlorophyll A) data acquisition and analysis.</p>
 </section>
 <div class="grid">
 <!-- Satellite temperature -->
@@ -412,13 +412,14 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="g-col-8" style="justify-items: left;">
 <div>
-<p><a href="./satelite_chla.html">12. Satellite based chlorophyll A data</a> <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.</p>
+<p><a href="./satelite_chla.html">12. Satellite based optical (chlA) data</a> <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.</p>
 </div>
 </div>
 </div>
 <section id="size-based-ecosystem-models" class="level2">
 <h2 class="anchored" data-anchor-id="size-based-ecosystem-models">Size based ecosystem models</h2>
 <p>Size based community and ecosystem models represent a powerful tool to explore potential outcomes of different fisheries management strategies, species interactions, climate change and a lot more. In this project we are developing a size based model for the Curonian lagoon ecosystem.</p>
+</section>
 <div class="grid">
 <!-- MIZER -->
 <div class="g-col-4" style="justify-items: center;">
@@ -432,7 +433,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -81,21 +81,21 @@
     "href": "jabba_models.html",
     "title": "Surplus production models",
     "section": "",
-    "text": "LTLANG: JABBA is a Bayesian State-Space Surplus Production Model framework developed by Winker et al. 2018.\nIt uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series.\nYou can find all information in the developers’ [vignette]"
+    "text": "JABBA - tai Bajeso metodais paremta perteklinės produkcijos modelių sistema, išvystyta Winker et al. 2018, vis dažniau naudojama žuvų išteklių tyrimuose.\nJABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje. Jabba yra vienas sudėtingesnių pridėtinės produkcijos modelių, ir jis leidžia daryti skirtingas prielaidas apie duomenų ir modeliuojamų procesų patikimumą ir sklaidą.\nDaugiau informacijos apie modelį galite rasti modelio kūrėjų puslapyje"
   },
   {
-    "objectID": "jabba_models.html#lt-model-code",
-    "href": "jabba_models.html#lt-model-code",
+    "objectID": "jabba_models.html#modelių-kodas",
+    "href": "jabba_models.html#modelių-kodas",
     "title": "Surplus production models",
-    "section": "lt: Model code",
-    "text": "lt: Model code\nlt: Here is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania)."
+    "section": "Modelių kodas",
+    "text": "Modelių kodas\nLietuviškas vertimas"
   },
   {
-    "objectID": "jabba_models.html#ltapplication-of-the-model",
-    "href": "jabba_models.html#ltapplication-of-the-model",
+    "objectID": "jabba_models.html#modelių-pritaikymas",
+    "href": "jabba_models.html#modelių-pritaikymas",
     "title": "Surplus production models",
-    "section": "lt:Application of the model",
-    "text": "lt:Application of the model\nlt:To learn more about surplus production modeling to Curonian Lagoon and Kaunas Water Reservoir fish stocks and results that could be of interest to managers, you can read this and this summary or or watch this and this conference talks."
+    "section": "Modelių pritaikymas",
+    "text": "Modelių pritaikymas\nJeigu norite daugiau sužinoti apie perteklinės produkcijos modeliavimą Kuršių bei Kauno marių žuvų populiacijoms, bei susipažinti su rezultatais, kurie gali būti svarbūs priimant žuvų išteklių valdymo sprendimus, skaitykite čia ir čia arba žiūrėkite konferencijos pranešimus Kuršių marioms ir Kauno marioms.\nBe to šis modelis buvo pritaikytas Europos starkio būklės tyrime, kuriame dalyvavo institucijos iš šešių Europos šalių. Šio tyrimo rezultatus galite surasti šioje išankstinėje publikacijoje (mokslinė publikacija šiuo metu yra pateikta spaudai)."
   },
   {
     "objectID": "ML_fish_size.html",
@@ -144,42 +144,42 @@
     "href": "models.html",
     "title": "Overview of models",
     "section": "",
-    "text": "LT—- We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).\n\n\nLITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.\n::: grid"
+    "text": "Sukūrėme ir pritaikėme visą spektrą įvairių statistinių ir mechanistinių modelių, kuriuos naudojome savo tyrimuose ir dalijamės su mokslo visuomene. Tikimės, kad šie modeliai pasitarnaus žuvininkystės tyrimuose bei bus naudingi priimant žuvų išteklių valdymo sprendimus. Šiuos modelius galite nemokamai naudoti nekomerciniais tikslais, tačiau prašome nurodyti pirminį šaltinį (straipsnius arba šią svetainę).\n\n\nMokslinės stebėsenos, verslinės ar megėjiškos žvejybos sugavimų duomenys yra dažnai naudojami žuvų populiacijos būklei ir tendencijoms vertinti. Vis dėlto tokie duomenys paprastai yra gan sudėtingi ir įvairūs, ir juos reikia standartizuoti. Yra keletas metodų, kuriuos galima naudoti sugavimų vienai pastangai (CPUE) standartizavimui, ir mes pateikiame tris galimus modelius, didėjančio sudėtingumo tvarka."
   },
   {
-    "objectID": "models.html#ltsurplus-production-models-for-stock-assessments",
-    "href": "models.html#ltsurplus-production-models-for-stock-assessments",
+    "objectID": "models.html#perteklinės-produkcijos-modeliai-žuvų-išteklių-tyrimuose",
+    "href": "models.html#perteklinės-produkcijos-modeliai-žuvų-išteklių-tyrimuose",
     "title": "Overview of models",
-    "section": "LT–Surplus production models for stock assessments",
-    "text": "LT–Surplus production models for stock assessments\nLITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable."
+    "section": "Perteklinės produkcijos modeliai žuvų išteklių tyrimuose",
+    "text": "Perteklinės produkcijos modeliai žuvų išteklių tyrimuose\nPerteklinės produkcijos (PP) modeliai dažniausiai naudojami vertinant žuvų išteklius, kuriems trūksta detalizuotų amžiaus duomenų. Jie yra pagrįsti sugavimų (laimikių) ir populiacijos santykinio gausumo indekso (pvz., standartizuotos CPUE laiko eilutės iš auksčiau pateiktų modelių) kitimu laike. Šiuose modeliuose daroma prielaida, kad žuvų populiacijos gausa priklauso nuo jos atsinaujinimo greičio, aplinkos talpos ir sugavimų. PP modeliai buvo sėkmingai pritaikyti daugeliui žuvų išteklių visame pasaulyje ir, nepaisant prielaidų, dažnai veikia stebėtinai gerai, jeigu santykinio populiacijos gausumo ir sugavimų laiko eilutės yra patikimos."
   },
   {
-    "objectID": "models.html#lithuanian-fish-growth-models",
-    "href": "models.html#lithuanian-fish-growth-models",
+    "objectID": "models.html#žuvų-augimo-modeliai",
+    "href": "models.html#žuvų-augimo-modeliai",
     "title": "Overview of models",
-    "section": "LITHUANIAN Fish growth models",
-    "text": "LITHUANIAN Fish growth models\nLITHUANIAN Fish growth and therefore body sizes are highly variable, as it depends on temperature, food availability and many other processes. Understanding and modelling how and why growth can change is therefore an important part of fisheries research."
+    "section": "Žuvų augimo modeliai",
+    "text": "Žuvų augimo modeliai\nŽuvų dydis ir augimas labai varijuoja laike ir erdvėje, nes jis priklauso nuo temperatūros, maisto prieinamumo ir daugelio kitų procesų. Todėl modeliavimas, kaip ir kodėl augimas gali keistis, ir kaip tai įvertinti, yra svarbi žuvininkystės tyrimų dalis."
   },
   {
-    "objectID": "models.html#machine-learning-models-1",
-    "href": "models.html#machine-learning-models-1",
+    "objectID": "models.html#mašininio-mokymosi-modeliai",
+    "href": "models.html#mašininio-mokymosi-modeliai",
     "title": "Overview of models",
-    "section": "Machine learning models",
-    "text": "Machine learning models\nLITHUANIAN: Machine learning (ML) enables rapid analyses of large image and datasets and is an important step to facilitate citizen science driven data collection techniques. During our project we have developed two machine learning models for fish species and size identification."
+    "section": "Mašininio mokymosi modeliai",
+    "text": "Mašininio mokymosi modeliai\nMašininis mokymasis (MM) leidžia greitai analizuoti didelius vaizdų ir kitokių duomenų rinkinius ir yra svarbus žingsnis palengvinant piliečių mokslu grindžiamus duomenų rinkimą ir apdorijimą. Vykdydami projektą sukūrėme du mašininio mokymosi modelius žuvų rūšims ir dydžiui nustatyti."
   },
   {
-    "objectID": "models.html#satellite-data-analysis-1",
-    "href": "models.html#satellite-data-analysis-1",
+    "objectID": "models.html#palydovinių-duomenų-analizė",
+    "href": "models.html#palydovinių-duomenų-analizė",
     "title": "Overview of models",
-    "section": "Satellite data analysis",
-    "text": "Satellite data analysis\nRemote sensing and satellite data is now being collected on high temporal and spatial resolution. However, it is often challenging to access and process these data. We have developed some models and tools to aid with satellite based water surface temperature and chlorophyll A data acquisition and analysis."
+    "section": "Palydovinių duomenų analizė",
+    "text": "Palydovinių duomenų analizė\nŠiuo metu palydoviniai, nuotolinio stebėjimo duomenys gali būti renkami naudojant itin didelę laiko ir erdvinę skiriamąją gebą. Tačiau dažnai šiuos duomenis vis dar būna sunku pasiekti ir apdoroti. Mes sukūrėme keletą modelių ir įrankių, padedančių gauti ir analizuoti palydovinius vandens paviršiaus temperatūros ir optinės klasės (chlorofilo A) duomenis."
   },
   {
-    "objectID": "models.html#size-based-ecosystem-models",
-    "href": "models.html#size-based-ecosystem-models",
+    "objectID": "models.html#individų-dydžiais-pagrįsti-ekosistemų-modeliai",
+    "href": "models.html#individų-dydžiais-pagrįsti-ekosistemų-modeliai",
     "title": "Overview of models",
-    "section": "Size based ecosystem models",
-    "text": "Size based ecosystem models\nSize based community and ecosystem models represent a powerful tool to explore potential outcomes of different fisheries management strategies, species interactions, climate change and a lot more. In this project we are developing a size based model for the Curonian lagoon ecosystem.\n\n\n\n\n\n\n\n13. Sized based models for Curonian lagoon and Baltic Sea  Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package mizer."
+    "section": "Individų dydžiais pagrįsti ekosistemų modeliai",
+    "text": "Individų dydžiais pagrįsti ekosistemų modeliai\nIndividų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas įrankis, galintis numatyti įvairių žuvininkystės valdymo strategijų pasekmes, modeliuoti rūšių sąveiką, klimato kaitos poveikį ir kitus procesus. Šiame projekte kuriame individų dydžiu pagrįstą Kuršių marių ekosistemos modelį."
   },
   {
     "objectID": "satelite_chla.html",
@@ -193,7 +193,7 @@
     "href": "satelite_chla.html#modelis",
     "title": "Extracting and analysing optical water quality data from satellites",
     "section": "Modelis",
-    "text": "Modelis\nTam kad patogiai pasiekti ir apdoroti vandens klasių duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis Google Colaboratory aplinka. Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į nuorodą. Tuomet reikia užsiregistruoti Google Earth Engine. Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.\nPo registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą\n\n\n\n\n\nKai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite Failas ir tada Išsaugoti kopiją Diske). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal čia pateiktą pavyzdį. Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti čia (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip čia pateiktas pavyzdys. Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, ir arčiau nei 100 metrų vienas nuo kito (nes satelito raiška yra 100 metrų).\nKai jau turėsite dokumentą su palydoviniais duomenimis, naudokite šį R markdown kodą tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. Čia jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai."
+    "text": "Modelis\nTam kad patogiai pasiekti ir apdoroti vandens klasių duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis Google Colaboratory aplinka. Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į nuorodą. Tuomet reikia užsiregistruoti Google Earth Engine. Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.\nPo registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą\n\n\n\n\n\nPaspaudę matysite tokį dokumentą:\n\n\n\n\n\nKai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite Failas ir tada Išsaugoti kopiją Diske). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal čia pateiktą pavyzdį. Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti čia (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip čia pateiktas pavyzdys. Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, ir arčiau nei 100 metrų vienas nuo kito (nes satelito raiška yra 100 metrų).\nKai jau turėsite dokumentą su palydoviniais duomenimis, naudokite šį R markdown kodą tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. Čia jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai."
   },
   {
     "objectID": "satelite_chla.html#modelio-taikymas",
@@ -214,7 +214,7 @@
     "href": "satelite_temp.html#modelis",
     "title": "Extracting and analysing lake surface temperature data from satellites",
     "section": "Modelis",
-    "text": "Modelis\nTam kad lengvai pasiekti vandens paviršiaus temperatūros duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis Google Colaboratory aplinka. Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į nuorodą. Tuomet reikia užsiregistruoti Google Earth Engine. Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.\nPo registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą\n\n\n\n\n\nKai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite Failas ir tada Išsaugoti kopiją Diske). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal čia pateiktą pavyzdį. Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip čia pateiktas pavyzdys. Šiame pavyzdyje mes naudojame tik du taškus, bet jūs galite pridėti tiek taškų (eilučių) kiek jums reikia.\nKai jau turėsite dokumentą su palydoviniais duomenimis, naudokite šį R markdown kodą tam kad pašalinti duomenis iš debesuotų dienų, o taip pat duomenis iš galimai žemos kokybės Landsat 7 laiko eilutės (nuo 2018 iki 2022 metų). Šis kodas taip pat pateikia galimybes sukurti duomenų grafikus. Čia jūs galite pažiūrėti į šio duomenų filtravimo ir grafikų paruošimo rezultatus nenaudojant pateikto kodo."
+    "text": "Modelis\nTam kad lengvai pasiekti vandens paviršiaus temperatūros duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis Google Colaboratory aplinka. Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į nuorodą. Tuomet reikia užsiregistruoti Google Earth Engine. Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.\nPo registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą\n\n\n\n\n\nPaspaudę matysite tokį dokumentą:\n\n\n\n\n\nKai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite Failas ir tada Išsaugoti kopiją Diske). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal čia pateiktą pavyzdį. Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip čia pateiktas pavyzdys. Šiame pavyzdyje mes naudojame tik du taškus, bet jūs galite pridėti tiek taškų (eilučių) kiek jums reikia.\nKai jau turėsite dokumentą su palydoviniais duomenimis, naudokite šį R markdown kodą tam kad pašalinti duomenis iš debesuotų dienų, o taip pat duomenis iš galimai žemos kokybės Landsat 7 laiko eilutės (nuo 2018 iki 2022 metų). Šis kodas taip pat pateikia galimybes sukurti duomenų grafikus. Čia jūs galite pažiūrėti į šio duomenų filtravimo ir grafikų paruošimo rezultatus nenaudojant pateikto kodo."
   },
   {
     "objectID": "satelite_temp.html#modelio-taikymas",

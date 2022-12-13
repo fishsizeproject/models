@@ -240,9 +240,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#ltlang-introduction" id="toc-ltlang-introduction" class="nav-link active" data-scroll-target="#ltlang-introduction">LTLANG: Introduction</a></li>
-  <li><a href="#lt-model-code" id="toc-lt-model-code" class="nav-link" data-scroll-target="#lt-model-code">lt: Model code</a></li>
-  <li><a href="#ltapplication-of-the-model" id="toc-ltapplication-of-the-model" class="nav-link" data-scroll-target="#ltapplication-of-the-model">lt:Application of the model</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelių-kodas" id="toc-modelių-kodas" class="nav-link" data-scroll-target="#modelių-kodas">Modelių kodas</a></li>
+  <li><a href="#modelių-pritaikymas" id="toc-modelių-pritaikymas" class="nav-link" data-scroll-target="#modelių-pritaikymas">Modelių pritaikymas</a></li>
   </ul>
 </nav>
     </div>
@@ -267,16 +267,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!-- next para ------------------------------------------------------------- -->
-<section id="ltlang-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="ltlang-introduction">LTLANG: Introduction</h2>
-<p>LTLANG: JABBA is a Bayesian State-Space Surplus Production Model framework developed by <a href="resources/Winker2018.pdf">Winker et al.&nbsp;2018</a>.</p>
-<p>It uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series.</p>
-<p>You can find all information in the developers’ [<strong>vignette</strong>]</p>
+<section id="įvadas" class="level2">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>JABBA - tai Bajeso metodais paremta perteklinės produkcijos modelių sistema, išvystyta <a href="resources/Winker2018.pdf">Winker et al.&nbsp;2018</a>, vis dažniau naudojama žuvų išteklių tyrimuose.</p>
+<p>JABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje. Jabba yra vienas sudėtingesnių pridėtinės produkcijos modelių, ir jis leidžia daryti skirtingas prielaidas apie duomenų ir modeliuojamų procesų patikimumą ir sklaidą.</p>
+<p>Daugiau informacijos apie modelį galite rasti modelio kūrėjų <a href="https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md">puslapyje</a></p>
 </section>
 <p><img src="images/BBmsy_Roach.png" class="img-fluid" style="width:50.0%" data-fig-align="center"> <!-- next para ------------------------------------------------------------- --></p>
-<section id="lt-model-code" class="level2">
-<h2 class="anchored" data-anchor-id="lt-model-code">lt: Model code</h2>
-<p>lt: <a href="scripts/JabbaModel_example.Rmd">Here</a> is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania).</p>
+<section id="modelių-kodas" class="level2">
+<h2 class="anchored" data-anchor-id="modelių-kodas">Modelių kodas</h2>
+<p>Lietuviškas vertimas</p>
 </section>
 <div class="grid">
 <!-- GLM's -->
@@ -296,9 +296,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <!-- next para ------------------------------------------------------------- -->
-<section id="ltapplication-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="ltapplication-of-the-model">lt:Application of the model</h2>
-<p>lt:To learn more about surplus production modeling to Curonian Lagoon and Kaunas Water Reservoir fish stocks and results that could be of interest to managers, you can read <a href="resources/KM_jabba_rez.pdf">this</a> and <a href="resources/Kaunas_jabba_rez.pdf">this</a> summary or or watch <a href="https://www.youtube.com/watch?v=xpMZfxMDnYQ&amp;ab_channel=Lydekaipaliepus">this</a> and <a href="https://www.youtube.com/watch?v=UQkkBOtS09g&amp;ab_channel=Lydekaipaliepus">this</a> conference talks.</p>
+<section id="modelių-pritaikymas" class="level2">
+<h2 class="anchored" data-anchor-id="modelių-pritaikymas">Modelių pritaikymas</h2>
+<p>Jeigu norite daugiau sužinoti apie perteklinės produkcijos modeliavimą Kuršių bei Kauno marių žuvų populiacijoms, bei susipažinti su rezultatais, kurie gali būti svarbūs priimant žuvų išteklių valdymo sprendimus, skaitykite <a href="resources/KM_jabba_rez.pdf">čia</a> ir <a href="resources/Kaunas_jabba_rez.pdf">čia</a> arba žiūrėkite konferencijos pranešimus <a href="https://www.youtube.com/watch?v=xpMZfxMDnYQ&amp;ab_channel=Lydekaipaliepus">Kuršių marioms</a> ir <a href="https://www.youtube.com/watch?v=UQkkBOtS09g&amp;ab_channel=Lydekaipaliepus">Kauno marioms</a>.</p>
+<p>Be to šis modelis buvo pritaikytas Europos starkio būklės tyrime, kuriame dalyvavo institucijos iš šešių Europos šalių. Šio tyrimo rezultatus galite surasti šioje <a href="link_to_be_added_BioRxiv">išankstinėje publikacijoje</a> (mokslinė publikacija šiuo metu yra pateikta spaudai).</p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
