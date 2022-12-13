@@ -61,6 +61,20 @@ To use our models it is very important that fish species (or ecotypes or any oth
 |__ ...
 </pre>
 
+This model is developed in Python and is run on a free version of Google Colab.
+Scripts provided are adapted to be user friendly and do not require prior Python knowledge to run them (but some Python knowledge is required to modify these scripts further).
+
+Colab, or “Colaboratory”, is a free, cloud-based environment similar to Jupyter’s network environment that allows us to execute Python code (and Python libraries) in the browser without the need for installation and configuration. It also provides some free access to computing resources.
+
+To start using Google Colab, you will need a Google account.
+
+The link below will direct you to the Google Colab notebook. It will open the notebook which you can run and modify directly (i.e. without worrying about overwriting the source or original notebook). To save any changes you make to the notebook you will have to save a copy of the notebook in your own Google Drive. If you try to save the changes directly in the source notebook you will get the message "Cannot save changes" and you need to select "Save a copy in Drive".
+
+After modifying your notebook you can save changes by choosing File→Save a copy in Drive and follow the resulting prompts.
+
+Alternatively, you can start a new notebook by going to Google Colab’s home page [here](https://colab.research.google.com/) and clicking "new notebook" on the bottom right corner. If you like you can also click "cancel" and go to a short tutorial on how to get started with Google colab.
+
+Please also note that in this notebook we provide an example data set with three fish species, with photos contributed by [AnglerAtlas](https://www.anglersatlas.com/).
 
 To apply our model you can use this code:
 
@@ -100,6 +114,7 @@ To apply our model you can use this code:
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YgIrWWiaex8ObtAbAJOAXlRRGUbElkYj?usp=sharing)
 
+![](images/species_model_training.png){width="75%" fig-align="center"}
 
 <!-- start para ------------------------------------------------------------- -->
 
@@ -108,6 +123,11 @@ To apply our model you can use this code:
 ## Application of the model
 
 You can also watch [**this talk**](https://youtu.be/mHw8-tUgCkI?t=1886) for the "Online workshop: Machine learning, fishing and citizen science" and [**this talk**](https://youtu.be/iujl9R3lEaQ?t=5293) for the "Online seminar: Recreational angling effort and engagement in the digital age" to learn more about this model.
+
+In this [**publication**](https://www.mdpi.com/2071-1050/14/21/14324) we demonstrate the potential use of this approach for recreational fisheries research. In particular, we illustrate the scientific application, utility and potential for scalability for fish species or other object classification. The framework is flexible, and can be customised for a variety of image classification and research questions. We show that with a relatively small number of images per class (200–300), a model of reasonably high performance can be developed quickly and with minimal resources for a small number of classification classes (six in our case). 
+
+Contributions of the research community to fish species identification models would be especially powerful, as research groups around the world could engage local citizen scientists to assemble images and develop models relevant for local fisheries’ management and ecological questions. Such models could then enable faster processing of new local citizen science data, spearheading marine recreational fishing assessments into a new data-rich era.
+
 
 ::: 
 
@@ -118,5 +138,12 @@ You can also watch [**this talk**](https://youtu.be/mHw8-tUgCkI?t=1886) for the 
 Čia bus vertimas
 
 ::: 
+
+<!-- end para ------------------------------------------------------------- -->
+
+
+![](images/fish_detected.png){width="75%" fig-align="center"}
+
+<!-- start para ------------------------------------------------------------- -->
 
 <!-- end para ------------------------------------------------------------- -->

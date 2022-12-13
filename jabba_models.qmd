@@ -16,13 +16,13 @@ You can find all information in the developers' \[**vignette**\]
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LTLANG: Introduction
+## Įvadas
 
-LTLANG: JABBA is a Bayesian State-Space Surplus Production Model framework developed by [Winker et al. 2018](resources/Winker2018.pdf).
+JABBA - tai Bajeso metodais paremta perteklinės produkcijos modelių sistema, išvystyta [Winker et al. 2018](resources/Winker2018.pdf), vis dažniau naudojama žuvų išteklių tyrimuose.
 
-It uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series.
+JABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje.
 
-You can find all information in the developers' \[**vignette**\]
+Visą informaciją galite rasti kūrėjų puslapyje \[**vignette**\]
 :::
 
 ![](images/BBmsy_Roach.png){width="50%" fig-align="center"} <!-- next para ------------------------------------------------------------- -->
@@ -34,9 +34,9 @@ You can find all information in the developers' \[**vignette**\]
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## lt: Model code
+## Modelių kodas
 
-lt: [Here](scripts/JabbaModel_example.Rmd) is an example code of how we used JABBA for modeling five species in the Curonian Lagoon and Kaunas water reservoir (Lithuania).
+[Čia](scripts/JabbaModel_example.Rmd) galite rasti pavyzdį, kaip JABBA naudojama žuvų populiacijoms iš Kuršių marių modeliuoti.
 :::
 
 ::: grid
@@ -60,9 +60,9 @@ To learn more about surplus production modeling to Curonian Lagoon and Kaunas Wa
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## lt:Application of the model
+## Modelių pritaikymas
 
-lt:To learn more about surplus production modeling to Curonian Lagoon and Kaunas Water Reservoir fish stocks and results that could be of interest to managers, you can read [this](resources/KM_jabba_rez.pdf) and [this](resources/Kaunas_jabba_rez.pdf) summary or or watch [this](https://www.youtube.com/watch?v=xpMZfxMDnYQ&ab_channel=Lydekaipaliepus) and [this](https://www.youtube.com/watch?v=UQkkBOtS09g&ab_channel=Lydekaipaliepus) conference talks.
+Jeigu norite daugiau sužinoti apie perteklinės produkcijos modeliavimą Kuršių bei Kauno marių žuvų populiacijoms, bei susipažinti su rezultatais, kurie gali būti svarbūs priimant žuvų išteklių valdymo sprendimus, skaitykite [čia](resources/KM_jabba_rez.pdf) ir [čia](resources/Kaunas_jabba_rez.pdf) arba žiūrėkite konferencijos pranešimus [Kuršių marioms](https://www.youtube.com/watch?v=xpMZfxMDnYQ&ab_channel=Lydekaipaliepus) ir [Kauno marioms](https://www.youtube.com/watch?v=UQkkBOtS09g&ab_channel=Lydekaipaliepus).
 :::
 
 ![](images/Pikeperchprojection.png){width="75%" fig-align="center"}
