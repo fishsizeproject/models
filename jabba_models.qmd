@@ -10,9 +10,9 @@ editor: source
 
 JABBA is a Bayesian State-Space Surplus Production Model framework developed by [Winker et al. 2018](resources/Winker2018.pdf).
 
-It uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series. Jabba allows for one of more sophisticated surplus production model implementations, and has options to fix or estimate both process and observation variance. 
+It uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series. JABBA allows for one of more sophisticated surplus production model implementations, and has options to fix or estimate both process and observation variance.
 
-You can learn more about th modelling framework and its application from this developers [vignette](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md)
+You can learn more about this modelling framework and its application from the developers [vignette](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md)
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
@@ -20,7 +20,7 @@ You can learn more about th modelling framework and its application from this de
 
 JABBA - tai Bajeso metodais paremta perteklinės produkcijos modelių sistema, išvystyta [Winker et al. 2018](resources/Winker2018.pdf), vis dažniau naudojama žuvų išteklių tyrimuose.
 
-JABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje. Jabba yra vienas sudėtingesnių pridėtinės produkcijos modelių, ir jis leidžia daryti skirtingas prielaidas apie duomenų ir modeliuojamų procesų patikimumą ir sklaidą. 
+JABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė (apriorinė) informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje. JABBA yra vienas sudėtingesnių pridėtinės produkcijos modelių, ir jis leidžia daryti skirtingas prielaidas apie duomenų ir modeliuojamų procesų patikimumą ir sklaidą.
 
 Daugiau informacijos apie modelį galite rasti modelio kūrėjų [puslapyje](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md)
 :::
@@ -30,16 +30,17 @@ Daugiau informacijos apie modelį galite rasti modelio kūrėjų [puslapyje](htt
 ::: {.content-visible when-profile="english"}
 ## Model code
 
-The main model code is available in this [**R markdown script**](scripts/JabbaModel_example.zip) and is demonstrated using [**this dataset**](scripts/StockA1_catch_cpueSE.csv) from 30 years of a freshwater fish species catches, standardised CPUE (using our [GLM model](GLM_standardisation.qmd) and CPUE standard errors. You can download the model and modify the script according to your needs. Before you run the model you will need to install all Jabba, as is explained in the developers [vingette](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md).
+The main model code is available in this [**R markdown script**](scripts/JabbaModel_example.zip) and is demonstrated using [**this dataset**](scripts/StockA1_catch_cpueSE.csv) from 30 years of a freshwater fish species catches, standardised CPUE (using our [GLM model](GLM_standardisation.qmd) and CPUE standard errors. You can download the model and modify the script according to your needs. Before you run the model you will need to install JABBA, as is explained in the developers [vingette](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md).
 
-To look at the model code and outputs without having to run the code, you can click [**here**](resources/Jabba_knitted.html). After applying the model you will be able to produce biomass time series with uncertainty ranges (above), look at Kobe plots showing changes in biomass and fishing mortality through time (relative to values that would give maximum sustainble yields), as in the plot below, explore posterior values for population parameters (plot below) and make projections into the future (very last plot at the end of this page). 
+To look at the model code and outputs without having to run the code, you can click [**here**](resources/Jabba_knitted.html). After applying the model you will be able to produce biomass time series with uncertainty ranges (above), look at Kobe plots showing changes in biomass and fishing mortality through time (relative to values that would give maximum sustainable yields), as in the plot below, explore posterior values for population parameters (plot below) and make projections into the future (very last plot at the end of this page).
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelių kodas
 
-Lietuviškas vertimas
+Pagrindinis kodas yra šiame [**R markdown**](scripts/JabbaModel_example.zip), naudojami šie pavyzdiniai [**duomenys**](scripts/StockA1_catch_cpueSE.csv) -- 30 metų versliniai sugavimai (laimikiai), bei standartizuoti sugavimai pastangai (CPUE) su standartinėmis paklaidomis (standartizacija atlikta naudojant [GLM modelį](GLM_standardisation.qmd). Modelį ir kodą galite parsisiųsti ir modifikuoti savo reikmėms. Prieš paleidžiant kodą, reikia instaliuoti JABBA, kaip paaiškinta kūrėjų [puslapyje](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md).
 
+Norėdami pamatyti modelį ir rezultatus nepaleidžiant kodo, spauskite [**čia**](resources/Jabba_knitted.html). Pritaikę modelį ir paleidę kodą, galėsite sudaryti biomasės laiko eilutes su pasikliautiniais intervalais (žr. pavyzdį aukščiau), nagrinėti Kobe diagramas, rodančias biomasės ir žvejybinio mirtingumo pokyčius laikui bėgant (lyginant su vertėmis, kurios leistų gauti didžiausią tvarų laimikį, žr. žemiau esantį grafiką). Taip pat galite nubraižyti aposteriorines populiacinių parametrų vertes (žr. grafiką žemiau) bei sudaryti ateities prognozes (paskutinė diagrama šio puslapio pabaigoje).
 :::
 
 ::: grid
@@ -69,8 +70,7 @@ Also, the model has been applied in this collaborative project to assess nine Eu
 
 Jeigu norite daugiau sužinoti apie perteklinės produkcijos modeliavimą Kuršių bei Kauno marių žuvų populiacijoms, bei susipažinti su rezultatais, kurie gali būti svarbūs priimant žuvų išteklių valdymo sprendimus, skaitykite [čia](resources/KM_jabba_rez.pdf) ir [čia](resources/Kaunas_jabba_rez.pdf) arba žiūrėkite konferencijos pranešimus [Kuršių marioms](https://www.youtube.com/watch?v=xpMZfxMDnYQ&ab_channel=Lydekaipaliepus) ir [Kauno marioms](https://www.youtube.com/watch?v=UQkkBOtS09g&ab_channel=Lydekaipaliepus).
 
-Be to šis modelis buvo pritaikytas Europos starkio būklės tyrime, kuriame dalyvavo institucijos iš šešių Europos šalių. Šio tyrimo rezultatus galite surasti šioje [išankstinėje publikacijoje](link_to_be_added_BioRxiv) (mokslinė publikacija šiuo metu yra pateikta spaudai).
-
+Be to, šis modelis buvo pritaikytas Europos starkio būklės tyrime, kuriame dalyvavo institucijos iš šešių Europos šalių. Šio tyrimo rezultatus galite surasti šioje [išankstinėje publikacijoje](link_to_be_added_BioRxiv) (mokslinė publikacija šiuo metu yra pateikta spaudai).
 :::
 
 ![](images/Pikeperchprojection.png){width="75%" fig-align="center"}
