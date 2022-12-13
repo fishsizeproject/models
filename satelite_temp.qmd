@@ -29,7 +29,13 @@ Vandens paviršiaus temperatūrą (PT) galima gauti iš [**Landsat**](https://ww
 
 To help you extract and process temperature data we have two user friendly tools. The main code to access and download the data from GEE is written in Python and is available through [Google Colaboratory environment](https://colab.research.google.com/). Google Colaboratory is a free online resource which already has Python libraries installed, so you can run the scripts easily, even if you do not have programming skills. To access the satellite data collections through Google Earth Engine, you need to have a Google account(if you do not have Google account, you can sign up [here](https://support.google.com/accounts/answer/27441?hl=en). Then use your Google account to [register for the Google Earth Engine](https://signup.earthengine.google.com/), which will ask you to authorise your account.
 
-Next you can go to the model scripts on Google Colaboratory using the link below [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hMcqZKt3rVkldwek02mpFH0_n_71Bdtb?usp=sharing)
+Next you can go to the model scripts on Google Colaboratory using the link below
+
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hMcqZKt3rVkldwek02mpFH0_n_71Bdtb?usp=sharing)
+
+You will see a document that looks like this:
+
+![](images/TempGoogleColab_EN_snap.png){width="60%" fig-align="center"}
 
 When you open the Google Colab notebook, **make a copy** of it in your own Google Drive (Select **File** and then **Make a copy in Drive**). You can edit your copy of the notebook, if you need, but don't forget to save. Further instructions on how to use the notebook are found in the notebook itself. To extract surface temperature data you will need to create and upload a csv file with codes, names and coordinates of you sites, like in this [**example file**](resources/coord.csv). The dowloaded satellite data will look like this [**example file**](resources/lst_2sites.csv). In this example we only extract data for two lakes (two rows), but you can add as many lakes or sampling points in one lake (rows) as you need. However, remember not to select coordinates close to the shore (ideally more than 50 meters) and don't put points too close to each other, as the resolution of the data is 100 meters. 
 
@@ -44,6 +50,10 @@ Tam kad lengvai pasiekti vandens paviršiaus temperatūros duomenis, mes sukūr�
 Po registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qtX5A8fR-ScqvTjQgr6PkknwFlPMhbtM?usp=sharing)
+
+Paspaudę matysite tokį dokumentą:
+
+![](images/TempGoogleColab_LT_snap.png){width="60%" fig-align="center"}
 
 Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite **Failas** ir tada **Išsaugoti kopiją Diske**). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal [**čia pateiktą pavyzdį**](resources/coord.csv). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip [**čia pateiktas pavyzdys**](resources/lst_2sites.csv). Šiame pavyzdyje mes naudojame tik du taškus, bet jūs galite pridėti tiek taškų (eilučių) kiek jums reikia.
 

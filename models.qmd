@@ -12,11 +12,11 @@ Scientific monitoring and artisanal, commercial or recreational fish catch data 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-LT---- We have developed and applied a range of statistical and mechanistic models, which we used in our studies and are happy to share with others. We hope these models will be useful for fisheries research and management. The models are available for free non-commercial use, but please reference the original source (publications or this website).
+Sukūrėme ir pritaikėme visą spektrą įvairių statistinių ir mechanistinių modelių, kuriuos naudojome savo tyrimuose ir dalijamės su mokslo visuomene. Tikimės, kad šie modeliai pasitarnaus žuvininkystės tyrimuose bei bus naudingi priimant žuvų išteklių valdymo sprendimus. Šiuos modelius galite nemokamai naudoti nekomerciniais tikslais, tačiau prašome nurodyti pirminį šaltinį (straipsnius arba šią svetainę).
 
-## Models for catch per unit effort (CPUE) standardisation
+## Modeliai, skirti standartizuoti sugavimus vienai pastangai (CPUE)
 
-LITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish catch data is often used to assess population status and trends, but such data are usually complex and require careful standardisation. There are several approaches that can be used for CPUE standardisation and we present three potential models of increasing complexity.
+Mokslinės stebėsenos, verslinės ar megėjiškos žvejybos sugavimų duomenys yra dažnai naudojami žuvų populiacijos būklei ir tendencijoms vertinti. Vis dėlto tokie duomenys paprastai yra gan sudėtingi ir įvairūs, ir juos reikia standartizuoti. Yra keletas metodų, kuriuos galima naudoti sugavimų vienai pastangai (CPUE) standartizavimui, ir mes pateikiame tris galimus modelius, didėjančio sudėtingumo tvarka.
 :::
 
 ::: grid
@@ -26,13 +26,13 @@ LITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish
 ![](images/course_image.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
 [1. Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) <br> This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[1. Generalized linear model (GLM) based standardisation](GLM_standardisation.qmd) <br> LITHUANIAN: This model could be used for scientific monitoring or commercial catch data and applies GLM with Tweedie distribution to extract annual CPUE residuals. Here we apply the model for five common Lithuanian freshwater species.
+[1. Standartizacija, paremta apibendrintaisiais tiesiniais modeliais (GLM)](GLM_standardisation.qmd) <br> Šis modelis gali būti naudojamas mokslinės stebėsenos arba verslinės žvejybos sugavimų duomenims. Čia taikome GLM modelį su "tweedie" skirstiniu ir išskiriame metines CPUE liekanos. Modelis pritaikytas penkioms paplitusioms Lietuvos gėlavandenių žuvų rūšims.
 :::
 :::
 
@@ -42,12 +42,13 @@ LITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish
 ![](images/zero_inflated.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
-[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
+[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> If catch data has a lot of zero values, they will violate standard statistical model assumptions. For such data we need models (GLMs) with adjustments for zero inflation.
 :::
+
 ::: {.content-visible when-profile="lithuanian"}
-[2. Zero inflated models for CPUE standardisation](Zero_inflated_model.qmd) <br> LITHUANIAN: If catch data has a lot of zero values, one can also GLMs with adjustments for zero inflation.
+[2. Modeliai, pritaikyti duomenims su nulinių reikšmių perviršiu](Zero_inflated_model.qmd) <br> Jei sugavimo duomenys turi daug nulinių reikšmių, jie neatitiks tradicinių statistinių modelių prielaidų. Tokiems duomenims galima naudoti tiesinius modelius (GLM), kurie koreguojama nulių perviršį.
 :::
 :::
 
@@ -57,13 +58,13 @@ LITHUANIAN: Scientific monitoring and artisanal, commercial or recreational fish
 ![](images/cpue_inla.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
-[3. Bayesian model with INLA](Bayesian_inla.qmd) <br> This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
+[3. Bayesian model with INLA](Bayesian_inla.qmd) <br> This is a Bayesian model that account for autocorrelation in catches across time and space. This model uses approximate Bayesian inference, implemented in the [INLA package](https://www.r-inla.org/).
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[3. Bayesian model with INLA](Bayesian_inla.qmd) <br> LITHUANIAN: This is a Bayesian model that account for autocorrelation in catches across time and space. It uses approximate Bayesian inference implemented in the [INLA package](https://www.r-inla.org/).
+[3. Bajeso modelis su INLA](Bayesian_inla.qmd) <br> Čia pristatome Bajeso modelį, kuris atsižvelgia į sugavimų autokoreliaciją laike ir erdvėje. Modelis naudoja Bajeso aproksimaciją, naudojant programinę biblioteką [INLA](https://www.r-inla.org/).
 :::
 :::
 :::
@@ -75,9 +76,9 @@ Surplus production (SP) models are commonly used to assess data-poor fish stocks
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LT--Surplus production models for stock assessments
+## Perteklinės produkcijos modeliai žuvų išteklių tyrimuose
 
-LITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor fish stocks and are based on time series of catches and population abundance index (such as standardised CPUE time series, from the models above). These models assume that fish population abundance depends on its regeneration rate, carrying capacity and catches. SP models have been successfully applied to many stocks and, despite their simple assumptions, often perform surprisingly well, assuming the population abundance and catch time series are reliable.
+Perteklinės produkcijos (PP) modeliai dažniausiai naudojami vertinant žuvų išteklius, kuriems trūksta detalizuotų amžiaus duomenų. Jie yra pagrįsti sugavimų (laimikių) ir populiacijos santykinio gausumo indekso (pvz., standartizuotos CPUE laiko eilutės iš auksčiau pateiktų modelių) kitimu laike. Šiuose modeliuose daroma prielaida, kad žuvų populiacijos gausa priklauso nuo jos atsinaujinimo greičio, aplinkos talpos ir sugavimų. PP modeliai buvo sėkmingai pritaikyti daugeliui žuvų išteklių visame pasaulyje ir, nepaisant prielaidų, dažnai veikia stebėtinai gerai, jeigu santykinio populiacijos gausumo ir sugavimų laiko eilutės yra patikimos.
 :::
 
 ::: grid
@@ -87,15 +88,14 @@ LITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor
 ![](images/roach.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
-::: {.content-visible when-profile="english"} 
+::: {.g-col-8 style="justify-items: left;"}
+::: {.content-visible when-profile="english"}
 [4. Understand SP models](surplus-production.qmd) <br> This little model lets you explore key assumptions behind surplus production population models. See how sustainable yield will depend on population regeneration and fishing mortality rate. See how catching more fish sometimes can give you less long term yield.
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[4. Understand SP models](surplus-production.qmd) <br> LITHUANIAN: This little model lets you explore key assumptions behind surplus production population models. See how sustainable yield will depend on population regeneration and fishing mortality rate. See how catching more fish sometimes can give you less long term yield.
+[4. Suprask PP modelius](surplus-production.qmd) <br> LITHUANIAN: Šis paprastas modelis padės susipažinti su pagrindinėmis perteklinės produkcijos modelių prielaidomis. Naudodami šį modelį įvertinkite, kaip didžiausias tvarus laimikis priklauso nuo populiacijos atsikūrimo greičio bei žvejybinio mirtingumo. Atkreipkite dėmesį, kaip kartais didesnis žvejybinis mirtingumas nulemia mažesnius laimikius ilgalaikėje perspektyvoje.
 :::
-
 :::
 
 <!-- Zero-inflated models -------------------------------------------------- -->
@@ -104,15 +104,14 @@ LITHUANIAN: Surplus production (SP) models are commonly used to assess data-poor
 ![](images/pikeperch.png){fig-align="center" width="100%"}
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
-::: {.content-visible when-profile="english"} 
-[5. Apply SP models with JABBA](jabba_models.qmd) <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.
+::: {.g-col-8 style="justify-items: left;"}
+::: {.content-visible when-profile="english"}
+[5. Apply SP models with JABBA](jabba_models.qmd) <br> JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian freshwater fish species or apply the codes for your own fish data.
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[5. Apply SP models with JABBA](jabba_models.qmd) <br> LITHUANIAN: JABBA is an advanced and user friendly surplus production modelling framework. Here you can learn about its application and explore five models adapted for five Lithuanian fish species, from Curonian lagoon and Kaunas Water reservoir.
+[5. Pritaikyk SP modelius naudojant JABBA](jabba_models.qmd) <br> JABBA - tai sudėtingesnio tipo, Bajeso metodais paremta perteklinės produkcijos modelių sistema. Čia pateiktuose programiniuose koduose galite susipažinti su jos pritaikymu penkioms Lietuvos gėlavandenių žuvų rūšims iš Kuršių bei Kauno marių, arba naudoti kodus jūsų tiriamoms populiacijoms.
 :::
-
 :::
 :::
 
@@ -123,9 +122,9 @@ Fish growth and therefore body sizes are highly variable, as it depends on tempe
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LITHUANIAN Fish growth models
+## Žuvų augimo modeliai
 
-LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depends on temperature, food availability and many other processes. Understanding and modelling how and why growth can change is therefore an important part of fisheries research.
+Žuvų dydis ir augimas labai varijuoja laike ir erdvėje, nes jis priklauso nuo temperatūros, maisto prieinamumo ir daugelio kitų procesų. Todėl modeliavimas, kaip ir kodėl augimas gali keistis, ir kaip tai įvertinti, yra svarbi žuvininkystės tyrimų dalis.
 :::
 
 ::: grid
@@ -135,14 +134,14 @@ LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depen
 ![](images/perch.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
-::: {.content-visible when-profile="english"} 
+::: {.g-col-8 style="justify-items: left;"}
+::: {.content-visible when-profile="english"}
 [6. Von-Bertalanffy growth](von-bertalanffy.qmd) <br> With this model you can explore Von-Bertalanffy function parameters and asses how well it fits your data. You can also visualise how variation in growth will make size classes indistinguishable as fish get older.
 :::
-::: {.content-visible when-profile="lithuanian"}
-[6. Von-Bertalanffy growth](von-bertalanffy.qmd) <br> LITHUANIAN: With this model you can explore Von-Bertalanffy function parameters and asses how well it fits your data. You can also visualise how variation in growth will make size classes indistinguishable as fish get older.
-:::
 
+::: {.content-visible when-profile="lithuanian"}
+[6. Von-Bertalanffy augimo kreivė](von-bertalanffy.qmd) <br> Naudodami šį modelį galite tyrinėti Von-Bertalanffy funkcijos parametrus ir įvertinti, kaip ši augimo kreivė atitinka jūsų duomenis. Taip pat galite vizualizuoti, kada ir kaip dėl variacijos augime vyresnių žuvų amžiaus grupės tampa nebeatskiriamos pagal dydį.
+:::
 :::
 
 <!-- Temperature models -->
@@ -151,12 +150,13 @@ LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depen
 ![](images/temperatureModel.jpg)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
 [7. Temperature impacts on growth](temperature_growth.qmd) <br> Mechanistic life-history optimisation based model to assess how temperature driven changes in intake, metabolism and reproduction can affect growth. You can run this model in Excel or R.
 :::
+
 ::: {.content-visible when-profile="lithuanian"}
-[7. Temperature impacts on growth](temperature_growth.qmd) <br> LITHUANIAN: Mechanistic life-history optimisation based model to assess how temperature driven changes in intake, metabolism and reproduction can affect growth. You can run this model in Excel or R.
+[7. Temperatūros įtaka augimui](temperature_growth.qmd) <br> Mechanistinis žuvies gyvenimo ciklo optimizavimo modelis, skirtas įvertinti, kaip temperatūros sąlygoti maitinimosi, metabolizmo ir dauginimosi pokyčiai gali paveikti augimą. Šį modelį galite paleisti programoje Excel arba R.
 :::
 :::
 
@@ -166,16 +166,16 @@ LITHUANIAN Fish growth and therefore body sizes are highly variable, as it depen
 ![](images/detect_growth_S.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
-::: {.content-visible when-profile="english"} 
+::: {.g-col-8 style="justify-items: left;"}
+::: {.content-visible when-profile="english"}
 [8. Detecting growth changes](growth_change.qmd) <br> Bayesian model to estimate changes in growth parameters from a time series of age-length data. The model is applied to fish growth data from a nuclear power plant heated lake in Lithuania.
 :::
-::: {.content-visible when-profile="lithuanian"}
-[8. Detecting growth changes](growth_change.qmd) <br> LITHUANIAN: Bayesian model to estimate changes in growth parameters from a time series of age-length data. The model is applied to fish growth data from a nuclear power plant heated lake in Lithuania.
-:::
-:::
-:::
 
+::: {.content-visible when-profile="lithuanian"}
+[8. Augimo pokyčių nustatymas](growth_change.qmd) <br> Bajeso modelis, skirtas įvertinti augimo parametrų pokyčius pagal amžiaus ir ilgio duomenų laiko eilutes. Modelis taikomas žuvų augimo duomenims iš atominės elektrinės šildyto ežero Lietuvoje.
+:::
+:::
+:::
 
 ::: {.content-visible when-profile="english"}
 ## Machine learning models
@@ -184,9 +184,9 @@ Machine learning (ML) enables rapid analyses of large image and datasets and is 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## Machine learning models
+## Mašininio mokymosi modeliai
 
-LITHUANIAN: Machine learning (ML) enables rapid analyses of large image and datasets and is an important step to facilitate citizen science driven data collection techniques. During our project we have developed two machine learning models for fish species and size identification.
+Mašininis mokymasis (MM) leidžia greitai analizuoti didelius vaizdų ir kitokių duomenų rinkinius ir yra svarbus žingsnis palengvinant piliečių mokslu grindžiamus duomenų rinkimą ir apdorijimą. Vykdydami projektą sukūrėme du mašininio mokymosi modelius žuvų rūšims ir dydžiui nustatyti.
 :::
 
 ::: grid
@@ -196,12 +196,13 @@ LITHUANIAN: Machine learning (ML) enables rapid analyses of large image and data
 ![](images/fish_detected.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
 [9. ML for species identification](ML_fish_species.qmd) <br> Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
 :::
+
 ::: {.content-visible when-profile="lithuanian"}
-[9. ML for species identification](ML_fish_species.qmd) <br> LITHUANIAN: Here you can learn about our pipeline for machine learning based image classification tools. The pipeline has been applied to fish species identification, but could be used for any other images classes.
+[9. Mašininis mokymas žuvų rūšims atpažinti](ML_fish_species.qmd) <br> Čia galite sužinoti apie mūsų mašininiu mokymu pagrįstus vaizdų klasifikavimo įrankius. Algoritmai buvo pritaikyti žuvų rūšims nustatyti, bet gali būti naudojami bet kokioms kitoms vaizdų klasėms.
 :::
 :::
 
@@ -211,29 +212,28 @@ LITHUANIAN: Machine learning (ML) enables rapid analyses of large image and data
 ![](images/ml_size.png){fig-align="center" width="100%"}
 :::
 
-
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
 [10. ML for fish size estimation](ML_fish_size.qmd) <br> Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
 :::
-::: {.content-visible when-profile="lithuanian"}
-[10. ML for fish size estimation](ML_fish_size.qmd) <br> LITHUANIAN: Information on fish sizes is very important for population management, but many citizen science or social media platforms do not collect it. We are also developing a model to identify fish sizes based on photos of anglers holding fish.
-:::
-:::
-:::
 
+::: {.content-visible when-profile="lithuanian"}
+[10. Mašininis mokymas žuvų dydžiui nustatyti](ML_fish_size.qmd) <br> Informacija apie žuvų dydį yra itin reikalinga priimant populiacijos valdymuo sprendimus, tačiau daugelis piliečių mokslo ar socialinių tinklų platformų jos nerenka. Todėl sukūrėme ir toliau tobuliname modelį, skirtą žuvų dydžiams nustatyti pagal žvejų, laikančių žuvis, nuotraukas.
+:::
+:::
+:::
 
 ::: {.content-visible when-profile="english"}
 ## Satellite data analysis
 
-Remote sensing and satellite data is now being collected on high temporal and spatial resolution. However, it is often challenging to access and process these data. We have developed some models and tools to aid with satellite based water surface temperature and chlorophyll A data acquisition and analysis.
+Remote sensing and satellite data is now being collected on high temporal and spatial resolution. However, it is often challenging to access and process these data. We have developed some models and tools to aid with satellite based water surface temperature and optical (chlorophyll A) data acquisition and analysis.
 :::
+
 ::: {.content-visible when-profile="lithuanian"}
-## Satellite data analysis
+## Palydovinių duomenų analizė
 
-Remote sensing and satellite data is now being collected on high temporal and spatial resolution. However, it is often challenging to access and process these data. We have developed some models and tools to aid with satellite based water surface temperature and chlorophyll A data acquisition and analysis.
+Šiuo metu palydoviniai, nuotolinio stebėjimo duomenys gali būti renkami naudojant itin didelę laiko ir erdvinę skiriamąją gebą. Tačiau dažnai šiuos duomenis vis dar būna sunku pasiekti ir apdoroti. Mes sukūrėme keletą modelių ir įrankių, padedančių gauti ir analizuoti palydovinius vandens paviršiaus temperatūros ir optinės klasės (chlorofilo A) duomenis.
 :::
-
 
 ::: grid
 <!-- Satellite temperature -->
@@ -242,15 +242,15 @@ Remote sensing and satellite data is now being collected on high temporal and sp
 ![](images/satelliteTemp.png)
 :::
 
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
 [11. Satellite based temperature data](satelite_temp.qmd) <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.
 :::
-::: {.content-visible when-profile="lithuanian"}
-[11. Satellite based temperature data](satelite_temp.qmd) <br> This is a use friendly model and tool to extract and analyse satellite based water surface temperature observations from Google Earth engine. You will need a Google account and coordinates of your locations.
-:::
-:::
 
+::: {.content-visible when-profile="lithuanian"}
+[11. Palydoviniai temperatūros duomenys](satelite_temp.qmd) <br> Čia pateikiamas patogus naudoti modelis ir įrankis, skirtas išgauti ir analizuoti palydovinius vandens paviršiaus temperatūros stebėjimus iš „Google Earth Engine". Jums reikės „Google" paskyros ir jūsų tiriamų vietų koordinačių.
+:::
+:::
 
 <!-- Satellite cholorphyll -->
 
@@ -258,20 +258,28 @@ Remote sensing and satellite data is now being collected on high temporal and sp
 ![](images/Chla_sateliteHlaf.jpg)
 :::
 
-
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
-[12. Satellite based chlorophyll A data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
+[12. Satellite based optical (chlA) data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
 :::
+
 ::: {.content-visible when-profile="lithuanian"}
-[12. Satellite based chlorophyll A data](satelite_chla.qmd) <br> This tool will help you extract chlorophyll A data from satellite observations and apply a model to filter out unreliable data and estimate lake class.
+[12. Palydoviniai optiniai (chlorofilo A) duomenys](satelite_chla.qmd) <br> Šis įrankis padės išgauti vandens optinės klasės (chlorofilo A) duomenis iš palydovinių stebėjimų ir pritaikyti modelį, kad būtų galima išfiltruoti nepatikimus duomenis ir nustyti ežero klasę.
 :::
 :::
 :::
 
+::: {.content-visible when-profile="english"}
 ## Size based ecosystem models
 
 Size based community and ecosystem models represent a powerful tool to explore potential outcomes of different fisheries management strategies, species interactions, climate change and a lot more. In this project we are developing a size based model for the Curonian lagoon ecosystem.
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+## Individų dydžiais pagrįsti ekosistemų modeliai
+
+Individų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas įrankis, galintis numatyti įvairių žuvininkystės valdymo strategijų pasekmes, modeliuoti rūšių sąveiką, klimato kaitos poveikį ir kitus procesus. Šiame projekte kuriame individų dydžiu pagrįstą Kuršių marių ekosistemos modelį.
+:::
 
 ::: grid
 <!-- MIZER -->
@@ -280,13 +288,13 @@ Size based community and ecosystem models represent a powerful tool to explore p
 ![](images/mizer.png)
 :::
 
-
-::: {.g-col-8 style="justify-items: left;"} 
+::: {.g-col-8 style="justify-items: left;"}
 ::: {.content-visible when-profile="english"}
 [13. Sized based models for Curonian lagoon and Baltic Sea](curonian_mizer.qmd) <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package *mizer*.
 :::
+
 ::: {.content-visible when-profile="lithuanian"}
-[13. Sized based models for Curonian lagoon and Baltic Sea](curonian_mizer.qmd) <br> Learn about the potential climate change impacts in the Baltic Sea, explore a basic Curonian lagoon model and understand key principles of size based modelling, as implemented in a R package *mizer*.
+[13. Individų dydžiu pagrįsti Kuršių marių ir Baltijos jūros ekosisteminiai](curonian_mizer.qmd) <br> Sužinokite apie galimą klimato kaitos poveikį Baltijos jūrai, išnagrinėkite pirminį Kuršių marių modelį ir supraskite pagrindinius dydžiu pagrįsto modeliavimo principus, įgyvendintus R pakete *mizer*.
 :::
 :::
 :::

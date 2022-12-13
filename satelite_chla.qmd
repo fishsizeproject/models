@@ -57,7 +57,13 @@ Daugiau informacijos apie šį modelį rasite viešai prieinamoje [Grendaitės a
 
 To help you extract and process temperature data we have two user friendly tools. The main code to access and download the data from GEE is written in Python and is available through [Google Colaboratory environment](https://colab.research.google.com/). Google Colaboratory is a free online resource which already has Python libraries installed, so you can run the scripts easily, even if you do not have programming skills. To access the satellite data collections through Google Earth Engine, you need to have a Google account(if you do not have Google account, you can sign up [here](https://support.google.com/accounts/answer/27441?hl=en). Then use your Google account to [register for the Google Earth Engine](https://signup.earthengine.google.com/), which will ask you to authorise your account.
 
-Next you can go to the model scripts on Google Colaboratory using the link below [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1iCXX9KlqHICMwvAxmkce2FK9bS74OkbA?usp=sharing)
+Next you can go to the model scripts on Google Colaboratory using the link below
+
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1iCXX9KlqHICMwvAxmkce2FK9bS74OkbA?usp=sharing)
+
+You will see a document that looks like this: 
+
+![](images/ChlaGoogleColab_EN_snap.png){width="60%" fig-align="center"} 
 
 When you open the Google Colab notebook, **make a copy** of it in your own Google Drive (Select **File** and then **Make a copy in Drive**). You can edit your copy of the notebook, if you need, but don't forget to save. Further instructions on how to use the notebook are found in the notebook itself.
 
@@ -76,6 +82,10 @@ Tam kad patogiai pasiekti ir apdoroti vandens klasių duomenis, mes sukūrėme d
 Po registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą
 
 [![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YpZsc1duJiUiKqkd_5lO-hgcz36HRc3s?usp=sharing)
+
+Paspaudę matysite tokį dokumentą:
+
+![](images/ChlaGoogleColab_LT_snap.png){width="60%" fig-align="center"}
 
 Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite **Failas** ir tada **Išsaugoti kopiją Diske**). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal [**čia pateiktą pavyzdį**](resources/coord_2.csv). Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti [**čia**](resources/lake_class_models.zip) (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip [**čia pateiktas pavyzdys**](resources/Data_S2_class_coord_2.csv). Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, ir arčiau nei 100 metrų vienas nuo kito (nes satelito raiška yra 100 metrų).
 
