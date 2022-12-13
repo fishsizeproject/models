@@ -15,7 +15,7 @@ Surplus production models are widely used in assessments of data limited fisheri
 
 Also, because surplus production models estimate model parameters from available time series, they work best if the time series has sufficient contrast in catches and population abundance. If catches and CPUE remained relatively stable through time, then parameter and population status estimates will have large uncertainty ranges.
 
-The main parameter, determining population resilience to fishing is the population regeneration rate ***r***. We usually do not ***r*** for our species and population, but we can look up estimates in the FishBase life-history tool section. Or we can use these [generic estimates](https://studylib.net/doc/5888624/doc---fishbase) which suggest ***r*** of 0.6-1.5 for high resilience species (Von Bertalanffy growth rate K\>0.3, maturation age \< 1, high fecundity) and ***r*** of 0.2-1 for medium resilience species:
+The main parameter, determining population resilience to fishing is the population regeneration rate ***r***. We usually do not have ***r*** for our species and population, but we can look up estimates in the FishBase life-history tool section. Or we can use these [generic estimates](https://studylib.net/doc/5888624/doc---fishbase) which suggest ***r*** of 0.6-1.5 for high resilience species (Von Bertalanffy growth rate K\>0.3, maturation age \< 1, high fecundity) and ***r*** of 0.2-1 for medium resilience species.
 
 ![](images/PopGrowthRates.png){width="50%" fig-align="center"}
 
@@ -26,9 +26,21 @@ To learn more about the principles of surplus production models, we recommend th
 ::: {.content-visible when-profile="lithuanian"}
 ## Įvadas
 
-Perteklinės produkcijos modeliai yra plačiai naudojami tiems žuvų ištekliams, apie kuriuos duomenys yra labai riboti. Šie modeliai pagrįsti prielaida, kad išteklių gausumą daugiausia lemia žvejyba, populiacijos atsinaujinimo ar augimo tempas (***r***) ir aplinkos talpa (***K***) - t.y., biomasės lygis, nesant žvejybos.
+Perteklinės produkcijos modeliai yra plačiai naudojami tiems žuvų ištekliams, apie kuriuos duomenys yra riboti. Šie modeliai pagrįsti prielaida, kad išteklių gausumą daugiausia lemia žvejyba, populiacijos atsinaujinimo ar augimo tempas (***r***) ir aplinkos talpa (***K***) - t.y., biomasės lygis, nesant žvejybos.
 
-Jei tiksliai žinotume ***r*** ir ***K*** ir turėtume patikimus duomenis apie laimikį laikui bėgant, galėtume gana gerai įvertinti populiacijos dydį. Tačiau kadangi ***r*** ir ***K*** nėra žinomi, mes naudojame sugavimų ir populiacijos gausos indekso laiko eilutes (pvz., standartizuotus duomenis apie žvejybos pastangos vienetą), kad įvertintume labiausiai tikėtinas *** vertes. r*** ir ***K***, įvertinti populiacijos būklę ir sudaryti ateities prognozes. Tai reiškia, kad norėdami pritaikyti perteklinės produkcijos modelius savo atsargoms, mums reikia informacijos apie:
+Jei tiksliai žinotume ***r*** ir ***K*** ir turėtume patikimus duomenis apie sugavimus laikui bėgant, galėtume gana gerai įvertinti populiacijos dydį. Tačiau kadangi ***r*** ir ***K*** paprastai nėra žinomi, naudojamos sugavimų ir populiacijos gausumo indekso laiko eilutės (pvz., standartizuotus sugavimus pastangai, CPUE) labiausiai tikėtinoms ***r*** ir ***K*** reikšmėms nustatyti, populiacijos būklei įvertinti ir ateities prognozėms sudaryti. Taigi, norint pritaikyti perteklinės produkcijos modelius žuvų ištekliams, reikalingi šie duomenys:
+
+1)  sugavimų (laimikių) laiko eilutės,
+2)  standartizuotų sugavimų pastangai (CPUE) laiko eilutės arba kitas populiacijos santykinio gausumo indeksas,
+3)  preliminarūs spėjimai apie ***r*** ir ***K*** reikšmes ir santykinį populiacijos dydį laiko eilutės pradžioje (t.y., koks populiacijos dydis buvo lyginant su aplinkos talpa). 
+
+Perteklinės produkcijos modeliai geriausiai veikia, kai laiko eilutėje yra pakankamai kontrastingi sugavimai ir svyruojantis populiacijos gausumas. Jei laimikis ir CPUE laikui bėgant išliko gana stabilūs, parametrų ir populiacijos būklės įverčiai turės didelius neapibrėžtumo diapazonus.
+Pagrindinis parametras, lemiantis populiacijos atsparumą žvejybai, yra populiacijos atsinaujinimo greitis ***r***. Paprastai mes nežinome ***r*** savo rūšiai ar populiacijai, bet įverčių galime ieškoti FishBase life-history skyriuje. 
+
+Arba galime naudoti šiuos [bendruosius įvertinimus](https://studylib.net/doc/5888624/doc---fishbase), kurie rodo, kad ***r*** yra 0,6–1,5 didelio atsparumo rūšims (Von Bertalanffy augimo tempas. K\>0,3, brendimo amžius \< 1, didelis vaisingumas) ir ***r*** 0,2-1 vidutinio atsparumo rūšims.
+
+Norėdami daugiau sužinoti apie perteklinės produkcijos modelius, rekomenduojame šią puikią ir laisvai prieinamą Malcolmo Haddono knygą "[Using R for Modelling and Quantitative Methods in Fisheries](https://haddonm.github.io/URMQMF/surplus-production-models.html)".
+
 
 ![](images/PopGrowthRates.png){width="50%" fig-align="center"}
 :::
@@ -47,7 +59,7 @@ Before applying surplus production models to our stocks it is important to under
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelis 
 
-lietuviškas vertimas
+Prieš taikant perteklinės produkcijos modelius žuvų ištekliams, svarbu suprasti, kaip jie veikia ir kokias prielaidas daro. Kad būtų patogu tą padaryti, sukūrėme šį įrankį, kurį galite rasti
 [**čia**](https://fishsize.shinyapps.io/surplus-production/) 
 
 ![](images/SPapp_screenshot.png){width="50%" fig-align="center"} 
@@ -75,7 +87,13 @@ However, it is important to remember that simple models must make simplifying as
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio taikymas
 
-Čia bus vertimas 
+Perteklinės produkcijos modeliai yra taikomi įvairioms populiacijoms ir paprastai veikia geriau nei paprastesni modeliai, pagrįsti tik sugautų žuvų kiekio duomenimis. Naujausią perteklinės produkcijos modelių taikymo apžvalgą rasite [**šioje publikacijoje**](). Be to, kai duomenys yra riboti, paprasti perteklinės produkcijos modeliai veikia netgi geriau nei sudėtingesni modeliai su daugybe parametrų, kurių negalima veiksmingai įvertinti, žr. pavyzdį [**čia**](). 
+
+Tačiau svarbu atsiminti, kad paprasti modeliai daro supaprastinančias prielaidas. Pagrindinės prielaidos, kurias reikia turėti omenyje, yra šios:
+
+1. Populiacijos gausumą daugiausia kontroliuoja žvejyba, o ne kiti aplinkos veiksniai ar rūšių sąveika. Jei taip nėra, tuomet reikia kito tipų modelių – galbūt tokių, kurie susieja žuvų išteklius su temperatūra, kitų rūšių paplitimu, srovėmis ar kitais veiksniais.
+2. Neatsižvelgiama nei į amžiaus, nei žuvų dydžio struktūrą. Pvz., 1 kg 5 metų žuvies yra tolygu 1 kg 10 metų žuviai, ir jų indėlis į nerštą yra vienodas.   
+3. Populiacijos parametrai, tokie kaip augimas, natūralus mirtingumas, aplinkos talpa ir populiacijos atsinaujinimo greitis, yra nekintantys (fiksuoti tiek laike tiek erdvėje). Nors dažniausiai taip nėra, dauguma duomenų rinkinių neturi pakankamai informacijos, kad būtų galima įvertinti šių parametrų pokyčius laikui bėgant.
 
 :::
 
