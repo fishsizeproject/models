@@ -23,7 +23,17 @@ While the two parameter function is commonly used and might be easy to understan
 ::: {.content-visible when-profile="lithuanian"}
 ## Įvadas
 
-Čia bus vertimas
+Vienas iš labiausiai paplitusių būdų modeliuoti žuvų augimą yra naudoti [**von Bertalanffy augimo kreivę**](https://en.wikipedia.org/wiki/Von_Bertalanffy_function#:~:text=The%20von%20Bertalanffy%20growth%20function,length%20from%20age%20in%20animals.). Labiausiai paplitusi von Bertalanffy kreivės versija aprašo žuvies ilgį kaip trijų parametrų funkciją. Šie parametrai - tai asimptotinis ilgis $L_\infty$, von Bertalanffy augimo koeficientas $k$ ir teorinis žuvies amžius $t0$ kai žuvies dydis yra 0.
+
+$L_{(t)} = L_\infty (1-e^{-k(t-t0)})$
+
+$k$ parametras yra metinis augimo greitis, kuris parodo, kaip greitai individas pasieks asimptotinį ilgį. Daugeliu atvejų, $1/k$ apytiksliai nurodo subrendimo amžių, nors tai gali varijuoti.
+
+Kai kuriuose tyrimuose yra naudojama dviejų parametrų von Bertalanffy augimo kreivė (neįtraukiamas parametras $t0$):
+
+$L_{(t)} = L_\infty (1-e^{-kt})$
+
+Nors ši funkcija yra paprastesnė, ji kritikuojama, pvz., žr. [*čia*](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210x.12020)
 :::
 
 ![](images/TSR.png){width="50%" fig-align="center"}
@@ -43,9 +53,12 @@ To start using the model, go [**here**](https://fishsize.shinyapps.io/von-bertal
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelis
 
-Čia bus vertimas
+Sukūrėme R shiny aplikaciją, kuri generuoja ilgio augimo kreives priklausomai nuo von Bertalanffy parametrų verčių. Galite naudoti mūsų [**pavyzdinius amžiaus duomenis**](resources/Example_ageLength.csv), kad pamatytumėte, kaip kreivė atitinka realų duomenų rinkinį (jis jau įkeltas į R shiny programą). Galite įkelti ir savo amžiaus duomenis, tačiau įsitikinkite, kad naudojate tą patį formatą, kaip ir mūsų pavyzdyje.
 
-[**čia**](https://fishsize.shinyapps.io/von-bertalanffy/)
+Tap pat galite išnagrinėti ilgio histogramas pagal amžių, darant skirtingas prielaidas apie amžiaus ir ilgio variacijos koeficientus (CV). Pavyzdžiui, kai kurios populiacijos gali turėti nedidelę variaciją augime -  tai reiškia, kad CV yra mažas (CV = 0,1 arba mažesnis), o skirtingos amžiaus grupės aiškiai skiriasi savo ilgiu. Kitos populiacijos gali turėti didelį augimo kintamumą (CV = 0,3 arba didesnis), o tai reiškia, kad tarp amžiaus grupių bus daug persidengimo ir bus sunku atskirti amžiaus klases.
+
+
+Norėdami pradėti naudoti modelį, eikite [**čia**](https://fishsize.shinyapps.io/von-bertalanffy/)
 :::
 
 ![](images/VBapp_screenshot_main.png){width="50%" fig-align="center"} ![](images/VBapp_screenshot_histograms.png){width="50%" fig-align="center"}
@@ -63,7 +76,9 @@ The von Bertalanffy (VB) growth function is very widely used in fisheries and ec
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio taikymas
 
-Čia bus vertimas
+Von Bertalanffy (VB) augimo funkcija yra labai plačiai naudojama žuvininkystėje ir ekologijoje. VB augimo parametrų prireiks taikant daugumą žuvininkystės modelių, jie taip pat naudojami ir ekosistemų modeliuose, pvz., šiame [**dydžiu pagrįstame Kuršių marių ekosistemos modelyje**](curonian_mizer.qmd). Tačiau su šia funkcija reikia elgtis atsargiai. Norint gauti patikimus augimo funkcijos koeficientus, reikia pakankamai daug tiek jauniklių, tiek senų žuvų duomenų. Deja, dažnai abiem atvejais duomenys yra riboti. Pavyzdžiui, jei žuvų ištekliai yra intensyviai eksploatuojami, mes niekada nepamatysime didelių individų ir negalėsime įvertinti jų asimptotinio dydžio. Jei mūsų duomenys gaunami iš verslinės žvejybos, o ne iš nepriklausomų mokslinių tyrimų, galime niekada nematyti mažų individų. 
+
+[**FishBase**](https://www.fishbase.se/search.php) yra didžiausia ir svarbiausia žuvų duomenų bazė pasaulyje. Šioje duomenų bazėje galite ieškoti jus dominančios žuvų rūšies VB augimo parametrų, apskaičiuotų įvairių tyrimų metu (slinkite iki galo žemyn ir spustelėkite pasirinkimą *Growth*, kaip nurodyta [**šiame pavyzdyje**](https://www. .fishbase.se/popdyn/PopGrowthList.php?ID=258&GenusName=Esox&SpeciesName=lucius&fc=74) lydekoms). Galite pamatyti, kaip VB parametrai skiriasi priklausomai nuo populiacijos. Dalis šių skirtumų atsiranda dėl natūralių populiacijų augimo skirtumų, tačiau didelę dalį taip pat lemia ribotų duomenų naudojimas. Dėl šios priežasties sukūrėme toliau pateiktą programą, kad galėtumėte atidžiai įvertinti, kaip VB parametrai tinka jūsų duomenų rinkiniams.
 :::
 
 ![](images/Salmotrutta_sm.png){width="50%" fig-align="center"}
