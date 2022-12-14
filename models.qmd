@@ -32,7 +32,7 @@ Mokslinės stebėsenos, verslinės ar megėjiškos žvejybos sugavimų duomenys 
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-[1. Standartizacija, paremta apibendrintaisiais tiesiniais modeliais (GLM)](GLM_standardisation.qmd) <br> Šis modelis gali būti naudojamas mokslinės stebėsenos arba verslinės žvejybos sugavimų duomenims. Čia taikome GLM modelį su "tweedie" skirstiniu ir išskiriame metines CPUE liekanos. Modelis pritaikytas penkioms paplitusioms Lietuvos gėlavandenių žuvų rūšims.
+[1. Standartizacija, paremta apibendrintaisiais tiesiniais modeliais (GLM)](GLM_standardisation.qmd) <br> Šis modelis gali būti naudojamas mokslinės stebėsenos arba verslinės žvejybos sugavimų duomenims. Čia taikome GLM modelį su "tweedie" skirstiniu ir išskiriame metines CPUE liekanas. Modelis pritaikytas penkioms paplitusioms Lietuvos gėlavandenių žuvų rūšims.
 :::
 :::
 
