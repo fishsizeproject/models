@@ -22,15 +22,15 @@ The model is coded in [R](https://www.r-project.org/) language, so you will need
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## LTlang:Introduction
+## Įvadas
 
-LTlang:Fisheries catches through time are usually correlated. Catch in one year is not independent of the catch in the previous year. In CPUE standardisation models we should ideally account for this autocorrelation. The [GLM based models](GLM_standardisation.qmd) don't really do that, despite being a popular approach. Therefore here we will develop and apply a different model which accounts for spatial and temporal correlation in our catches. 
+Žvejybos sugavimai laike dažniausiai koreliuoja - t.y., sugautų žuvų kiekis priklauso nuo to, koks buvo laimikis prieš metus. Idealiu atveju į tai turėtų būti atsižvelgta, tačiau CPUE standartizacija, pagrįsta [GLM modeliais](GLM_standardisation.qmd) to nedaro, nepaisant to, kad tai yra populiarus ir dažnai naudojamas metodas. Todėl sukūrėme kitokį modelį, kuris atspindi sugavimų koreliaciją erdvėje ir laike. 
 
-In this model we will estimate model parameters using approximate Bayesian inference as implemented in the [INLA package](https://www.r-inla.org/). The approximate Bayesian inference runs much faster than full inference using MCMC approach and with INLA package it can be applied to a wide range of distributions. For a basic introduction into the Bayesian approach and why it is useful, check out [**these slides**](resources/BayesianModels.pdf). 
+Šiame modelyje parametrus įvertinsime naudodami aproksimuotą Bajeso išvadą, kaip įdiegta [INLA pakete](https://www.r-inla.org/). Bajeso metodas įvykdomas daug greičiau nei klasikinis MCMC, o naudojant INLA paketą Bajeso metodą galima taikyti įvairiems pasiskirstymams. Norėdami daugiau sužinoti apie Bajeso metodą ir kodėl jis naudingas, žr. [**čia**](resources/BayesianModels.pdf).
 
-The slides and the model, together with a detailed description of all the modelling steps have been presented in the last lecture of the [CPUE standardisation course](https://fishsizeproject.github.io/CPUEcourse/5-zander.html), so we recommend you watch the lecture before applying the model. Also, before proceeding with CPUE standardisation,  make sure you carefully *assess and explore your data*. We have prepared two courses and different scripts for data exploration, which you can find on our [CPUE standardisation course](https://fishsizeproject.github.io/CPUEcourse/) webpage.
+Skaidrės ir modelis, kartu su išsamiu visų modeliavimo žingsnių aprašymu buvo pateikti paskutinėje [CPUE standartizacijos kursų](https://fishsizeproject.github.io/CPUEcourse/5-zander.html) paskaitoje, todėl prieš taikant modelį rekomenduojame ją pažiūrėti. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai *įvertinote savo duomenis*. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų [svetainėje](https://fishsizeproject.github.io/CPUEcourse/). 
 
-The model is coded in [R](https://www.r-project.org/) language, so you will need R and [RStudio](https://www.rstudio.com/products/rstudio/) to run it. If you need a brief introduction into R, check [this introductory page](https://course.mizer.sizespectrum.org/prepare/install-tools.html) from an online course on size based modelling. 
+Modelis parašytas [R](https://www.r-project.org/) aplinkoje, todėl jums reikės instaliuoti R ir [RStudio](https://www.rstudio.com/products/rstudio/). Jei jums reikia trumpo įvado apie R, peržiūrėkite [šį įvadinį puslapį](https://course.mizer.sizespectrum.org/prepare/install-tools.html) iš mūsų kurso apie dydžiu pagrįstą modeliavimą. 
 
 :::
 
@@ -49,11 +49,12 @@ To look at the model code and outputs without having to run the code, you can cl
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## LTlang:Model code
+## Modelio kodas
 
-LTlang:The main model code is available in this [**R markdown script**](scripts/BayesianINLA.zip) and is demonstrated using [**this dataset**](scripts/pikeperch.csv) from 22 years of commercial pikeperch (*Sander lucioperca*) catches in the Baltic Sea. You can download the model and modify the script according to your needs. Before you run the model you will need to install all the R packages, as is explained in this [**R script**](scripts/model_packages.R).
+Pagrindinis modelio kodas pasiekiamas šiame [**R markdown**](scripts/BayesianINLA.zip); čia naudojamas [**duomenų rinkinys**](scripts/pikeperch.csv) su 22 metų versliniais starkių ( *Sander lucioperca*) sugavimais Baltijos jūroje. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Prieš paleisdami modelį turėsite įdiegti visus R paketus, kaip paaiškinta šiame [**R kode**](scripts/model_packages.R).
 
-To look at the model code and outputs without having to run the code, you can click [**here**](resources/BayesianINLA.html). After applying the model you should be able to plot predicted CPUE and its uncertainty through time, like in the plot below. 
+Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti [**čia**](resources/BayesianINLA.html). Pritaikę modelį turėtumėte nubraižyti CPUE ir jo neapibrėžtumą laikui bėgant, kaip parodyta paveiksle žemiau.
+
 
 :::
 
@@ -73,9 +74,9 @@ We are currently working on applying this model to CPUE standardisation of the [
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## LTlang: Application of the model 
+## Modelio taikymas 
 
-LTlang:We are currently working on applying this model to CPUE standardisation of the [long term data set](https://www.sciencedirect.com/science/article/pii/S2352340922002013) from the Curonian Lagoon and Kaunas Water Reservoir in Lithuania. Stay tuned for more outputs. If you are interested to learn more, please contact us as *lydekaipaliepus@gamtc.lt*
+Šiuo metu dirbame su šio modelio pritaikymu [ilgalaikės stebėsenos duomenims](https://www.sciencedirect.com/science/article/pii/S2352340922002013) iš Kuršių ir Kauno marių. Jei norite daugiau sužinoti, sekite naujienas ar susisiekite su mumis *lydekaipaliepus@gamtc.lt*
 
 :::
 
