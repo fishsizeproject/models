@@ -241,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
+  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
   <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
   </ul>
 </nav>
@@ -270,14 +270,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>JABBA is a Bayesian State-Space Surplus Production Model framework developed by <a href="resources/Winker2018.pdf">Winker et al.&nbsp;2018</a>.</p>
-<p>It uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series. Jabba allows for one of more sophisticated surplus production model implementations, and has options to fix or estimate both process and observation variance.</p>
-<p>You can learn more about th modelling framework and its application from this developers <a href="https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md">vignette</a></p>
+<p>It uses catch and relative abundance time series and requires prior information on a) the resilience parameter r (intrinsic rate of population increase), b) carrying capacity K and c) the relative initial biomass at the beginning of the time series. JABBA allows for one of more sophisticated surplus production model implementations, and has options to fix or estimate both process and observation variance.</p>
+<p>You can learn more about this modelling framework and its application from the developers <a href="https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md">vignette</a></p>
 </section>
 <p><img src="images/BBmsy_Roach.png" class="img-fluid" style="width:50.0%" data-fig-align="center"> <!-- next para ------------------------------------------------------------- --></p>
-<section id="model-code" class="level2">
-<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
-<p>The main model code is available in this <a href="scripts/JabbaModel_example.zip"><strong>R markdown script</strong></a> and is demonstrated using <a href="scripts/StockA1_catch_cpueSE.csv"><strong>this dataset</strong></a> from 30 years of a freshwater fish species catches, standardised CPUE (using our <a href="./GLM_standardisation.html">GLM model</a> and CPUE standard errors. You can download the model and modify the script according to your needs. Before you run the model you will need to install all Jabba, as is explained in the developers <a href="https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md">vingette</a>.</p>
-<p>To look at the model code and outputs without having to run the code, you can click <a href="resources/Jabba_knitted.html"><strong>here</strong></a>. After applying the model you will be able to produce biomass time series with uncertainty ranges (above), look at Kobe plots showing changes in biomass and fishing mortality through time (relative to values that would give maximum sustainble yields), as in the plot below, explore posterior values for population parameters (plot below) and make projections into the future (very last plot at the end of this page).</p>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Model</h2>
+<p>The main model code is available in this <a href="scripts/JabbaModel_example.zip"><strong>R markdown script</strong></a> and is demonstrated using <a href="scripts/StockA1_catch_cpueSE.csv"><strong>this dataset</strong></a> from 30 years of a freshwater fish species catches, standardised CPUE (using our <a href="./GLM_standardisation.html">GLM model</a> and CPUE standard errors. You can download the model and modify the script according to your needs. Before you run the model you will need to install JABBA, as is explained in the developers <a href="https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md">vingette</a>.</p>
+<p>To look at the model code and outputs without having to run the code, you can click <a href="resources/Jabba_knitted.html"><strong>here</strong></a>. After applying the model you will be able to produce biomass time series with uncertainty ranges (above), look at Kobe plots showing changes in biomass and fishing mortality through time (relative to values that would give maximum sustainable yields), as in the plot below, explore posterior values for population parameters (plot below) and make projections into the future (very last plot at the end of this page).</p>
 </section>
 <div class="grid">
 <!-- GLM's -->

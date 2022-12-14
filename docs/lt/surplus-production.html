@@ -275,7 +275,16 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="įvadas" class="level2">
 <h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
-<p>Čia bus vertimas</p>
+<p>Perteklinės produkcijos modeliai yra plačiai naudojami tiems žuvų ištekliams, apie kuriuos duomenys yra riboti. Šie modeliai pagrįsti prielaida, kad išteklių gausumą daugiausia lemia žvejyba, populiacijos atsinaujinimo ar augimo tempas (<strong><em>r</em></strong>) ir aplinkos talpa (<strong><em>K</em></strong>) - t.y., biomasės lygis, nesant žvejybos.</p>
+<p>Jei tiksliai žinotume <strong><em>r</em></strong> ir <strong><em>K</em></strong> ir turėtume patikimus duomenis apie sugavimus laikui bėgant, galėtume gana gerai įvertinti populiacijos dydį. Tačiau kadangi <strong><em>r</em></strong> ir <strong><em>K</em></strong> paprastai nėra žinomi, naudojamos sugavimų ir populiacijos gausumo indekso laiko eilutės (pvz., standartizuotus sugavimus pastangai, CPUE) labiausiai tikėtinoms <strong><em>r</em></strong> ir <strong><em>K</em></strong> reikšmėms nustatyti, populiacijos būklei įvertinti ir ateities prognozėms sudaryti. Taigi, norint pritaikyti perteklinės produkcijos modelius žuvų ištekliams, reikalingi šie duomenys:</p>
+<ol type="1">
+<li>sugavimų (laimikių) laiko eilutės,</li>
+<li>standartizuotų sugavimų pastangai (CPUE) laiko eilutės arba kitas populiacijos santykinio gausumo indeksas,</li>
+<li>preliminarūs spėjimai apie <strong><em>r</em></strong> ir <strong><em>K</em></strong> reikšmes ir santykinį populiacijos dydį laiko eilutės pradžioje (t.y., koks populiacijos dydis buvo lyginant su aplinkos talpa).</li>
+</ol>
+<p>Perteklinės produkcijos modeliai geriausiai veikia, kai laiko eilutėje yra pakankamai kontrastingi sugavimai ir svyruojantis populiacijos gausumas. Jei laimikis ir CPUE laikui bėgant išliko gana stabilūs, parametrų ir populiacijos būklės įverčiai turės didelius neapibrėžtumo diapazonus. Pagrindinis parametras, lemiantis populiacijos atsparumą žvejybai, yra populiacijos atsinaujinimo greitis <strong><em>r</em></strong>. Paprastai mes nežinome <strong><em>r</em></strong> savo rūšiai ar populiacijai, bet įverčių galime ieškoti FishBase life-history skyriuje.</p>
+<p>Arba galime naudoti šiuos <a href="https://studylib.net/doc/5888624/doc---fishbase">bendruosius įvertinimus</a>, kurie rodo, kad <strong><em>r</em></strong> yra 0,6–1,5 didelio atsparumo rūšims (Von Bertalanffy augimo tempas. K&gt;0,3, brendimo amžius &lt; 1, didelis vaisingumas) ir <strong><em>r</em></strong> 0,2-1 vidutinio atsparumo rūšims.</p>
+<p>Norėdami daugiau sužinoti apie perteklinės produkcijos modelius, rekomenduojame šią puikią ir laisvai prieinamą Malcolmo Haddono knygą “<a href="https://haddonm.github.io/URMQMF/surplus-production-models.html">Using R for Modelling and Quantitative Methods in Fisheries</a>”.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PopGrowthRates.png" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -285,17 +294,24 @@ ul.task-list li input[type="checkbox"] {
 <!-- next para ------------------------------------------------------------- -->
 <section id="modelis" class="level2">
 <h2 class="anchored" data-anchor-id="modelis">Modelis</h2>
-<p>lietuviškas vertimas <a href="https://fishsize.shinyapps.io/surplus-production/"><strong>čia</strong></a></p>
+<p>Prieš taikant perteklinės produkcijos modelius žuvų ištekliams, svarbu suprasti, kaip jie veikia ir kokias prielaidas daro. Kad būtų patogu tą padaryti, sukūrėme šį įrankį, kurį galite rasti <a href="https://fishsize.shinyapps.io/surplus-production/"><strong>čia</strong></a></p>
+</section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/SPapp_screenshot.png" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-</section>
 <!-- next para ------------------------------------------------------------- -->
 <section id="modelio-taikymas" class="level2">
 <h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>
-<p>Čia bus vertimas</p>
+<p>Perteklinės produkcijos modeliai yra taikomi įvairioms populiacijoms ir paprastai veikia geriau nei paprastesni modeliai, pagrįsti tik sugautų žuvų kiekio duomenimis. Naujausią perteklinės produkcijos modelių taikymo apžvalgą rasite <a href="https://link.springer.com/article/10.1007/s11160-022-09731-w"><strong>šioje publikacijoje</strong></a>. Be to, kai duomenys yra riboti, paprasti perteklinės produkcijos modeliai veikia netgi geriau nei sudėtingesni modeliai su daugybe parametrų, kurių negalima veiksmingai įvertinti, žr. pavyzdį <a href=""><strong>čia</strong></a>.</p>
+<p>Tačiau svarbu atsiminti, kad paprasti modeliai daro supaprastinančias prielaidas. Pagrindinės prielaidos, kurias reikia turėti omenyje, yra šios:</p>
+<ol type="1">
+<li>Populiacijos gausumą daugiausia kontroliuoja žvejyba, o ne kiti aplinkos veiksniai ar rūšių sąveika. Jei taip nėra, tuomet reikia kito tipų modelių – galbūt tokių, kurie susieja žuvų išteklius su temperatūra, kitų rūšių paplitimu, srovėmis ar kitais veiksniais.</li>
+<li>Neatsižvelgiama nei į amžiaus, nei žuvų dydžio struktūrą. Pvz., 1 kg 5 metų žuvies yra tolygu 1 kg 10 metų žuviai, ir jų indėlis į nerštą yra vienodas.<br>
+</li>
+<li>Populiacijos parametrai, tokie kaip augimas, natūralus mirtingumas, aplinkos talpa ir populiacijos atsinaujinimo greitis, yra nekintantys (fiksuoti tiek laike tiek erdvėje). Nors dažniausiai taip nėra, dauguma duomenų rinkinių neturi pakankamai informacijos, kad būtų galima įvertinti šių parametrų pokyčius laikui bėgant.</li>
+</ol>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

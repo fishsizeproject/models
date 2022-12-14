@@ -241,9 +241,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#lt-introduction" id="toc-lt-introduction" class="nav-link active" data-scroll-target="#lt-introduction">lt: Introduction</a></li>
-  <li><a href="#lt-model-code" id="toc-lt-model-code" class="nav-link" data-scroll-target="#lt-model-code">lt: Model code</a></li>
-  <li><a href="#ltapplication-of-the-model" id="toc-ltapplication-of-the-model" class="nav-link" data-scroll-target="#ltapplication-of-the-model">lt:Application of the model</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelis" id="toc-modelis" class="nav-link" data-scroll-target="#modelis">Modelis</a></li>
+  <li><a href="#modelio-pritaikymas" id="toc-modelio-pritaikymas" class="nav-link" data-scroll-target="#modelio-pritaikymas">Modelio pritaikymas</a></li>
   </ul>
 </nav>
     </div>
@@ -274,27 +274,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!-- next para ------------------------------------------------------------- -->
-<section id="lt-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="lt-introduction">lt: Introduction</h2>
-<p>lt: Fish growth is strongly dependent on temperature. In warmer conditions fish often growth faster as juveniles, mature at smaller sizes and are smaller as adults. This is known as the <a href="https://pascal-francis.inist.fr/vibad/index.php?action=getRecordDetail&amp;idt=4124219#"><em>temperature size rule</em></a>, as defined by David Atkinson in 1994.</p>
+<section id="įvadas" class="level2">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>Žuvų augimas labai priklauso nuo temperatūros. Esant aukštesnei temperatūrai, žuvys dažnai auga greičiau, subręsta būdamos mažesnio dydžio, it taip pat pasiekia mažesnį maksimalų dydį. Tai žinoma kaip <a href="https://pascal-francis.inist.fr/vibad/index.php?action=getRecordDetail&amp;idt=4124219#"><em>temperatūros – dydžio taisyklė</em></a>, pibrėžta David Atkinson dar 1994 m.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/TSR_zebra.png" class="img-fluid figure-img" style="width:60.0%"></p>
 </figure>
 </div>
-<p>However, the mechanisms behind this growth remain unclear. In this model we propose that temperature size rule (TSR) emerges in response to both physiological changes (faster metabolism and intake) and growth and reproduction optimisation to changes in mortality. We develop a physiologically structured life history optimisation model and explore a range of parameters and scenarios under which TSR is likely to emerge. For a brief introduction into the model you can watch these <a href="resources/Audzijonyte_TempGrowthModel.pdf"><strong>slides</strong></a> or watch this <a href="https://youtu.be/Xt_7yO8vyb4"><strong>conference talk</strong></a>.</p>
+<p>Vis dėlto tokio augimo mechanizmai lieka neaiškūs. Šiuo modeliu parodome, kaip temperatūros-dydžio taisyklė gali atsirasti reaguojant į fiziologinius pokyčius (greitesnį metabolizmą ir suvartojimą), ir optimizuojant augimą ir dauginimąsi, priklausomai nuo mirtingumo.</p>
+<p>Mes sukūrėme fiziologiškai struktūrizuotą gyvenimo ciklo optimizavimo modelį, kuriuo galime tirti, kokioms sąlygoms esant (įvairiems biologinių parametrų scenarijams) atsiranda temperatūros-dydžio taisyklė. Norėdami trumpai susipažinti su modeliu, galite paskaityti <a href="resources/Audzijonyte_TempGrowthModel.pdf"><strong>čia</strong></a> ar pažiūrėti šį <a href="https://youtu.be/Xt_7yO8vyb4"><strong>konferencijos pranešimą</strong></a>.</p>
 </section>
 <!-- next para ------------------------------------------------------------- -->
-<section id="lt-model-code" class="level2">
-<h2 class="anchored" data-anchor-id="lt-model-code">lt: Model code</h2>
-<p>lt:The model is written in Microsoft Excel and <a href="https://www.r-project.org/">R</a> environment. All model code and details are available on this <a href="https://github.com/astaaudzi/TSRmodel"><strong>GitHub repository</strong></a>. The main model Excel file can also be downloaded <a href="resources/EmergentTSRgrowth_Optimisation.xlsx"><strong>here</strong></a>. In this Excel file you can modify temperature response parameters and their size dependency, optimise the model using Solver option built in Excel and see the resulting growth and reproduction curves, as shown in the figure below.</p>
+<section id="modelis" class="level2">
+<h2 class="anchored" data-anchor-id="modelis">Modelis</h2>
+<p>Modelis parašytas Microsoft Excel ir <a href="https://www.r-project.org/">R</a>. Visą modelio kodą ir išsamią informaciją rasite šioje <a href="https://github.com/astaaudzi/TSRmodel"><strong>GitHub saugykloje</strong></a>. Pagrindinio modelio „Excel“ failą taip pat galima atsisiųsti <a href="resources/EmergentTSRgrowth_Optimisation.xlsx"><strong>čia</strong></a>. Šiame „Excel“ faile galite keisti temperatūros atsako parametrus ir jų priklausomybę nuo dydžio, optimizuoti modelį naudodami Solver parinktį ir matyti sugeneruotas augimo ir dauginimosi kreives, kaip parodyta paveikslėlyje žemiau.</p>
+</section>
 <p><img src="images/TempModelExcel.png" class="img-fluid" style="width:100.0%"></p>
-</section>
 <!-- next para ------------------------------------------------------------- -->
-<section id="ltapplication-of-the-model" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="ltapplication-of-the-model">lt:Application of the model</h2>
-<p>lt: The open access <a href="https://www.journals.uchicago.edu/doi/full/10.1086/722027"><strong>publication</strong></a> presenting this model is published in a special issue of The Biological Bulletin. If you want to learn more about the role of temperature and oxygen on fish growth, please also check out this <a href="https://www.journals.uchicago.edu/doi/full/10.1086/722899"><strong>overview publication</strong></a> in the same special issue.</p>
-<p>This model is easy to modify and explore, and you are welcome to use it in your research and teaching. If you would like to suggest or implement new model modifications and publish them, please contact us at <em>lydekaipaliepus@gamtc.lt</em></p>
+<section id="modelio-pritaikymas" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="modelio-pritaikymas">Modelio pritaikymas</h2>
+<p>Atviros prieigos <a href="https://www.journals.uchicago.edu/doi/full/10.1086/722027"><strong>mokslinis straipsnis</strong></a>, pristatantis šį modelį, paskelbtas specialiame žurnalo Biological Bulletin numeryje. Jei norite daugiau sužinoti apie temperatūros ir deguonies įtaką žuvų augimui, paskaitykite ir šią <a href="https://www.journals.uchicago.edu/doi/full/10.1086/722899"><strong>apžvalginę publikaciją</strong></a> tame pačiame žurnalo numeryje.</p>
+<p>Šį modelį lengva modifikuoti, todėl galite jį naudoti mokymo tikslais ar atliekant mokslinius tyrimus. Jei turite pasiūlymų naujoms modelio modifikacijoms ar norėtumėte jį naudoti savo publikacijoms, susisiekite su mumis el.paštu <em>lydekaipaliepus@gamtc.lt</em></p>
 <div class="page-columns page-full"><p> <img src="images/vendace.png" class="img-fluid" style="width:60.0%" data-fig-align="center"></p><div class="no-row-height column-margin column-container"><span class="">Seliava. Piešinio autorė Amy Rose Coghlan</span></div></div>
 </section>
 

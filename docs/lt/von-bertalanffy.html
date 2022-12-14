@@ -52,6 +52,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -275,7 +276,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="įvadas" class="level2">
 <h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
-<p>Čia bus vertimas</p>
+<p>Vienas iš labiausiai paplitusių būdų modeliuoti žuvų augimą yra naudoti <a href="https://en.wikipedia.org/wiki/Von_Bertalanffy_function#:~:text=The%20von%20Bertalanffy%20growth%20function,length%20from%20age%20in%20animals."><strong>von Bertalanffy augimo kreivę</strong></a>. Labiausiai paplitusi von Bertalanffy kreivės versija aprašo žuvies ilgį kaip trijų parametrų funkciją. Šie parametrai - tai asimptotinis ilgis <span class="math inline">\(L_\infty\)</span>, von Bertalanffy augimo koeficientas <span class="math inline">\(k\)</span> ir teorinis žuvies amžius <span class="math inline">\(t0\)</span> kai žuvies dydis yra 0.</p>
+<p><span class="math inline">\(L_{(t)} = L_\infty (1-e^{-k(t-t0)})\)</span></p>
+<p><span class="math inline">\(k\)</span> parametras yra metinis augimo greitis, kuris parodo, kaip greitai individas pasieks asimptotinį ilgį. Daugeliu atvejų, <span class="math inline">\(1/k\)</span> apytiksliai nurodo subrendimo amžių, nors tai gali varijuoti.</p>
+<p>Kai kuriuose tyrimuose yra naudojama dviejų parametrų von Bertalanffy augimo kreivė (neįtraukiamas parametras <span class="math inline">\(t0\)</span>):</p>
+<p><span class="math inline">\(L_{(t)} = L_\infty (1-e^{-kt})\)</span></p>
+<p>Nors ši funkcija yra paprastesnė, ji kritikuojama, pvz., žr. <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210x.12020"><em>čia</em></a></p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -285,14 +291,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- next para ------------------------------------------------------------- -->
 <section id="modelis" class="level2">
 <h2 class="anchored" data-anchor-id="modelis">Modelis</h2>
-<p>Čia bus vertimas</p>
-<p><a href="https://fishsize.shinyapps.io/von-bertalanffy/"><strong>čia</strong></a></p>
+<p>Sukūrėme R shiny aplikaciją, kuri generuoja ilgio augimo kreives priklausomai nuo von Bertalanffy parametrų verčių. Galite naudoti mūsų <a href="resources/Example_ageLength.csv"><strong>pavyzdinius amžiaus duomenis</strong></a>, kad pamatytumėte, kaip kreivė atitinka realų duomenų rinkinį (jis jau įkeltas į R shiny programą). Galite įkelti ir savo amžiaus duomenis, tačiau įsitikinkite, kad naudojate tą patį formatą, kaip ir mūsų pavyzdyje.</p>
+<p>Tap pat galite išnagrinėti ilgio histogramas pagal amžių, darant skirtingas prielaidas apie amžiaus ir ilgio variacijos koeficientus (CV). Pavyzdžiui, kai kurios populiacijos gali turėti nedidelę variaciją augime - tai reiškia, kad CV yra mažas (CV = 0,1 arba mažesnis), o skirtingos amžiaus grupės aiškiai skiriasi savo ilgiu. Kitos populiacijos gali turėti didelį augimo kintamumą (CV = 0,3 arba didesnis), o tai reiškia, kad tarp amžiaus grupių bus daug persidengimo ir bus sunku atskirti amžiaus klases.</p>
+<p>Norėdami pradėti naudoti modelį, eikite <a href="https://fishsize.shinyapps.io/von-bertalanffy/"><strong>čia</strong></a></p>
 </section>
 <p><img src="images/VBapp_screenshot_main.png" class="img-fluid" style="width:50.0%" data-fig-align="center"> <img src="images/VBapp_screenshot_histograms.png" class="img-fluid" style="width:50.0%" data-fig-align="center"></p>
 <!-- next para ------------------------------------------------------------- -->
 <section id="modelio-taikymas" class="level2">
 <h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>
-<p>Čia bus vertimas</p>
+<p>Von Bertalanffy (VB) augimo funkcija yra labai plačiai naudojama žuvininkystėje ir ekologijoje. VB augimo parametrų prireiks taikant daugumą žuvininkystės modelių, jie taip pat naudojami ir ekosistemų modeliuose, pvz., šiame <a href="./curonian_mizer.html"><strong>dydžiu pagrįstame Kuršių marių ekosistemos modelyje</strong></a>. Tačiau su šia funkcija reikia elgtis atsargiai. Norint gauti patikimus augimo funkcijos koeficientus, reikia pakankamai daug tiek jauniklių, tiek senų žuvų duomenų. Deja, dažnai abiem atvejais duomenys yra riboti. Pavyzdžiui, jei žuvų ištekliai yra intensyviai eksploatuojami, mes niekada nepamatysime didelių individų ir negalėsime įvertinti jų asimptotinio dydžio. Jei mūsų duomenys gaunami iš verslinės žvejybos, o ne iš nepriklausomų mokslinių tyrimų, galime niekada nematyti mažų individų.</p>
+<p><a href="https://www.fishbase.se/search.php"><strong>FishBase</strong></a> yra didžiausia ir svarbiausia žuvų duomenų bazė pasaulyje. Šioje duomenų bazėje galite ieškoti jus dominančios žuvų rūšies VB augimo parametrų, apskaičiuotų įvairių tyrimų metu (slinkite iki galo žemyn ir spustelėkite pasirinkimą <em>Growth</em>, kaip nurodyta <a href="https://www.%20.fishbase.se/popdyn/PopGrowthList.php?ID=258&amp;GenusName=Esox&amp;SpeciesName=lucius&amp;fc=74"><strong>šiame pavyzdyje</strong></a> lydekoms). Galite pamatyti, kaip VB parametrai skiriasi priklausomai nuo populiacijos. Dalis šių skirtumų atsiranda dėl natūralių populiacijų augimo skirtumų, tačiau didelę dalį taip pat lemia ribotų duomenų naudojimas. Dėl šios priežasties sukūrėme toliau pateiktą programą, kad galėtumėte atidžiai įvertinti, kaip VB parametrai tinka jūsų duomenų rinkiniams.</p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

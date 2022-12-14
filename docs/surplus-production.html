@@ -282,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
 <li>some preliminary guesses about <strong><em>r</em></strong> and <strong><em>K</em></strong> and initial population depletion level, or how close to the carrying capacity our population was at the start of our time series.</li>
 </ol>
 <p>Also, because surplus production models estimate model parameters from available time series, they work best if the time series has sufficient contrast in catches and population abundance. If catches and CPUE remained relatively stable through time, then parameter and population status estimates will have large uncertainty ranges.</p>
-<p>The main parameter, determining population resilience to fishing is the population regeneration rate <strong><em>r</em></strong>. We usually do not <strong><em>r</em></strong> for our species and population, but we can look up estimates in the FishBase life-history tool section. Or we can use these <a href="https://studylib.net/doc/5888624/doc---fishbase">generic estimates</a> which suggest <strong><em>r</em></strong> of 0.6-1.5 for high resilience species (Von Bertalanffy growth rate K&gt;0.3, maturation age &lt; 1, high fecundity) and <strong><em>r</em></strong> of 0.2-1 for medium resilience species:</p>
+<p>The main parameter, determining population resilience to fishing is the population regeneration rate <strong><em>r</em></strong>. We usually do not have <strong><em>r</em></strong> for our species and population, but we can look up estimates in the FishBase life-history tool section. Or we can use these <a href="https://studylib.net/doc/5888624/doc---fishbase">generic estimates</a> which suggest <strong><em>r</em></strong> of 0.6-1.5 for high resilience species (Von Bertalanffy growth rate K&gt;0.3, maturation age &lt; 1, high fecundity) and <strong><em>r</em></strong> of 0.2-1 for medium resilience species.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PopGrowthRates.png" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -294,16 +294,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="model" class="level2">
 <h2 class="anchored" data-anchor-id="model">Model</h2>
 <p>Before applying surplus production models to our stocks it is important to understand how they work and what assumptions they make. To help you explore these assumptions and outcomes, we have developed this user friendly tool which you can access <a href="https://fishsize.shinyapps.io/surplus-production/"><strong>here</strong></a>.</p>
+</section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/SPapp_screenshot.png" class="img-fluid figure-img" style="width:50.0%"></p>
 </figure>
 </div>
-</section>
 <!-- next para ------------------------------------------------------------- -->
 <section id="application-of-the-model" class="level2">
 <h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
-<p>Surplus production models have been applied to a wide range of populations and usually perform better than even simpler models that are based only on catch data. For a recent overview of surplus production model applications, please see <a href=""><strong>this publication</strong></a>. Also, when data is limited, simple surplus production models can perform better than more complex models with many parameters, which cannot be effectively estimated, see example publication <a href=""><strong>here</strong></a>.</p>
+<p>Surplus production models have been applied to a wide range of populations and usually perform better than even simpler models that are based only on catch data. For a recent overview of surplus production model applications, please see <a href="https://link.springer.com/article/10.1007/s11160-022-09731-w"><strong>this publication</strong></a>. Also, when data is limited, simple surplus production models can perform better than more complex models with many parameters, which cannot be effectively estimated, see example publication <a href=""><strong>here</strong></a>.</p>
 <p>However, it is important to remember that simple models must make simplifying assumptions. The main assumptions to keep in mind are:</p>
 <ol type="1">
 <li><p>Population abundance is mostly controlled by fishing and not other environmental parameters or species interactions. If this is not the case we need other types of models - perhaps models relating stock abundance to prey biomass, temperature, currents or other factors.</p></li>
