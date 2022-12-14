@@ -17,17 +17,16 @@ For examples on how this method has been applied to other stocks, see references
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LT lang: Introduction
+## Įvadas
 
-LT lang:Before proceeding with CPUE standardisation, first make sure you carefully **assess and explore your data**. We have prepared the courses and scripts for data exploration, which you can find on our [CPUE standardisation course](https://fishsizeproject.github.io/CPUEcourse/) webpage.
+Prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai **įvertinote savo duomenis**. Tam paruošėme kursus ir kodus, kuriuos rasite mūsų [svetainėje](https://fishsizeproject.github.io/CPUEcourse/).
 
-One commonly used approach for CPUE data standardisation applies generalized linear models (GLM). Here we model all variables that could impact our catches and extract annual deviations and their uncertainty. From this we can plot a standardized time series of population abundance.
+Vienas dažniausiai naudojamų CPUE standartizavimo metodų - apibendrinti tiesiniai modeliai (GLM). Čia modeliuojame visus kintamuosius, galinčius turėti įtakos sugavimams, ir išskiriame metinius nuokrypius bei jų neapibrėžtumą. Iš to galime sudaryti standartizuotą santykinio populiacijos gausumo laiko eilutę.
 
-In this set of [slides](resources/CPUEstandartisation_GLM.pdf) you will find main points about GLM based CPUE standardisation.
+[Čia](resources/CPUEstandartisation_GLM.pdf) rasite pagrindinę informaciją apie CPUE standartizaciją naudojant GLM.
 
-For examples on how this method has been applied to other stocks, see references [here](resources/Maunder2004.pdf) and [here](resources/Forrestal_2018.pdf)
+Pavyzdžius, kaip šis metodas buvo pritaikytas kitoms rūšims, galite rasti [šioje](resources/Maunder2004.pdf) ir [šioje](resources/Forrestal_2018.pdf) publikacijose.
 :::
-
 
 <!-- next para ------------------------------------------------------------- -->
 
@@ -40,36 +39,32 @@ To apply our GLM based standardisation model you can use [this code](scripts/CPU
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LT lang:Model code
+## Modelio kodas
 
-We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use [**this code**](scripts/dataConversion.Rmd) to covert your data table into a suitable format.
+GLM pagrįstą modelį pritaikėme penkioms paplitusioms Lietuvos gėlavandenių žuvų rūšims iš Kuršių ir Kauno marių. Norėdami naudoti mūsų modelius savo duomenims, pirmiausia turite konvertuoti duomenų rinkinį į formatą, kuriame kiekviena eilutė atitinka unikalų įrašą, nurodantį sugavimus pagal įrankius, akių dydį, tinklo ilgį, sezoną, vietovę ar kitus kintamuosius, kuriuos norite įtraukti į modelį. Duomenų konvertavimui galite naudoti [**šį kodą**](scripts/dataConversion.Rmd).
 
-To apply our GLM based standardisation model you can use [this code](scripts/CPUEstand_example.zip) where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below. To look at the model code and outputs without having to run the code, you can click [**here**](resources/CPUEstand_example.html).
+Norėdami pritaikyti mūsų GLM pagrįstą standartizacijos modelį, galite naudoti [šį kodą](scripts/CPUEstand_example.zip), kur pritaikysite apibendrintus tiesinius modelius su Tweedie pasiskirstymu ir įvertinsite svarbius kintamuosius prognozei. Ištraukę metines liekanas (annual residuals) ir su jais susijusią neapibrėžtį, galėsite sudaryti standartizuoto santykino gausumo laiko eilutes, kaip parodyta paveikslėlyje žemiau. Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti [**čia**](resources/CPUEstand_example.html).
 :::
 
-
-![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} 
-<!-- next para ------------------------------------------------------------- -->
+![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} <!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
 ## Application of the model
 
 To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our [publication](https://www.mdpi.com/2410-3888/7/5/232) in journal *Fishes*.
 
-You can also watch [**this conference talk**](broken%20link) to learn more about this analysis.
+You can also watch [**this conference talk**](https://www.youtube.com/watch?v=MoAJ4PuOW8M&list=PLbdhgW7mtwEUwB2S5BIEoERR8YFQzJ2Yf&index=3&ab_channel=Lydekaipaliepus) to learn more about this analysis.
 
 Once you conduct your CPUE standardisation, you can use the standardised values in [**surplus production models**](jabba_models.qmd), as explained on this website.
-
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio taikymas
 
-LT lang:To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our [**publication**](https://www.mdpi.com/2410-3888/7/5/232) in journal *Fishes*.
+Norėdami daugiau sužinoti apie šio CPUE standartizacijos modelio pritaikymą Kauno marių žuvų populiacijoms, skaitykite [šią publikaciją](https://www.mdpi.com/2410-3888/7/5/232) žurnale *Fishes*.
 
-You can also watch [**this conference talk**](broken%20link) to learn more about this analysis.
+Taip pat galite peržiūrėti [**šį pranešimą**](https://www.youtube.com/watch?v=MoAJ4PuOW8M&list=PLbdhgW7mtwEUwB2S5BIEoERR8YFQzJ2Yf&index=3&ab_channel=Lydekaipaliepus) konferencijoje. 
 
-Once you conduct your CPUE standardisation, you can use the standardised values in [**surplus production models**](jabba_models.qmd), as explained on this website.
-:::
+Atlikus CPUE standartizaciją, gautas reikšmes galite naudoti [**perteklinės produkcijos modeliuose**](jabba_models.qmd), kaip paaiškinta šiame puslapyje. 
 
 ![](images/cpue_glm1.jpg){width="60%" fig-align="center"}

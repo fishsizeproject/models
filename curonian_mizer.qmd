@@ -22,6 +22,12 @@ We have also developed a first version of Curonian lagoon ecosystem model, which
 ::: {.content-visible when-profile="lithuanian"}
 ## Įvadas
 
+Individų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas ir populiarus įrankis tiriant tarprūšinę sąveiką, ekosistemų dinamiką, klimato kaitą, žvejybos poveikį ir daugelį kitų procesų. Norėdami plačiau susipažinti su tokio tipo modeliais, skaitykite Ken H Andersen knygą ["Fish Ecology, Evolution, and Exploitation" (2019](https://ken.haste.dk/home/publications)) arba apsilankykite plačiai naudojamo dydžiu pagrįstu modeliavimo R paketo [*mizer*](https://sizespectrum.org/mizer/) pagrindiniame puslapyje. Trumpą apžvalgą taip pat galite rasti [šioje publikacijoje](https://www.sciencedirect.com/science/article/pii/S0169534716302361), 
+
+Šio projekto metu mes pritaikėme mizer pakrančių ir gėlo vandens ekosistemoms, įdiegdami dydžiu pagrįstą foninių resursų struktūrą. Ši modifikacija leidžia vartotojams savarankiškai modeliuoti planktoną, bentosą, makrodumblius ir kitus foninius išteklius, kurie neabejotinai yra svarbus sekliųjų vandenų ekosistemų aspektas. Modifikuotas mizer buvo naudojamas Baltijos jūros ekosistemos modeliui sukurti ir ištirti, kaip klimato kaitos sąlygoti žuvų fiziologijos ir foninių išteklių gausumo pokyčiai gali paveikti biomasę ir menkių, strimėlių bei bretlingių produkciją.
+
+Taip pat sukūrėme pirmąją Kuršių marių ekosistemos modelio versiją, kuri apima atskirus bentoso ir planktono išteklius bei [dešimt pagrindinių žuvų rūšių](https://course.mizer.sizespectrum.org/build/find-species-parameters.html). Modelis buvo sukurtas [mizer kurso metu](https://course.mizer.sizespectrum.org/), kur kurso dalyviai prisidėjo prie modelio parametrizacijos. 
+
 
 [Pagrindinių mizer modelio dalių iliustracija, autorius Max Lindmark]{.aside} 
 
@@ -48,7 +54,12 @@ All model code for the Baltic Sea model and all generated data are available on 
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio kodas
 
+Norėdami paleisti dydžiu pagrįstus modelius su mizer, jums reikia R ir Rstudio, taip pat turite įdiegti mizer paketą. Daugiau informacijos apie tai, kaip tai padaryti, rasite šioje [mizer kurso svetainėje](https://course.mizer.sizespectrum.org/). Šioje svetainėje rasite išsamius paaiškinimus, kaip rasti rūšies parametrus, paruošti ir [kalibruoti modelį](https://course.mizer.sizespectrum.org/build/refine-model.html). Taip pat galite pamatyti [skirtingus Kuršių marių žuvų rūšių biomasės žvejybos scenarijus](https://course.mizer.sizespectrum.org/use/fishing-scenarios.html), kai kurie rezultatai rodomi toliau pateiktuose paveikslėliuose.
 
+Jei norite naudoti mizer su keliais foniniais ištekliais, įdiekite [mizerMR priedą iš Github](https://github.com/sizespectrum/mizerMR).
+Siekdami palengvinti modelio kalibravimą, taip pat pritaikėme ShinyR programą, pasiekiamą [čia](https://github.com/sizespectrum/mizerExperimental). Jei norite peržiūrėti ShinyR programos ekrano kopijas nepaleidžiant modelio, eikite [čia](resources/mizerMR_screenshots.pdf).
+
+Visas Baltijos jūros modelio modelio kodas ir visi sugeneruoti duomenys yra prieinami [GitHub](https://github.com/maxlindmark/mizer-rewiring/tree/rewire-temp) ir [Zenodo](https://doi.org/10.5281/zenodo.6821926).
 
 [Kuršių marių rūšių biomasės pokytis pakeitus žvejybos mirtingumą]{.aside}
 
@@ -74,6 +85,10 @@ We are still working on the Curonian Lagoon model. Final model development and a
 
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio pritaikymas
+
+Straipsnis, kuriame aprašomas Baltijos jūros modelis, publikuotas Global Change Biology žurnale ir yra pasiekiamas [*čia*](https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16341). 
+
+Vis dar dirbame prie Kuršių marių modelio. Galutinis modelio kūrimas ir pritaikymas įvairiems klimato kaitos ir žuvininkystės klausimams yra doktorantūros projekto, kurį 2022 m. gruodžio mėn. Gamtos tyrimų centre pradėjo Elyza Pilipaitytė, tema. Jei norite sužinoti daugiau ar bendradarbiauti, susisiekite *lydekaipaliepus\@gamtc.lt*. 
 
 
 [Šamas. Piešinio autorė Amy Rose Coghlan]{.aside} ![](images/Sirulusglanis_sm.png){width="75%" fig-align="center"}

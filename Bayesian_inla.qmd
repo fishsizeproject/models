@@ -51,7 +51,7 @@ To look at the model code and outputs without having to run the code, you can cl
 
 ## Modelio kodas
 
-Pagrindinis modelio kodas pasiekiamas šiame [**R markdown**](scripts/BayesianINLA.zip); čia naudojamas [**duomenų rinkinys**](scripts/pikeperch.csv) su 22 metų versliniais starkių ( *Sander lucioperca*) sugavimais Baltijos jūroje. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Prieš paleisdami modelį turėsite įdiegti visus R paketus, kaip paaiškinta šiame [**R kode**](scripts/model_packages.R).
+Pagrindinis modelio kodas pasiekiamas šiame [**R markdown**](scripts/BayesianINLA.zip); čia naudojamas [**duomenų rinkinys**](scripts/pikeperch.csv) su 22 metų versliniais starkių (*Sander lucioperca*) sugavimais Baltijos jūroje. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Prieš paleisdami modelį turėsite įdiegti visus R paketus, kaip paaiškinta šiame [**R kode**](scripts/model_packages.R).
 
 Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti [**čia**](resources/BayesianINLA.html). Pritaikę modelį turėtumėte nubraižyti CPUE ir jo neapibrėžtumą laikui bėgant, kaip parodyta paveiksle žemiau.
 
