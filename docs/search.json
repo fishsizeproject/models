@@ -23,9 +23,23 @@
   {
     "objectID": "curonian_mizer.html",
     "href": "curonian_mizer.html",
-    "title": "ENGLISH TITLE MIZER",
+    "title": "Size based models for Baltic Sea and Curonian lagoon",
     "section": "",
-    "text": "ENGLISH TITLE MIZER\nAbout the model (english)\nA link to the code\nA link for more info\nA link to the model"
+    "text": "Size based community and ecosystem models are a powerful and popular tool to explore size based species interactions, ecosystem dynamics, climate change, fishing effects and many other processes. For a quick overview you can read this publication, Ken H Andersen’s book “Fish Ecology, Evolution, and Exploitation” (2019) or visit the home page of a widely popular size based modelling R package mizer.\nDuring this project we adapted mizer to coastal and freshwater ecosystems, by introducing multiple size structured background resources. This modification allows users to model plankton, benthos, macroalgal and other baseline resources independently, which is an important aspect in shallow water ecosystems. The modified mizer was then used to develop a Baltic Sea ecosystem model and explore how climate change driven changes in fish physiology and background resource abundance might affect biomass and yields of cod, herring and sprat.\nWe have also developed a first version of Curonian lagoon ecosystem model, which includes separate benthic and plankton resources and ten main fish species. The model was developed in the mizer online course, where course participants contributed different versions of model parameterisation to develop an ensemble modelling approach.\nRepresentation of mizer modelling framework by Max Lindmark"
+  },
+  {
+    "objectID": "curonian_mizer.html#model-code",
+    "href": "curonian_mizer.html#model-code",
+    "title": "Size based models for Baltic Sea and Curonian lagoon",
+    "section": "Model code",
+    "text": "Model code\nTo run the size based models with mizer you need R and Rstudio, and you also have to install mizer package. Further details on how to do this are available on this mizer course website. On this website you can find detail explanation of how to find species parameters, set up and calibrate a model. You can also see exploration of [different fishing scenarios on the biomasses of Curonian lagoon fish species][https://course.mizer.sizespectrum.org/use/fishing-scenarios.html], with some results shown in the figures below.\nTo use mizer with multiple background resources, please install the [mizerMR add-on from Github][https://github.com/sizespectrum/mizerMR].\nTo make the model calibration easier we have also adapted a ShinyR application available through mizerExperimental branch. Here you have a quick look at the application screenshots without having to run it.\nAll model code for the Baltic Sea model and all generated data are available on GitHub and on Zenodo.\n Left: Changes in species biomass through time under new fishing scenariosRight: Changes in species sizes structure under new fishing scenarios"
+  },
+  {
+    "objectID": "curonian_mizer.html#application-of-the-model",
+    "href": "curonian_mizer.html#application-of-the-model",
+    "title": "Size based models for Baltic Sea and Curonian lagoon",
+    "section": "Application of the model",
+    "text": "Application of the model\nThe publication describing the development and findings of the Baltic Sea model is published in Global Change Biology and is available here.\nWe are still working on the Curonian Lagoon model. Final model development and application to different climate change and fisheries questions is a topic for a PhD project, started by Elyza Pilipaitytė in Nature Research Centre in December 2022. If you would like to learn more or collaborate, please get in touch at lydekaipaliepus@gamtc.lt\n Catfish drawing by Amy Rose Coghlan"
   },
   {
     "objectID": "GLM_standardisation.html",

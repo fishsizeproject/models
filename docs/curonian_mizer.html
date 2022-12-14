@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Asta Audzijonyte, Max Lindmark, Gustav Delius">
 
-<title>Sustainable Inland Fisheries -</title>
+<title>Sustainable Inland Fisheries - Size based models for Baltic Sea and Curonian lagoon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -87,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Size based models for Baltic Sea and Curonian lagoon</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -239,24 +240,84 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#english-title-mizer" id="toc-english-title-mizer" class="nav-link active" data-scroll-target="#english-title-mizer">ENGLISH TITLE MIZER</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#model-code" id="toc-model-code" class="nav-link" data-scroll-target="#model-code">Model code</a></li>
+  <li><a href="#application-of-the-model" id="toc-application-of-the-model" class="nav-link" data-scroll-target="#application-of-the-model">Application of the model</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Size based models for Baltic Sea and Curonian lagoon</h1>
+</div>
 
 
 
-<!-- start para ------------------------------------------------------------- -->
-<section id="english-title-mizer" class="level1">
-<h1>ENGLISH TITLE MIZER</h1>
-<p>About the model (english)</p>
-<p>A link to the <a href="https://www.github.com">code</a></p>
-<p>A link for <a href="https://www.google.com">more info</a></p>
-<p>A link to the <a href="https://fishsize.shinyapps.io/pikeperch/">model</a></p>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Asta Audzijonyte, Max Lindmark, Gustav Delius </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- next para ------------------------------------------------------------- -->
+<section id="introduction" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Size based community and ecosystem models are a powerful and popular tool to explore size based species interactions, ecosystem dynamics, climate change, fishing effects and many other processes. For a quick overview you can read <a href="https://www.sciencedirect.com/science/article/pii/S0169534716302361">this publication</a>, Ken H Andersen’s book <a href="https://ken.haste.dk/home/publications">“Fish Ecology, Evolution, and Exploitation” (2019</a>) or visit the home page of a widely popular size based modelling R package <a href="https://sizespectrum.org/mizer/"><em>mizer</em></a>.</p>
+<p>During this project we adapted mizer to coastal and freshwater ecosystems, by introducing multiple size structured background resources. This modification allows users to model plankton, benthos, macroalgal and other baseline resources independently, which is an important aspect in shallow water ecosystems. The modified mizer was then used to develop a Baltic Sea ecosystem model and explore how climate change driven changes in fish physiology and background resource abundance might affect biomass and yields of cod, herring and sprat.</p>
+<p>We have also developed a first version of Curonian lagoon ecosystem model, which includes separate benthic and plankton resources and <a href="https://course.mizer.sizespectrum.org/build/find-species-parameters.html">ten main fish species</a>. The model was developed in the <a href="https://course.mizer.sizespectrum.org/"><em>mizer online course</em></a>, where course participants contributed different versions of model parameterisation to develop an ensemble modelling approach.</p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">Representation of mizer modelling framework by Max Lindmark</span></div></div>
 </section>
-<!-- end para ------------------------------------------------------------- -->
+<p><img src="images/sizeBasedModels.jpg" class="img-fluid" style="width:50.0%" data-fig-align="center"> <!-- next para ------------------------------------------------------------- --></p>
+<section id="model-code" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="model-code">Model code</h2>
+<p>To run the size based models with mizer you need R and Rstudio, and you also have to install mizer package. Further details on how to do this are available on this <a href="https://course.mizer.sizespectrum.org/"><em>mizer course website</em></a>. On this website you can find detail explanation of how to find species parameters, set up and <a href="https://course.mizer.sizespectrum.org/build/refine-model.html">calibrate a model</a>. You can also see exploration of [different fishing scenarios on the biomasses of Curonian lagoon fish species][https://course.mizer.sizespectrum.org/use/fishing-scenarios.html], with some results shown in the figures below.</p>
+<p>To use mizer with multiple background resources, please install the [mizerMR add-on from Github][https://github.com/sizespectrum/mizerMR].</p>
+<p>To make the model calibration easier we have also adapted a ShinyR application available through <a href="https://github.com/sizespectrum/mizerExperimental">mizerExperimental branch</a>. <a href="resources/mizerMR_screenshots.pdf"><em>Here</em></a> you have a quick look at the application screenshots without having to run it.</p>
+<p>All model code for the Baltic Sea model and all generated data are available on <a href="https://github.com/maxlindmark/mizer-rewiring/tree/rewire-temp"><em>GitHub</em></a> and on <a href="https://doi.org/10.5281/zenodo.6821926"><em>Zenodo</em></a>.</p>
+<div class="page-columns page-full"><p> </p><div class="no-row-height column-margin column-container"><span class="">Left: Changes in species biomass through time under new fishing scenarios</span><span class="">Right: Changes in species sizes structure under new fishing scenarios</span></div></div>
+</section>
+<div class="grid">
+<!-- GLM's -->
+<div class="g-col-5">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CuronianLagoonBiomases.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="g-col-7">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CuronianLagoonSizeStructure.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<!-- next para ------------------------------------------------------------- -->
+<section id="application-of-the-model" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
+<p>The publication describing the development and findings of the Baltic Sea model is published in Global Change Biology and is available <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16341"><em>here</em></a>.</p>
+<p>We are still working on the Curonian Lagoon model. Final model development and application to different climate change and fisheries questions is a topic for a PhD project, started by Elyza Pilipaitytė in Nature Research Centre in December 2022. If you would like to learn more or collaborate, please get in touch at <em>lydekaipaliepus@gamtc.lt</em></p>
+<div class="page-columns page-full"><p> <img src="images/vendace.png" class="img-fluid" style="width:60.0%" data-fig-align="center"></p><div class="no-row-height column-margin column-container"><span class="">Catfish drawing by Amy Rose Coghlan</span></div></div>
+</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Sirulusglanis_sm.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
 
 
 
