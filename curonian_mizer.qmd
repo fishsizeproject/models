@@ -13,7 +13,7 @@ Size based community and ecosystem models are a powerful and popular tool to exp
 
 During this project we adapted mizer to coastal and freshwater ecosystems, by introducing multiple size structured background resources. This modification allows users to model plankton, benthos, macroalgal and other baseline resources independently, which is an important aspect in shallow water ecosystems. The modified mizer was then used to develop a Baltic Sea ecosystem model and explore how climate change driven changes in fish physiology and background resource abundance might affect biomass and yields of cod, herring and sprat. 
 
-We have also developed a first version of Curonian lagoon ecosystem model, which includes separate benthic and plankton resources and [ten main fish species](https://course.mizer.sizespectrum.org/build/find-species-parameters.html). The model was developed in the [*mizer online course*](https://course.mizer.sizespectrum.org/), where course participants contributed different versions of model parameterisation to develop an ensemble modelling approach. 
+We have also developed a first version of Curonian lagoon ecosystem model, which includes separate benthic and plankton resources and [ten main fish species](https://course.mizer.sizespectrum.org/build/find-species-parameters.html). The model was developed in the [mizer online course](https://course.mizer.sizespectrum.org/), where course participants contributed different versions of model parameterisation to develop an ensemble modelling approach. 
 
 [Representation of mizer modelling framework by Max Lindmark]{.aside} 
 
@@ -27,44 +27,37 @@ We have also developed a first version of Curonian lagoon ecosystem model, which
 
 :::
 
-![](images/sizeBasedModels.jpg){width="50%" fig-align="center"} 
+![](images/sizeBasedModels.jpg){width="100%" fig-align="center"} 
 <!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
 ## Model code
 
-To run the size based models with mizer you need R and Rstudio, and you also have to install mizer package. Further details on how to do this are available on this [*mizer course website*](https://course.mizer.sizespectrum.org/). On this website you can find detail explanation of how to find species parameters, set up and [calibrate a model](https://course.mizer.sizespectrum.org/build/refine-model.html). You can also see exploration of [different fishing scenarios on the biomasses of Curonian lagoon fish species][https://course.mizer.sizespectrum.org/use/fishing-scenarios.html], with some results shown in the figures below. 
+To run the size based models with mizer you need R and Rstudio, and you also have to install mizer package. Further details on how to do this are available on this [mizer course website](https://course.mizer.sizespectrum.org/). On this website you can find detail explanation of how to find species parameters, set up and [calibrate a model](https://course.mizer.sizespectrum.org/build/refine-model.html). You can also see exploration of [different fishing scenarios on the biomasses of Curonian lagoon fish species](https://course.mizer.sizespectrum.org/use/fishing-scenarios.html), with some results shown in the figures below. 
 
-To use mizer with multiple background resources, please install the [mizerMR add-on from Github][https://github.com/sizespectrum/mizerMR]. 
+To use mizer with multiple background resources, please install the [mizerMR add-on from Github](https://github.com/sizespectrum/mizerMR). 
 
-To make the model calibration easier we have also adapted a ShinyR application available through [mizerExperimental branch](https://github.com/sizespectrum/mizerExperimental). [*Here*](resources/mizerMR_screenshots.pdf) you have a quick look at the application screenshots without having to run it. 
+To make the model calibration easier we have also adapted a ShinyR application available through [mizerExperimental branch](https://github.com/sizespectrum/mizerExperimental). To have a look at the ShinyR application screenshots without having to run the model, go  [here](resources/mizerMR_screenshots.pdf). 
 
-All model code for the Baltic Sea model and all generated data are available on [*GitHub*](https://github.com/maxlindmark/mizer-rewiring/tree/rewire-temp) and on [*Zenodo*](https://doi.org/10.5281/zenodo.6821926).
+All model code for the Baltic Sea model and all generated data are available on [GitHub](https://github.com/maxlindmark/mizer-rewiring/tree/rewire-temp) and [Zenodo](https://doi.org/10.5281/zenodo.6821926).
 
-[Left: Changes in species biomass through time under new fishing scenarios]{.aside}
-[Right: Changes in species sizes structure under new fishing scenarios]{.aside}
+[Changes in species biomass through time under new fishing scenarios]{.aside}
 :::
+
 
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio kodas
 
 
 
-[Kairėje: Kuršių marių rūšių biomasės pokytis pakeitus žvejybos mirtingumą]{.aside}
-[Right: Kuršių marių žuvų dydžio struktūros pokytis]{.aside}
+[Kuršių marių rūšių biomasės pokytis pakeitus žvejybos mirtingumą]{.aside}
+
 :::
 
-::: grid
-<!-- GLM's -->
 
-::: g-col-5
 ![](images/CuronianLagoonBiomases.png){width="100%" fig-align="center"}
-:::
 
-::: g-col-7
-![](images/CuronianLagoonSizeStructure.png){width="100%" fig-align="center"}
-:::
-:::
+
 
 <!-- next para ------------------------------------------------------------- -->
 
@@ -75,7 +68,7 @@ The publication describing the development and findings of the Baltic Sea model 
 
 We are still working on the Curonian Lagoon model. Final model development and application to different climate change and fisheries questions is a topic for a PhD project, started by Elyza Pilipaitytė in Nature Research Centre in December 2022. If you would like to learn more or collaborate, please get in touch at *lydekaipaliepus\@gamtc.lt*
 
-[Catfish drawing by Amy Rose Coghlan]{.aside} ![](images/vendace.png){width="60%" fig-align="center"}
+[Catfish drawing by Amy Rose Coghlan]{.aside} ![](images/Sirulusglanis_sm.png){width="75%" fig-align="center"}
 
 :::
 
@@ -83,8 +76,7 @@ We are still working on the Curonian Lagoon model. Final model development and a
 ## Modelio pritaikymas
 
 
-[Šamas Piešinio autorė Amy Rose Coghlan]{.aside} ![](images/vendace.png){width="60%" fig-align="center"}
+[Šamas. Piešinio autorė Amy Rose Coghlan]{.aside} ![](images/Sirulusglanis_sm.png){width="75%" fig-align="center"}
 
 :::
 
-![](images/Sirulusglanis_sm.png){width="75%" fig-align="center"}
