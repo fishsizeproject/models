@@ -1,5 +1,6 @@
 ---
 title: "Surplus production models"
+author: Egle Jakubavičiūtė, Asta Audzijonyte
 editor: source
 ---
 
