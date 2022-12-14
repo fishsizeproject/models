@@ -18,13 +18,14 @@ Before proceeding with CPUE standardisation, first make sure you carefully *asse
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LITH:Introduction
+## Įvadas
 
 LITH:Most fisheries datasets (scientific, commercial, recreational) have a lot of zero catches. These are fishing trips were no fish was caught. These zero catches are important but we need to fit appropriate models to accommodate them. Here we are introducing a model for zero inflated data. This model is coded in [R](https://www.r-project.org/) language, so you will need R and [RStudio](https://www.rstudio.com/products/rstudio/) to run it. If you need a brief introduction into R, check [this introductory page](https://course.mizer.sizespectrum.org/prepare/install-tools.html) from an online course on size based modelling. 
 
-For a basic introduction into the model and data, check out [**these slides**](resources/ZeroInflatedModels.pdf). However, if you want to use the model we strongly recommend that you watch at least [**part 4**](https://fishsizeproject.github.io/CPUEcourse/4-hilsha.html) of our CPUE standardisation course, where the model and approach were presented in more detail.  
+Daugumoje žuvininkystės duomenų rinkinių (mokslinių, verslinės ar megėjiškos žvejybos) yra labai daug nulinių reikšmių - kuomet buvo žvejota, bet nieko nepagauta. Šie nuliniai sugavimai yra svarbi duomenų dalis, tačiau tam modeliai turi būti specialiai pritaikyti. Čia pristatome modelį duomenims su nulinių reikšmių perviršiu. Modelis parašytas [R](https://www.r-project.org/) kalba, todėl jums reikės R ir [RStudio](https://www.rstudio.com/products/rstudio/). Jei jums reikia trumpo įvado apie R, peržiūrėkite [šį įvadinį puslapį](https://course.mizer.sizespectrum.org/prepare/install-tools.html) iš mūsų kurso apie dydžiu pagrįstą modeliavimą.
 
-Before proceeding with CPUE standardisation, first make sure you carefully *assess and explore your data*. We have prepared two courses and different scripts for data exploration, which you can find on our [CPUE standardisation course](https://fishsizeproject.github.io/CPUEcourse/) webpage.
+Įvadinę informaciją apie modelį ir duomenis galite rasti [**čia**](resources/ZeroInflatedModels.pdf). Tačiau jei norite naudoti modelį, primygtinai rekomenduojame atlikti bent [**4**](https://fishsizeproject.github.io/CPUEcourse/4-hilsha.html) mūsų CPUE standartizacijos kurso dalį, kur modelis pristatytas išsamiau. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai *įvertinote savo duomenis*. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų [svetainėje](https://fishsizeproject.github.io/CPUEcourse/). 
+
 
 :::
 
@@ -38,9 +39,11 @@ The main model code is available in this [**R markdown script**](scripts/Hilsha.
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## LITH:Model code
+## Modelio kodas
 
-LITH:The main model code is available in this [**R markdown script**](scripts/Hilsha.zip) and is demonstrated using [**this dataset**](scripts/hilsa.csv). You can download the model and modify the script according to your needs. To look at the model code and outputs without having to run the code, you can click [**here**](resources/ZeroInflated.html). After applying the model you should be able to plot predicted catches as a function of fishing time (or other estimate of effort) and month or season, like in the plot below. 
+Pagrindinis modelio kodas pasiekiamas šiame [**R markdown**](scripts/Hilsha.zip), naudojamas [**šis duomenų rinkinys**](scripts/hilsa.csv). Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti [**čia**](resources/ZeroInflated.html). Pritaikę modelį, turėtumėte nubraižyti sugavimus kaip žvejybos trukmės (ar kito tipo pastangos) ir sezono funkciją, kaip parodyta paveiksle žemiau.
+
+
 
 :::
 
@@ -57,9 +60,11 @@ To better understand this model and its applications, we strongly recommend that
 
 
 ::: {.content-visible when-profile="lithuanian"}
-## LITH: Application of the model 
+## Modelio taikymas 
 
-LITH:To better understand this model and its applications, we strongly recommend that you go through our [**CPUE standardisation course**](https://fishsizeproject.github.io/CPUEcourse/) material, where we discuss different models and their strengths in greater detail. The course also explains how to simulate new datasets using estimated model parameters to assess the probability of obtaining as many zero entries as you have in your dataset (example output of these simulations is shown in the plot below).  
+
+Kad geriau suprastumėte šį modelį ir jo pritaikymą, primygtinai rekomenduojame perskaityti mūsų [**CPUE standartizacijos kurso**](https://fishsizeproject.github.io/CPUEcourse/) medžiagą, kurioje detaliau aptariame įvairius modelius ir jų stipriąsias puses. Kurse taip pat paaiškinama, kaip imituoti naujus duomenų rinkinius naudojant apskaičiuotus modelio parametrus, siekiant įvertinti tikimybę gauti tiek nulinių reikšmių, kiek turite savo duomenų rinkinyje (šių imitavimų išvesties pavyzdys parodytas toliau pateiktoje diagramoje).
+
 
 :::
 
