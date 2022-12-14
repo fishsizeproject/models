@@ -26,7 +26,7 @@ The model is coded in [R](https://www.r-project.org/) language, so you will need
 
 Žvejybos sugavimai laike dažniausiai koreliuoja - t.y., sugautų žuvų kiekis priklauso nuo to, koks buvo laimikis prieš metus. Idealiu atveju į tai turėtų būti atsižvelgta, tačiau CPUE standartizacija, pagrįsta [GLM modeliais](GLM_standardisation.qmd) to nedaro, nepaisant to, kad tai yra populiarus ir dažnai naudojamas metodas. Todėl sukūrėme kitokį modelį, kuris atspindi sugavimų koreliaciją erdvėje ir laike. 
 
-Šiame modelyje parametrus įvertinsime naudodami aproksimuotą Bajeso išvadą, kaip įdiegta [INLA pakete](https://www.r-inla.org/). Bajeso metodas įvykdomas daug greičiau nei klasikinis MCMC, o naudojant INLA paketą Bajeso metodą galima taikyti įvairiems pasiskirstymams. Norėdami daugiau sužinoti apie Bajeso metodą ir kodėl jis naudingas, žr. [**čia**](resources/BayesianModels.pdf).
+Šiame modelyje parametrus įvertinsime naudodami aproksimuotą Bajeso išvadą, kaip įdiegta [INLA pakete](https://www.r-inla.org/). Bajeso metodas įvykdomas daug greičiau nei klasikinis MCMC, o naudojant INLA paketą Bajeso metodą galima taikyti įvairiems pasiskirstymams. Norėdami daugiau sužinoti apie Bajeso metodą ir kodėl jis naudingas, žiūrėkite mokymo skaidres [**čia**](resources/BayesianModels.pdf).
 
 Skaidrės ir modelis, kartu su išsamiu visų modeliavimo žingsnių aprašymu buvo pateikti paskutinėje [CPUE standartizacijos kursų](https://fishsizeproject.github.io/CPUEcourse/5-zander.html) paskaitoje, todėl prieš taikant modelį rekomenduojame ją pažiūrėti. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai *įvertinote savo duomenis*. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų [svetainėje](https://fishsizeproject.github.io/CPUEcourse/). 
 
