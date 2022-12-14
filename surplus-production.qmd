@@ -52,8 +52,6 @@ Norėdami daugiau sužinoti apie perteklinės produkcijos modelius, rekomenduoja
 
 Before applying surplus production models to our stocks it is important to understand how they work and what assumptions they make. To help you explore these assumptions and outcomes, we have developed this user friendly tool which you can access [**here**](https://fishsize.shinyapps.io/surplus-production/).
 
-![](images/SPapp_screenshot.png){width="50%" fig-align="center"}
-
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
@@ -62,16 +60,17 @@ Before applying surplus production models to our stocks it is important to under
 Prieš taikant perteklinės produkcijos modelius žuvų ištekliams, svarbu suprasti, kaip jie veikia ir kokias prielaidas daro. Kad būtų patogu tą padaryti, sukūrėme šį įrankį, kurį galite rasti
 [**čia**](https://fishsize.shinyapps.io/surplus-production/) 
 
-![](images/SPapp_screenshot.png){width="50%" fig-align="center"} 
-
 :::
+
+![](images/SPapp_screenshot.png){width="50%" fig-align="center"}
+
 
 <!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
 ## Application of the model 
 
-Surplus production models have been applied to a wide range of populations and usually perform better than even simpler models that are based only on catch data. For a recent overview of surplus production model applications, please see [**this publication**](). Also, when data is limited, simple surplus production models can perform better than more complex models with many parameters, which cannot be effectively estimated, see example publication [**here**](). 
+Surplus production models have been applied to a wide range of populations and usually perform better than even simpler models that are based only on catch data. For a recent overview of surplus production model applications, please see [**this publication**](https://link.springer.com/article/10.1007/s11160-022-09731-w). Also, when data is limited, simple surplus production models can perform better than more complex models with many parameters, which cannot be effectively estimated, see example publication [**here**](). 
 
 However, it is important to remember that simple models must make simplifying assumptions. The main assumptions to keep in mind are: 
 
@@ -87,7 +86,7 @@ However, it is important to remember that simple models must make simplifying as
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio taikymas
 
-Perteklinės produkcijos modeliai yra taikomi įvairioms populiacijoms ir paprastai veikia geriau nei paprastesni modeliai, pagrįsti tik sugautų žuvų kiekio duomenimis. Naujausią perteklinės produkcijos modelių taikymo apžvalgą rasite [**šioje publikacijoje**](). Be to, kai duomenys yra riboti, paprasti perteklinės produkcijos modeliai veikia netgi geriau nei sudėtingesni modeliai su daugybe parametrų, kurių negalima veiksmingai įvertinti, žr. pavyzdį [**čia**](). 
+Perteklinės produkcijos modeliai yra taikomi įvairioms populiacijoms ir paprastai veikia geriau nei paprastesni modeliai, pagrįsti tik sugautų žuvų kiekio duomenimis. Naujausią perteklinės produkcijos modelių taikymo apžvalgą rasite [**šioje publikacijoje**](https://link.springer.com/article/10.1007/s11160-022-09731-w). Be to, kai duomenys yra riboti, paprasti perteklinės produkcijos modeliai veikia netgi geriau nei sudėtingesni modeliai su daugybe parametrų, kurių negalima veiksmingai įvertinti, žr. pavyzdį [**čia**](). 
 
 Tačiau svarbu atsiminti, kad paprasti modeliai daro supaprastinančias prielaidas. Pagrindinės prielaidos, kurias reikia turėti omenyje, yra šios:
 

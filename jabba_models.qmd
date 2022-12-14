@@ -25,10 +25,11 @@ JABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip p
 Daugiau informacijos apie modelį galite rasti modelio kūrėjų [puslapyje](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md)
 :::
 
-![](images/BBmsy_Roach.png){width="50%" fig-align="center"} <!-- next para ------------------------------------------------------------- -->
+![](images/BBmsy_Roach.png){width="50%" fig-align="center"} 
+<!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
-## Model code
+## Model
 
 The main model code is available in this [**R markdown script**](scripts/JabbaModel_example.zip) and is demonstrated using [**this dataset**](scripts/StockA1_catch_cpueSE.csv) from 30 years of a freshwater fish species catches, standardised CPUE (using our [GLM model](GLM_standardisation.qmd) and CPUE standard errors. You can download the model and modify the script according to your needs. Before you run the model you will need to install JABBA, as is explained in the developers [vingette](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md).
 
@@ -36,11 +37,14 @@ To look at the model code and outputs without having to run the code, you can cl
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## Modelių kodas
+## Modelis
 
-Pagrindinis kodas yra šiame [**R markdown**](scripts/JabbaModel_example.zip), naudojami šie pavyzdiniai [**duomenys**](scripts/StockA1_catch_cpueSE.csv) -- 30 metų versliniai sugavimai (laimikiai), bei standartizuoti sugavimai pastangai (CPUE) su standartinėmis paklaidomis (standartizacija atlikta naudojant [GLM modelį](GLM_standardisation.qmd). Modelį ir kodą galite parsisiųsti ir modifikuoti savo reikmėms. Prieš paleidžiant kodą, reikia instaliuoti JABBA, kaip paaiškinta kūrėjų [puslapyje](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md).
+Pagrindinis modelio kodas yra šiame [**R markdown dokumente**](scripts/JabbaModel_example.zip), ir šiam kodui naudojami šie pavyzdiniai [**duomenys**](scripts/StockA1_catch_cpueSE.csv), kuriuose yra pateikti 30 metų versliniai sugavimai (laimikiai), bei standartizuoti sugavimai pastangai (CPUE) su standartinėmis paklaidomis (standartizacija atlikta naudojant [GLM modelį](GLM_standardisation.qmd). 
 
-Norėdami pamatyti modelį ir rezultatus nepaleidžiant kodo, spauskite [**čia**](resources/Jabba_knitted.html). Pritaikę modelį ir paleidę kodą, galėsite sudaryti biomasės laiko eilutes su pasikliautiniais intervalais (žr. pavyzdį aukščiau), nagrinėti Kobe diagramas, rodančias biomasės ir žvejybinio mirtingumo pokyčius laikui bėgant (lyginant su vertėmis, kurios leistų gauti didžiausią tvarų laimikį, žr. žemiau esantį grafiką). Taip pat galite nubraižyti aposteriorines populiacinių parametrų vertes (žr. grafiką žemiau) bei sudaryti ateities prognozes (paskutinė diagrama šio puslapio pabaigoje).
+Modelį ir kodą galite parsisiųsti ir pritaikyti savo reikmėms. Prieš paleidžiant kodą, reikia instaliuoti JABBA, kaip paaiškinta kūrėjų [puslapyje](https://github.com/jabbamodel/JABBA/blob/master/Tutorial_Vignette.md).
+
+Norėdami pamatyti modelį ir rezultatus nevykdant kodo, spauskite [**čia**](resources/Jabba_knitted.html). Pritaikę modelį ir įvykdę kodą, galėsite sudaryti biomasės laiko eilutes su pasikliautiniais intervalais (žr. pavyzdį aukščiau), nagrinėti Kobe diagramas, rodančias biomasės ir žvejybinio mirtingumo pokyčius laikui bėgant (lyginant su vertėmis, kurios leistų gauti didžiausią tvarų laimikį, žr. žemiau esantį grafiką). Taip pat galite nubraižyti aposteriorines populiacinių parametrų vertes (žr. grafiką žemiau) bei sudaryti ateities prognozes (paskutinė diagrama šio puslapio pabaigoje).
+
 :::
 
 ::: grid
@@ -66,11 +70,12 @@ Also, the model has been applied in this collaborative project to assess nine Eu
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## Modelių pritaikymas
+## Modelio pritaikymas
 
 Jeigu norite daugiau sužinoti apie perteklinės produkcijos modeliavimą Kuršių bei Kauno marių žuvų populiacijoms, bei susipažinti su rezultatais, kurie gali būti svarbūs priimant žuvų išteklių valdymo sprendimus, skaitykite [čia](resources/KM_jabba_rez.pdf) ir [čia](resources/Kaunas_jabba_rez.pdf) arba žiūrėkite konferencijos pranešimus [Kuršių marioms](https://www.youtube.com/watch?v=xpMZfxMDnYQ&ab_channel=Lydekaipaliepus) ir [Kauno marioms](https://www.youtube.com/watch?v=UQkkBOtS09g&ab_channel=Lydekaipaliepus).
 
 Be to, šis modelis buvo pritaikytas Europos starkio būklės tyrime, kuriame dalyvavo institucijos iš šešių Europos šalių. Šio tyrimo rezultatus galite surasti šioje [išankstinėje publikacijoje](link_to_be_added_BioRxiv) (mokslinė publikacija šiuo metu yra pateikta spaudai).
+
 :::
 
 ![](images/Pikeperchprojection.png){width="75%" fig-align="center"}
