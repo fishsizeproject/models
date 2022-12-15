@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.49">
+<meta name="generator" content="quarto-1.3.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -241,9 +241,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#lt-lang-introduction" id="toc-lt-lang-introduction" class="nav-link active" data-scroll-target="#lt-lang-introduction">LT lang: Introduction</a></li>
-  <li><a href="#lt-langmodel-code" id="toc-lt-langmodel-code" class="nav-link" data-scroll-target="#lt-langmodel-code">LT lang:Model code</a></li>
-  <li><a href="#modelio-taikymas" id="toc-modelio-taikymas" class="nav-link" data-scroll-target="#modelio-taikymas">Modelio taikymas</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelio-kodas" id="toc-modelio-kodas" class="nav-link" data-scroll-target="#modelio-kodas">Modelio kodas</a></li>
   </ul>
 </nav>
     </div>
@@ -273,26 +272,24 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="lt-lang-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="lt-lang-introduction">LT lang: Introduction</h2>
-<p>LT lang:Before proceeding with CPUE standardisation, first make sure you carefully <strong>assess and explore your data</strong>. We have prepared the courses and scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
-<p>One commonly used approach for CPUE data standardisation applies generalized linear models (GLM). Here we model all variables that could impact our catches and extract annual deviations and their uncertainty. From this we can plot a standardized time series of population abundance.</p>
-<p>In this set of <a href="resources/CPUEstandartisation_GLM.pdf">slides</a> you will find main points about GLM based CPUE standardisation.</p>
-<p>For examples on how this method has been applied to other stocks, see references <a href="resources/Maunder2004.pdf">here</a> and <a href="resources/Forrestal_2018.pdf">here</a></p>
+<section id="įvadas" class="level2">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>Prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai <strong>įvertinote savo duomenis</strong>. Tam paruošėme kursus ir kodus, kuriuos rasite mūsų <a href="https://fishsizeproject.github.io/CPUEcourse/">svetainėje</a>.</p>
+<p>Vienas dažniausiai naudojamų CPUE standartizavimo metodų - apibendrinti tiesiniai modeliai (GLM). Čia modeliuojame visus kintamuosius, galinčius turėti įtakos sugavimams, ir išskiriame metinius nuokrypius bei jų neapibrėžtumą. Iš to galime sudaryti standartizuotą santykinio populiacijos gausumo laiko eilutę.</p>
+<p><a href="resources/CPUEstandartisation_GLM.pdf">Čia</a> rasite pagrindinę informaciją apie CPUE standartizaciją naudojant GLM.</p>
+<p>Pavyzdžius, kaip šis metodas buvo pritaikytas kitoms rūšims, galite rasti <a href="resources/Maunder2004.pdf">šioje</a> ir <a href="resources/Forrestal_2018.pdf">šioje</a> publikacijose.</p>
 </section>
 <!-- next para ------------------------------------------------------------- -->
-<section id="lt-langmodel-code" class="level2">
-<h2 class="anchored" data-anchor-id="lt-langmodel-code">LT lang:Model code</h2>
-<p>We have developed GLM based models for CPUE standardisation of five fish species in the Curonian Lagoon and Kaunas Water reservoir (Lithuania). To use our models you first need to convert your dataset into a format where each row corresponds to a unique entry indicating all catches per gear, mesh size, length, season, fishing trip or other variables you want to include in the model. You can use <a href="scripts/dataConversion.Rmd"><strong>this code</strong></a> to covert your data table into a suitable format.</p>
-<p>To apply our GLM based standardisation model you can use <a href="scripts/CPUEstand_example.zip">this code</a> where you will apply generalized linear models with Tweedie distribution and assess important predictor variables. Once you extract annual residuals and associated uncertainty you can plot the time series, as in the image below. To look at the model code and outputs without having to run the code, you can click <a href="resources/CPUEstand_example.html"><strong>here</strong></a>.</p>
+<section id="modelio-kodas" class="level2">
+<h2 class="anchored" data-anchor-id="modelio-kodas">Modelio kodas</h2>
+<p>GLM pagrįstą modelį pritaikėme penkioms paplitusioms Lietuvos gėlavandenių žuvų rūšims iš Kuršių ir Kauno marių. Norėdami naudoti mūsų modelius savo duomenims, pirmiausia turite konvertuoti duomenų rinkinį į formatą, kuriame kiekviena eilutė atitinka unikalų įrašą, nurodantį sugavimus pagal įrankius, akių dydį, tinklo ilgį, sezoną, vietovę ar kitus kintamuosius, kuriuos norite įtraukti į modelį. Duomenų konvertavimui galite naudoti <a href="scripts/dataConversion.Rmd"><strong>šį kodą</strong></a>.</p>
+<p>Norėdami pritaikyti mūsų GLM pagrįstą standartizacijos modelį, galite naudoti <a href="scripts/CPUEstand_example.zip">šį kodą</a>, kur pritaikysite apibendrintus tiesinius modelius su Tweedie pasiskirstymu ir įvertinsite svarbius kintamuosius prognozei. Ištraukę metines liekanas (annual residuals) ir su jais susijusią neapibrėžtį, galėsite sudaryti standartizuoto santykino gausumo laiko eilutes, kaip parodyta paveikslėlyje žemiau. Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti <a href="resources/CPUEstand_example.html"><strong>čia</strong></a>.</p>
 </section>
 <p><img src="images/example_stand_cpue1.jpeg" class="img-fluid" style="width:50.0%" data-fig-align="center"> <!-- next para ------------------------------------------------------------- --></p>
-<section id="modelio-taikymas" class="level2">
-<h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>
-<p>LT lang:To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our <a href="https://www.mdpi.com/2410-3888/7/5/232"><strong>publication</strong></a> in journal <em>Fishes</em>.</p>
-<p>You can also watch <a href="broken link"><strong>this conference talk</strong></a> to learn more about this analysis.</p>
-<p>Once you conduct your CPUE standardisation, you can use the standardised values in <a href="./jabba_models.html"><strong>surplus production models</strong></a>, as explained on this website.</p>
-</section>
+<p>::: {.content-visible when-profile=“lithuanian”} ## Modelio taikymas</p>
+<p>Norėdami daugiau sužinoti apie šio CPUE standartizacijos modelio pritaikymą Kauno marių žuvų populiacijoms, skaitykite <a href="https://www.mdpi.com/2410-3888/7/5/232">šią publikaciją</a> žurnale <em>Fishes</em>.</p>
+<p>Taip pat galite peržiūrėti <a href="https://www.youtube.com/watch?v=MoAJ4PuOW8M&amp;list=PLbdhgW7mtwEUwB2S5BIEoERR8YFQzJ2Yf&amp;index=3&amp;ab_channel=Lydekaipaliepus"><strong>šį pranešimą</strong></a> konferencijoje.</p>
+<p>Atlikus CPUE standartizaciją, gautas reikšmes galite naudoti <a href="./jabba_models.html"><strong>perteklinės produkcijos modeliuose</strong></a>, kaip paaiškinta šiame puslapyje.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/cpue_glm1.jpg" class="img-fluid figure-img" style="width:60.0%"></p>

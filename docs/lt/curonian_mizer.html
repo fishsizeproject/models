@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.49">
+<meta name="generator" content="quarto-1.3.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Asta Audzijonyte, Max Lindmark, Gustav Delius">
 
-<title>Lydekai paliepus: tvari vidaus vandenų žvejyba -</title>
+<title>Lydekai paliepus: tvari vidaus vandenų žvejyba - Size based models for Baltic Sea and Curonian lagoon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -74,11 +75,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -87,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Size based models for Baltic Sea and Curonian lagoon</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -239,24 +240,66 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#lith-title-mizer" id="toc-lith-title-mizer" class="nav-link active" data-scroll-target="#lith-title-mizer">LITH TITLE MIZER</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelio-kodas" id="toc-modelio-kodas" class="nav-link" data-scroll-target="#modelio-kodas">Modelio kodas</a></li>
+  <li><a href="#modelio-pritaikymas" id="toc-modelio-pritaikymas" class="nav-link" data-scroll-target="#modelio-pritaikymas">Modelio pritaikymas</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Size based models for Baltic Sea and Curonian lagoon</h1>
+</div>
 
 
 
-<!-- start para ------------------------------------------------------------- -->
-<section id="lith-title-mizer" class="level1">
-<h1>LITH TITLE MIZER</h1>
-<p>About the model (Lithuanian)</p>
-<p>A link to the <a href="https://www.github.com">code</a></p>
-<p>A link for <a href="https://www.google.com">more info</a></p>
-<p>A link to the <a href="https://fishsize.shinyapps.io/pikeperch/">model</a></p>
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Asta Audzijonyte, Max Lindmark, Gustav Delius </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- next para ------------------------------------------------------------- -->
+<section id="įvadas" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>Individų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas ir populiarus įrankis tiriant tarprūšinę sąveiką, ekosistemų dinamiką, klimato kaitą, žvejybos poveikį ir daugelį kitų procesų. Norėdami plačiau susipažinti su tokio tipo modeliais, skaitykite Ken H Andersen knygą <a href="https://ken.haste.dk/home/publications">“Fish Ecology, Evolution, and Exploitation” (2019</a>) arba apsilankykite plačiai naudojamo dydžiu pagrįstu modeliavimo R paketo <a href="https://sizespectrum.org/mizer/"><em>mizer</em></a> pagrindiniame puslapyje. Trumpą apžvalgą taip pat galite rasti <a href="https://www.sciencedirect.com/science/article/pii/S0169534716302361">šioje publikacijoje</a>,</p>
+<p>Šio projekto metu mes pritaikėme <em>mizer</em> pakrančių ir gėlo vandens ekosistemoms, įdiegdami dydžiu pagrįstą foninių resursų struktūrą. Ši modifikacija leidžia vartotojams geriau ir tiksliau modeliuoti atskirus planktoną, bentosą, makrodumblius ir kitus maisto išteklius, kas tai yra svarbus sekliųjų vandenų ekosistemų aspektas. Modifikuotas <em>mizer</em> buvo naudojamas Baltijos jūros ekosistemos modeliui sukurti ir ištirti, kaip klimato kaitos sąlygoti žuvų fiziologijos ir maisto išteklių gausumo pokyčiai gali paveikti biomasę ir menkių, strimėlių bei bretlingių produkciją.</p>
+<p>Taip pat sukūrėme pirmąją Kuršių marių ekosistemos modelio versiją, kuri apima atskirus bentoso ir planktono išteklius bei <a href="https://course.mizer.sizespectrum.org/build/find-species-parameters.html">dešimt pagrindinių žuvų rūšių</a>. Modelis buvo sukurtas <a href="https://course.mizer.sizespectrum.org/">mizer kurso metu</a>, kur kurso dalyviai prisidėjo prie modelio parametrizacijos.</p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">Pagrindinių mizer modelio dalių iliustracija, autorius Max Lindmark</span></div></div>
 </section>
-<!-- end para ------------------------------------------------------------- -->
+<p><img src="images/sizeBasedModels.jpg" class="img-fluid" style="width:100.0%" data-fig-align="center"> <!-- next para ------------------------------------------------------------- --></p>
+<section id="modelio-kodas" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="modelio-kodas">Modelio kodas</h2>
+<p>Norėdami naudoti dydžiu pagrįstus modelius su <em>mizer</em>, jums reikia R ir Rstudio, taip pat turite įdiegti <em>mizer</em> paketą. Daugiau informacijos apie tai, kaip tai padaryti, rasite šioje <a href="https://course.mizer.sizespectrum.org/">mizer kurso svetainėje</a>. Šioje svetainėje rasite išsamius paaiškinimus, kaip rasti rūšies parametrus, paruošti ir <a href="https://course.mizer.sizespectrum.org/build/refine-model.html">kalibruoti modelį</a>. Taip pat galite pamatyti <a href="https://course.mizer.sizespectrum.org/use/fishing-scenarios.html">skirtingus Kuršių marių žuvų rūšių biomasės žvejybos scenarijus</a>, kai kurie rezultatai rodomi toliau pateiktuose paveikslėliuose.</p>
+<p>Jei norite naudoti <em>mizer</em> su keliais maisto ištekliais, įdiekite <a href="https://github.com/sizespectrum/mizerMR">mizerMR priedą iš Github</a>. Siekdami palengvinti modelio kalibravimą, taip pat pritaikėme ShinyR programą, pasiekiamą <a href="https://github.com/sizespectrum/mizerExperimental">čia</a>. Jei norite peržiūrėti ShinyR programos ekrano kopijas nepaleidžiant modelio, eikite <a href="resources/mizerMR_screenshots.pdf">čia</a>.</p>
+<p>Visas Baltijos jūros modelio modelio kodas ir visi sugeneruoti duomenys yra prieinami <a href="https://github.com/maxlindmark/mizer-rewiring/tree/rewire-temp">GitHub</a> ir <a href="https://doi.org/10.5281/zenodo.6821926">Zenodo</a>.</p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">Kuršių marių rūšių biomasės pokytis pakeitus žvejybos mirtingumą</span></div></div>
+</section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/CuronianLagoonBiomases.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<!-- next para ------------------------------------------------------------- -->
+<section id="modelio-pritaikymas" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="modelio-pritaikymas">Modelio pritaikymas</h2>
+<p>Straipsnis, kuriame aprašomas Baltijos jūros modelis, publikuotas Global Change Biology žurnale ir yra pasiekiamas <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/gcb.16341"><em>čia</em></a>.</p>
+<p>Vis dar dirbame prie Kuršių marių modelio. Galutinis modelio kūrimas ir pritaikymas įvairiems klimato kaitos ir žuvininkystės klausimams yra doktorantūros projekto, kurį 2022 m. gruodžio mėn. Gamtos tyrimų centre pradėjo Elyza Pilipaitytė, tema. Jei norite sužinoti daugiau ar bendradarbiauti, susisiekite <em>lydekaipaliepus@gamtc.lt</em>.</p>
+<div class="page-columns page-full"><p> <img src="images/Sirulusglanis_sm.png" class="img-fluid" style="width:75.0%" data-fig-align="center"></p><div class="no-row-height column-margin column-container"><span class="">Šamas. Piešinio autorė Amy Rose Coghlan</span></div></div>
+</section>
 
 
 

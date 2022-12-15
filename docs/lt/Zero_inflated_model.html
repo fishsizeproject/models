@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.49">
+<meta name="generator" content="quarto-1.3.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -241,9 +241,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#lithintroduction" id="toc-lithintroduction" class="nav-link active" data-scroll-target="#lithintroduction">LITH:Introduction</a></li>
-  <li><a href="#lithmodel-code" id="toc-lithmodel-code" class="nav-link" data-scroll-target="#lithmodel-code">LITH:Model code</a></li>
-  <li><a href="#lith-application-of-the-model" id="toc-lith-application-of-the-model" class="nav-link" data-scroll-target="#lith-application-of-the-model">LITH: Application of the model</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelio-kodas" id="toc-modelio-kodas" class="nav-link" data-scroll-target="#modelio-kodas">Modelio kodas</a></li>
+  <li><a href="#modelio-taikymas" id="toc-modelio-taikymas" class="nav-link" data-scroll-target="#modelio-taikymas">Modelio taikymas</a></li>
   </ul>
 </nav>
     </div>
@@ -274,16 +274,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!-- next para ------------------------------------------------------------- -->
-<section id="lithintroduction" class="level2">
-<h2 class="anchored" data-anchor-id="lithintroduction">LITH:Introduction</h2>
-<p>LITH:Most fisheries datasets (scientific, commercial, recreational) have a lot of zero catches. These are fishing trips were no fish was caught. These zero catches are important but we need to fit appropriate models to accommodate them. Here we are introducing a model for zero inflated data. This model is coded in <a href="https://www.r-project.org/">R</a> language, so you will need R and <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> to run it. If you need a brief introduction into R, check <a href="https://course.mizer.sizespectrum.org/prepare/install-tools.html">this introductory page</a> from an online course on size based modelling.</p>
-<p>For a basic introduction into the model and data, check out <a href="resources/ZeroInflatedModels.pdf"><strong>these slides</strong></a>. However, if you want to use the model we strongly recommend that you watch at least <a href="https://fishsizeproject.github.io/CPUEcourse/4-hilsha.html"><strong>part 4</strong></a> of our CPUE standardisation course, where the model and approach were presented in more detail.</p>
-<p>Before proceeding with CPUE standardisation, first make sure you carefully <em>assess and explore your data</em>. We have prepared two courses and different scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
+<section id="įvadas" class="level2">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>Daugumoje žuvininkystės duomenų rinkinių (mokslinių, verslinės ar megėjiškos žvejybos) yra daug nulinių reikšmių - kuomet buvo žvejota, bet nieko nepagauta. Šie nuliniai sugavimai yra svarbi duomenų dalis, tačiau jų analizei reikia specialiai pritaikytų modelių. Čia pristatome modelį duomenims su nulinių reikšmių perviršiu. Modelis parašytas <a href="https://www.r-project.org/">R</a> kalba, todėl jums reikės įsidiegti R ir <a href="https://www.rstudio.com/products/rstudio/">RStudio</a>. Jei jums reikia trumpo įvado apie R, peržiūrėkite <a href="https://course.mizer.sizespectrum.org/prepare/install-tools.html">šį įvadinį puslapį</a> iš mūsų kurso apie individų dydžiu pagrįstą modeliavimą.</p>
+<p>Įvadinę informaciją apie modelį ir duomenis galite rasti <a href="resources/ZeroInflatedModels.pdf"><strong>čia</strong></a>. Tačiau jei norite naudoti modelį, būtinai rekomenduojame atlikti bent <a href="https://fishsizeproject.github.io/CPUEcourse/4-hilsha.html"><strong>4</strong></a> mūsų CPUE standartizacijos kurso dalį, kur modelis pristatytas išsamiau. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai <em>įvertinote savo duomenis</em>. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų <a href="https://fishsizeproject.github.io/CPUEcourse/">svetainėje</a>.</p>
 </section>
 <!-- next para ------------------------------------------------------------- -->
-<section id="lithmodel-code" class="level2">
-<h2 class="anchored" data-anchor-id="lithmodel-code">LITH:Model code</h2>
-<p>LITH:The main model code is available in this <a href="scripts/Hilsha.zip"><strong>R markdown script</strong></a> and is demonstrated using <a href="scripts/hilsa.csv"><strong>this dataset</strong></a>. You can download the model and modify the script according to your needs. To look at the model code and outputs without having to run the code, you can click <a href="resources/ZeroInflated.html"><strong>here</strong></a>. After applying the model you should be able to plot predicted catches as a function of fishing time (or other estimate of effort) and month or season, like in the plot below.</p>
+<section id="modelio-kodas" class="level2">
+<h2 class="anchored" data-anchor-id="modelio-kodas">Modelio kodas</h2>
+<p>Pagrindinis modelio kodas pasiekiamas šiame <a href="scripts/Hilsha.zip"><strong>R markdown</strong></a>, naudojamas <a href="scripts/hilsa.csv"><strong>šis duomenų rinkinys</strong></a>. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti <a href="resources/ZeroInflated.html"><strong>čia</strong></a>. Pritaikę modelį, turėtumėte nubraižyti sugavimus kaip žvejybos trukmės (ar kito tipo pastangos) ir sezono funkciją, kaip parodyta paveiksle žemiau.</p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -291,9 +290,9 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <!-- next para ------------------------------------------------------------- -->
-<section id="lith-application-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="lith-application-of-the-model">LITH: Application of the model</h2>
-<p>LITH:To better understand this model and its applications, we strongly recommend that you go through our <a href="https://fishsizeproject.github.io/CPUEcourse/"><strong>CPUE standardisation course</strong></a> material, where we discuss different models and their strengths in greater detail. The course also explains how to simulate new datasets using estimated model parameters to assess the probability of obtaining as many zero entries as you have in your dataset (example output of these simulations is shown in the plot below).</p>
+<section id="modelio-taikymas" class="level2">
+<h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>
+<p>Kad geriau suprastumėte šį modelį ir jo pritaikymą, primygtinai rekomenduojame perskaityti mūsų <a href="https://fishsizeproject.github.io/CPUEcourse/"><strong>CPUE standartizacijos kurso</strong></a> medžiagą, kurioje detaliau aptariame įvairius modelius ir jų stipriąsias puses. Kurse taip pat paaiškinama, kaip imituoti naujus duomenų rinkinius naudojant apskaičiuotus modelio parametrus, siekiant įvertinti tikimybę gauti tiek nulinių reikšmių, kiek turite savo duomenų rinkinyje (šių imitavimų išvesties pavyzdys parodytas toliau pateiktoje diagramoje).</p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

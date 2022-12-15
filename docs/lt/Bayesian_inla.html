@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.49">
+<meta name="generator" content="quarto-1.3.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -76,11 +76,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -241,9 +241,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#ltlangintroduction" id="toc-ltlangintroduction" class="nav-link active" data-scroll-target="#ltlangintroduction">LTlang:Introduction</a></li>
-  <li><a href="#ltlangmodel-code" id="toc-ltlangmodel-code" class="nav-link" data-scroll-target="#ltlangmodel-code">LTlang:Model code</a></li>
-  <li><a href="#ltlang-application-of-the-model" id="toc-ltlang-application-of-the-model" class="nav-link" data-scroll-target="#ltlang-application-of-the-model">LTlang: Application of the model</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelio-kodas" id="toc-modelio-kodas" class="nav-link" data-scroll-target="#modelio-kodas">Modelio kodas</a></li>
+  <li><a href="#modelio-taikymas" id="toc-modelio-taikymas" class="nav-link" data-scroll-target="#modelio-taikymas">Modelio taikymas</a></li>
   </ul>
 </nav>
     </div>
@@ -274,18 +274,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <!-- next para ------------------------------------------------------------- -->
-<section id="ltlangintroduction" class="level2">
-<h2 class="anchored" data-anchor-id="ltlangintroduction">LTlang:Introduction</h2>
-<p>LTlang:Fisheries catches through time are usually correlated. Catch in one year is not independent of the catch in the previous year. In CPUE standardisation models we should ideally account for this autocorrelation. The <a href="./GLM_standardisation.html">GLM based models</a> don’t really do that, despite being a popular approach. Therefore here we will develop and apply a different model which accounts for spatial and temporal correlation in our catches.</p>
-<p>In this model we will estimate model parameters using approximate Bayesian inference as implemented in the <a href="https://www.r-inla.org/">INLA package</a>. The approximate Bayesian inference runs much faster than full inference using MCMC approach and with INLA package it can be applied to a wide range of distributions. For a basic introduction into the Bayesian approach and why it is useful, check out <a href="resources/BayesianModels.pdf"><strong>these slides</strong></a>.</p>
-<p>The slides and the model, together with a detailed description of all the modelling steps have been presented in the last lecture of the <a href="https://fishsizeproject.github.io/CPUEcourse/5-zander.html">CPUE standardisation course</a>, so we recommend you watch the lecture before applying the model. Also, before proceeding with CPUE standardisation, make sure you carefully <em>assess and explore your data</em>. We have prepared two courses and different scripts for data exploration, which you can find on our <a href="https://fishsizeproject.github.io/CPUEcourse/">CPUE standardisation course</a> webpage.</p>
-<p>The model is coded in <a href="https://www.r-project.org/">R</a> language, so you will need R and <a href="https://www.rstudio.com/products/rstudio/">RStudio</a> to run it. If you need a brief introduction into R, check <a href="https://course.mizer.sizespectrum.org/prepare/install-tools.html">this introductory page</a> from an online course on size based modelling.</p>
+<section id="įvadas" class="level2">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>Žvejybos sugavimai laike dažniausiai koreliuoja - t.y., sugautų žuvų kiekis priklauso nuo to, koks buvo laimikis prieš metus. Idealiu atveju į tai turėtų būti atsižvelgta, tačiau CPUE standartizacija, pagrįsta <a href="./GLM_standardisation.html">GLM modeliais</a> to nedaro, nepaisant to, kad tai yra populiarus ir dažnai naudojamas metodas. Todėl sukūrėme kitokį modelį, kuris atspindi sugavimų koreliaciją erdvėje ir laike.</p>
+<p>Šiame modelyje parametrus įvertinsime naudodami aproksimuotą Bajeso išvadą, kaip įdiegta <a href="https://www.r-inla.org/">INLA pakete</a>. Bajeso metodas įvykdomas daug greičiau nei klasikinis MCMC, o naudojant INLA paketą Bajeso metodą galima taikyti įvairiems pasiskirstymams. Norėdami daugiau sužinoti apie Bajeso metodą ir kodėl jis naudingas, žiūrėkite mokymo skaidres <a href="resources/BayesianModels.pdf"><strong>čia</strong></a>.</p>
+<p>Skaidrės ir modelis, kartu su išsamiu visų modeliavimo žingsnių aprašymu buvo pateikti paskutinėje <a href="https://fishsizeproject.github.io/CPUEcourse/5-zander.html">CPUE standartizacijos kursų</a> paskaitoje, todėl prieš taikant modelį rekomenduojame ją pažiūrėti. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai <em>įvertinote savo duomenis</em>. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų <a href="https://fishsizeproject.github.io/CPUEcourse/">svetainėje</a>.</p>
+<p>Modelis parašytas <a href="https://www.r-project.org/">R</a> aplinkoje, todėl jums reikės instaliuoti R ir <a href="https://www.rstudio.com/products/rstudio/">RStudio</a>. Jei jums reikia trumpo įvado apie R, peržiūrėkite <a href="https://course.mizer.sizespectrum.org/prepare/install-tools.html">šį įvadinį puslapį</a> iš mūsų kurso apie dydžiu pagrįstą modeliavimą.</p>
 </section>
 <!-- next para ------------------------------------------------------------- -->
-<section id="ltlangmodel-code" class="level2">
-<h2 class="anchored" data-anchor-id="ltlangmodel-code">LTlang:Model code</h2>
-<p>LTlang:The main model code is available in this <a href="scripts/BayesianINLA.zip"><strong>R markdown script</strong></a> and is demonstrated using <a href="scripts/pikeperch.csv"><strong>this dataset</strong></a> from 22 years of commercial pikeperch (<em>Sander lucioperca</em>) catches in the Baltic Sea. You can download the model and modify the script according to your needs. Before you run the model you will need to install all the R packages, as is explained in this <a href="scripts/model_packages.R"><strong>R script</strong></a>.</p>
-<p>To look at the model code and outputs without having to run the code, you can click <a href="resources/BayesianINLA.html"><strong>here</strong></a>. After applying the model you should be able to plot predicted CPUE and its uncertainty through time, like in the plot below.</p>
+<section id="modelio-kodas" class="level2">
+<h2 class="anchored" data-anchor-id="modelio-kodas">Modelio kodas</h2>
+<p>Pagrindinis modelio kodas pasiekiamas šiame <a href="scripts/BayesianINLA.zip"><strong>R markdown</strong></a>; čia naudojamas <a href="scripts/pikeperch.csv"><strong>duomenų rinkinys</strong></a> su 22 metų versliniais starkių (<em>Sander lucioperca</em>) sugavimais Baltijos jūroje. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Prieš paleisdami modelį turėsite įdiegti visus R paketus, kaip paaiškinta šiame <a href="scripts/model_packages.R"><strong>R kode</strong></a>.</p>
+<p>Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti <a href="resources/BayesianINLA.html"><strong>čia</strong></a>. Pritaikę modelį turėtumėte nubraižyti CPUE ir jo neapibrėžtumą laikui bėgant, kaip parodyta paveiksle žemiau.</p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -293,9 +293,9 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <!-- next para ------------------------------------------------------------- -->
-<section id="ltlang-application-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="ltlang-application-of-the-model">LTlang: Application of the model</h2>
-<p>LTlang:We are currently working on applying this model to CPUE standardisation of the <a href="https://www.sciencedirect.com/science/article/pii/S2352340922002013">long term data set</a> from the Curonian Lagoon and Kaunas Water Reservoir in Lithuania. Stay tuned for more outputs. If you are interested to learn more, please contact us as <em>lydekaipaliepus@gamtc.lt</em></p>
+<section id="modelio-taikymas" class="level2">
+<h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>
+<p>Šiuo metu dirbame su šio modelio pritaikymu <a href="https://www.sciencedirect.com/science/article/pii/S2352340922002013">ilgalaikės stebėsenos duomenims</a> iš Kuršių ir Kauno marių. Jei norite daugiau sužinoti, sekite naujienas ar susisiekite su mumis <em>lydekaipaliepus@gamtc.lt</em></p>
 </section>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
