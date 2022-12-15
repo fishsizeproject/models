@@ -43,7 +43,7 @@ Once you have the file with satellite data retrieved for the selected coordinate
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
-## Modelis
+## Modelio kodas
 
 Tam kad lengvai pasiekti vandens paviršiaus temperatūros duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis [Google Colaboratory aplinka](https://colab.research.google.com/). Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į [nuorodą](https://support.google.com/accounts/answer/27441?hl=lt). Tuomet **reikia užsiregistruoti** [Google Earth Engine](https://signup.earthengine.google.com/). Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.
 

@@ -23,10 +23,12 @@ In this [**publication**](https://www.mdpi.com/2071-1050/14/21/14324) in the jou
 
 ## Įvadas
 
-Čia bus vertimas
+Čia pristatome **vartotojui draugišką ir lengvai pritaikomą dirbtinio intelekto (DI) sistemą, skirtą žuvų rūšių identifikavimo modeliams kurti**. Parengėme duomenų pirminio apdorojimo, vaizdų apdorojimo ir mašininio mokymosi modelių kūrimo kursą ir kodus, kuriuos galite rasti mūsų rengtuose [nuotiniuose mokymuose](https://fishsizeproject.github.io/Course-MLforImageProcessing/). 
+
+Šiame atviros prieigos [**straipsnyje**](https://www.mdpi.com/2071-1050/14/21/14324) skelbtame žurnale *Sustainability* rasite išsamų sistemos aprašymą, bandomąjį pavyzdį, kuriame demonstruojamas galimas panaudojimas mėgėjiškos žvejybos tyrimams, žinių, įgytų taikant pavyzdį, santrauką ir pagrindinių uždavinių bei galimo tolesnio plėtojimo apžvalgą. Visus sistemoje naudojamus kodus taip pat galite rasti mūsų [Github puslapyje](https://github.com/fishsizeproject/ML-framework-for-image-processing).
 
 
-[Open-source modular framework for large scale image storage, handling, annotation and automatic classification]{.aside}
+[Atviros prieigos, modulinė didelio masto vaizdų saugojimo, tvarkymo, anotavimo ir automatinio klasifikavimo sistema]{.aside}
 
 ::: 
 
@@ -66,9 +68,7 @@ Scripts provided are adapted to be user friendly and do not require prior Python
 
 Colab, or “Colaboratory”, is a free, cloud-based environment similar to Jupyter’s network environment that allows us to execute Python code (and Python libraries) in the browser without the need for installation and configuration. It also provides some free access to computing resources.
 
-To start using Google Colab, you will need a Google account.
-
-The link below will direct you to the Google Colab notebook. It will open the notebook which you can run and modify directly (i.e. without worrying about overwriting the source or original notebook). To save any changes you make to the notebook you will have to save a copy of the notebook in your own Google Drive. If you try to save the changes directly in the source notebook you will get the message "Cannot save changes" and you need to select "Save a copy in Drive".
+To start using Google Colab, you will need a Google account. The link below will direct you to the Google Colab notebook. It will open the notebook which you can run and modify directly (i.e. without worrying about overwriting the source or original notebook). To save any changes you make to the notebook you will have to save a copy of the notebook in your own Google Drive. If you try to save the changes directly in the source notebook you will get the message "Cannot save changes" and you need to select "Save a copy in Drive".
 
 After modifying your notebook you can save changes by choosing File→Save a copy in Drive and follow the resulting prompts.
 
@@ -83,30 +83,40 @@ To apply our model you can use this code:
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## Modelis
+## Modelio kodas
 
-čia bus vertimas
-
+Norint naudoti mūsų modelius, labai svarbu, kad žuvų rūšys (arba ekotipai, arba bet kokios kitos klasės, kurias norite, kad jūsų modelis identifikuotų) jūsų duomenų rinkinyje būtų identifikuotos teisingai, kitaip jūsų modelis bus netikslus. Nuotraukas (JPEG arba PNG formatu) galite įkelti į "Google" diską pagal rūšis (t. y. po vieną rūšį viename aplanke - įsitikinkite, kad jos yra teisingai identifikuotos), laikydamiesi šios katalogų struktūros:
 
 <pre>
 <b>dataset</b>
-|__ <b>perch</b>
-    |______ 100080576_f52e8ee070_n.PNG
-    |______ 14167534527_781ceb1b7a_n.PNG
+|__ <b>eserys</b>
+    |______ eserys1.PNG
+    |______ kita_nuotrauka.PNG
     |______ ...
-|__ <b>striped_bass</b>
-    |______ 10043234166_e6dd915111_n.PNG
-    |______ 1426682852_e62169221f_m.PNG
+|__ <b>lydeka</b>
+    |______ nuotrauku_pavadinimai_nesvarbus.PNG
+    |______ dar_viena_lydeka.PNG
     |______ ...
-|__ <b>trout</b>
-    |______ 102501987_3cdb8e5394_n.PNG
-    |______ 14982802401_a3dfb22afb.PNG
+|__ <b>kuoja</b>
+    |______ 10250198.PNG
+    |______ bet_koks_pavadinimas.PNG
     |______ ...
 |__ ...
 </pre>
 
+Šis modelis sukurtas "Python" kalba ir veikia nemokamoje "Google Colab" versijoje. Pateikiami programiniai kodai yra pritaikyti taip, kad juos būtų patogu naudoti ir jų naudojimui nereikėtų išsamių "Python" programavimo kalbos žinių (tačiau norint toliau kodus pakeisti, tam tikos programavimo žinios žinoma yra reikalingos). 
 
-To apply our model you can use this code:
+"Colab", arba "Colaboratory", yra nemokama, į "Jupyter" tinklo aplinką panaši debesų kompiuterijos aplinka, leidžianti vykdyti "Python" kodą (ir "Python" bibliotekas) naršyklėje be atskiro įdiegimo ir konfigūravimo. Ji taip pat suteikia prieigą prie riboto kiekio skaičiavimo išteklių.
+
+Norėdami pradėti naudotis "Google Colab", turite turėti "Google" paskyrą. Žemiau pateikta nuoroda nukreips jus į "Google Colab" užrašų knygelę. Ji atvers užrašų knygelę, kurią galėsite paleisti ir keisti tiesiogiai (t. y. nesirūpindami, kad perrašysite šaltinį ar pradinę užrašų knygelę). Norėdami išsaugoti bet kokius užrašų knygelės pakeitimus, turėsite išsaugoti užrašų knygelės kopiją savo "Google" diske. Jei bandysite įrašyti pakeitimus tiesiogiai pradinėje užrašų knygelėje, gausite pranešimą "cannot Save changes" (negalima įrašyti pakeitimų) ir turėsite pasirinkti "Save a copy in Drive" (įrašyti kopiją diske).
+
+Pakeitę užrašų knygelę galite išsaugoti pakeitimus pasirinkę File→Save a copy in Drive (Failas→Įrašyti kopiją diske) ir vadovaukitės gautais nurodymais.
+
+Taip pat galite sukurti naują užrašų knygelę nuėję į "Google Colab" pagrindinį puslapį [čia](https://colab.research.google.com/) ir spustelėdami apatiniame dešiniajame kampe esančią nuorodą "new notebook". Jei norite, taip pat galite spustelėti "atšaukti" ir pereiti prie trumpo mokomojo vadovo, kaip pradėti dirbti su "Google colab".
+
+Taip pat atkreipkite dėmesį, kad šiame užrašų sąsiuvinyje pateikiame trijų žuvų rūšių duomenų rinkinio pavyzdį, kurio nuotraukas pateikė [AnglerAtlas](https://www.anglersatlas.com/).
+
+Norėdami taikyti mūsų modelį, galite naudoti šį kodą:
 
 ::: 
 
@@ -122,11 +132,11 @@ To apply our model you can use this code:
 
 ## Application of the model
 
-You can also watch [**this talk**](https://youtu.be/mHw8-tUgCkI?t=1886) for the "Online workshop: Machine learning, fishing and citizen science" and [**this talk**](https://youtu.be/iujl9R3lEaQ?t=5293) for the "Online seminar: Recreational angling effort and engagement in the digital age" to learn more about this model.
+To learn more about the application of the model you can watch [**this talk**](https://youtu.be/mHw8-tUgCkI?t=1886) for the "Online workshop: Machine learning, fishing and citizen science" and [**this talk**](https://youtu.be/iujl9R3lEaQ?t=5293) for the "Online seminar: Recreational angling effort and engagement in the digital age" to learn more about this model.
 
 In this [**publication**](https://www.mdpi.com/2071-1050/14/21/14324) we demonstrate the potential use of this approach for recreational fisheries research. In particular, we illustrate the scientific application, utility and potential for scalability for fish species or other object classification. The framework is flexible, and can be customised for a variety of image classification and research questions. We show that with a relatively small number of images per class (200–300), a model of reasonably high performance can be developed quickly and with minimal resources for a small number of classification classes (six in our case). 
 
-Contributions of the research community to fish species identification models would be especially powerful, as research groups around the world could engage local citizen scientists to assemble images and develop models relevant for local fisheries’ management and ecological questions. Such models could then enable faster processing of new local citizen science data, spearheading marine recreational fishing assessments into a new data-rich era.
+Contributions of the research community to fish species identification models would be especially powerful, as research groups around the world could engage local citizen scientists to assemble images and develop models relevant for local fisheries’ management and ecological questions. Such models could then enable faster processing of new local citizen science data, spearheading recreational fishing assessments into a new data-rich era.
 
 
 ::: 
@@ -135,7 +145,12 @@ Contributions of the research community to fish species identification models wo
 
 ## Modelio taikymas
 
-Čia bus vertimas
+Jei norite daugiau sužinoti apie modelio vystymą ir pritaikymą galite peržiūrėti [**šį pranešimą**](https://youtu.be/mHw8-tUgCkI?t=1886) nuotoliniame seminare "Internetinis seminaras: "Mašinų mokymasis, žvejyba ir piliečių mokslas" arba [**šį pranetimą**](https://youtu.be/iujl9R3lEaQ?t=5293) nuotoliniame seminare  "Mėgėjiškos žvejybos pastangos ir įsitraukimas skaitmeniniame amžiuje".
+
+Šiame atviros prieigos [**straipsnyje**](https://www.mdpi.com/2071-1050/14/21/14324) mes detaliai aprašome kaip pristatymas metodas gali būti taikomas mėgėjiškos žūklės tyrimams. Visų pirma parodome mokslinį taikymą, naudingumą ir mastelio didinimo galimybes žuvų rūšims ar kitiems objektams klasifikuoti. Čia pateikta sistema yra lanksti, ją galima pritaikyti įvairiems vaizdų klasifikavimo ir mokslinių tyrimų klausimams spręsti. Parodome, kad turint palyginti nedidelį vaizdų skaičių kiekvienoje vaizdų klasėje (200-300), galima greitai ir su minimaliais ištekliais sukurti gana aukšto našumo modelį nedideliam klasifikavimo klasių skaičiui (mūsų atveju - šešioms).
+
+Tolimesniam modelio vystymui ir taikymui kviečiame ir skatinsime platesnį mokslininkų bendruomenės ir piliečių mokslo įsitraukimą. Tyrimų grupės visame pasaulyje galėtų įtraukti vietinius piliečius mokslininkus, kad jie rinktų nuotraukas mažų modulinių modelių, susijusius su vietos žuvininkystės valdymo ir ekologiniais klausimais, kūrimui. Tokie modeliai leistų greičiau apdoroti naujus piliečių mokslo duomenis, ir tai žymiai padidintų mėgėjiškos žvejybos tyrimams prieinamų duomenų kiekį.
+
 
 ::: 
 
