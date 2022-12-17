@@ -74,7 +74,7 @@ After modifying your notebook you can save changes by choosing File→Save a cop
 
 Alternatively, you can start a new notebook by going to Google Colab’s home page [here](https://colab.research.google.com/) and clicking "new notebook" on the bottom right corner. If you like you can also click "cancel" and go to a short tutorial on how to get started with Google colab.
 
-Please also note that in this notebook we provide an example data set with three fish species, with photos contributed by [AnglerAtlas](https://www.anglersatlas.com/).
+Please also note that in this notebook we provide an example data set with three fish species, with photos contributed by the Canadian angler citizen science platform [**My Catch, Angler's Atlas](https://www.anglersatlas.com/mycatch), through a collaborative data sharing agreement with Nature Reserach Centre. 
 
 To apply our model you can use this code:
 
@@ -114,7 +114,7 @@ Pakeitę užrašų knygelę galite išsaugoti pakeitimus pasirinkę File→Save 
 
 Taip pat galite sukurti naują užrašų knygelę nuėję į "Google Colab" pagrindinį puslapį [čia](https://colab.research.google.com/) ir spustelėdami apatiniame dešiniajame kampe esančią nuorodą "new notebook". Jei norite, taip pat galite spustelėti "atšaukti" ir pereiti prie trumpo mokomojo vadovo, kaip pradėti dirbti su "Google colab".
 
-Taip pat atkreipkite dėmesį, kad šiame užrašų sąsiuvinyje pateikiame trijų žuvų rūšių duomenų rinkinio pavyzdį, kurio nuotraukas pateikė [AnglerAtlas](https://www.anglersatlas.com/).
+Taip pat atkreipkite dėmesį, kad šiame užrašų sąsiuvinyje pateikiame trijų žuvų rūšių duomenų rinkinio pavyzdį, kurio nuotraukas pateikė Kanados žvejų piliečių mokslo programa [**My Catch, Angler's Atlas](https://www.anglersatlas.com/mycatch), bendradarbiaujanti su Gamtos tyrimų centro mokslininkais. 
 
 Norėdami taikyti mūsų modelį, galite naudoti šį kodą:
 

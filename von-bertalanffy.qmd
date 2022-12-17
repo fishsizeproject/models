@@ -48,6 +48,9 @@ We have developed an R shiny application that allows you to explore length growt
 Importantly, you can explore the histograms of lengths at age, assuming different coefficients of variation (CV) of age-length variability. For example, some populations may have little growth variation, which means that CV is small (CV = 0.1 or smaller), and different age groups are clearly differentiated in their lengths. Other populations might have a lot growth variability (CV = 0.3 or larger), which means that there will be a lot of length overlap among age groups and it will be difficult to separate age classes from length data alone.
 
 To start using the model, go [**here**](https://fishsize.shinyapps.io/von-bertalanffy/)
+
+![](images/VBmodel_EN.png){width="50%" fig-align="center"} 
+
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
@@ -57,11 +60,12 @@ Sukūrėme R shiny aplikaciją, kuri generuoja ilgio augimo kreives priklausomai
 
 Tap pat galite išnagrinėti ilgio histogramas pagal amžių, darant skirtingas prielaidas apie amžiaus ir ilgio variacijos koeficientus (CV). Pavyzdžiui, kai kurios populiacijos gali turėti nedidelę variaciją augime -  tai reiškia, kad CV yra mažas (CV = 0,1 arba mažesnis), o skirtingos amžiaus grupės aiškiai skiriasi savo ilgiu. Kitos populiacijos gali turėti didelį augimo kintamumą (CV = 0,3 arba didesnis), o tai reiškia, kad tarp amžiaus grupių bus daug persidengimo ir bus sunku atskirti amžiaus klases.
 
+Norėdami pradėti naudoti modelį, spauskite [**čia**](https://fishsize.shinyapps.io/von-bertalanffy/)
 
-Norėdami pradėti naudoti modelį, eikite [**čia**](https://fishsize.shinyapps.io/von-bertalanffy/)
+![](images/VBmodel_LT.png){width="50%" fig-align="center"} 
+
 :::
 
-![](images/VBapp_screenshot_main.png){width="50%" fig-align="center"} ![](images/VBapp_screenshot_histograms.png){width="50%" fig-align="center"}
 
 <!-- next para ------------------------------------------------------------- -->
 

@@ -10,22 +10,26 @@ editor: source
 
 ## Introduction
 
-Here we present a **simple approach to develop models for estimating fish size classes from images**. We have prepared a scripts for data pre-processing and machine learning model development, which you can find on our [Online course](https://fishsizeproject.github.io/Course-MLforImageProcessing/G-practice-4.html) webpage. 
+Here we present a **simple approach to develop models for estimating fish size classes** from images where people are holding fish in their hands. Millions of such fish images available on social media, smart phone app citizen science platforms, but in most cases there is no fish body size information associated with these images. Yet, if body size data was available, it would greatly improve assessments of many inland and coastal fisheries. To solve this challenge we have trained a machine learning model to classify such images into 5 to 10 centimeter size classes. The framework is similar to what we presented in the [fish species identification model](ML_fish_species.qmd), but now it is adapted to fish sizes. 
 
-In this [**publication**](link here) you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a speficied reference object. You can also find all the scripts used in the framework in our [Github page](link here).
+Images for the model training were collected through collaborative agreement between Nature Reserach Centre and [**My Catch, Angler's Atlas](https://www.anglersatlas.com/mycatch) citizen science platform, where users contributed images during various fishing tournaments. Additional photos were also collected through the [**FishSizeProject** smart phone app](https://en.sif.lt/fishsize-project/) developed durign this project. 
 
+To learn more about the framework, please visit our [**online course**](https://fishsizeproject.github.io/Course-MLforImageProcessing/) webpage. 
 ::: 
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## lt: Introduction
+## Įvadas
 
-lt: Here we present a **simple approach to develop models for estimating fish size classes from images**. We have prepared a scripts for data pre-processing and machine learning model development, which you can find on our [Online course](https://fishsizeproject.github.io/Course-MLforImageProcessing/G-practice-4.html) webpage. 
+Čia pristatome **vartotojui draugišką ir lengvai pritaikomą dirbtinio intelekto (DI) sistemą, padedančia įvertinti žuvų dydžio klases** iš nuotraukų kurti, kuriose žuvis rankose laiko žmonės. Socialinėse platformose, piliečių moklso programose ir išmaniųjų telefonų programėlių dėka pasaulyje yra surinkta milijonai nuotraukų, kuriose žvejai rankose laiko pagautas žuvis. Dauguma atveju tokiose nuotruakose nėra informacijos apie žuvies dydį, o tai reiškia kad jų panaudojimas žuvų būklės įvertinime yra labai ribotas. Siekdami pagerinti duomenų rinkimą apie gėlavandenes ir jūros pakrantės žuvis ir jų populiacijų būklę, mes pritaikėme šį dirbtinio intelekto modelį, kuris klasifikuoja žuvis į nustatyto dyždio (5-10 cm) klases. Šis modelis ir jo naudojimas yra panašus į [DI paremtą žuvų rūšių atpažinimo modelį](ML_fish_species.qmd), bet yra pritaikytas žuvų dydžio klasėms. 
 
-In this [**publication**](link here) you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a speficied reference object. You can also find all the scripts used in the framework in our [Github page](link here).
+Šio modelio apmokymui nuotraukos buvo surinktos Gamtos tyrimų centro ir Kadanos žvejų piliečių moklso programėlės [**My Catch, Angler's Atlas](https://www.anglersatlas.com/mycatch) bendradarbiavimo dėka. MyCatch programėlės vartotojai dalinosi nuotraukomis surinktomis įvairių žvejybos konkursų metu. Nuotraukos taip pat buvo surinktos iš šiame projekte sukurtos [**FishSizeProject** programėlės](https://sif.lt/fishsizeproject/).
+
+Jei norite daugiau sužinoti apie mašininio mokymosi modelių kūrimą ir mūsų pristatomą sistemą, kviečiame išklausyti mūsų surengtus [**nuotolinius mokymus**](https://fishsizeproject.github.io/Course-MLforImageProcessing/). 
 
 ::: 
 
+![](images/salmonRuler.png){width="75%" fig-align="center"}
 
 <!-- end para ------------------------------------------------------------- -->
 
@@ -43,58 +47,64 @@ To use our models it is very important that fish size classes in your dataset ar
 <pre>
 <b>dataset</b>
 |__ <b>class5</b>
-    |______ 100080576_f52e8ee070_n.PNG
-    |______ 14167534527_781ceb1b7a_n.PNG
+    |______ image1.PNG
+    |______ image2.PNG
     |______ ...
 |__ <b>class10</b>
-    |______ 10043234166_e6dd915111_n.PNG
-    |______ 1426682852_e62169221f_m.PNG
+    |______ image3.JPG
+    |______ image4.PNG
     |______ ...
 |__ <b>class15</b>
-    |______ 102501987_3cdb8e5394_n.PNG
-    |______ 14982802401_a3dfb22afb.PNG
+    |______ image5.PNG
+    |______ image.JPG
     |______ ...
 |__ ...
 </pre>
 
-
+Image names are not important, as long as directory names (classes) are correct. 
 
 To apply our model you can use this code:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YgIrWWiaex8ObtAbAJOAXlRRGUbElkYj?usp=sharing)
+
+You can also find all the scripts used in the framework in our [Github page](https://github.com/fishsizeproject).
 
 ::: 
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## lt: Model code
+## Modelio kodas
 
-lt: To use our models it is very important that fish size classes in your dataset are identified correctly, otherwise your model will not be very useful. You can upload images (in JPEG or PNG format) to your Google drive by size class (i.e. fish images of each size class per folder), following this directory structure:
+Norint pritaikyti šį modelį jūsų surinktoms nuotraukos, labai svarbu, kad žuvų dydžių klasės jūsų duomenų rinkinyje būtų teisingai nustatytos, nes kitaip jūsų modelis bus netikslus. Nuotraukas (JPEG arba PNG formatu) galite įkelti į "Google" diską pagal dydžių klases (t. y. po vieną dydžio klasę viename aplanke), laikydamiesi šios katalogų struktūros:
 
 
 <pre>
 <b>dataset</b>
 |__ <b>class5</b>
-    |______ 100080576_f52e8ee070_n.PNG
-    |______ 14167534527_781ceb1b7a_n.PNG
+    |______ image1.PNG
+    |______ image2.PNG
     |______ ...
 |__ <b>class10</b>
-    |______ 10043234166_e6dd915111_n.PNG
-    |______ 1426682852_e62169221f_m.PNG
+    |______ image3.JPG
+    |______ image4.PNG
     |______ ...
 |__ <b>class15</b>
-    |______ 102501987_3cdb8e5394_n.PNG
-    |______ 14982802401_a3dfb22afb.PNG
+    |______ image5.PNG
+    |______ image.JPG
     |______ ...
 |__ ...
 </pre>
 
+Nuotraukų pavadinimas nėra svarbus. Svarbu tik kad katalogų pavadinimai atitiktų jūsų norimas dydžio klases. 
 
-To apply our model you can use this code:
+Norėdami taikyti mūsų modelį, galite naudoti šį kodą:
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1YgIrWWiaex8ObtAbAJOAXlRRGUbElkYj?usp=sharing)
 
 ::: 
+
+![](images/sizeClasses.png){width="60%" fig-align="center"}
+
 
 <!-- end para ------------------------------------------------------------- -->
 
@@ -105,16 +115,28 @@ To apply our model you can use this code:
 
 ## Application of the model
 
-You can also watch [**this talk**](https://youtu.be/iujl9R3lEaQ?t=5293) for the "Online seminar: Recreational angling effort and engagement in the digital age" to learn more about this model.
+To learn more about the model development and applications you can watch [**this talk**](https://youtu.be/iujl9R3lEaQ?t=5293) for the online seminar "Recreational angling effort and engagement in the digital age". You can also watch [this talk](youtube link) presented in the workshop "Can citizen science, smartphone app and social media data be used for recreational fisheries management?"
+
+In this [**publication**](link here) you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a specified reference object. 
+
+The next steps are to invite angler contributions to provide more images, train model with more data for higher accuracy and precision, and then apply this model to social media data of a charismatic predatory fish. So watch this space. 
+
+
+[Common barbel drawing by Amy Rose Coghlan]{.aside} ![](images/Barbusbarbus_sm.png){width="60%" fig-align="center"}
 
 ::: 
 
 ::: {.content-visible when-profile="lithuanian"}
 
-## lt: Application of the model
+## Modelio taikymas 
 
-lt: You can also watch [**this talk**](https://youtu.be/iujl9R3lEaQ?t=5293) for the "Online seminar: Recreational angling effort and engagement in the digital age" to learn more about this model.
+Jei norite daugiau sužinoti apie modelio vystymą ir pritaikymą galite peržiūrėti [**šį pranešimą**](https://youtu.be/iujl9R3lEaQ?t=5293) nuotoliniame seminare "Mašinų mokymasis, žvejyba ir piliečių mokslas" arba [**šį pranetimą**](youtube link) nuotoliniame seminare  "Ar piliečių mokslo, išmaniųjų telefonų ir socialinės medijos duomenys gali būti naudojami mėgėjiškos žvejybos valdyme?".
+
+Šioje [**ublikacijoje**](link here) mes detaliai aprašome pristatomą modelį ir jo pritaikymą pradiniams duomenis. 
+
+Artimiausioje ateityje mes šį modelį toliau tobulinsime. Tam pirmiausia sieksime surinkti daugiau nuotraukų, pasiekti didesnį modelio tikslumą, ir tuomet pritaikyti šį modelį populiarios žuvies rūšies (pvz. lydekos) tyrimams naudojant socialinių tinklų nuotraukas. Taigi, laukite daugiau rezultatų.   
+
+
+[Ūsorius. Piešinio autorė Amy Rose Coghlan]{.aside} ![](images/Barbusbarbus_sm.png){width="60%" fig-align="center"}
 
 ::: 
-
-<!-- end para ------------------------------------------------------------- -->

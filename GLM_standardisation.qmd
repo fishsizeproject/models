@@ -49,6 +49,7 @@ Norėdami pritaikyti mūsų GLM pagrįstą standartizacijos modelį, galite naud
 ![](images/example_stand_cpue1.jpeg){width="50%" fig-align="center"} <!-- next para ------------------------------------------------------------- -->
 
 ::: {.content-visible when-profile="english"}
+
 ## Application of the model
 
 To learn more about the application of this CPUE standardisation model to Kaunas Water Reservoir fish populations, you can read our [publication](https://www.mdpi.com/2410-3888/7/5/232) in journal *Fishes*.
@@ -56,9 +57,11 @@ To learn more about the application of this CPUE standardisation model to Kaunas
 You can also watch [**this conference talk**](https://www.youtube.com/watch?v=MoAJ4PuOW8M&list=PLbdhgW7mtwEUwB2S5BIEoERR8YFQzJ2Yf&index=3&ab_channel=Lydekaipaliepus) to learn more about this analysis.
 
 Once you conduct your CPUE standardisation, you can use the standardised values in [**surplus production models**](jabba_models.qmd), as explained on this website.
+
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
+
 ## Modelio taikymas
 
 Norėdami daugiau sužinoti apie šio CPUE standartizacijos modelio pritaikymą Kauno marių žuvų populiacijoms, skaitykite [šią publikaciją](https://www.mdpi.com/2410-3888/7/5/232) žurnale *Fishes*.
@@ -66,5 +69,7 @@ Norėdami daugiau sužinoti apie šio CPUE standartizacijos modelio pritaikymą 
 Taip pat galite peržiūrėti [**šį pranešimą**](https://www.youtube.com/watch?v=MoAJ4PuOW8M&list=PLbdhgW7mtwEUwB2S5BIEoERR8YFQzJ2Yf&index=3&ab_channel=Lydekaipaliepus) konferencijoje. 
 
 Atlikus CPUE standartizaciją, gautas reikšmes galite naudoti [**perteklinės produkcijos modeliuose**](jabba_models.qmd), kaip paaiškinta šiame puslapyje. 
+
+:::
 
 ![](images/cpue_glm1.jpg){width="60%" fig-align="center"}
