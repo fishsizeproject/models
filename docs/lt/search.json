@@ -2,273 +2,357 @@
   {
     "objectID": "Bayesian_inla.html",
     "href": "Bayesian_inla.html",
-    "title": "Bayesian CPUE standardisation using INLA",
+    "title": "\nCHANGE TO LT: Bayesian CPUE standardisation using INLA\n",
     "section": "",
-    "text": "Žvejybos sugavimai laike dažniausiai koreliuoja - t.y., sugautų žuvų kiekis priklauso nuo to, koks buvo laimikis prieš metus. Idealiu atveju į tai turėtų būti atsižvelgta, tačiau CPUE standartizacija, pagrįsta GLM modeliais to nedaro, nepaisant to, kad tai yra populiarus ir dažnai naudojamas metodas. Todėl sukūrėme kitokį modelį, kuris atspindi sugavimų koreliaciją erdvėje ir laike.\nŠiame modelyje parametrus įvertinsime naudodami aproksimuotą Bajeso išvadą, kaip įdiegta INLA pakete. Bajeso metodas įvykdomas daug greičiau nei klasikinis MCMC, o naudojant INLA paketą Bajeso metodą galima taikyti įvairiems pasiskirstymams. Norėdami daugiau sužinoti apie Bajeso metodą ir kodėl jis naudingas, žiūrėkite mokymo skaidres čia.\nSkaidrės ir modelis, kartu su išsamiu visų modeliavimo žingsnių aprašymu buvo pateikti paskutinėje CPUE standartizacijos kursų paskaitoje, todėl prieš taikant modelį rekomenduojame ją pažiūrėti. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai įvertinote savo duomenis. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų svetainėje.\nModelis parašytas R aplinkoje, todėl jums reikės instaliuoti R ir RStudio. Jei jums reikia trumpo įvado apie R, peržiūrėkite šį įvadinį puslapį iš mūsų kurso apie dydžiu pagrįstą modeliavimą."
+    "text": "Author\n    \n             Carl Smith, Egle Jakubavičiūtė, Asta Audzijonyte"
+  },
+  {
+    "objectID": "Bayesian_inla.html#įvadas",
+    "href": "Bayesian_inla.html#įvadas",
+    "title": "\nCHANGE TO LT: Bayesian CPUE standardisation using INLA\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nŽvejybos sugavimai laike dažniausiai koreliuoja - t.y., sugautų žuvų kiekis priklauso nuo to, koks buvo laimikis prieš metus. Idealiu atveju į tai turėtų būti atsižvelgta, tačiau CPUE standartizacija, pagrįsta GLM modeliais to nedaro, nepaisant to, kad tai yra populiarus ir dažnai naudojamas metodas. Todėl sukūrėme kitokį modelį, kuris atspindi sugavimų koreliaciją erdvėje ir laike.\nŠiame modelyje parametrus įvertinsime naudodami aproksimuotą Bajeso išvadą, kaip įdiegta INLA pakete. Bajeso metodas įvykdomas daug greičiau nei klasikinis MCMC, o naudojant INLA paketą Bajeso metodą galima taikyti įvairiems pasiskirstymams. Norėdami daugiau sužinoti apie Bajeso metodą ir kodėl jis naudingas, žiūrėkite mokymo skaidres čia.\nSkaidrės ir modelis, kartu su išsamiu visų modeliavimo žingsnių aprašymu buvo pateikti paskutinėje CPUE standartizacijos kursų paskaitoje, todėl prieš taikant modelį rekomenduojame ją pažiūrėti. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai įvertinote savo duomenis. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų svetainėje.\nModelis parašytas R aplinkoje, todėl jums reikės instaliuoti R ir RStudio. Jei jums reikia trumpo įvado apie R, peržiūrėkite šį įvadinį puslapį iš mūsų kurso apie dydžiu pagrįstą modeliavimą."
   },
   {
     "objectID": "Bayesian_inla.html#modelio-kodas",
     "href": "Bayesian_inla.html#modelio-kodas",
-    "title": "Bayesian CPUE standardisation using INLA",
+    "title": "\nCHANGE TO LT: Bayesian CPUE standardisation using INLA\n",
     "section": "Modelio kodas",
     "text": "Modelio kodas\nPagrindinis modelio kodas pasiekiamas šiame R markdown; čia naudojamas duomenų rinkinys su 22 metų versliniais starkių (Sander lucioperca) sugavimais Baltijos jūroje. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Prieš paleisdami modelį turėsite įdiegti visus R paketus, kaip paaiškinta šiame R kode.\nJei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti čia. Pritaikę modelį turėtumėte nubraižyti CPUE ir jo neapibrėžtumą laikui bėgant, kaip parodyta paveiksle žemiau."
   },
   {
     "objectID": "Bayesian_inla.html#modelio-taikymas",
     "href": "Bayesian_inla.html#modelio-taikymas",
-    "title": "Bayesian CPUE standardisation using INLA",
+    "title": "\nCHANGE TO LT: Bayesian CPUE standardisation using INLA\n",
     "section": "Modelio taikymas",
     "text": "Modelio taikymas\nŠiuo metu dirbame su šio modelio pritaikymu ilgalaikės stebėsenos duomenims iš Kuršių ir Kauno marių. Jei norite daugiau sužinoti, sekite naujienas ar susisiekite su mumis lydekaipaliepus@gamtc.lt"
   },
   {
     "objectID": "curonian_mizer.html",
     "href": "curonian_mizer.html",
-    "title": "Size based models for Baltic Sea and Curonian lagoon",
+    "title": "\nCHANGE TO LT: Size based models for Baltic Sea and Curonian lagoon\n",
     "section": "",
-    "text": "Individų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas ir populiarus įrankis tiriant tarprūšinę sąveiką, ekosistemų dinamiką, klimato kaitą, žvejybos poveikį ir daugelį kitų procesų. Norėdami plačiau susipažinti su tokio tipo modeliais, skaitykite Ken H Andersen knygą “Fish Ecology, Evolution, and Exploitation” (2019) arba apsilankykite plačiai naudojamo dydžiu pagrįstu modeliavimo R paketo mizer pagrindiniame puslapyje. Trumpą apžvalgą taip pat galite rasti šioje publikacijoje,\nŠio projekto metu mes pritaikėme mizer pakrančių ir gėlo vandens ekosistemoms, įdiegdami dydžiu pagrįstą foninių resursų struktūrą. Ši modifikacija leidžia vartotojams geriau ir tiksliau modeliuoti atskirus planktoną, bentosą, makrodumblius ir kitus maisto išteklius, kas tai yra svarbus sekliųjų vandenų ekosistemų aspektas. Modifikuotas mizer buvo naudojamas Baltijos jūros ekosistemos modeliui sukurti ir ištirti, kaip klimato kaitos sąlygoti žuvų fiziologijos ir maisto išteklių gausumo pokyčiai gali paveikti biomasę ir menkių, strimėlių bei bretlingių produkciją.\nTaip pat sukūrėme pirmąją Kuršių marių ekosistemos modelio versiją, kuri apima atskirus bentoso ir planktono išteklius bei dešimt pagrindinių žuvų rūšių. Modelis buvo sukurtas mizer kurso metu, kur kurso dalyviai prisidėjo prie modelio parametrizacijos.\nPagrindinių mizer modelio dalių iliustracija, autorius Max Lindmark"
+    "text": "Author\n    \n             Asta Audzijonyte, Max Lindmark, Gustav Delius"
+  },
+  {
+    "objectID": "curonian_mizer.html#įvadas",
+    "href": "curonian_mizer.html#įvadas",
+    "title": "\nCHANGE TO LT: Size based models for Baltic Sea and Curonian lagoon\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nIndividų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas ir populiarus įrankis tiriant tarprūšinę sąveiką, ekosistemų dinamiką, klimato kaitą, žvejybos poveikį ir daugelį kitų procesų. Norėdami plačiau susipažinti su tokio tipo modeliais, skaitykite Ken H Andersen knygą “Fish Ecology, Evolution, and Exploitation” (2019) arba apsilankykite plačiai naudojamo dydžiu pagrįstu modeliavimo R paketo mizer pagrindiniame puslapyje. Trumpą apžvalgą taip pat galite rasti šioje publikacijoje,\nŠio projekto metu mes pritaikėme mizer pakrančių ir gėlo vandens ekosistemoms, įdiegdami dydžiu pagrįstą foninių resursų struktūrą. Ši modifikacija leidžia vartotojams geriau ir tiksliau modeliuoti atskirus planktoną, bentosą, makrodumblius ir kitus maisto išteklius, kas tai yra svarbus sekliųjų vandenų ekosistemų aspektas. Modifikuotas mizer buvo naudojamas Baltijos jūros ekosistemos modeliui sukurti ir ištirti, kaip klimato kaitos sąlygoti žuvų fiziologijos ir maisto išteklių gausumo pokyčiai gali paveikti biomasę ir menkių, strimėlių bei bretlingių produkciją.\nTaip pat sukūrėme pirmąją Kuršių marių ekosistemos modelio versiją, kuri apima atskirus bentoso ir planktono išteklius bei dešimt pagrindinių žuvų rūšių. Modelis buvo sukurtas mizer kurso metu, kur kurso dalyviai prisidėjo prie modelio parametrizacijos.\nPagrindinių mizer modelio dalių iliustracija, autorius Max Lindmark"
   },
   {
     "objectID": "curonian_mizer.html#modelio-kodas",
     "href": "curonian_mizer.html#modelio-kodas",
-    "title": "Size based models for Baltic Sea and Curonian lagoon",
+    "title": "\nCHANGE TO LT: Size based models for Baltic Sea and Curonian lagoon\n",
     "section": "Modelio kodas",
     "text": "Modelio kodas\nNorėdami naudoti dydžiu pagrįstus modelius su mizer, jums reikia R ir Rstudio, taip pat turite įdiegti mizer paketą. Daugiau informacijos apie tai, kaip tai padaryti, rasite šioje mizer kurso svetainėje. Šioje svetainėje rasite išsamius paaiškinimus, kaip rasti rūšies parametrus, paruošti ir kalibruoti modelį. Taip pat galite pamatyti skirtingus Kuršių marių žuvų rūšių biomasės žvejybos scenarijus, kai kurie rezultatai rodomi toliau pateiktuose paveikslėliuose.\nJei norite naudoti mizer su keliais maisto ištekliais, įdiekite mizerMR priedą iš Github. Siekdami palengvinti modelio kalibravimą, taip pat pritaikėme ShinyR programą, pasiekiamą čia. Jei norite peržiūrėti ShinyR programos ekrano kopijas nepaleidžiant modelio, eikite čia.\nVisas Baltijos jūros modelio modelio kodas ir visi sugeneruoti duomenys yra prieinami GitHub ir Zenodo.\nKuršių marių rūšių biomasės pokytis pakeitus žvejybos mirtingumą"
   },
   {
     "objectID": "curonian_mizer.html#modelio-pritaikymas",
     "href": "curonian_mizer.html#modelio-pritaikymas",
-    "title": "Size based models for Baltic Sea and Curonian lagoon",
+    "title": "\nCHANGE TO LT: Size based models for Baltic Sea and Curonian lagoon\n",
     "section": "Modelio pritaikymas",
     "text": "Modelio pritaikymas\nStraipsnis, kuriame aprašomas Baltijos jūros modelis, publikuotas Global Change Biology žurnale ir yra pasiekiamas čia.\nVis dar dirbame prie Kuršių marių modelio. Galutinis modelio kūrimas ir pritaikymas įvairiems klimato kaitos ir žuvininkystės klausimams yra doktorantūros projekto, kurį 2022 m. gruodžio mėn. Gamtos tyrimų centre pradėjo Elyza Pilipaitytė, tema. Jei norite sužinoti daugiau ar bendradarbiauti, susisiekite lydekaipaliepus@gamtc.lt.\n Šamas. Piešinio autorė Amy Rose Coghlan"
   },
   {
     "objectID": "GLM_standardisation.html",
     "href": "GLM_standardisation.html",
-    "title": "Standardising catch per unit effort (CPUE) using generalised linear models",
+    "title": "\nCHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linear models\n",
     "section": "",
-    "text": "Prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai įvertinote savo duomenis. Tam paruošėme kursus ir kodus, kuriuos rasite mūsų svetainėje.\nVienas dažniausiai naudojamų CPUE standartizavimo metodų - apibendrinti tiesiniai modeliai (GLM). Čia modeliuojame visus kintamuosius, galinčius turėti įtakos sugavimams, ir išskiriame metinius nuokrypius bei jų neapibrėžtumą. Iš to galime sudaryti standartizuotą santykinio populiacijos gausumo laiko eilutę.\nČia rasite pagrindinę informaciją apie CPUE standartizaciją naudojant GLM.\nPavyzdžius, kaip šis metodas buvo pritaikytas kitoms rūšims, galite rasti šioje ir šioje publikacijose.\n::: {.content-visible when-profile=“lithuanian”} ## Modelio taikymas\nNorėdami daugiau sužinoti apie šio CPUE standartizacijos modelio pritaikymą Kauno marių žuvų populiacijoms, skaitykite šią publikaciją žurnale Fishes.\nTaip pat galite peržiūrėti šį pranešimą konferencijoje.\nAtlikus CPUE standartizaciją, gautas reikšmes galite naudoti perteklinės produkcijos modeliuose, kaip paaiškinta šiame puslapyje."
+    "text": "Author\n    \n             Egle Jakubavičiūtė and Asta Audzijonyte"
+  },
+  {
+    "objectID": "GLM_standardisation.html#įvadas",
+    "href": "GLM_standardisation.html#įvadas",
+    "title": "\nCHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linear models\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nPrieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai įvertinote savo duomenis. Tam paruošėme kursus ir kodus, kuriuos rasite mūsų svetainėje.\nVienas dažniausiai naudojamų CPUE standartizavimo metodų - apibendrinti tiesiniai modeliai (GLM). Čia modeliuojame visus kintamuosius, galinčius turėti įtakos sugavimams, ir išskiriame metinius nuokrypius bei jų neapibrėžtumą. Iš to galime sudaryti standartizuotą santykinio populiacijos gausumo laiko eilutę.\nČia rasite pagrindinę informaciją apie CPUE standartizaciją naudojant GLM.\nPavyzdžius, kaip šis metodas buvo pritaikytas kitoms rūšims, galite rasti šioje ir šioje publikacijose."
   },
   {
     "objectID": "GLM_standardisation.html#modelio-kodas",
     "href": "GLM_standardisation.html#modelio-kodas",
-    "title": "Standardising catch per unit effort (CPUE) using generalised linear models",
+    "title": "\nCHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linear models\n",
     "section": "Modelio kodas",
     "text": "Modelio kodas\nGLM pagrįstą modelį pritaikėme penkioms paplitusioms Lietuvos gėlavandenių žuvų rūšims iš Kuršių ir Kauno marių. Norėdami naudoti mūsų modelius savo duomenims, pirmiausia turite konvertuoti duomenų rinkinį į formatą, kuriame kiekviena eilutė atitinka unikalų įrašą, nurodantį sugavimus pagal įrankius, akių dydį, tinklo ilgį, sezoną, vietovę ar kitus kintamuosius, kuriuos norite įtraukti į modelį. Duomenų konvertavimui galite naudoti šį kodą.\nNorėdami pritaikyti mūsų GLM pagrįstą standartizacijos modelį, galite naudoti šį kodą, kur pritaikysite apibendrintus tiesinius modelius su Tweedie pasiskirstymu ir įvertinsite svarbius kintamuosius prognozei. Ištraukę metines liekanas (annual residuals) ir su jais susijusią neapibrėžtį, galėsite sudaryti standartizuoto santykino gausumo laiko eilutes, kaip parodyta paveikslėlyje žemiau. Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti čia."
   },
   {
+    "objectID": "GLM_standardisation.html#modelio-taikymas",
+    "href": "GLM_standardisation.html#modelio-taikymas",
+    "title": "\nCHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linear models\n",
+    "section": "Modelio taikymas",
+    "text": "Modelio taikymas\nNorėdami daugiau sužinoti apie šio CPUE standartizacijos modelio pritaikymą Kauno marių žuvų populiacijoms, skaitykite šią publikaciją žurnale Fishes.\nTaip pat galite peržiūrėti šį pranešimą konferencijoje.\nAtlikus CPUE standartizaciją, gautas reikšmes galite naudoti perteklinės produkcijos modeliuose, kaip paaiškinta šiame puslapyje."
+  },
+  {
     "objectID": "growth_change.html",
     "href": "growth_change.html",
-    "title": "Detecting changes in fish growth through time",
+    "title": "\nCHANGE TO LT: Detecting changes in fish growth through time\n",
     "section": "",
-    "text": "Temperatūra turi didelę įtaką žuvų augimui, tačiau dėl natūralios variacijos žuvų augime dažnai yra sunku ją nustatyti iš dydžio ir amžiaus duomenų. Norint atskirti būtent temperatūros įtaką, reikalingas modelis, apskaičiuojantis temperatūros poveikį tam tikro amžiaus žuvims.\nSukūrėme būtent tokį modelį ir pritaikėme jį ilgalaikės žuvų augimo stebėsenos duomenų rinkiniui Drūkšių ežere Lietuvoje. Drūkšių ežeras yra unikali sistema, nes 1984-2010 m. buvo naudojamas atominės elektrinės vėsinimui ir ežero temperatūra buvo pakilusi 2C. 2010 m. elektrinė uždaryta ir ežero temperatūra grįžo į natūralų lygį. Gamtos tyrimų centras vykdė ilgalaikį žuvų augimo monitoringą Drūkšių ežere, o tai suteikia unikalią galimybę įvertinti, kaip temperatūros pokyčiai paveikė penkių pagrindinių žuvų rūšių augimą.\n Kairėje: Drūkšių ežerasDešinėje: Vidutinės ežero vandens temperatūros pasikeitimas"
+    "text": "Author\n    \n             Max Lindmark and Asta Audzijonyte"
+  },
+  {
+    "objectID": "growth_change.html#įvadas",
+    "href": "growth_change.html#įvadas",
+    "title": "\nCHANGE TO LT: Detecting changes in fish growth through time\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nTemperatūra turi didelę įtaką žuvų augimui, tačiau dėl natūralios variacijos žuvų augime dažnai yra sunku ją nustatyti iš dydžio ir amžiaus duomenų. Norint atskirti būtent temperatūros įtaką, reikalingas modelis, apskaičiuojantis temperatūros poveikį tam tikro amžiaus žuvims.\nSukūrėme būtent tokį modelį ir pritaikėme jį ilgalaikės žuvų augimo stebėsenos duomenų rinkiniui Drūkšių ežere Lietuvoje. Drūkšių ežeras yra unikali sistema, nes 1984-2010 m. buvo naudojamas atominės elektrinės vėsinimui ir ežero temperatūra buvo pakilusi 2C. 2010 m. elektrinė uždaryta ir ežero temperatūra grįžo į natūralų lygį. Gamtos tyrimų centras vykdė ilgalaikį žuvų augimo monitoringą Drūkšių ežere, o tai suteikia unikalią galimybę įvertinti, kaip temperatūros pokyčiai paveikė penkių pagrindinių žuvų rūšių augimą.\n Kairėje: Drūkšių ežerasDešinėje: Vidutinės ežero vandens temperatūros pasikeitimas"
   },
   {
     "objectID": "growth_change.html#modelis",
     "href": "growth_change.html#modelis",
-    "title": "Detecting changes in fish growth through time",
+    "title": "\nCHANGE TO LT: Detecting changes in fish growth through time\n",
     "section": "Modelis",
     "text": "Modelis\nModelis parašytas R aplinkoje ir taiko Bajeso mišrius modelius, kuriuose žuvies ilgis aprašomas kaip amžiaus ir vidutinės viso gyvenimo temperatūros funkcija, su sąveika tarp vidutinės gyvenimo temperatūros ir amžiaus. Modelio kodą ir rezultatus galite rasti čia. Naudojant šį modelį, galima įvertinti, ar visos žuvų amžiaus grupės šiltensnėje temperatūroje auga greičiau, ar lėčiau ir ar temperatūros poveikis jaunoms žuvims yra kitoks nei senesnėms. Žemiau esančiame paveikslėlyje galite pamatyti modeliu tikrinamas hipotezes."
   },
   {
     "objectID": "growth_change.html#modelio-pritakymas",
     "href": "growth_change.html#modelio-pritakymas",
-    "title": "Detecting changes in fish growth through time",
+    "title": "\nCHANGE TO LT: Detecting changes in fish growth through time\n",
     "section": "Modelio pritakymas",
     "text": "Modelio pritakymas\nModelis ir rezultatai buvo pristatyti kasmetinėje Tarptautinės jūrų tyrimų tarnybos (ICES) konferencijoje 2022 – žr. video įrašą.\nRezultatai taip pat buvo pristatyti 151-ojoje Amerikos žuvininkystės draugijos konferencijoje 2021 – žr. video įrašą\nJeigu turite pasiūlymų naujoms modelio modifikacijoms ir norite jas paskelbti, prašome susisiekti lydekaipaliepus@gamtc.lt\nEšerys. Piešinio autorė Amy Rose Coghlan"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Models for sustainable inland fisheries",
+    "title": "\nCHANGE TO LT: Models for sustainable inland fisheries\n",
     "section": "",
-    "text": "Šis projektas ir tinklapio sukūrimas buvo finansuotas iš Europos regioninės plėtros fondo lėšų pagal priemonės Nr. 01.2.2-LMT-K-718 veiklą “Mokslininkų iš užsienio pritraukimas vykdyti mokslinius tyrimus” ir projektą „Pažangūs modeliai, piliečių mokslas ir didieji duomenys tvariai vidaus vandenų maisto produkcijai ir ekosistemų paslaugoms“ (Numeris 01.2.2-LMT-K-718-02-0006)\nŠį puslapį ir jame pristatomus modelius sukūrė Asta Audzijonytė, Carl Smith, Catarina Silva, Eglė Jakubavičiūtė, Dalia Grendaitė, Max Lindmark, Freddie Heather, Stephen Midway ir Gustav Delius.\nKei jums iškilo klausimų arba jei turite pasiūlymų susisiekite su mumis adresu lydekaipaliepus@gamtc.lt\nPradėti naršyti modelių puslapius\nGrįžti atgal į projekto tinklapį."
+    "text": "CHANGE TO LT: Models for sustainable inland fisheries\n\n\n\n\n\n\n\n\nŠis projektas ir tinklapio sukūrimas buvo finansuotas iš Europos regioninės plėtros fondo lėšų pagal priemonės Nr. 01.2.2-LMT-K-718 veiklą “Mokslininkų iš užsienio pritraukimas vykdyti mokslinius tyrimus” ir projektą „Pažangūs modeliai, piliečių mokslas ir didieji duomenys tvariai vidaus vandenų maisto produkcijai ir ekosistemų paslaugoms“ (Numeris 01.2.2-LMT-K-718-02-0006)\nŠį puslapį ir jame pristatomus modelius sukūrė Asta Audzijonytė, Carl Smith, Catarina Silva, Eglė Jakubavičiūtė, Dalia Grendaitė, Max Lindmark, Freddie Heather, Stephen Midway ir Gustav Delius.\nKei jums iškilo klausimų arba jei turite pasiūlymų susisiekite su mumis adresu lydekaipaliepus@gamtc.lt\nPradėti naršyti modelių puslapius\nGrįžti atgal į projekto tinklapį."
   },
   {
     "objectID": "jabba_models.html",
     "href": "jabba_models.html",
-    "title": "Surplus production models",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
     "section": "",
-    "text": "JABBA - tai Bajeso metodais paremta perteklinės produkcijos modelių sistema, išvystyta Winker et al. 2018, vis dažniau naudojama žuvų išteklių tyrimuose.\nJABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė (apriorinė) informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje. JABBA yra vienas sudėtingesnių pridėtinės produkcijos modelių, ir jis leidžia daryti skirtingas prielaidas apie duomenų ir modeliuojamų procesų patikimumą ir sklaidą.\nDaugiau informacijos apie modelį galite rasti modelio kūrėjų puslapyje"
+    "text": "Author\n    \n             Egle Jakubavičiūtė, Asta Audzijonyte"
+  },
+  {
+    "objectID": "jabba_models.html#įvadas",
+    "href": "jabba_models.html#įvadas",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nJABBA - tai Bajeso metodais paremta perteklinės produkcijos modelių sistema, išvystyta Winker et al. 2018, vis dažniau naudojama žuvų išteklių tyrimuose.\nJABBA naudoja sugavimų (laimikių) bei santykinio gausumo laiko eilutę, taip pat reikalinga pirminė (apriorinė) informacija apie: a) populiacijos augimo greitį r, b) aplinkos talpą K ir c) biomasės lygį laiko eilutės pradžioje. JABBA yra vienas sudėtingesnių pridėtinės produkcijos modelių, ir jis leidžia daryti skirtingas prielaidas apie duomenų ir modeliuojamų procesų patikimumą ir sklaidą.\nDaugiau informacijos apie modelį galite rasti modelio kūrėjų puslapyje"
   },
   {
     "objectID": "jabba_models.html#modelis",
     "href": "jabba_models.html#modelis",
-    "title": "Surplus production models",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
     "section": "Modelis",
     "text": "Modelis\nPagrindinis modelio kodas yra šiame R markdown dokumente, ir šiam kodui naudojami šie pavyzdiniai duomenys, kuriuose yra pateikti 30 metų versliniai sugavimai (laimikiai), bei standartizuoti sugavimai pastangai (CPUE) su standartinėmis paklaidomis (standartizacija atlikta naudojant GLM modelį.\nModelį ir kodą galite parsisiųsti ir pritaikyti savo reikmėms. Prieš paleidžiant kodą, reikia instaliuoti JABBA, kaip paaiškinta kūrėjų puslapyje.\nNorėdami pamatyti modelį ir rezultatus nevykdant kodo, spauskite čia. Pritaikę modelį ir įvykdę kodą, galėsite sudaryti biomasės laiko eilutes su pasikliautiniais intervalais (žr. pavyzdį aukščiau), nagrinėti Kobe diagramas, rodančias biomasės ir žvejybinio mirtingumo pokyčius laikui bėgant (lyginant su vertėmis, kurios leistų gauti didžiausią tvarų laimikį, žr. žemiau esantį grafiką). Taip pat galite nubraižyti aposteriorines populiacinių parametrų vertes (žr. grafiką žemiau) bei sudaryti ateities prognozes (paskutinė diagrama šio puslapio pabaigoje)."
   },
   {
     "objectID": "jabba_models.html#modelio-pritaikymas",
     "href": "jabba_models.html#modelio-pritaikymas",
-    "title": "Surplus production models",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
     "section": "Modelio pritaikymas",
     "text": "Modelio pritaikymas\nJeigu norite daugiau sužinoti apie perteklinės produkcijos modeliavimą Kuršių bei Kauno marių žuvų populiacijoms, bei susipažinti su rezultatais, kurie gali būti svarbūs priimant žuvų išteklių valdymo sprendimus, skaitykite čia ir čia arba žiūrėkite konferencijos pranešimus Kuršių marioms ir Kauno marioms.\nBe to, šis modelis buvo pritaikytas Europos starkio būklės tyrime, kuriame dalyvavo institucijos iš šešių Europos šalių. Šio tyrimo rezultatus galite surasti šioje išankstinėje publikacijoje (mokslinė publikacija šiuo metu yra pateikta spaudai)."
   },
   {
     "objectID": "ML_fish_size.html",
     "href": "ML_fish_size.html",
-    "title": "Estimating fish size classes using image classification and machine learning models",
+    "title": "\nCHANGE TO LT: Estimating fish size classes using image classification and machine learning models\n",
     "section": "",
-    "text": "lt: Here we present a simple approach to develop models for estimating fish size classes from images. We have prepared a scripts for data pre-processing and machine learning model development, which you can find on our Online course webpage.\nIn this publication you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a speficied reference object. You can also find all the scripts used in the framework in our Github page."
+    "text": "Author\n    \n             Catarina Silva and Asta Audzijonyte"
   },
   {
-    "objectID": "ML_fish_size.html#lt-model-code",
-    "href": "ML_fish_size.html#lt-model-code",
-    "title": "Estimating fish size classes using image classification and machine learning models",
-    "section": "lt: Model code",
-    "text": "lt: Model code\nlt: To use our models it is very important that fish size classes in your dataset are identified correctly, otherwise your model will not be very useful. You can upload images (in JPEG or PNG format) to your Google drive by size class (i.e. fish images of each size class per folder), following this directory structure:\ndataset\n|__ class5\n    |______ 100080576_f52e8ee070_n.PNG\n    |______ 14167534527_781ceb1b7a_n.PNG\n    |______ ...\n|__ class10\n    |______ 10043234166_e6dd915111_n.PNG\n    |______ 1426682852_e62169221f_m.PNG\n    |______ ...\n|__ class15\n    |______ 102501987_3cdb8e5394_n.PNG\n    |______ 14982802401_a3dfb22afb.PNG\n    |______ ...\n|__ ...\n\nTo apply our model you can use this code:\n\n\n\nOpen In Colab"
+    "objectID": "ML_fish_size.html#įvadas",
+    "href": "ML_fish_size.html#įvadas",
+    "title": "\nCHANGE TO LT: Estimating fish size classes using image classification and machine learning models\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nČia pristatome vartotojui draugišką ir lengvai pritaikomą dirbtinio intelekto (DI) sistemą, padedančia įvertinti žuvų dydžio klases iš nuotraukų kurti, kuriose žuvis rankose laiko žmonės. Socialinėse platformose, piliečių moklso programose ir išmaniųjų telefonų programėlių dėka pasaulyje yra surinkta milijonai nuotraukų, kuriose žvejai rankose laiko pagautas žuvis. Dauguma atveju tokiose nuotruakose nėra informacijos apie žuvies dydį, o tai reiškia kad jų panaudojimas žuvų būklės įvertinime yra labai ribotas. Siekdami pagerinti duomenų rinkimą apie gėlavandenes ir jūros pakrantės žuvis ir jų populiacijų būklę, mes pritaikėme šį dirbtinio intelekto modelį, kuris klasifikuoja žuvis į nustatyto dyždio (5-10 cm) klases. Šis modelis ir jo naudojimas yra panašus į DI paremtą žuvų rūšių atpažinimo modelį, bet yra pritaikytas žuvų dydžio klasėms.\nŠio modelio apmokymui nuotraukos buvo surinktos Gamtos tyrimų centro ir Kadanos žvejų piliečių moklso programėlės **My Catch, Angler’s Atlas bendradarbiavimo dėka. MyCatch programėlės vartotojai dalinosi nuotraukomis surinktomis įvairių žvejybos konkursų metu. Nuotraukos taip pat buvo surinktos iš šiame projekte sukurtos FishSizeProject programėlės.\nJei norite daugiau sužinoti apie mašininio mokymosi modelių kūrimą ir mūsų pristatomą sistemą, kviečiame išklausyti mūsų surengtus nuotolinius mokymus."
   },
   {
-    "objectID": "ML_fish_size.html#lt-application-of-the-model",
-    "href": "ML_fish_size.html#lt-application-of-the-model",
-    "title": "Estimating fish size classes using image classification and machine learning models",
-    "section": "lt: Application of the model",
-    "text": "lt: Application of the model\nlt: You can also watch this talk for the “Online seminar: Recreational angling effort and engagement in the digital age” to learn more about this model."
+    "objectID": "ML_fish_size.html#modelio-kodas",
+    "href": "ML_fish_size.html#modelio-kodas",
+    "title": "\nCHANGE TO LT: Estimating fish size classes using image classification and machine learning models\n",
+    "section": "Modelio kodas",
+    "text": "Modelio kodas\nNorint pritaikyti šį modelį jūsų surinktoms nuotraukos, labai svarbu, kad žuvų dydžių klasės jūsų duomenų rinkinyje būtų teisingai nustatytos, nes kitaip jūsų modelis bus netikslus. Nuotraukas (JPEG arba PNG formatu) galite įkelti į “Google” diską pagal dydžių klases (t. y. po vieną dydžio klasę viename aplanke), laikydamiesi šios katalogų struktūros:\ndataset\n|__ class5\n    |______ image1.PNG\n    |______ image2.PNG\n    |______ ...\n|__ class10\n    |______ image3.JPG\n    |______ image4.PNG\n    |______ ...\n|__ class15\n    |______ image5.PNG\n    |______ image.JPG\n    |______ ...\n|__ ...\n\nNuotraukų pavadinimas nėra svarbus. Svarbu tik kad katalogų pavadinimai atitiktų jūsų norimas dydžio klases.\nNorėdami taikyti mūsų modelį, galite naudoti šį kodą:\n\n\n\nOpen In Colab"
+  },
+  {
+    "objectID": "ML_fish_size.html#modelio-taikymas",
+    "href": "ML_fish_size.html#modelio-taikymas",
+    "title": "\nCHANGE TO LT: Estimating fish size classes using image classification and machine learning models\n",
+    "section": "Modelio taikymas",
+    "text": "Modelio taikymas\nJei norite daugiau sužinoti apie modelio vystymą ir pritaikymą galite peržiūrėti šį pranešimą nuotoliniame seminare “Mašinų mokymasis, žvejyba ir piliečių mokslas” arba šį pranetimą nuotoliniame seminare “Ar piliečių mokslo, išmaniųjų telefonų ir socialinės medijos duomenys gali būti naudojami mėgėjiškos žvejybos valdyme?”.\nŠioje ublikacijoje mes detaliai aprašome pristatomą modelį ir jo pritaikymą pradiniams duomenis.\nArtimiausioje ateityje mes šį modelį toliau tobulinsime. Tam pirmiausia sieksime surinkti daugiau nuotraukų, pasiekti didesnį modelio tikslumą, ir tuomet pritaikyti šį modelį populiarios žuvies rūšies (pvz. lydekos) tyrimams naudojant socialinių tinklų nuotraukas. Taigi, laukite daugiau rezultatų.\n Ūsorius. Piešinio autorė Amy Rose Coghlan"
   },
   {
     "objectID": "ML_fish_species.html",
     "href": "ML_fish_species.html",
-    "title": "Machine learning based image collection, annotation and classification of fish species",
+    "title": "\nCHANGE TO LT: Machine learning based image collection, annotation and classification of fish species\n",
     "section": "",
-    "text": "Čia pristatome vartotojui draugišką ir lengvai pritaikomą dirbtinio intelekto (DI) sistemą, skirtą žuvų rūšių identifikavimo modeliams kurti. Parengėme duomenų pirminio apdorojimo, vaizdų apdorojimo ir mašininio mokymosi modelių kūrimo kursą ir kodus, kuriuos galite rasti mūsų rengtuose nuotiniuose mokymuose.\nŠiame atviros prieigos straipsnyje skelbtame žurnale Sustainability rasite išsamų sistemos aprašymą, bandomąjį pavyzdį, kuriame demonstruojamas galimas panaudojimas mėgėjiškos žvejybos tyrimams, žinių, įgytų taikant pavyzdį, santrauką ir pagrindinių uždavinių bei galimo tolesnio plėtojimo apžvalgą. Visus sistemoje naudojamus kodus taip pat galite rasti mūsų Github puslapyje.\nAtviros prieigos, modulinė didelio masto vaizdų saugojimo, tvarkymo, anotavimo ir automatinio klasifikavimo sistema"
+    "text": "Author\n    \n             Catarina Silva and Asta Audzijonyte"
+  },
+  {
+    "objectID": "ML_fish_species.html#įvadas",
+    "href": "ML_fish_species.html#įvadas",
+    "title": "\nCHANGE TO LT: Machine learning based image collection, annotation and classification of fish species\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nČia pristatome vartotojui draugišką ir lengvai pritaikomą dirbtinio intelekto (DI) sistemą, skirtą žuvų rūšių identifikavimo modeliams kurti. Parengėme duomenų pirminio apdorojimo, vaizdų apdorojimo ir mašininio mokymosi modelių kūrimo kursą ir kodus, kuriuos galite rasti mūsų rengtuose nuotiniuose mokymuose.\nŠiame atviros prieigos straipsnyje skelbtame žurnale Sustainability rasite išsamų sistemos aprašymą, bandomąjį pavyzdį, kuriame demonstruojamas galimas panaudojimas mėgėjiškos žvejybos tyrimams, žinių, įgytų taikant pavyzdį, santrauką ir pagrindinių uždavinių bei galimo tolesnio plėtojimo apžvalgą. Visus sistemoje naudojamus kodus taip pat galite rasti mūsų Github puslapyje.\nAtviros prieigos, modulinė didelio masto vaizdų saugojimo, tvarkymo, anotavimo ir automatinio klasifikavimo sistema"
   },
   {
     "objectID": "ML_fish_species.html#modelio-kodas",
     "href": "ML_fish_species.html#modelio-kodas",
-    "title": "Machine learning based image collection, annotation and classification of fish species",
+    "title": "\nCHANGE TO LT: Machine learning based image collection, annotation and classification of fish species\n",
     "section": "Modelio kodas",
-    "text": "Modelio kodas\nNorint naudoti mūsų modelius, labai svarbu, kad žuvų rūšys (arba ekotipai, arba bet kokios kitos klasės, kurias norite, kad jūsų modelis identifikuotų) jūsų duomenų rinkinyje būtų identifikuotos teisingai, kitaip jūsų modelis bus netikslus. Nuotraukas (JPEG arba PNG formatu) galite įkelti į “Google” diską pagal rūšis (t. y. po vieną rūšį viename aplanke - įsitikinkite, kad jos yra teisingai identifikuotos), laikydamiesi šios katalogų struktūros:\ndataset\n|__ eserys\n    |______ eserys1.PNG\n    |______ kita_nuotrauka.PNG\n    |______ ...\n|__ lydeka\n    |______ nuotrauku_pavadinimai_nesvarbus.PNG\n    |______ dar_viena_lydeka.PNG\n    |______ ...\n|__ kuoja\n    |______ 10250198.PNG\n    |______ bet_koks_pavadinimas.PNG\n    |______ ...\n|__ ...\n\nŠis modelis sukurtas “Python” kalba ir veikia nemokamoje “Google Colab” versijoje. Pateikiami programiniai kodai yra pritaikyti taip, kad juos būtų patogu naudoti ir jų naudojimui nereikėtų išsamių “Python” programavimo kalbos žinių (tačiau norint toliau kodus pakeisti, tam tikos programavimo žinios žinoma yra reikalingos).\n“Colab”, arba “Colaboratory”, yra nemokama, į “Jupyter” tinklo aplinką panaši debesų kompiuterijos aplinka, leidžianti vykdyti “Python” kodą (ir “Python” bibliotekas) naršyklėje be atskiro įdiegimo ir konfigūravimo. Ji taip pat suteikia prieigą prie riboto kiekio skaičiavimo išteklių.\nNorėdami pradėti naudotis “Google Colab”, turite turėti “Google” paskyrą. Žemiau pateikta nuoroda nukreips jus į “Google Colab” užrašų knygelę. Ji atvers užrašų knygelę, kurią galėsite paleisti ir keisti tiesiogiai (t. y. nesirūpindami, kad perrašysite šaltinį ar pradinę užrašų knygelę). Norėdami išsaugoti bet kokius užrašų knygelės pakeitimus, turėsite išsaugoti užrašų knygelės kopiją savo “Google” diske. Jei bandysite įrašyti pakeitimus tiesiogiai pradinėje užrašų knygelėje, gausite pranešimą “cannot Save changes” (negalima įrašyti pakeitimų) ir turėsite pasirinkti “Save a copy in Drive” (įrašyti kopiją diske).\nPakeitę užrašų knygelę galite išsaugoti pakeitimus pasirinkę File→Save a copy in Drive (Failas→Įrašyti kopiją diske) ir vadovaukitės gautais nurodymais.\nTaip pat galite sukurti naują užrašų knygelę nuėję į “Google Colab” pagrindinį puslapį čia ir spustelėdami apatiniame dešiniajame kampe esančią nuorodą “new notebook”. Jei norite, taip pat galite spustelėti “atšaukti” ir pereiti prie trumpo mokomojo vadovo, kaip pradėti dirbti su “Google colab”.\nTaip pat atkreipkite dėmesį, kad šiame užrašų sąsiuvinyje pateikiame trijų žuvų rūšių duomenų rinkinio pavyzdį, kurio nuotraukas pateikė AnglerAtlas.\nNorėdami taikyti mūsų modelį, galite naudoti šį kodą:"
+    "text": "Modelio kodas\nNorint naudoti mūsų modelius, labai svarbu, kad žuvų rūšys (arba ekotipai, arba bet kokios kitos klasės, kurias norite, kad jūsų modelis identifikuotų) jūsų duomenų rinkinyje būtų identifikuotos teisingai, kitaip jūsų modelis bus netikslus. Nuotraukas (JPEG arba PNG formatu) galite įkelti į “Google” diską pagal rūšis (t. y. po vieną rūšį viename aplanke - įsitikinkite, kad jos yra teisingai identifikuotos), laikydamiesi šios katalogų struktūros:\ndataset\n|__ eserys\n    |______ eserys1.PNG\n    |______ kita_nuotrauka.PNG\n    |______ ...\n|__ lydeka\n    |______ nuotrauku_pavadinimai_nesvarbus.PNG\n    |______ dar_viena_lydeka.PNG\n    |______ ...\n|__ kuoja\n    |______ 10250198.PNG\n    |______ bet_koks_pavadinimas.PNG\n    |______ ...\n|__ ...\n\nŠis modelis sukurtas “Python” kalba ir veikia nemokamoje “Google Colab” versijoje. Pateikiami programiniai kodai yra pritaikyti taip, kad juos būtų patogu naudoti ir jų naudojimui nereikėtų išsamių “Python” programavimo kalbos žinių (tačiau norint toliau kodus pakeisti, tam tikos programavimo žinios žinoma yra reikalingos).\n“Colab”, arba “Colaboratory”, yra nemokama, į “Jupyter” tinklo aplinką panaši debesų kompiuterijos aplinka, leidžianti vykdyti “Python” kodą (ir “Python” bibliotekas) naršyklėje be atskiro įdiegimo ir konfigūravimo. Ji taip pat suteikia prieigą prie riboto kiekio skaičiavimo išteklių.\nNorėdami pradėti naudotis “Google Colab”, turite turėti “Google” paskyrą. Žemiau pateikta nuoroda nukreips jus į “Google Colab” užrašų knygelę. Ji atvers užrašų knygelę, kurią galėsite paleisti ir keisti tiesiogiai (t. y. nesirūpindami, kad perrašysite šaltinį ar pradinę užrašų knygelę). Norėdami išsaugoti bet kokius užrašų knygelės pakeitimus, turėsite išsaugoti užrašų knygelės kopiją savo “Google” diske. Jei bandysite įrašyti pakeitimus tiesiogiai pradinėje užrašų knygelėje, gausite pranešimą “cannot Save changes” (negalima įrašyti pakeitimų) ir turėsite pasirinkti “Save a copy in Drive” (įrašyti kopiją diske).\nPakeitę užrašų knygelę galite išsaugoti pakeitimus pasirinkę File→Save a copy in Drive (Failas→Įrašyti kopiją diske) ir vadovaukitės gautais nurodymais.\nTaip pat galite sukurti naują užrašų knygelę nuėję į “Google Colab” pagrindinį puslapį čia ir spustelėdami apatiniame dešiniajame kampe esančią nuorodą “new notebook”. Jei norite, taip pat galite spustelėti “atšaukti” ir pereiti prie trumpo mokomojo vadovo, kaip pradėti dirbti su “Google colab”.\nTaip pat atkreipkite dėmesį, kad šiame užrašų sąsiuvinyje pateikiame trijų žuvų rūšių duomenų rinkinio pavyzdį, kurio nuotraukas pateikė Kanados žvejų piliečių mokslo programa **My Catch, Angler’s Atlas, bendradarbiaujanti su Gamtos tyrimų centro mokslininkais.\nNorėdami taikyti mūsų modelį, galite naudoti šį kodą:"
   },
   {
     "objectID": "ML_fish_species.html#modelio-taikymas",
     "href": "ML_fish_species.html#modelio-taikymas",
-    "title": "Machine learning based image collection, annotation and classification of fish species",
+    "title": "\nCHANGE TO LT: Machine learning based image collection, annotation and classification of fish species\n",
     "section": "Modelio taikymas",
     "text": "Modelio taikymas\nJei norite daugiau sužinoti apie modelio vystymą ir pritaikymą galite peržiūrėti šį pranešimą nuotoliniame seminare “Internetinis seminaras:”Mašinų mokymasis, žvejyba ir piliečių mokslas” arba šį pranetimą nuotoliniame seminare “Mėgėjiškos žvejybos pastangos ir įsitraukimas skaitmeniniame amžiuje”.\nŠiame atviros prieigos straipsnyje mes detaliai aprašome kaip pristatymas metodas gali būti taikomas mėgėjiškos žūklės tyrimams. Visų pirma parodome mokslinį taikymą, naudingumą ir mastelio didinimo galimybes žuvų rūšims ar kitiems objektams klasifikuoti. Čia pateikta sistema yra lanksti, ją galima pritaikyti įvairiems vaizdų klasifikavimo ir mokslinių tyrimų klausimams spręsti. Parodome, kad turint palyginti nedidelį vaizdų skaičių kiekvienoje vaizdų klasėje (200-300), galima greitai ir su minimaliais ištekliais sukurti gana aukšto našumo modelį nedideliam klasifikavimo klasių skaičiui (mūsų atveju - šešioms).\nTolimesniam modelio vystymui ir taikymui kviečiame ir skatinsime platesnį mokslininkų bendruomenės ir piliečių mokslo įsitraukimą. Tyrimų grupės visame pasaulyje galėtų įtraukti vietinius piliečius mokslininkus, kad jie rinktų nuotraukas mažų modulinių modelių, susijusius su vietos žuvininkystės valdymo ir ekologiniais klausimais, kūrimui. Tokie modeliai leistų greičiau apdoroti naujus piliečių mokslo duomenis, ir tai žymiai padidintų mėgėjiškos žvejybos tyrimams prieinamų duomenų kiekį."
   },
   {
-    "objectID": "models.html",
-    "href": "models.html",
-    "title": "Overview of models",
-    "section": "",
-    "text": "Sukūrėme ir pritaikėme visą spektrą įvairių statistinių ir mechanistinių modelių, kuriuos naudojome savo tyrimuose ir dalijamės su mokslo visuomene. Tikimės, kad šie modeliai pasitarnaus žuvininkystės tyrimuose bei bus naudingi priimant žuvų išteklių valdymo sprendimus. Šiuos modelius galite nemokamai naudoti nekomerciniais tikslais, tačiau prašome nurodyti pirminį šaltinį (straipsnius arba šią svetainę).\n\n\nMokslinės stebėsenos, verslinės ar megėjiškos žvejybos sugavimų duomenys yra dažnai naudojami žuvų populiacijos būklei ir tendencijoms vertinti. Vis dėlto tokie duomenys paprastai yra gan sudėtingi ir įvairūs, ir juos reikia standartizuoti. Yra keletas metodų, kuriuos galima naudoti sugavimų vienai pastangai (CPUE) standartizavimui, ir mes pateikiame tris galimus modelius, didėjančio sudėtingumo tvarka."
+    "objectID": "models.html#modeliai-skirti-standartizuoti-sugavimus-vienai-pastangai-cpue",
+    "href": "models.html#modeliai-skirti-standartizuoti-sugavimus-vienai-pastangai-cpue",
+    "title": "\nCHANGE TO LT: Overview of models\n",
+    "section": "Modeliai, skirti standartizuoti sugavimus vienai pastangai (CPUE)",
+    "text": "Modeliai, skirti standartizuoti sugavimus vienai pastangai (CPUE)\nMokslinės stebėsenos, verslinės ar megėjiškos žvejybos sugavimų duomenys yra dažnai naudojami žuvų populiacijos būklei ir tendencijoms vertinti. Vis dėlto tokie duomenys paprastai yra gan sudėtingi ir įvairūs, ir juos reikia standartizuoti. Yra keletas metodų, kuriuos galima naudoti sugavimų vienai pastangai (CPUE) standartizavimui, ir mes pateikiame tris galimus modelius, didėjančio sudėtingumo tvarka."
   },
   {
     "objectID": "models.html#perteklinės-produkcijos-modeliai-žuvų-išteklių-tyrimuose",
     "href": "models.html#perteklinės-produkcijos-modeliai-žuvų-išteklių-tyrimuose",
-    "title": "Overview of models",
+    "title": "\nCHANGE TO LT: Overview of models\n",
     "section": "Perteklinės produkcijos modeliai žuvų išteklių tyrimuose",
     "text": "Perteklinės produkcijos modeliai žuvų išteklių tyrimuose\nPerteklinės produkcijos (PP) modeliai dažniausiai naudojami vertinant žuvų išteklius, kuriems trūksta detalizuotų amžiaus duomenų. Jie yra pagrįsti sugavimų (laimikių) ir populiacijos santykinio gausumo indekso (pvz., standartizuotos CPUE laiko eilutės iš auksčiau pateiktų modelių) kitimu laike. Šiuose modeliuose daroma prielaida, kad žuvų populiacijos gausa priklauso nuo jos atsinaujinimo greičio, aplinkos talpos ir sugavimų. PP modeliai buvo sėkmingai pritaikyti daugeliui žuvų išteklių visame pasaulyje ir, nepaisant prielaidų, dažnai veikia stebėtinai gerai, jeigu santykinio populiacijos gausumo ir sugavimų laiko eilutės yra patikimos."
   },
   {
     "objectID": "models.html#žuvų-augimo-modeliai",
     "href": "models.html#žuvų-augimo-modeliai",
-    "title": "Overview of models",
+    "title": "\nCHANGE TO LT: Overview of models\n",
     "section": "Žuvų augimo modeliai",
     "text": "Žuvų augimo modeliai\nŽuvų dydis ir augimas labai varijuoja laike ir erdvėje, nes jis priklauso nuo temperatūros, maisto prieinamumo ir daugelio kitų procesų. Todėl modeliavimas, kaip ir kodėl augimas gali keistis, ir kaip tai įvertinti, yra svarbi žuvininkystės tyrimų dalis."
   },
   {
     "objectID": "models.html#mašininio-mokymosi-modeliai",
     "href": "models.html#mašininio-mokymosi-modeliai",
-    "title": "Overview of models",
+    "title": "\nCHANGE TO LT: Overview of models\n",
     "section": "Mašininio mokymosi modeliai",
     "text": "Mašininio mokymosi modeliai\nMašininis mokymasis (MM) leidžia greitai analizuoti didelius vaizdų ir kitokių duomenų rinkinius ir yra svarbus žingsnis palengvinant piliečių mokslu grindžiamus duomenų rinkimą ir apdorijimą. Vykdydami projektą sukūrėme du mašininio mokymosi modelius žuvų rūšims ir dydžiui nustatyti."
   },
   {
     "objectID": "models.html#palydovinių-duomenų-analizė",
     "href": "models.html#palydovinių-duomenų-analizė",
-    "title": "Overview of models",
+    "title": "\nCHANGE TO LT: Overview of models\n",
     "section": "Palydovinių duomenų analizė",
     "text": "Palydovinių duomenų analizė\nŠiuo metu palydoviniai, nuotolinio stebėjimo duomenys gali būti renkami naudojant itin didelę laiko ir erdvinę skiriamąją gebą. Tačiau dažnai šiuos duomenis vis dar būna sunku pasiekti ir apdoroti. Mes sukūrėme keletą modelių ir įrankių, padedančių gauti ir analizuoti palydovinius vandens paviršiaus temperatūros ir optinės klasės (chlorofilo A) duomenis."
   },
   {
     "objectID": "models.html#individų-dydžiais-pagrįsti-ekosistemų-modeliai",
     "href": "models.html#individų-dydžiais-pagrįsti-ekosistemų-modeliai",
-    "title": "Overview of models",
+    "title": "\nCHANGE TO LT: Overview of models\n",
     "section": "Individų dydžiais pagrįsti ekosistemų modeliai",
     "text": "Individų dydžiais pagrįsti ekosistemų modeliai\nIndividų dydžiu pagrįsti bendrijų ir ekosistemų modeliai yra galingas įrankis, galintis numatyti įvairių žuvininkystės valdymo strategijų pasekmes, modeliuoti rūšių sąveiką, klimato kaitos poveikį ir kitus procesus. Šiame projekte kuriame individų dydžiu pagrįstą Kuršių marių ekosistemos modelį."
   },
   {
     "objectID": "satelite_chla.html",
     "href": "satelite_chla.html",
-    "title": "Extracting and analysing optical water quality data from satellites",
+    "title": "\nCHANGE TO LT: Extracting and analysing optical water quality data from satellites\n",
     "section": "",
-    "text": "Vandens kokybė yra svarbus aplinkos rodiklis. Tradiciniais metodais gaunama informacija apie vandens kokybę yra tiksli, tačiau šie metodai reikalauja daug žmogiškųjų ir piniginių išteklių, dėl to dažniausiai matavimai būna atliekami tik kai kuriuose telkiniuose. Be to matavimai būna taškiniai, nors didesniuose vandens telkiniuoe vandens kokybės parametrai gali skirtis skirtingose akvatorijos vietose.\nPalydoviniai duomenys gali padėti surinkti daugiau duomenų apie vandens telkinius. Naudodami palydovinę informaciją galime stebėti vandens parametrų pasiskirstymą visame vandens telkinyje bei gauti stebėjimų duomenis dažniau. Palydovai suteikia informaciją apie optines vandens savybes. Optiškai sudėtinguose vandens telkiniuose (t.y. gėlavandeniuose telkiniuose) gali būti stebimi trys vandens parametrai: chlorofilo-a pigmentas, randamas dumbliuose ir melsvabakterėse, suspenduota medžiaga, ir spalvotoji ištirpusi organinė medžiaga.\nŠiame dokumente apibūdinamas metodas skirtas biofizinės ežero klasės nustatymui. Šis metodas naudoja spektrinius vandens požymius, gautus iš Europos Kosmoso Agentūros (EKA) Copernicus Sentinel-2 misijos palydovų. Metodas yra paremtas mašininio mokymosi atsitiktinio miško algoritmu ir priskiria ežerui vieną iš keturių klasių:\n\nSkaidri klasė. Vandens skaidrumas yra didesnis nei 2 m vidutino gylio ir giliuose ežeruose ir didesnis nei 1,3 m sekliuose ežeruose. Taip pat šios klasės vandenyje stebima maža optiškai aktyvių medžiagų koncentracija, tad vandens spektras nėra jų paveiktas. Vandens skaidrumas šioje klasėje siejamas su gera ir labai gera ekologine vandens būkle, kaip nustatoma ir pagal Europos Sąjungos Bendrosios Vandens Politikos direktyvą.\nTarpinė klasė. Vandens skaidrumas yra geras arba labai geras, tačiau chlorofilo-a koncentracija yra kiek didesnė (tarp 7 ir 20 mg/m^3) nei skaidrioje klasėje, tad ši klasė gali būti siejama su lengvais dumblių ir melsvabaketerių žydėjimais.\nChla-klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose ir mažesnis už 1,3 m sekliuose ežeruose, o chlorofilo-a koncentracija dažniausiai yra aukštesnė nei 20 mg/m^3. Ši klasė siejama su vidutine, bloga ar labai bloga vandens kokybe.\nDrumsta klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose bei mažesnis nei 1,3 m sekliuose ežeruose, tačiau chlorofilo koncentracija yra panaši į tarpinės klasės koncentraciją, tad mažas vandens skaidrumas yra veikiau nulemtas aukštesnės spalvotosios ištirpusios medžiagos koncentracijos.\n\nDaugiau informacijos apie šį modelį rasite viešai prieinamoje Grendaitės and Stonevičiaus (2022) publikacijoje. Modelių tikslumas išbandymo etape skyrėsi tarp klasių: 27 % drumstai klasei, 70 % Chla-klasei, 81 % tarpinei klasei ir 85 % skaidriai klasei.\nČia pateiktas programinis kodas pritaiko ežero klasės nustatymo modelius, naudojant Sentinel-2 duomenis, prieinamus per Google Earth engine (GEE). Pateiktas kodas taip pat nufiltruoja netinkamus palydovinius duomenis bei pritaiko ežero klasės modelį."
+    "text": "Author\n    \n             Dalia Grendaitė"
+  },
+  {
+    "objectID": "satelite_chla.html#įvadas",
+    "href": "satelite_chla.html#įvadas",
+    "title": "\nCHANGE TO LT: Extracting and analysing optical water quality data from satellites\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nVandens kokybė yra svarbus aplinkos rodiklis. Tradiciniais metodais gaunama informacija apie vandens kokybę yra tiksli, tačiau šie metodai reikalauja daug žmogiškųjų ir piniginių išteklių, dėl to dažniausiai matavimai būna atliekami tik kai kuriuose telkiniuose. Be to matavimai būna taškiniai, nors didesniuose vandens telkiniuoe vandens kokybės parametrai gali skirtis skirtingose akvatorijos vietose.\nPalydoviniai duomenys gali padėti surinkti daugiau duomenų apie vandens telkinius. Naudodami palydovinę informaciją galime stebėti vandens parametrų pasiskirstymą visame vandens telkinyje bei gauti stebėjimų duomenis dažniau. Palydovai suteikia informaciją apie optines vandens savybes. Optiškai sudėtinguose vandens telkiniuose (t.y. gėlavandeniuose telkiniuose) gali būti stebimi trys vandens parametrai: chlorofilo-a pigmentas, randamas dumbliuose ir melsvabakterėse, suspenduota medžiaga, ir spalvotoji ištirpusi organinė medžiaga.\nŠiame dokumente apibūdinamas metodas skirtas biofizinės ežero klasės nustatymui. Šis metodas naudoja spektrinius vandens požymius, gautus iš Europos Kosmoso Agentūros (EKA) Copernicus Sentinel-2 misijos palydovų. Metodas yra paremtas mašininio mokymosi atsitiktinio miško algoritmu ir priskiria ežerui vieną iš keturių klasių:\n\nSkaidri klasė. Vandens skaidrumas yra didesnis nei 2 m vidutino gylio ir giliuose ežeruose ir didesnis nei 1,3 m sekliuose ežeruose. Taip pat šios klasės vandenyje stebima maža optiškai aktyvių medžiagų koncentracija, tad vandens spektras nėra jų paveiktas. Vandens skaidrumas šioje klasėje siejamas su gera ir labai gera ekologine vandens būkle, kaip nustatoma ir pagal Europos Sąjungos Bendrosios Vandens Politikos direktyvą.\nTarpinė klasė. Vandens skaidrumas yra geras arba labai geras, tačiau chlorofilo-a koncentracija yra kiek didesnė (tarp 7 ir 20 mg/m^3) nei skaidrioje klasėje, tad ši klasė gali būti siejama su lengvais dumblių ir melsvabaketerių žydėjimais.\nChla-klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose ir mažesnis už 1,3 m sekliuose ežeruose, o chlorofilo-a koncentracija dažniausiai yra aukštesnė nei 20 mg/m^3. Ši klasė siejama su vidutine, bloga ar labai bloga vandens kokybe.\nDrumsta klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose bei mažesnis nei 1,3 m sekliuose ežeruose, tačiau chlorofilo koncentracija yra panaši į tarpinės klasės koncentraciją, tad mažas vandens skaidrumas yra veikiau nulemtas aukštesnės spalvotosios ištirpusios medžiagos koncentracijos.\n\nDaugiau informacijos apie šį modelį rasite viešai prieinamoje Grendaitės and Stonevičiaus (2022) publikacijoje. Modelių tikslumas išbandymo etape skyrėsi tarp klasių: 27 % drumstai klasei, 70 % Chla-klasei, 81 % tarpinei klasei ir 85 % skaidriai klasei.\nČia pateiktas programinis kodas pritaiko ežero klasės nustatymo modelius, naudojant Sentinel-2 duomenis, prieinamus per Google Earth engine (GEE). Pateiktas kodas taip pat nufiltruoja netinkamus palydovinius duomenis bei pritaiko ežero klasės modelį."
   },
   {
     "objectID": "satelite_chla.html#modelis",
     "href": "satelite_chla.html#modelis",
-    "title": "Extracting and analysing optical water quality data from satellites",
+    "title": "\nCHANGE TO LT: Extracting and analysing optical water quality data from satellites\n",
     "section": "Modelis",
     "text": "Modelis\nTam kad patogiai pasiekti ir apdoroti vandens klasių duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis Google Colaboratory aplinka. Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į nuorodą. Tuomet reikia užsiregistruoti Google Earth Engine. Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.\nPo registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą\n\n\n\n\n\nPaspaudę matysite tokį dokumentą:\n\n\n\n\n\nKai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite Failas ir tada Išsaugoti kopiją Diske). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal čia pateiktą pavyzdį. Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti čia (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip čia pateiktas pavyzdys. Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, ir arčiau nei 100 metrų vienas nuo kito (nes satelito raiška yra 100 metrų).\nKai jau turėsite dokumentą su palydoviniais duomenimis, naudokite šį R markdown kodą tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. Čia jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai."
   },
   {
     "objectID": "satelite_chla.html#modelio-taikymas",
     "href": "satelite_chla.html#modelio-taikymas",
-    "title": "Extracting and analysing optical water quality data from satellites",
+    "title": "\nCHANGE TO LT: Extracting and analysing optical water quality data from satellites\n",
     "section": "Modelio taikymas",
     "text": "Modelio taikymas\nŠis ežero vandens klasės ir kokybės nustatymo modelis gali būti pritaikytas didelio masto vandens kokybės stebėjimui. Tokie stebėjimai ir duomenų pasiekiamumas yra svarbūs siekiant ES misijos Atkurti mūsų vandenyną ir vandenis tikslų. Čia pateikti programiniai kodai ir modeliai taip pat gali būti taikomi moksliniuose tyrimuose, siekiant susieti vandens kokybės ir kitų biologinių parametrų ar žuvų gausumo duomenis. Tačiau yra svarbu atkreipti dėmesį į tai, kad modelis yra parengtas Lietuvos ir kitiems borealiniams ežerams ir jo pritaikymas tropikų ar savanų vandens telkiniams turėtų būti toliau vystomas ir tikrinamas."
   },
   {
     "objectID": "satelite_temp.html",
     "href": "satelite_temp.html",
-    "title": "Extracting and analysing lake surface temperature data from satellites",
+    "title": "\nCHANGE TO LT: Extracting and analysing lake surface temperature data from satellites\n",
     "section": "",
-    "text": "Vandens paviršiaus temperatūrą (PT) galima gauti iš Landsat misijos palydovų. Pirmasis Landsat palydovas buvo paleistas 1972 metais, tačiau temperatūros duomenys yra renkami tik nuo Landsat 4 palydovo paleidimo 1984 metais. Nuo šių metų, palydovai turi šiluminės infraraudonosios spinduliuotės jutiklį (ang. - thermal infrared sensor), kuriuo nustatoma ilgabangė Žemės skleidžiama energija, kurios intensyvumas priklauso nuo paviršiaus temperatūros.\nŠiuo metu Žemės orbitoje yra Landsat 8 (nuo 2013 m. kovo mėn.) ir Landsat 9 (nuo 2021 m. spalio mėn.) palydovai, kuriais gaunama informacija apie paviršiaus atspindį (ang. - reflectance) ir temperatūrą. Paprasčiausias būdas gauti palydovinę PT informacią yra naudojantis Google Earth engine (GEE) paslaugomis. Google Earch engine inegruoja algoritmą kuris pateikia paviršiaus temperatūros duomenis (Kelvinais) kiekvienai Landsat nuotraukos gardelei. ST algoritmas buvo sukurtas Ročesterio technologijos instituto (ang. - Rochester Institute of Technology (RIT)) ir NASA Reaktyvinio judėjimo laboratorija (ang. - Jet Propulsion Laboratory (JPL)) kartu su JAV Geologijos tarnybos programinės įrangos inžinieriais (Landsat 4-7 ir Landsat 8-9 produktų aprašymas). Temperatūros nustatymui algoritmas naudoja atspindžio duomenis iš kitų Landsat spektrinių juostų, šiluminės juostos, bei pagalbinius aukščio ir atmosferos duomenis. Tempeartūros duomenys pateikiami 100 m gardelėmis, o tai reiškia kad PT duomenis galima gauti net ir sąlyginai nedideliems ežerams. Landsat duomenys yra prieinami iki 76 laipsnių platumos. Daugiau apie Landsat 8 duomenų rinkinį galima rasti GEE nuorodoje."
+    "text": "Author\n    \n             Max Lindmark and Asta Audzijonyte"
+  },
+  {
+    "objectID": "satelite_temp.html#įvadas",
+    "href": "satelite_temp.html#įvadas",
+    "title": "\nCHANGE TO LT: Extracting and analysing lake surface temperature data from satellites\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nVandens paviršiaus temperatūrą (PT) galima gauti iš Landsat misijos palydovų. Pirmasis Landsat palydovas buvo paleistas 1972 metais, tačiau temperatūros duomenys yra renkami tik nuo Landsat 4 palydovo paleidimo 1984 metais. Nuo šių metų, palydovai turi šiluminės infraraudonosios spinduliuotės jutiklį (ang. - thermal infrared sensor), kuriuo nustatoma ilgabangė Žemės skleidžiama energija, kurios intensyvumas priklauso nuo paviršiaus temperatūros.\nŠiuo metu Žemės orbitoje yra Landsat 8 (nuo 2013 m. kovo mėn.) ir Landsat 9 (nuo 2021 m. spalio mėn.) palydovai, kuriais gaunama informacija apie paviršiaus atspindį (ang. - reflectance) ir temperatūrą. Paprasčiausias būdas gauti palydovinę PT informacią yra naudojantis Google Earth engine (GEE) paslaugomis. Google Earch engine inegruoja algoritmą kuris pateikia paviršiaus temperatūros duomenis (Kelvinais) kiekvienai Landsat nuotraukos gardelei. ST algoritmas buvo sukurtas Ročesterio technologijos instituto (ang. - Rochester Institute of Technology (RIT)) ir NASA Reaktyvinio judėjimo laboratorija (ang. - Jet Propulsion Laboratory (JPL)) kartu su JAV Geologijos tarnybos programinės įrangos inžinieriais (Landsat 4-7 ir Landsat 8-9 produktų aprašymas). Temperatūros nustatymui algoritmas naudoja atspindžio duomenis iš kitų Landsat spektrinių juostų, šiluminės juostos, bei pagalbinius aukščio ir atmosferos duomenis. Tempeartūros duomenys pateikiami 100 m gardelėmis, o tai reiškia kad PT duomenis galima gauti net ir sąlyginai nedideliems ežerams. Landsat duomenys yra prieinami iki 76 laipsnių platumos. Daugiau apie Landsat 8 duomenų rinkinį galima rasti GEE nuorodoje."
   },
   {
     "objectID": "satelite_temp.html#modelio-kodas",
     "href": "satelite_temp.html#modelio-kodas",
-    "title": "Extracting and analysing lake surface temperature data from satellites",
+    "title": "\nCHANGE TO LT: Extracting and analysing lake surface temperature data from satellites\n",
     "section": "Modelio kodas",
     "text": "Modelio kodas\nTam kad lengvai pasiekti vandens paviršiaus temperatūros duomenis, mes sukūrėme du programinius kodus. Pagrindinis kodas leidžia pasiimti duomenis iš GEE paskyros ir yra parašytas Python programavimo kalba. Šis kodas yra prieinamas naudojantis Google Colaboratory aplinka. Google Colaboratory yra nemokama programavimo aplinka, kurioje jau yra įdiegtos įvairios Python bibliotekos. Kad galėtume pasiekti duomenų rinkinius per Google Earth Engine, reikalinga Google paskyra (jei Google paskyros neturite, ją susikurti galite eidami į nuorodą. Tuomet reikia užsiregistruoti Google Earth Engine. Ši registracija leidžia autorizuoti prisijungimą ir gauti prieigą prie GEE palydovinių duomenų.\nPo registracijos, naudokite programinį kodą, naudodami žemiau esančią nuorodą\n\n\n\n\n\nPaspaudę matysite tokį dokumentą:\n\n\n\n\n\nKai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite Failas ir tada Išsaugoti kopiją Diske). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal čia pateiktą pavyzdį. Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip čia pateiktas pavyzdys. Šiame pavyzdyje mes naudojame tik du taškus, bet jūs galite pridėti tiek taškų (eilučių) kiek jums reikia.\nKai jau turėsite dokumentą su palydoviniais duomenimis, naudokite šį R markdown kodą tam kad pašalinti duomenis iš debesuotų dienų, o taip pat duomenis iš galimai žemos kokybės Landsat 7 laiko eilutės (nuo 2018 iki 2022 metų). Šis kodas taip pat pateikia galimybes sukurti duomenų grafikus. Čia jūs galite pažiūrėti į šio duomenų filtravimo ir grafikų paruošimo rezultatus nenaudojant pateikto kodo."
   },
   {
     "objectID": "satelite_temp.html#modelio-taikymas",
     "href": "satelite_temp.html#modelio-taikymas",
-    "title": "Extracting and analysing lake surface temperature data from satellites",
+    "title": "\nCHANGE TO LT: Extracting and analysing lake surface temperature data from satellites\n",
     "section": "Modelio taikymas",
     "text": "Modelio taikymas\nTo assess the quality of the satellite temperature data we will compare it with the monitoring data from 12 Lithuanian lakes, available from the Lithuanian Hydrometeorological Service (meteo.lt). We expect small differences because in situ monitoring points are close to the shore, whereas for satellite data we chose coordinates in the central part of lake. Because satellite data points very close to the shore (50 meters or less) will be influenced by the coastal surfaces, vegetation and terrain, it is important to only use points that are sufficiently far from the shore. Nevertheless, we can see that the correlation is very high with correlation coefficients usually higher than 0.9\nTam kad įvertinti palydovinių duomenų kokybę, mes galime palyginti palydoviniu duomenis su in situ atliktai matavimais. Tam panaudosime monitoringo duomenis 12-ai Lietuvos ežerų. Šiuose ežeruose yra įrengtos automatinės stotys, prižiūrimos Lietuvos hidrometeorologijos tarnybos (meteo.lt). Svarbu yra pabrėžti, kad monitoringo stotys yra įrengtos arti kranto, o palydovinių duomenų pasiekimui naudojame taškus esančius labiau centrinėje ežero akvatorijoje (daugiau nei 50 metrų nuo kranto). Pastarasis faktas yra svarbus, nes taip išvengiame kranto paviršių ir reljefo įtakos palydoviniams duomenims. Žemiau pateiktame paveiksle matome kad ežerų in situ išmatuotos ir palydovais įvertintos temperatūros yra labai panašios, o jų koreliacijos koeficientai ežerams paprastai viršija 0.9."
   },
   {
     "objectID": "surplus-production.html",
     "href": "surplus-production.html",
-    "title": "Surplus production models",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
     "section": "",
-    "text": "Perteklinės produkcijos modeliai yra plačiai naudojami tiems žuvų ištekliams, apie kuriuos duomenys yra riboti. Šie modeliai pagrįsti prielaida, kad išteklių gausumą daugiausia lemia žvejyba, populiacijos atsinaujinimo ar augimo tempas (r) ir aplinkos talpa (K) - t.y., biomasės lygis, nesant žvejybos.\nJei tiksliai žinotume r ir K ir turėtume patikimus duomenis apie sugavimus laikui bėgant, galėtume gana gerai įvertinti populiacijos dydį. Tačiau kadangi r ir K paprastai nėra žinomi, naudojamos sugavimų ir populiacijos gausumo indekso laiko eilutės (pvz., standartizuotus sugavimus pastangai, CPUE) labiausiai tikėtinoms r ir K reikšmėms nustatyti, populiacijos būklei įvertinti ir ateities prognozėms sudaryti. Taigi, norint pritaikyti perteklinės produkcijos modelius žuvų ištekliams, reikalingi šie duomenys:\n\nsugavimų (laimikių) laiko eilutės,\nstandartizuotų sugavimų pastangai (CPUE) laiko eilutės arba kitas populiacijos santykinio gausumo indeksas,\npreliminarūs spėjimai apie r ir K reikšmes ir santykinį populiacijos dydį laiko eilutės pradžioje (t.y., koks populiacijos dydis buvo lyginant su aplinkos talpa).\n\nPerteklinės produkcijos modeliai geriausiai veikia, kai laiko eilutėje yra pakankamai kontrastingi sugavimai ir svyruojantis populiacijos gausumas. Jei laimikis ir CPUE laikui bėgant išliko gana stabilūs, parametrų ir populiacijos būklės įverčiai turės didelius neapibrėžtumo diapazonus. Pagrindinis parametras, lemiantis populiacijos atsparumą žvejybai, yra populiacijos atsinaujinimo greitis r. Paprastai mes nežinome r savo rūšiai ar populiacijai, bet įverčių galime ieškoti FishBase life-history skyriuje.\nArba galime naudoti šiuos bendruosius įvertinimus, kurie rodo, kad r yra 0,6–1,5 didelio atsparumo rūšims (Von Bertalanffy augimo tempas. K>0,3, brendimo amžius < 1, didelis vaisingumas) ir r 0,2-1 vidutinio atsparumo rūšims.\nNorėdami daugiau sužinoti apie perteklinės produkcijos modelius, rekomenduojame šią puikią ir laisvai prieinamą Malcolmo Haddono knygą “Using R for Modelling and Quantitative Methods in Fisheries”."
+    "text": "Author\n    \n             Egle Jakubavičiūtė, Freddie Heather, Asta Audzijonyte"
+  },
+  {
+    "objectID": "surplus-production.html#įvadas",
+    "href": "surplus-production.html#įvadas",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nPerteklinės produkcijos modeliai yra plačiai naudojami tiems žuvų ištekliams, apie kuriuos duomenys yra riboti. Šie modeliai pagrįsti prielaida, kad išteklių gausumą daugiausia lemia žvejyba, populiacijos atsinaujinimo ar augimo tempas (r) ir aplinkos talpa (K) - t.y., biomasės lygis, nesant žvejybos.\nJei tiksliai žinotume r ir K ir turėtume patikimus duomenis apie sugavimus laikui bėgant, galėtume gana gerai įvertinti populiacijos dydį. Tačiau kadangi r ir K paprastai nėra žinomi, naudojamos sugavimų ir populiacijos gausumo indekso laiko eilutės (pvz., standartizuotus sugavimus pastangai, CPUE) labiausiai tikėtinoms r ir K reikšmėms nustatyti, populiacijos būklei įvertinti ir ateities prognozėms sudaryti. Taigi, norint pritaikyti perteklinės produkcijos modelius žuvų ištekliams, reikalingi šie duomenys:\n\nsugavimų (laimikių) laiko eilutės,\nstandartizuotų sugavimų pastangai (CPUE) laiko eilutės arba kitas populiacijos santykinio gausumo indeksas,\npreliminarūs spėjimai apie r ir K reikšmes ir santykinį populiacijos dydį laiko eilutės pradžioje (t.y., koks populiacijos dydis buvo lyginant su aplinkos talpa).\n\nPerteklinės produkcijos modeliai geriausiai veikia, kai laiko eilutėje yra pakankamai kontrastingi sugavimai ir svyruojantis populiacijos gausumas. Jei laimikis ir CPUE laikui bėgant išliko gana stabilūs, parametrų ir populiacijos būklės įverčiai turės didelius neapibrėžtumo diapazonus. Pagrindinis parametras, lemiantis populiacijos atsparumą žvejybai, yra populiacijos atsinaujinimo greitis r. Paprastai mes nežinome r savo rūšiai ar populiacijai, bet įverčių galime ieškoti FishBase life-history skyriuje.\nArba galime naudoti šiuos bendruosius įvertinimus, kurie rodo, kad r yra 0,6–1,5 didelio atsparumo rūšims (Von Bertalanffy augimo tempas. K>0,3, brendimo amžius < 1, didelis vaisingumas) ir r 0,2-1 vidutinio atsparumo rūšims.\nNorėdami daugiau sužinoti apie perteklinės produkcijos modelius, rekomenduojame šią puikią ir laisvai prieinamą Malcolmo Haddono knygą “Using R for Modelling and Quantitative Methods in Fisheries”."
   },
   {
     "objectID": "surplus-production.html#modelis",
     "href": "surplus-production.html#modelis",
-    "title": "Surplus production models",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
     "section": "Modelis",
     "text": "Modelis\nPrieš taikant perteklinės produkcijos modelius žuvų ištekliams, svarbu suprasti, kaip jie veikia ir kokias prielaidas daro. Kad būtų patogu tą padaryti, sukūrėme šį įrankį, kurį galite rasti čia"
   },
   {
     "objectID": "surplus-production.html#modelio-taikymas",
     "href": "surplus-production.html#modelio-taikymas",
-    "title": "Surplus production models",
+    "title": "\nCHANGE TO LT: Surplus production models\n",
     "section": "Modelio taikymas",
-    "text": "Modelio taikymas\nPerteklinės produkcijos modeliai yra taikomi įvairioms populiacijoms ir paprastai veikia geriau nei paprastesni modeliai, pagrįsti tik sugautų žuvų kiekio duomenimis. Naujausią perteklinės produkcijos modelių taikymo apžvalgą rasite šioje publikacijoje. Be to, kai duomenys yra riboti, paprasti perteklinės produkcijos modeliai veikia netgi geriau nei sudėtingesni modeliai su daugybe parametrų, kurių negalima veiksmingai įvertinti, žr. pavyzdį čia.\nTačiau svarbu atsiminti, kad paprasti modeliai daro supaprastinančias prielaidas. Pagrindinės prielaidos, kurias reikia turėti omenyje, yra šios:\n\nPopuliacijos gausumą daugiausia kontroliuoja žvejyba, o ne kiti aplinkos veiksniai ar rūšių sąveika. Jei taip nėra, tuomet reikia kito tipų modelių – galbūt tokių, kurie susieja žuvų išteklius su temperatūra, kitų rūšių paplitimu, srovėmis ar kitais veiksniais.\nNeatsižvelgiama nei į amžiaus, nei žuvų dydžio struktūrą. Pvz., 1 kg 5 metų žuvies yra tolygu 1 kg 10 metų žuviai, ir jų indėlis į nerštą yra vienodas.\n\nPopuliacijos parametrai, tokie kaip augimas, natūralus mirtingumas, aplinkos talpa ir populiacijos atsinaujinimo greitis, yra nekintantys (fiksuoti tiek laike tiek erdvėje). Nors dažniausiai taip nėra, dauguma duomenų rinkinių neturi pakankamai informacijos, kad būtų galima įvertinti šių parametrų pokyčius laikui bėgant."
+    "text": "Modelio taikymas\nPerteklinės produkcijos modeliai yra taikomi įvairioms populiacijoms ir paprastai veikia geriau nei paprastesni modeliai, pagrįsti tik sugautų žuvų kiekio duomenimis. Naujausią perteklinės produkcijos modelių taikymo apžvalgą rasite šioje publikacijoje. Ši apžvalga taip pat paaiškina kad turint tik ribotus duomenis paprasti perteklinės produkcijos modeliai dažnai veikia geriau nei sudėtingesni modeliai su daug parametrų, kurių negalima teisingai apskaičiuoti ir įvertinti.\nTačiau svarbu atsiminti, kad paprasti modeliai daro supaprastinančias prielaidas. Pagrindinės prielaidos, kurias reikia turėti omenyje, yra šios:\n\nPopuliacijos gausumą daugiausia kontroliuoja žvejyba, o ne kiti aplinkos veiksniai ar rūšių sąveika. Jei taip nėra, tuomet reikia kito tipų modelių – galbūt tokių, kurie susieja žuvų išteklius su temperatūra, kitų rūšių paplitimu, srovėmis ar kitais veiksniais.\nNeatsižvelgiama nei į amžiaus, nei žuvų dydžio struktūrą. Pvz., 1 kg 5 metų žuvies yra tolygu 1 kg 10 metų žuviai, ir jų indėlis į nerštą yra vienodas.\n\nPopuliacijos parametrai, tokie kaip augimas, natūralus mirtingumas, aplinkos talpa ir populiacijos atsinaujinimo greitis, yra nekintantys (fiksuoti tiek laike tiek erdvėje). Nors dažniausiai taip nėra, dauguma duomenų rinkinių neturi pakankamai informacijos, kad būtų galima įvertinti šių parametrų pokyčius laikui bėgant."
   },
   {
     "objectID": "temperature_growth.html",
     "href": "temperature_growth.html",
-    "title": "Model to explore temperature impacts on fish growth",
+    "title": "\nCHANGE TO LT: Model to explore temperature impacts on fish growth\n",
     "section": "",
-    "text": "Žuvų augimas labai priklauso nuo temperatūros. Esant aukštesnei temperatūrai, žuvys dažnai auga greičiau, subręsta būdamos mažesnio dydžio, it taip pat pasiekia mažesnį maksimalų dydį. Tai žinoma kaip temperatūros – dydžio taisyklė, pibrėžta David Atkinson dar 1994 m.\n\n\n\n\n\nVis dėlto tokio augimo mechanizmai lieka neaiškūs. Šiuo modeliu parodome, kaip temperatūros-dydžio taisyklė gali atsirasti reaguojant į fiziologinius pokyčius (greitesnį metabolizmą ir suvartojimą), ir optimizuojant augimą ir dauginimąsi, priklausomai nuo mirtingumo.\nMes sukūrėme fiziologiškai struktūrizuotą gyvenimo ciklo optimizavimo modelį, kuriuo galime tirti, kokioms sąlygoms esant (įvairiems biologinių parametrų scenarijams) atsiranda temperatūros-dydžio taisyklė. Norėdami trumpai susipažinti su modeliu, galite paskaityti čia ar pažiūrėti šį konferencijos pranešimą."
+    "text": "Author\n    \n             Asta Audzijonyte, Egle Jakubavičiūtė, Max Lindmark, Shane Richards"
+  },
+  {
+    "objectID": "temperature_growth.html#įvadas",
+    "href": "temperature_growth.html#įvadas",
+    "title": "\nCHANGE TO LT: Model to explore temperature impacts on fish growth\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nŽuvų augimas labai priklauso nuo temperatūros. Esant aukštesnei temperatūrai, žuvys dažnai auga greičiau, subręsta būdamos mažesnio dydžio, it taip pat pasiekia mažesnį maksimalų dydį. Tai žinoma kaip temperatūros – dydžio taisyklė, pibrėžta David Atkinson dar 1994 m.\n\n\n\n\n\nVis dėlto tokio augimo mechanizmai lieka neaiškūs. Šiuo modeliu parodome, kaip temperatūros-dydžio taisyklė gali atsirasti reaguojant į fiziologinius pokyčius (greitesnį metabolizmą ir suvartojimą), ir optimizuojant augimą ir dauginimąsi, priklausomai nuo mirtingumo.\nMes sukūrėme fiziologiškai struktūrizuotą gyvenimo ciklo optimizavimo modelį, kuriuo galime tirti, kokioms sąlygoms esant (įvairiems biologinių parametrų scenarijams) atsiranda temperatūros-dydžio taisyklė. Norėdami trumpai susipažinti su modeliu, galite paskaityti čia ar pažiūrėti šį konferencijos pranešimą."
   },
   {
     "objectID": "temperature_growth.html#modelis",
     "href": "temperature_growth.html#modelis",
-    "title": "Model to explore temperature impacts on fish growth",
+    "title": "\nCHANGE TO LT: Model to explore temperature impacts on fish growth\n",
     "section": "Modelis",
     "text": "Modelis\nModelis parašytas Microsoft Excel ir R. Visą modelio kodą ir išsamią informaciją rasite šioje GitHub saugykloje. Pagrindinio modelio „Excel“ failą taip pat galima atsisiųsti čia. Šiame „Excel“ faile galite keisti temperatūros atsako parametrus ir jų priklausomybę nuo dydžio, optimizuoti modelį naudodami Solver parinktį ir matyti sugeneruotas augimo ir dauginimosi kreives, kaip parodyta paveikslėlyje žemiau."
   },
   {
     "objectID": "temperature_growth.html#modelio-pritaikymas",
     "href": "temperature_growth.html#modelio-pritaikymas",
-    "title": "Model to explore temperature impacts on fish growth",
+    "title": "\nCHANGE TO LT: Model to explore temperature impacts on fish growth\n",
     "section": "Modelio pritaikymas",
     "text": "Modelio pritaikymas\nAtviros prieigos mokslinis straipsnis, pristatantis šį modelį, paskelbtas specialiame žurnalo Biological Bulletin numeryje. Jei norite daugiau sužinoti apie temperatūros ir deguonies įtaką žuvų augimui, paskaitykite ir šią apžvalginę publikaciją tame pačiame žurnalo numeryje.\nŠį modelį lengva modifikuoti, todėl galite jį naudoti mokymo tikslais ar atliekant mokslinius tyrimus. Jei turite pasiūlymų naujoms modelio modifikacijoms ar norėtumėte jį naudoti savo publikacijoms, susisiekite su mumis el.paštu lydekaipaliepus@gamtc.lt\n Seliava. Piešinio autorė Amy Rose Coghlan"
   },
@@ -289,42 +373,56 @@
   {
     "objectID": "von-bertalanffy.html",
     "href": "von-bertalanffy.html",
-    "title": "Models to explore and estiamte von-Bertalanffy growth curves",
+    "title": "\nCHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves\n",
     "section": "",
-    "text": "Vienas iš labiausiai paplitusių būdų modeliuoti žuvų augimą yra naudoti von Bertalanffy augimo kreivę. Labiausiai paplitusi von Bertalanffy kreivės versija aprašo žuvies ilgį kaip trijų parametrų funkciją. Šie parametrai - tai asimptotinis ilgis \\(L_\\infty\\), von Bertalanffy augimo koeficientas \\(k\\) ir teorinis žuvies amžius \\(t0\\) kai žuvies dydis yra 0.\n\\(L_{(t)} = L_\\infty (1-e^{-k(t-t0)})\\)\n\\(k\\) parametras yra metinis augimo greitis, kuris parodo, kaip greitai individas pasieks asimptotinį ilgį. Daugeliu atvejų, \\(1/k\\) apytiksliai nurodo subrendimo amžių, nors tai gali varijuoti.\nKai kuriuose tyrimuose yra naudojama dviejų parametrų von Bertalanffy augimo kreivė (neįtraukiamas parametras \\(t0\\)):\n\\(L_{(t)} = L_\\infty (1-e^{-kt})\\)\nNors ši funkcija yra paprastesnė, ji kritikuojama, pvz., žr. čia"
+    "text": "Author\n    \n             Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte"
+  },
+  {
+    "objectID": "von-bertalanffy.html#įvadas",
+    "href": "von-bertalanffy.html#įvadas",
+    "title": "\nCHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nVienas iš labiausiai paplitusių būdų modeliuoti žuvų augimą yra naudoti von Bertalanffy augimo kreivę. Labiausiai paplitusi von Bertalanffy kreivės versija aprašo žuvies ilgį kaip trijų parametrų funkciją. Šie parametrai - tai asimptotinis ilgis \\(L_\\infty\\), von Bertalanffy augimo koeficientas \\(k\\) ir teorinis žuvies amžius \\(t0\\) kai žuvies dydis yra 0.\n\\(L_{(t)} = L_\\infty (1-e^{-k(t-t0)})\\)\n\\(k\\) parametras yra metinis augimo greitis, kuris parodo, kaip greitai individas pasieks asimptotinį ilgį. Daugeliu atvejų, \\(1/k\\) apytiksliai nurodo subrendimo amžių, nors tai gali varijuoti.\nKai kuriuose tyrimuose yra naudojama dviejų parametrų von Bertalanffy augimo kreivė (neįtraukiamas parametras \\(t0\\)):\n\\(L_{(t)} = L_\\infty (1-e^{-kt})\\)\nNors ši funkcija yra paprastesnė, ji kritikuojama, pvz., žr. čia"
   },
   {
     "objectID": "von-bertalanffy.html#modelis",
     "href": "von-bertalanffy.html#modelis",
-    "title": "Models to explore and estiamte von-Bertalanffy growth curves",
+    "title": "\nCHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves\n",
     "section": "Modelis",
-    "text": "Modelis\nSukūrėme R shiny aplikaciją, kuri generuoja ilgio augimo kreives priklausomai nuo von Bertalanffy parametrų verčių. Galite naudoti mūsų pavyzdinius amžiaus duomenis, kad pamatytumėte, kaip kreivė atitinka realų duomenų rinkinį (jis jau įkeltas į R shiny programą). Galite įkelti ir savo amžiaus duomenis, tačiau įsitikinkite, kad naudojate tą patį formatą, kaip ir mūsų pavyzdyje.\nTap pat galite išnagrinėti ilgio histogramas pagal amžių, darant skirtingas prielaidas apie amžiaus ir ilgio variacijos koeficientus (CV). Pavyzdžiui, kai kurios populiacijos gali turėti nedidelę variaciją augime - tai reiškia, kad CV yra mažas (CV = 0,1 arba mažesnis), o skirtingos amžiaus grupės aiškiai skiriasi savo ilgiu. Kitos populiacijos gali turėti didelį augimo kintamumą (CV = 0,3 arba didesnis), o tai reiškia, kad tarp amžiaus grupių bus daug persidengimo ir bus sunku atskirti amžiaus klases.\nNorėdami pradėti naudoti modelį, eikite čia"
+    "text": "Modelis\nSukūrėme R shiny aplikaciją, kuri generuoja ilgio augimo kreives priklausomai nuo von Bertalanffy parametrų verčių. Galite naudoti mūsų pavyzdinius amžiaus duomenis, kad pamatytumėte, kaip kreivė atitinka realų duomenų rinkinį (jis jau įkeltas į R shiny programą). Galite įkelti ir savo amžiaus duomenis, tačiau įsitikinkite, kad naudojate tą patį formatą, kaip ir mūsų pavyzdyje.\nTap pat galite išnagrinėti ilgio histogramas pagal amžių, darant skirtingas prielaidas apie amžiaus ir ilgio variacijos koeficientus (CV). Pavyzdžiui, kai kurios populiacijos gali turėti nedidelę variaciją augime - tai reiškia, kad CV yra mažas (CV = 0,1 arba mažesnis), o skirtingos amžiaus grupės aiškiai skiriasi savo ilgiu. Kitos populiacijos gali turėti didelį augimo kintamumą (CV = 0,3 arba didesnis), o tai reiškia, kad tarp amžiaus grupių bus daug persidengimo ir bus sunku atskirti amžiaus klases.\nNorėdami pradėti naudoti modelį, spauskite čia"
   },
   {
     "objectID": "von-bertalanffy.html#modelio-taikymas",
     "href": "von-bertalanffy.html#modelio-taikymas",
-    "title": "Models to explore and estiamte von-Bertalanffy growth curves",
+    "title": "\nCHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves\n",
     "section": "Modelio taikymas",
     "text": "Modelio taikymas\nVon Bertalanffy (VB) augimo funkcija yra labai plačiai naudojama žuvininkystėje ir ekologijoje. VB augimo parametrų prireiks taikant daugumą žuvininkystės modelių, jie taip pat naudojami ir ekosistemų modeliuose, pvz., šiame dydžiu pagrįstame Kuršių marių ekosistemos modelyje. Tačiau su šia funkcija reikia elgtis atsargiai. Norint gauti patikimus augimo funkcijos koeficientus, reikia pakankamai daug tiek jauniklių, tiek senų žuvų duomenų. Deja, dažnai abiem atvejais duomenys yra riboti. Pavyzdžiui, jei žuvų ištekliai yra intensyviai eksploatuojami, mes niekada nepamatysime didelių individų ir negalėsime įvertinti jų asimptotinio dydžio. Jei mūsų duomenys gaunami iš verslinės žvejybos, o ne iš nepriklausomų mokslinių tyrimų, galime niekada nematyti mažų individų.\nFishBase yra didžiausia ir svarbiausia žuvų duomenų bazė pasaulyje. Šioje duomenų bazėje galite ieškoti jus dominančios žuvų rūšies VB augimo parametrų, apskaičiuotų įvairių tyrimų metu (slinkite iki galo žemyn ir spustelėkite pasirinkimą Growth, kaip nurodyta šiame pavyzdyje lydekoms). Galite pamatyti, kaip VB parametrai skiriasi priklausomai nuo populiacijos. Dalis šių skirtumų atsiranda dėl natūralių populiacijų augimo skirtumų, tačiau didelę dalį taip pat lemia ribotų duomenų naudojimas. Dėl šios priežasties sukūrėme toliau pateiktą programą, kad galėtumėte atidžiai įvertinti, kaip VB parametrai tinka jūsų duomenų rinkiniams."
   },
   {
     "objectID": "Zero_inflated_model.html",
     "href": "Zero_inflated_model.html",
-    "title": "Zero inflated model for CPUE standardisation",
+    "title": "\nCHANGE TO LT: Zero inflated model for CPUE standardisation\n",
     "section": "",
-    "text": "Daugumoje žuvininkystės duomenų rinkinių (mokslinių, verslinės ar megėjiškos žvejybos) yra daug nulinių reikšmių - kuomet buvo žvejota, bet nieko nepagauta. Šie nuliniai sugavimai yra svarbi duomenų dalis, tačiau jų analizei reikia specialiai pritaikytų modelių. Čia pristatome modelį duomenims su nulinių reikšmių perviršiu. Modelis parašytas R kalba, todėl jums reikės įsidiegti R ir RStudio. Jei jums reikia trumpo įvado apie R, peržiūrėkite šį įvadinį puslapį iš mūsų kurso apie individų dydžiu pagrįstą modeliavimą.\nĮvadinę informaciją apie modelį ir duomenis galite rasti čia. Tačiau jei norite naudoti modelį, būtinai rekomenduojame atlikti bent 4 mūsų CPUE standartizacijos kurso dalį, kur modelis pristatytas išsamiau. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai įvertinote savo duomenis. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų svetainėje."
+    "text": "Author\n    \n             Carl Smith and Asta Audzijonyte"
+  },
+  {
+    "objectID": "Zero_inflated_model.html#įvadas",
+    "href": "Zero_inflated_model.html#įvadas",
+    "title": "\nCHANGE TO LT: Zero inflated model for CPUE standardisation\n",
+    "section": "Įvadas",
+    "text": "Įvadas\nDaugumoje žuvininkystės duomenų rinkinių (mokslinių, verslinės ar megėjiškos žvejybos) yra daug nulinių reikšmių - kuomet buvo žvejota, bet nieko nepagauta. Šie nuliniai sugavimai yra svarbi duomenų dalis, tačiau jų analizei reikia specialiai pritaikytų modelių. Čia pristatome modelį duomenims su nulinių reikšmių perviršiu. Modelis parašytas R kalba, todėl jums reikės įsidiegti R ir RStudio. Jei jums reikia trumpo įvado apie R, peržiūrėkite šį įvadinį puslapį iš mūsų kurso apie individų dydžiu pagrįstą modeliavimą.\nĮvadinę informaciją apie modelį ir duomenis galite rasti čia. Tačiau jei norite naudoti modelį, būtinai rekomenduojame atlikti bent 4 mūsų CPUE standartizacijos kurso dalį, kur modelis pristatytas išsamiau. Be to, prieš pradėdami standartizuoti CPUE, įsitikinkite, kad atidžiai įvertinote savo duomenis. Tam paruošėme du kursus ir kodus, kuriuos rasite mūsų svetainėje."
   },
   {
     "objectID": "Zero_inflated_model.html#modelio-kodas",
     "href": "Zero_inflated_model.html#modelio-kodas",
-    "title": "Zero inflated model for CPUE standardisation",
+    "title": "\nCHANGE TO LT: Zero inflated model for CPUE standardisation\n",
     "section": "Modelio kodas",
     "text": "Modelio kodas\nPagrindinis modelio kodas pasiekiamas šiame R markdown, naudojamas šis duomenų rinkinys. Galite atsisiųsti modelį ir modifikuoti kodą pagal savo poreikius. Jei norite peržiūrėti modelio kodą ir išvestis nepaleidžiant kodo, galite spustelėti čia. Pritaikę modelį, turėtumėte nubraižyti sugavimus kaip žvejybos trukmės (ar kito tipo pastangos) ir sezono funkciją, kaip parodyta paveiksle žemiau."
   },
   {
     "objectID": "Zero_inflated_model.html#modelio-taikymas",
     "href": "Zero_inflated_model.html#modelio-taikymas",
-    "title": "Zero inflated model for CPUE standardisation",
+    "title": "\nCHANGE TO LT: Zero inflated model for CPUE standardisation\n",
     "section": "Modelio taikymas",
     "text": "Modelio taikymas\nKad geriau suprastumėte šį modelį ir jo pritaikymą, primygtinai rekomenduojame perskaityti mūsų CPUE standartizacijos kurso medžiagą, kurioje detaliau aptariame įvairius modelius ir jų stipriąsias puses. Kurse taip pat paaiškinama, kaip imituoti naujus duomenų rinkinius naudojant apskaičiuotus modelio parametrus, siekiant įvertinti tikimybę gauti tiek nulinių reikšmių, kiek turite savo duomenų rinkinyje (šių imitavimų išvesties pavyzdys parodytas toliau pateiktoje diagramoje)."
   }

@@ -1,8 +1,52 @@
----
-title: "Machine learning based image collection, annotation and classification of fish species"
-author: Catarina Silva and Asta Audzijonytė
-editor: source
----
+
+::: {.content-visible when-profile="english"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+Machine learning based image collection, annotation and classification of fish species
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Catarina Silva and Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Machine learning based image collection, annotation and classification of fish species
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Catarina Silva and Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
 
 <!-- start para ------------------------------------------------------------- -->
 

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Catarina Silva and Asta Audzijonytė">
 
-<title>Lydekai paliepus: tvari vidaus vandenų žvejyba - Estimating fish size classes using image classification and machine learning models</title>
+<title>Lydekai paliepus: tvari vidaus vandenų žvejyba – ml_fish_size</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -89,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Estimating fish size classes using image classification and machine learning models</h1>
+      <h1 class="quarto-secondary-nav-title"></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -241,18 +240,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Šiame puslapyje</h2>
    
   <ul>
-  <li><a href="#lt-introduction" id="toc-lt-introduction" class="nav-link active" data-scroll-target="#lt-introduction">lt: Introduction</a></li>
-  <li><a href="#lt-model-code" id="toc-lt-model-code" class="nav-link" data-scroll-target="#lt-model-code">lt: Model code</a></li>
-  <li><a href="#lt-application-of-the-model" id="toc-lt-application-of-the-model" class="nav-link" data-scroll-target="#lt-application-of-the-model">lt: Application of the model</a></li>
+  <li><a href="#įvadas" id="toc-įvadas" class="nav-link active" data-scroll-target="#įvadas">Įvadas</a></li>
+  <li><a href="#modelio-kodas" id="toc-modelio-kodas" class="nav-link" data-scroll-target="#modelio-kodas">Modelio kodas</a></li>
+  <li><a href="#modelio-taikymas" id="toc-modelio-taikymas" class="nav-link" data-scroll-target="#modelio-taikymas">Modelio taikymas</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+<div>
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Estimating fish size classes using image classification and machine learning models</h1>
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Estimating fish size classes using image classification and machine learning models
+</h1>
 </div>
 
 
@@ -262,58 +265,66 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Catarina Silva and Asta Audzijonytė </p>
+             <p>Catarina Silva and Asta Audzijonyte</p>
           </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
+ </div>
+</div>
+</div>
 <!-- start para ------------------------------------------------------------- -->
-<section id="lt-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="lt-introduction">lt: Introduction</h2>
-<p>lt: Here we present a <strong>simple approach to develop models for estimating fish size classes from images</strong>. We have prepared a scripts for data pre-processing and machine learning model development, which you can find on our <a href="https://fishsizeproject.github.io/Course-MLforImageProcessing/G-practice-4.html">Online course</a> webpage.</p>
-<p>In this <a href="link here"><strong>publication</strong></a> you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a speficied reference object. You can also find all the scripts used in the framework in our <a href="link here">Github page</a>.</p>
+<section id="įvadas" class="level2">
+<h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
+<p>Čia pristatome <strong>vartotojui draugišką ir lengvai pritaikomą dirbtinio intelekto (DI) sistemą, padedančia įvertinti žuvų dydžio klases</strong> iš nuotraukų kurti, kuriose žuvis rankose laiko žmonės. Socialinėse platformose, piliečių moklso programose ir išmaniųjų telefonų programėlių dėka pasaulyje yra surinkta milijonai nuotraukų, kuriose žvejai rankose laiko pagautas žuvis. Dauguma atveju tokiose nuotruakose nėra informacijos apie žuvies dydį, o tai reiškia kad jų panaudojimas žuvų būklės įvertinime yra labai ribotas. Siekdami pagerinti duomenų rinkimą apie gėlavandenes ir jūros pakrantės žuvis ir jų populiacijų būklę, mes pritaikėme šį dirbtinio intelekto modelį, kuris klasifikuoja žuvis į nustatyto dyždio (5-10 cm) klases. Šis modelis ir jo naudojimas yra panašus į <a href="./ML_fish_species.html">DI paremtą žuvų rūšių atpažinimo modelį</a>, bet yra pritaikytas žuvų dydžio klasėms.</p>
+<p>Šio modelio apmokymui nuotraukos buvo surinktos Gamtos tyrimų centro ir Kadanos žvejų piliečių moklso programėlės <a href="https://www.anglersatlas.com/mycatch">**My Catch, Angler’s Atlas</a> bendradarbiavimo dėka. MyCatch programėlės vartotojai dalinosi nuotraukomis surinktomis įvairių žvejybos konkursų metu. Nuotraukos taip pat buvo surinktos iš šiame projekte sukurtos <a href="https://sif.lt/fishsizeproject/"><strong>FishSizeProject</strong> programėlės</a>.</p>
+<p>Jei norite daugiau sužinoti apie mašininio mokymosi modelių kūrimą ir mūsų pristatomą sistemą, kviečiame išklausyti mūsų surengtus <a href="https://fishsizeproject.github.io/Course-MLforImageProcessing/"><strong>nuotolinius mokymus</strong></a>.</p>
 </section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/salmonRuler.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
 <!-- end para ------------------------------------------------------------- -->
 <!-- start para ------------------------------------------------------------- -->
-<section id="lt-model-code" class="level2">
-<h2 class="anchored" data-anchor-id="lt-model-code">lt: Model code</h2>
-<p>lt: To use our models it is very important that fish size classes in your dataset are identified correctly, otherwise your model will not be very useful. You can upload images (in JPEG or PNG format) to your Google drive by size class (i.e.&nbsp;fish images of each size class per folder), following this directory structure:</p>
+<section id="modelio-kodas" class="level2">
+<h2 class="anchored" data-anchor-id="modelio-kodas">Modelio kodas</h2>
+<p>Norint pritaikyti šį modelį jūsų surinktoms nuotraukos, labai svarbu, kad žuvų dydžių klasės jūsų duomenų rinkinyje būtų teisingai nustatytos, nes kitaip jūsų modelis bus netikslus. Nuotraukas (JPEG arba PNG formatu) galite įkelti į “Google” diską pagal dydžių klases (t. y. po vieną dydžio klasę viename aplanke), laikydamiesi šios katalogų struktūros:</p>
 <pre><b>dataset</b>
 |__ <b>class5</b>
-    |______ 100080576_f52e8ee070_n.PNG
-    |______ 14167534527_781ceb1b7a_n.PNG
+    |______ image1.PNG
+    |______ image2.PNG
     |______ ...
 |__ <b>class10</b>
-    |______ 10043234166_e6dd915111_n.PNG
-    |______ 1426682852_e62169221f_m.PNG
+    |______ image3.JPG
+    |______ image4.PNG
     |______ ...
 |__ <b>class15</b>
-    |______ 102501987_3cdb8e5394_n.PNG
-    |______ 14982802401_a3dfb22afb.PNG
+    |______ image5.PNG
+    |______ image.JPG
     |______ ...
 |__ ...
 </pre>
-<p>To apply our model you can use this code:</p>
+<p>Nuotraukų pavadinimas nėra svarbus. Svarbu tik kad katalogų pavadinimai atitiktų jūsų norimas dydžio klases.</p>
+<p>Norėdami taikyti mūsų modelį, galite naudoti šį kodą:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://colab.research.google.com/drive/1YgIrWWiaex8ObtAbAJOAXlRRGUbElkYj?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://colab.research.google.com/drive/1CIA48l35mdHjRF3jjELWBKHpsDnCs9YE?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Open In Colab</figcaption><p></p>
 </figure>
 </div>
 </section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sizeClasses.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
 <!-- end para ------------------------------------------------------------- -->
 <!-- start para ------------------------------------------------------------- -->
-<section id="lt-application-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="lt-application-of-the-model">lt: Application of the model</h2>
-<p>lt: You can also watch <a href="https://youtu.be/iujl9R3lEaQ?t=5293"><strong>this talk</strong></a> for the “Online seminar: Recreational angling effort and engagement in the digital age” to learn more about this model.</p>
+<section id="modelio-taikymas" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>
+<p>Jei norite daugiau sužinoti apie modelio vystymą ir pritaikymą galite peržiūrėti <a href="https://youtu.be/iujl9R3lEaQ?t=5293"><strong>šį pranešimą</strong></a> nuotoliniame seminare “Mašinų mokymasis, žvejyba ir piliečių mokslas” arba <a href="youtube link"><strong>šį pranetimą</strong></a> nuotoliniame seminare “Ar piliečių mokslo, išmaniųjų telefonų ir socialinės medijos duomenys gali būti naudojami mėgėjiškos žvejybos valdyme?”.</p>
+<p>Šioje <a href="link here"><strong>ublikacijoje</strong></a> mes detaliai aprašome pristatomą modelį ir jo pritaikymą pradiniams duomenis.</p>
+<p>Artimiausioje ateityje mes šį modelį toliau tobulinsime. Tam pirmiausia sieksime surinkti daugiau nuotraukų, pasiekti didesnį modelio tikslumą, ir tuomet pritaikyti šį modelį populiarios žuvies rūšies (pvz. lydekos) tyrimams naudojant socialinių tinklų nuotraukas. Taigi, laukite daugiau rezultatų.</p>
+<div class="page-columns page-full"><p> <img src="images/Barbusbarbus_sm.png" class="img-fluid" style="width:60.0%" data-fig-align="center"></p><div class="no-row-height column-margin column-container"><span class="">Ūsorius. Piešinio autorė Amy Rose Coghlan</span></div></div>
 </section>
-<!-- end para ------------------------------------------------------------- -->
 
 
 

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Freddier Heather, Egle Jakubavičiūtė, Asta Audzijonytė">
 
-<title>Lydekai paliepus: tvari vidaus vandenų žvejyba - Models to explore and estiamte von-Bertalanffy growth curves</title>
+<title>Lydekai paliepus: tvari vidaus vandenų žvejyba – von-bertalanffy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Models to explore and estiamte von-Bertalanffy growth curves</h1>
+      <h1 class="quarto-secondary-nav-title"></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -251,9 +250,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+<div>
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Models to explore and estiamte von-Bertalanffy growth curves</h1>
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves
+</h1>
 </div>
 
 
@@ -263,17 +266,11 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Freddier Heather, Egle Jakubavičiūtė, Asta Audzijonytė </p>
+             <p>Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte</p>
           </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
+ </div>
+</div>
+</div>
 <section id="įvadas" class="level2">
 <h2 class="anchored" data-anchor-id="įvadas">Įvadas</h2>
 <p>Vienas iš labiausiai paplitusių būdų modeliuoti žuvų augimą yra naudoti <a href="https://en.wikipedia.org/wiki/Von_Bertalanffy_function#:~:text=The%20von%20Bertalanffy%20growth%20function,length%20from%20age%20in%20animals."><strong>von Bertalanffy augimo kreivę</strong></a>. Labiausiai paplitusi von Bertalanffy kreivės versija aprašo žuvies ilgį kaip trijų parametrų funkciją. Šie parametrai - tai asimptotinis ilgis <span class="math inline">\(L_\infty\)</span>, von Bertalanffy augimo koeficientas <span class="math inline">\(k\)</span> ir teorinis žuvies amžius <span class="math inline">\(t0\)</span> kai žuvies dydis yra 0.</p>
@@ -293,9 +290,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="modelis">Modelis</h2>
 <p>Sukūrėme R shiny aplikaciją, kuri generuoja ilgio augimo kreives priklausomai nuo von Bertalanffy parametrų verčių. Galite naudoti mūsų <a href="resources/Example_ageLength.csv"><strong>pavyzdinius amžiaus duomenis</strong></a>, kad pamatytumėte, kaip kreivė atitinka realų duomenų rinkinį (jis jau įkeltas į R shiny programą). Galite įkelti ir savo amžiaus duomenis, tačiau įsitikinkite, kad naudojate tą patį formatą, kaip ir mūsų pavyzdyje.</p>
 <p>Tap pat galite išnagrinėti ilgio histogramas pagal amžių, darant skirtingas prielaidas apie amžiaus ir ilgio variacijos koeficientus (CV). Pavyzdžiui, kai kurios populiacijos gali turėti nedidelę variaciją augime - tai reiškia, kad CV yra mažas (CV = 0,1 arba mažesnis), o skirtingos amžiaus grupės aiškiai skiriasi savo ilgiu. Kitos populiacijos gali turėti didelį augimo kintamumą (CV = 0,3 arba didesnis), o tai reiškia, kad tarp amžiaus grupių bus daug persidengimo ir bus sunku atskirti amžiaus klases.</p>
-<p>Norėdami pradėti naudoti modelį, eikite <a href="https://fishsize.shinyapps.io/von-bertalanffy/"><strong>čia</strong></a></p>
+<p>Norėdami pradėti naudoti modelį, spauskite <a href="https://fishsize.shinyapps.io/von-bertalanffy/"><strong>čia</strong></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/VBmodel_LT.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
 </section>
-<p><img src="images/VBapp_screenshot_main.png" class="img-fluid" style="width:50.0%" data-fig-align="center"> <img src="images/VBapp_screenshot_histograms.png" class="img-fluid" style="width:50.0%" data-fig-align="center"></p>
 <!-- next para ------------------------------------------------------------- -->
 <section id="modelio-taikymas" class="level2">
 <h2 class="anchored" data-anchor-id="modelio-taikymas">Modelio taikymas</h2>

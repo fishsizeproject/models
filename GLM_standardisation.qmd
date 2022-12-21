@@ -1,8 +1,54 @@
----
-title: "Standardising catch per unit effort (CPUE) using generalised linear models"
-author: Egle Jakubavičiūtė and Asta Audzijonytė
-editor: source
----
+
+::: {.content-visible when-profile="english"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+Standardising catch per unit effort (CPUE) using generalised linear models
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Egle Jakubavičiūtė and Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linear models
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Egle Jakubavičiūtė and Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+
+
 
 ::: {.content-visible when-profile="english"}
 ## Introduction

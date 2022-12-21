@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Freddier Heather, Egle Jakubavičiūtė, Asta Audzijonytė">
 
-<title>Sustainable Inland Fisheries - Models to explore and estiamte von-Bertalanffy growth curves</title>
+<title>Sustainable Inland Fisheries – von-bertalanffy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Models to explore and estiamte von-Bertalanffy growth curves</h1>
+      <h1 class="quarto-secondary-nav-title"></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -251,9 +250,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+<div>
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Models to explore and estiamte von-Bertalanffy growth curves</h1>
+<h1 class="title d-none d-lg-block">
+Models to explore and estiamte von-Bertalanffy growth curves
+</h1>
 </div>
 
 
@@ -263,17 +266,11 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Freddier Heather, Egle Jakubavičiūtė, Asta Audzijonytė </p>
+             <p>Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte</p>
           </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
+ </div>
+</div>
+</div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>One of the most common ways to model fish growth is by using the <a href="https://en.wikipedia.org/wiki/Von_Bertalanffy_function#:~:text=The%20von%20Bertalanffy%20growth%20function,length%20from%20age%20in%20animals."><strong>von Bertalanffy growth curve</strong></a>. The most common version of von Bertalanffy curve describes the length of a fish as a function of three parameters; the asymptotic length <span class="math inline">\(L_\infty\)</span>, the von Bertalanffy growth coefficient <span class="math inline">\(k\)</span> and the theoretical age <span class="math inline">\(t0\)</span> at which fish size is 0.</p>
@@ -294,8 +291,12 @@ ul.task-list li input[type="checkbox"] {
 <p>We have developed an R shiny application that allows you to explore length growth curves under different von Bertalanffy parameter values. You can use our <a href="resources/Example_ageLength.csv"><strong>example age-length data</strong></a> to see how the curve fits the realistic data set (it is already loaded in the app). Or alternatively you can upload your own age-length data, but make sure you keep the same format as our example.</p>
 <p>Importantly, you can explore the histograms of lengths at age, assuming different coefficients of variation (CV) of age-length variability. For example, some populations may have little growth variation, which means that CV is small (CV = 0.1 or smaller), and different age groups are clearly differentiated in their lengths. Other populations might have a lot growth variability (CV = 0.3 or larger), which means that there will be a lot of length overlap among age groups and it will be difficult to separate age classes from length data alone.</p>
 <p>To start using the model, go <a href="https://fishsize.shinyapps.io/von-bertalanffy/"><strong>here</strong></a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/VBmodel_EN.png" class="img-fluid figure-img" style="width:50.0%"></p>
+</figure>
+</div>
 </section>
-<p><img src="images/VBapp_screenshot_main.png" class="img-fluid" style="width:50.0%" data-fig-align="center"> <img src="images/VBapp_screenshot_histograms.png" class="img-fluid" style="width:50.0%" data-fig-align="center"></p>
 <!-- next para ------------------------------------------------------------- -->
 <section id="application-of-the-model" class="level2">
 <h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>

@@ -1,8 +1,53 @@
----
-title: "Zero inflated model for CPUE standardisation"
-author: Carl Smith and Asta Audzijonyte
-editor: source
----
+
+::: {.content-visible when-profile="english"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+Zero inflated model for CPUE standardisation
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Carl Smith and Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Zero inflated model for CPUE standardisation
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Carl Smith and Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+
 
 <!-- next para ------------------------------------------------------------- -->
 

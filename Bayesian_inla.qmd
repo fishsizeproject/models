@@ -1,8 +1,55 @@
----
-title: "Bayesian CPUE standardisation using INLA"
-author: Carl Smith, Egle Jakubavičiūtė, Asta Audzijonyte
-editor: source
----
+
+
+::: {.content-visible when-profile="english"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+Bayesian CPUE standardisation using INLA
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Carl Smith, Egle Jakubavičiūtė, Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Bayesian CPUE standardisation using INLA
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Carl Smith, Egle Jakubavičiūtė, Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+
+
 
 <!-- next para ------------------------------------------------------------- -->
 

@@ -1,6 +1,29 @@
----
-title: "Models for sustainable inland fisheries" 
----
+
+::: {.content-visible when-profile="english"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+Models for sustainable inland fisheries
+</h1>
+</div>
+```
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Models for sustainable inland fisheries
+</h1>
+</div>
+
+```
+
+:::
+
 
 <!-- NOTE: you must edit this .qmd file  for it to refresh on github pages, edit 3-->
 

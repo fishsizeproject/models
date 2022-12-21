@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Catarina Silva and Asta Audzijonytė">
 
-<title>Sustainable Inland Fisheries - Estimating fish size classes using image classification and machine learning models</title>
+<title>Sustainable Inland Fisheries – ml_fish_size</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,7 +55,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -89,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Estimating fish size classes using image classification and machine learning models</h1>
+      <h1 class="quarto-secondary-nav-title"></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -248,11 +247,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+
+
+<div>
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Estimating fish size classes using image classification and machine learning models</h1>
+<h1 class="title d-none d-lg-block">
+Estimating fish size classes using image classification and machine learning models
+</h1>
 </div>
 
 
@@ -262,23 +265,23 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Catarina Silva and Asta Audzijonytė </p>
+             <p>Catarina Silva and Asta Audzijonyte</p>
           </div>
-  </div>
-    
-  
-    
-  </div>
-  
-
-</header>
-
+ </div>
+</div>
+</div>
 <!-- start para ------------------------------------------------------------- -->
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Here we present a <strong>simple approach to develop models for estimating fish size classes from images</strong>. We have prepared a scripts for data pre-processing and machine learning model development, which you can find on our <a href="https://fishsizeproject.github.io/Course-MLforImageProcessing/G-practice-4.html">Online course</a> webpage.</p>
-<p>In this <a href="link here"><strong>publication</strong></a> you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a speficied reference object. You can also find all the scripts used in the framework in our <a href="link here">Github page</a>.</p>
+<p>Here we present a <strong>simple approach to develop models for estimating fish size classes</strong> from images where people are holding fish in their hands. Millions of such fish images available on social media, smart phone app citizen science platforms, but in most cases there is no fish body size information associated with these images. Yet, if body size data was available, it would greatly improve assessments of many inland and coastal fisheries. To solve this challenge we have trained a machine learning model to classify such images into 5 to 10 centimeter size classes. The framework is similar to what we presented in the <a href="./ML_fish_species.html">fish species identification model</a>, but now it is adapted to fish sizes.</p>
+<p>Images for the model training were collected through collaborative agreement between Nature Reserach Centre and <a href="https://www.anglersatlas.com/mycatch">**My Catch, Angler’s Atlas</a> citizen science platform, where users contributed images during various fishing tournaments. Additional photos were also collected through the <a href="https://en.sif.lt/fishsize-project/"><strong>FishSizeProject</strong> smart phone app</a> developed durign this project.</p>
+<p>To learn more about the framework, please visit our <a href="https://fishsizeproject.github.io/Course-MLforImageProcessing/"><strong>online course</strong></a> webpage.</p>
 </section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/salmonRuler.png" class="img-fluid figure-img" style="width:75.0%"></p>
+</figure>
+</div>
 <!-- end para ------------------------------------------------------------- -->
 <!-- start para ------------------------------------------------------------- -->
 <section id="model-code" class="level2">
@@ -286,34 +289,43 @@ ul.task-list li input[type="checkbox"] {
 <p>To use our models it is very important that fish size classes in your dataset are identified correctly, otherwise your model will not be very useful. You can upload images (in JPEG or PNG format) to your Google drive by size class (i.e.&nbsp;fish images of each size class per folder), following this directory structure:</p>
 <pre><b>dataset</b>
 |__ <b>class5</b>
-    |______ 100080576_f52e8ee070_n.PNG
-    |______ 14167534527_781ceb1b7a_n.PNG
+    |______ image1.PNG
+    |______ image2.PNG
     |______ ...
 |__ <b>class10</b>
-    |______ 10043234166_e6dd915111_n.PNG
-    |______ 1426682852_e62169221f_m.PNG
+    |______ image3.JPG
+    |______ image4.PNG
     |______ ...
 |__ <b>class15</b>
-    |______ 102501987_3cdb8e5394_n.PNG
-    |______ 14982802401_a3dfb22afb.PNG
+    |______ image5.PNG
+    |______ image.JPG
     |______ ...
 |__ ...
 </pre>
+<p>Image names are not important, as long as directory names (classes) are correct.</p>
 <p>To apply our model you can use this code:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://colab.research.google.com/drive/1YgIrWWiaex8ObtAbAJOAXlRRGUbElkYj?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://colab.research.google.com/drive/1CIA48l35mdHjRF3jjELWBKHpsDnCs9YE?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Open In Colab</figcaption><p></p>
 </figure>
 </div>
+<p>You can also find all the scripts used in the framework in our <a href="https://github.com/fishsizeproject">Github page</a>.</p>
 </section>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sizeClasses.png" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
 <!-- end para ------------------------------------------------------------- -->
 <!-- start para ------------------------------------------------------------- -->
-<section id="application-of-the-model" class="level2">
+<section id="application-of-the-model" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="application-of-the-model">Application of the model</h2>
-<p>You can also watch <a href="https://youtu.be/iujl9R3lEaQ?t=5293"><strong>this talk</strong></a> for the “Online seminar: Recreational angling effort and engagement in the digital age” to learn more about this model.</p>
+<p>To learn more about the model development and applications you can watch <a href="https://youtu.be/iujl9R3lEaQ?t=5293"><strong>this talk</strong></a> for the online seminar “Recreational angling effort and engagement in the digital age”. You can also watch <a href="youtube link">this talk</a> presented in the workshop “Can citizen science, smartphone app and social media data be used for recreational fisheries management?”</p>
+<p>In this <a href="link here"><strong>publication</strong></a> you will find a detailed description of the method and a pilot case-study where we demonstrate potential use for estimating fish size classes from images without a specified reference object.</p>
+<p>The next steps are to invite angler contributions to provide more images, train model with more data for higher accuracy and precision, and then apply this model to social media data of a charismatic predatory fish. So watch this space.</p>
+<div class="page-columns page-full"><p> <img src="images/Barbusbarbus_sm.png" class="img-fluid" style="width:60.0%" data-fig-align="center"></p><div class="no-row-height column-margin column-container"><span class="">Common barbel drawing by Amy Rose Coghlan</span></div></div>
 </section>
-<!-- end para ------------------------------------------------------------- -->
 
 
 

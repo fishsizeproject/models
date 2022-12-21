@@ -1,8 +1,52 @@
----
-title: "Models to explore and estiamte von-Bertalanffy growth curves"
-author: Freddier Heather, Egle Jakubavičiūtė, Asta Audzijonytė
-editor: source
----
+
+::: {.content-visible when-profile="english"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+Models to explore and estiamte von-Bertalanffy growth curves
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
+::: {.content-visible when-profile="lithuanian"}
+
+```{=html}
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">
+CHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte</p>
+          </div>
+ </div>
+</div>
+```
+
+:::
+
 
 ::: {.content-visible when-profile="english"}
 ## Introduction
