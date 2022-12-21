@@ -17,7 +17,7 @@ website:
       - href: https://fishsizeproject.github.io/models/index.html
         text: English
   sidebar:
-    style: "docked"
+    style: "floating"
     contents:
 #      - href: index.qmd
 #        text: "Home" 
