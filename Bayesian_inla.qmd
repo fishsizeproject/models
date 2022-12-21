@@ -29,7 +29,7 @@ Bayesian CPUE standardisation using INLA
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Bayesian CPUE standardisation using INLA
+Bajeso metodu paremtas sugavimų standartizacijos modelis
 </h1>
 </div>
 

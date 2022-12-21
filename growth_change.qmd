@@ -28,7 +28,7 @@ Detecting changes in fish growth through time
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Detecting changes in fish growth through time
+Bajeso modelis žuvų augimo greičio pakitimams įvertinti
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Detecting changes in fish growth through time
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Max Lindmark and Asta Audzijonyte</p>
+             <p>Max Lindmark ir Asta Audzijonyte</p>
           </div>
  </div>
 </div>

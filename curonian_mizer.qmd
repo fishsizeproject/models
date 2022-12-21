@@ -28,7 +28,7 @@ Size based models for Baltic Sea and Curonian lagoon
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Size based models for Baltic Sea and Curonian lagoon
+Individų dydžiu paremti Baltijos jūros ir Kuršių marių ekosistemų modeliai
 </h1>
 </div>
 

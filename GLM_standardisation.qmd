@@ -28,7 +28,7 @@ Standardising catch per unit effort (CPUE) using generalised linear models
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linear models
+Linijiniais modeliais paremta sugavimų standartizacija
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Standardising catch per unit effort (CPUE) using generalised linea
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Egle Jakubavičiūtė and Asta Audzijonyte</p>
+             <p>Egle Jakubavičiūtė ir Asta Audzijonyte</p>
           </div>
  </div>
 </div>

@@ -21,7 +21,7 @@ Overview of models
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Overview of models
+Modelių apžvalga
 </h1>
 </div>
 

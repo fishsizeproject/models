@@ -28,7 +28,7 @@ Zero inflated model for CPUE standardisation
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Zero inflated model for CPUE standardisation
+Sugavimų su daug nulinių reikšmių standartizacijos modelis
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Zero inflated model for CPUE standardisation
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Carl Smith and Asta Audzijonyte</p>
+             <p>Carl Smith ir Asta Audzijonyte</p>
           </div>
  </div>
 </div>

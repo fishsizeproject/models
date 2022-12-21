@@ -28,7 +28,7 @@ Estimating fish size classes using image classification and machine learning mod
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Estimating fish size classes using image classification and machine learning models
+Dirbtinio intelekto modelis žuvų dydžio nustatymui
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Estimating fish size classes using image classification and machin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Catarina Silva and Asta Audzijonyte</p>
+             <p>Catarina Silva ir Asta Audzijonyte</p>
           </div>
  </div>
 </div>

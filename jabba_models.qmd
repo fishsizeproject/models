@@ -4,7 +4,7 @@
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-Surplus production models
+Surplus production models with Jabba
 </h1>
 </div>
 
@@ -15,7 +15,7 @@ Surplus production models
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Egle Jakubavičiūtė, Asta Audzijonyte</p>
+             <p>Egle Jakubavičiūtė and Asta Audzijonyte</p>
           </div>
  </div>
 </div>
@@ -28,7 +28,7 @@ Surplus production models
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Surplus production models
+Bajeso metodo pridėtinės produkcijos modelis su Jabba 
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Surplus production models
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Egle Jakubavičiūtė, Asta Audzijonyte</p>
+             <p>Egle Jakubavičiūtė ir Asta Audzijonyte</p>
           </div>
  </div>
 </div>

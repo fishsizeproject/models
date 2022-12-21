@@ -16,7 +16,7 @@ Models for sustainable inland fisheries
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Models for sustainable inland fisheries
+Modeliai tvariai žvejybai
 </h1>
 </div>
 

@@ -28,7 +28,7 @@ Extracting and analysing optical water quality data from satellites
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Extracting and analysing optical water quality data from satellites
+Optinių palydovinių duomenų paruošimo modelis ežero vandens kokybei įvertinti
 </h1>
 </div>
 
@@ -58,7 +58,7 @@ Satellite data can help to overcome the scarcity of water quality data. Using sa
 
 In this document we provide user friendly tools to retrieve biophysical data on lake class, describing its water quality. The method uses spectral features of water obtained through European Space Agency's (ESA) Copernicus [Sentinel-2 satellites](https://sentinel.esa.int/web/sentinel/missions/sentinel-2). The method is based on machine learning random forest algorithm and assigns the lake to one of the four classes:
 
-1.  Clear class. Such lakes have water transparency is \>2 m in medium deep and deep lakes and \>1.3 m in shallow lakes, low concentrations of optically active substances (they do not affect water spectral features). Lakes in this class usually also have good ecological status as defined in the EU Water Framework Directive.
+1.  Clear class. Such lakes have water transparency of \>2 m in medium deep and deep lakes and \>1.3 m in shallow lakes, low concentrations of optically active substances (they do not affect water spectral features). Lakes in this class usually also have good ecological status as defined in the EU Water Framework Directive.
 
 2.  Moderate class. Water transparency is still good or high, but chlorophyll-a concentration is between 7 and 20 mg/m\^3 (higher than in clear class), indicating light algal and cyanobacterial blooms.
 
@@ -80,13 +80,13 @@ Palydoviniai duomenys gali padėti surinkti daugiau duomenų apie vandens telkin
 
 Šiame dokumente apibūdinamas metodas skirtas biofizinės ežero klasės nustatymui. Šis metodas naudoja spektrinius vandens požymius, gautus iš Europos Kosmoso Agentūros (EKA) Copernicus [Sentinel-2 misijos](https://sentinel.esa.int/web/sentinel/missions/sentinel-2) palydovų. Metodas yra paremtas mašininio mokymosi atsitiktinio miško algoritmu ir priskiria ežerui vieną iš keturių klasių:
 
-1.  Skaidri klasė. Vandens skaidrumas yra didesnis nei 2 m vidutino gylio ir giliuose ežeruose ir didesnis nei 1,3 m sekliuose ežeruose. Taip pat šios klasės vandenyje stebima maža optiškai aktyvių medžiagų koncentracija, tad vandens spektras nėra jų paveiktas. Vandens skaidrumas šioje klasėje siejamas su gera ir labai gera ekologine vandens būkle, kaip nustatoma ir pagal Europos Sąjungos Bendrosios Vandens Politikos direktyvą.
+1.  Skaidri klasė (angl. "clear"). Vandens skaidrumas yra didesnis nei 2 m vidutino gylio ir giliuose ežeruose ir didesnis nei 1,3 m sekliuose ežeruose. Taip pat šios klasės vandenyje stebima maža optiškai aktyvių medžiagų koncentracija, tad vandens spektras nėra jų paveiktas. Vandens skaidrumas šioje klasėje siejamas su gera ir labai gera ekologine vandens būkle, kaip nustatoma ir pagal Europos Sąjungos Bendrosios Vandens Politikos direktyvą.
 
-2.  Tarpinė klasė. Vandens skaidrumas yra geras arba labai geras, tačiau chlorofilo-a koncentracija yra kiek didesnė (tarp 7 ir 20 mg/m\^3) nei skaidrioje klasėje, tad ši klasė gali būti siejama su lengvais dumblių ir melsvabaketerių žydėjimais.
+2.  Tarpinė klasė (angl. "moderate"). Vandens skaidrumas yra geras arba labai geras, tačiau chlorofilo-a koncentracija yra kiek didesnė (tarp 7 ir 20 mg/m\^3) nei skaidrioje klasėje, tad ši klasė gali būti siejama su lengvais dumblių ir melsvabaketerių žydėjimais.
 
-3.  Chla-klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose ir mažesnis už 1,3 m sekliuose ežeruose, o chlorofilo-a koncentracija dažniausiai yra aukštesnė nei 20 mg/m\^3. Ši klasė siejama su vidutine, bloga ar labai bloga vandens kokybe.
+3.  Chla-klasė (angl. "chla-dominated"). Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose ir mažesnis už 1,3 m sekliuose ežeruose, o chlorofilo-a koncentracija dažniausiai yra aukštesnė nei 20 mg/m\^3. Ši klasė siejama su vidutine, bloga ar labai bloga vandens kokybe.
 
-4.  Drumsta klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose bei mažesnis nei 1,3 m sekliuose ežeruose, tačiau chlorofilo koncentracija yra panaši į tarpinės klasės koncentraciją, tad mažas vandens skaidrumas yra veikiau nulemtas aukštesnės spalvotosios ištirpusios medžiagos koncentracijos.
+4.  Drumsta klasė (angl. "turbid"). Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose bei mažesnis nei 1,3 m sekliuose ežeruose, tačiau chlorofilo koncentracija yra panaši į tarpinės klasės koncentraciją, tad mažas vandens skaidrumas yra veikiau nulemtas aukštesnės spalvotosios ištirpusios medžiagos koncentracijos.
 
 Daugiau informacijos apie šį modelį rasite viešai prieinamoje [Grendaitės and Stonevičiaus (2022) publikacijoje](https://www.mdpi.com/2073-4441/14/11/1732). Modelių tikslumas išbandymo etape skyrėsi tarp klasių: 27 % drumstai klasei, 70 % Chla-klasei, 81 % tarpinei klasei ir 85 % skaidriai klasei.
 
@@ -108,15 +108,15 @@ Next you can go to the model scripts on Google Colaboratory using the link below
 
 You will see a document that looks like this: 
 
-![](images/ChlaGoogleColab_EN_snap.png){width="60%" fig-align="center"} 
+![](images/ChlaGoogleColab_EN_snap.png){width="100%" fig-align="center"} 
 
 When you open the Google Colab notebook, **make a copy** of it in your own Google Drive (Select **File** and then **Make a copy in Drive**). You can edit your copy of the notebook, if you need, but don't forget to save. Further instructions on how to use the notebook are found in the notebook itself.
 
-To extract water quality (optical) data you will need to create and upload a csv file with codes, names and coordinates of you sites, like in this [**example file**](resources/coord_2.csv). You will also need to upload the auxiliary files with lake class classification models, which you can download [**here**](resources/lake_class_models.zip) (but make sure you unzip the files before uploading them to the Google Colaboratory). The downloaded lake class data will look like this [**example file**](resources/Data_S2_class_coord_2.csv). In this example we only extract data for three lakes (three rows in the coordinate example file), but you can add as many lakes (rows) as you need. However, remember not to select coordinates close to the shore (ideally more than 50 meters) and don't put points too close to each other, as the resolution of the data is 100 meters.
+To extract water quality (optical) data you will need to create and upload a csv file with codes, names and coordinates of you sites, like in this [**example file**](resources/coord_2.csv). You will also need to upload the auxiliary files with lake class classification models, which you can download [**here**](resources/lake_class_models.zip) (but make sure you unzip the files before uploading them to the Google Colaboratory). The downloaded lake class data will look like this [**example file**](resources/Data_S2_class_coord_2.csv). In this example we only extract data for three lakes (three rows in the coordinate example file), but you can add as many lakes (rows) as you need. However, remember not to select coordinates close to the shore (ideally more than 50 meters) and select points that are at least 10 m away from each other as the spatial resolution of satellite data is 10 m.
 
-Once you have the file with satellite data retrieved for the selected coordinates, you can use [**this R markdown script**](scripts/SateliteChla.zip) to plot your results, like in the image below. In this code we also compare satellite data with in situ monitoring data in Lithuanian lakes. If you want to look at the results of this script without having to run it, you can see it [**here**](resources/SateliteChlA.html)
+Once you have the file with satellite data retrieved for the selected coordinates, you can use [**this R markdown script**](scripts/SatelliteChla.zip) to plot your results, like in the image below. In this code we also compare satellite data with in situ monitoring data in Lithuanian lakes. If you want to look at the results of this script without having to run it, you can see it [**here**](resources/SatelliteChlA.html)
 
-![](images/sateliteChla_EN.png){width="50%" fig-align="center"}
+![](images/sateliteChla_EN.png){width="100%" fig-align="center"}
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
@@ -130,13 +130,13 @@ Po registracijos, naudokite programinį kodą, naudodami žemiau esančią nuoro
 
 Paspaudę matysite tokį dokumentą:
 
-![](images/ChlaGoogleColab_LT_snap.png){width="60%" fig-align="center"}
+![](images/ChlaGoogleColab_LT_snap.png){width="100%" fig-align="center"}
 
-Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite **Failas** ir tada **Išsaugoti kopiją Diske**). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal [**čia pateiktą pavyzdį**](resources/coord_2.csv). Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti [**čia**](resources/lake_class_models.zip) (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip [**čia pateiktas pavyzdys**](resources/Data_S2_class_coord_2.csv). Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, ir arčiau nei 100 metrų vienas nuo kito (nes satelito raiška yra 100 metrų).
+Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite **Failas** ir tada **Išsaugoti kopiją Diske**). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam, kad atsisiųstumėte optinius palydovinius duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal [**čia pateiktą pavyzdį**](resources/coord_2.csv). Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti [**čia**](resources/lake_class_models.zip) (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite palydovinius ir ežero klasės duomenis, kurie atrodys kaip [**čia pateiktas pavyzdys**](resources/Data_S2_class_coord_2.csv). Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, taip pat rekomenduojama rinktis taškus nutolusius vienas nuo kito daugiau nei 10 m, kadangi palydovo skiriamoji geba yra 10 m.
 
-Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite [**šį R markdown kodą**](scripts/SateliteChla.zip) tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. [**Čia**](resources/SateliteChlA.html) jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai.
+Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite [**šį R markdown kodą**](scripts/SatelliteChla.zip) tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. [**Čia**](resources/SatelliteChlA.html) jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai.
 
-![](images/sateliteChla_LT.png){width="50%" fig-align="center"}
+![](images/sateliteChla_LT.png){width="100%" fig-align="center"}
 :::
 
 <!-- next para ------------------------------------------------------------- -->
@@ -144,7 +144,7 @@ Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite [**šį R ma
 ::: {.content-visible when-profile="english"}
 ## Application of the model
 
-The model to assess lake class data could be used widely to monitor water quality across large scales and at high temporal resolution. As Europe is implementing its Water Framework Directive and has set the mission to [**Restore our ocean and waters**](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/restore-our-ocean-and-waters_en) wide scale availability of lake quality data is important. The code and algorithms presented here can be also used for various research projects, where scientists need to correlate biological characteristics to lake quality. The algorithm to groups lake classes has been developed for temperate lakes, and further work should be done to test how well it applies to lakes in, for example, tropical or arid regions.
+The model to assess lake class data could be used widely to monitor water quality across large scales and at high temporal resolution. As Europe is implementing its Water Framework Directive and has set the mission to [**Restore our ocean and waters**](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/eu-missions-horizon-europe/restore-our-ocean-and-waters_en) wide scale availability of lake quality data is important. The code and algorithms presented here can be also used for various research projects, where scientists need to correlate biological characteristics to lake quality. The algorithm presented in this document was developed to obtain lake class for tempearte lakes, and further work should be done to test how well it applies to lakes in, for example, tropical or arid regions.
 :::
 
 ::: {.content-visible when-profile="lithuanian"}

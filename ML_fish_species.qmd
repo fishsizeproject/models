@@ -28,7 +28,7 @@ Machine learning based image collection, annotation and classification of fish s
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Machine learning based image collection, annotation and classification of fish species
+Dirbtinio intelekto modelis žuvų rūšių atpažinimui
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Machine learning based image collection, annotation and classifica
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Catarina Silva and Asta Audzijonyte</p>
+             <p>Catarina Silva ir Asta Audzijonyte</p>
           </div>
  </div>
 </div>

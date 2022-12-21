@@ -15,7 +15,7 @@ Extracting and analysing lake surface temperature data from satellites
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Max Lindmark and Asta Audzijonyte </p>
+             <p>Dalia Grendaitė </p>
           </div>
  </div>
 </div>
@@ -28,7 +28,7 @@ Extracting and analysing lake surface temperature data from satellites
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Extracting and analysing lake surface temperature data from satellites
+Palydovinių vandens paviršiaus temperatūros duomenų parsisiuntimas ir analizė
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Extracting and analysing lake surface temperature data from satell
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Max Lindmark and Asta Audzijonyte </p>
+             <p>Dalia Grendaitė </p>
           </div>
  </div>
 </div>
@@ -80,7 +80,7 @@ Next you can go to the model scripts on Google Colaboratory using the link below
 
 You will see a document that looks like this:
 
-![](images/TempGoogleColab_EN_snap.png){width="60%" fig-align="center"}
+![](images/TempGoogleColab_EN_snap.png){width="100%" fig-align="center"}
 
 When you open the Google Colab notebook, **make a copy** of it in your own Google Drive (Select **File** and then **Make a copy in Drive**). You can edit your copy of the notebook, if you need, but don't forget to save. Further instructions on how to use the notebook are found in the notebook itself. To extract surface temperature data you will need to create and upload a csv file with codes, names and coordinates of you sites, like in this [**example file**](resources/coord.csv). The dowloaded satellite data will look like this [**example file**](resources/lst_2sites.csv). In this example we only extract data for two lakes (two rows), but you can add as many lakes or sampling points in one lake (rows) as you need. However, remember not to select coordinates close to the shore (ideally more than 50 meters) and don't put points too close to each other, as the resolution of the data is 100 meters. 
 
@@ -98,14 +98,14 @@ Po registracijos, naudokite programinį kodą, naudodami žemiau esančią nuoro
 
 Paspaudę matysite tokį dokumentą:
 
-![](images/TempGoogleColab_LT_snap.png){width="60%" fig-align="center"}
+![](images/TempGoogleColab_LT_snap.png){width="100%" fig-align="center"}
 
 Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite **Failas** ir tada **Išsaugoti kopiją Diske**). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal [**čia pateiktą pavyzdį**](resources/coord.csv). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip [**čia pateiktas pavyzdys**](resources/lst_2sites.csv). Šiame pavyzdyje mes naudojame tik du taškus, bet jūs galite pridėti tiek taškų (eilučių) kiek jums reikia.
 
 Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite [**šį R markdown kodą**](scripts/SateliteTemperature_Processing.zip) tam kad pašalinti duomenis iš debesuotų dienų, o taip pat duomenis iš galimai žemos kokybės Landsat 7 laiko eilutės (nuo 2018 iki 2022 metų). Šis kodas taip pat pateikia galimybes sukurti duomenų grafikus. [**Čia**](resources/SateliteTemperature_Processing.html) jūs galite pažiūrėti į šio duomenų filtravimo ir grafikų paruošimo rezultatus nenaudojant pateikto kodo.
 :::
 
-![](images/SateliteTemp.png){width="50%" fig-align="center"}
+![](images/SateliteTemp.png){width="100%" fig-align="center"}
 
 <!-- next para ------------------------------------------------------------- -->
 
@@ -114,16 +114,14 @@ Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite [**šį R ma
 
 To assess the quality of the satellite temperature data we will compare it with the monitoring data from 12 Lithuanian lakes, available from the Lithuanian Hydrometeorological Service ([meteo.lt](http://www.meteo.lt/lt/hidroinformacija)). We expect small differences because in situ monitoring points are close to the shore, whereas for satellite data we chose coordinates in the central part of lake. Because satellite data points very close to the shore (50 meters or less) will be influenced by the coastal surfaces, vegetation and terrain, it is important to only use points that are sufficiently far from the shore. Nevertheless, we can see that the correlation is very high with correlation coefficients usually higher than 0.9
 
-![](images/lakeTempCorr_EN.png){width="50%" fig-align="center"} ![](images/lakeTempCorrCoef.png){width="50%" fig-align="center"}
+![](images/lakeTempCorr_EN.png){width="100%" fig-align="center"} ![](images/lakeTempCorrCoef.png){width="50%" fig-align="center"}
 :::
 
 ::: {.content-visible when-profile="lithuanian"}
 ## Modelio taikymas
 
-To assess the quality of the satellite temperature data we will compare it with the monitoring data from 12 Lithuanian lakes, available from the Lithuanian Hydrometeorological Service ([meteo.lt](http://www.meteo.lt/lt/hidroinformacija)). We expect small differences because in situ monitoring points are close to the shore, whereas for satellite data we chose coordinates in the central part of lake. Because satellite data points very close to the shore (50 meters or less) will be influenced by the coastal surfaces, vegetation and terrain, it is important to only use points that are sufficiently far from the shore. Nevertheless, we can see that the correlation is very high with correlation coefficients usually higher than 0.9
-
 Tam kad įvertinti palydovinių duomenų kokybę, mes galime palyginti palydoviniu duomenis su in situ atliktai matavimais. Tam panaudosime monitoringo duomenis 12-ai Lietuvos ežerų. Šiuose ežeruose yra įrengtos automatinės stotys, prižiūrimos Lietuvos hidrometeorologijos tarnybos ([meteo.lt](http://www.meteo.lt/lt/hidroinformacija)). Svarbu yra pabrėžti, kad monitoringo stotys yra įrengtos arti kranto, o palydovinių duomenų pasiekimui naudojame taškus esančius labiau centrinėje ežero akvatorijoje (daugiau nei 50 metrų nuo kranto). Pastarasis faktas yra svarbus, nes taip išvengiame kranto paviršių ir reljefo įtakos palydoviniams duomenims. Žemiau pateiktame paveiksle matome kad ežerų in situ išmatuotos ir palydovais įvertintos temperatūros yra labai panašios, o jų koreliacijos koeficientai ežerams paprastai viršija 0.9.
 
-![](images/lakeTempCorr_LT.png){width="50%" fig-align="center"} ![](images/lakeTempCorrCoef.png){width="50%" fig-align="center"}
+![](images/lakeTempCorr_LT.png){width="100%" fig-align="center"} ![](images/lakeTempCorrCoef.png){width="50%" fig-align="center"}
 
 :::

@@ -15,7 +15,7 @@ Surplus production models
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Egle Jakubavičiūtė, Freddie Heather, Asta Audzijonyte</p>
+             <p>Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte</p>
           </div>
  </div>
 </div>
@@ -28,7 +28,7 @@ Surplus production models
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Surplus production models
+Pridėtinės produkcijos modelis 
 </h1>
 </div>
 
@@ -39,7 +39,7 @@ CHANGE TO LT: Surplus production models
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Egle Jakubavičiūtė, Freddie Heather, Asta Audzijonyte</p>
+             <p>Freddie Heather, Egle Jakubavičiūtė, Asta Audzijonyte</p>
           </div>
  </div>
 </div>

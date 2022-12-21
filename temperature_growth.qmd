@@ -28,7 +28,7 @@ Model to explore temperature impacts on fish growth
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Model to explore temperature impacts on fish growth
+Modelis kad įvertinti temperatūros įtaką žuvų augimui
 </h1>
 </div>
 

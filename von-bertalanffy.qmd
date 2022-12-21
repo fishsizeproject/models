@@ -4,7 +4,7 @@
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-Models to explore and estiamte von-Bertalanffy growth curves
+Models to explore and estimate von-Bertalanffy growth curves
 </h1>
 </div>
 
@@ -28,7 +28,7 @@ Models to explore and estiamte von-Bertalanffy growth curves
 ```{=html}
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Models to explore and estiamte von-Bertalanffy growth curves
+Von-Bertalanffy augimo modelis ir parametrų įvertinimas
 </h1>
 </div>
 
