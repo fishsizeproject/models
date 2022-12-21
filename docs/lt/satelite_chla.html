@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.34">
+<meta name="generator" content="quarto-1.3.49">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -75,11 +75,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/lt/index.html" rel="" target="">
  <span class="menu-text">Lietuvių</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="">
+    <a class="nav-link" href="https://fishsizeproject.github.io/models/index.html" rel="" target="">
  <span class="menu-text">English</span></a>
   </li>  
 </ul>
@@ -254,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <div class="quarto-title">
 <h1 class="title d-none d-lg-block">
-CHANGE TO LT: Extracting and analysing optical water quality data from satellites
+Optinių palydovinių duomenų paruošimo modelis ežero vandens kokybei įvertinti
 </h1>
 </div>
 
@@ -276,10 +276,10 @@ CHANGE TO LT: Extracting and analysing optical water quality data from satellite
 <p>Palydoviniai duomenys gali padėti surinkti daugiau duomenų apie vandens telkinius. Naudodami palydovinę informaciją galime stebėti vandens parametrų pasiskirstymą visame vandens telkinyje bei gauti stebėjimų duomenis dažniau. Palydovai suteikia informaciją apie optines vandens savybes. Optiškai sudėtinguose vandens telkiniuose (t.y. gėlavandeniuose telkiniuose) gali būti stebimi trys vandens parametrai: chlorofilo-a pigmentas, randamas dumbliuose ir melsvabakterėse, suspenduota medžiaga, ir spalvotoji ištirpusi organinė medžiaga.</p>
 <p>Šiame dokumente apibūdinamas metodas skirtas biofizinės ežero klasės nustatymui. Šis metodas naudoja spektrinius vandens požymius, gautus iš Europos Kosmoso Agentūros (EKA) Copernicus <a href="https://sentinel.esa.int/web/sentinel/missions/sentinel-2">Sentinel-2 misijos</a> palydovų. Metodas yra paremtas mašininio mokymosi atsitiktinio miško algoritmu ir priskiria ežerui vieną iš keturių klasių:</p>
 <ol type="1">
-<li><p>Skaidri klasė. Vandens skaidrumas yra didesnis nei 2 m vidutino gylio ir giliuose ežeruose ir didesnis nei 1,3 m sekliuose ežeruose. Taip pat šios klasės vandenyje stebima maža optiškai aktyvių medžiagų koncentracija, tad vandens spektras nėra jų paveiktas. Vandens skaidrumas šioje klasėje siejamas su gera ir labai gera ekologine vandens būkle, kaip nustatoma ir pagal Europos Sąjungos Bendrosios Vandens Politikos direktyvą.</p></li>
-<li><p>Tarpinė klasė. Vandens skaidrumas yra geras arba labai geras, tačiau chlorofilo-a koncentracija yra kiek didesnė (tarp 7 ir 20 mg/m^3) nei skaidrioje klasėje, tad ši klasė gali būti siejama su lengvais dumblių ir melsvabaketerių žydėjimais.</p></li>
-<li><p>Chla-klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose ir mažesnis už 1,3 m sekliuose ežeruose, o chlorofilo-a koncentracija dažniausiai yra aukštesnė nei 20 mg/m^3. Ši klasė siejama su vidutine, bloga ar labai bloga vandens kokybe.</p></li>
-<li><p>Drumsta klasė. Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose bei mažesnis nei 1,3 m sekliuose ežeruose, tačiau chlorofilo koncentracija yra panaši į tarpinės klasės koncentraciją, tad mažas vandens skaidrumas yra veikiau nulemtas aukštesnės spalvotosios ištirpusios medžiagos koncentracijos.</p></li>
+<li><p>Skaidri klasė (angl. “clear”). Vandens skaidrumas yra didesnis nei 2 m vidutino gylio ir giliuose ežeruose ir didesnis nei 1,3 m sekliuose ežeruose. Taip pat šios klasės vandenyje stebima maža optiškai aktyvių medžiagų koncentracija, tad vandens spektras nėra jų paveiktas. Vandens skaidrumas šioje klasėje siejamas su gera ir labai gera ekologine vandens būkle, kaip nustatoma ir pagal Europos Sąjungos Bendrosios Vandens Politikos direktyvą.</p></li>
+<li><p>Tarpinė klasė (angl. “moderate”). Vandens skaidrumas yra geras arba labai geras, tačiau chlorofilo-a koncentracija yra kiek didesnė (tarp 7 ir 20 mg/m^3) nei skaidrioje klasėje, tad ši klasė gali būti siejama su lengvais dumblių ir melsvabaketerių žydėjimais.</p></li>
+<li><p>Chla-klasė (angl. “chla-dominated”). Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose ir mažesnis už 1,3 m sekliuose ežeruose, o chlorofilo-a koncentracija dažniausiai yra aukštesnė nei 20 mg/m^3. Ši klasė siejama su vidutine, bloga ar labai bloga vandens kokybe.</p></li>
+<li><p>Drumsta klasė (angl. “turbid”). Vandens skaidrumas yra mažesnis nei 2 m vidutino gylio ir giliuose ežeruose bei mažesnis nei 1,3 m sekliuose ežeruose, tačiau chlorofilo koncentracija yra panaši į tarpinės klasės koncentraciją, tad mažas vandens skaidrumas yra veikiau nulemtas aukštesnės spalvotosios ištirpusios medžiagos koncentracijos.</p></li>
 </ol>
 <p>Daugiau informacijos apie šį modelį rasite viešai prieinamoje <a href="https://www.mdpi.com/2073-4441/14/11/1732">Grendaitės and Stonevičiaus (2022) publikacijoje</a>. Modelių tikslumas išbandymo etape skyrėsi tarp klasių: 27 % drumstai klasei, 70 % Chla-klasei, 81 % tarpinei klasei ir 85 % skaidriai klasei.</p>
 <p>Čia pateiktas programinis kodas pritaiko ežero klasės nustatymo modelius, naudojant Sentinel-2 duomenis, prieinamus per <a href="https://earthengine.google.com/"><strong>Google Earth engine (GEE)</strong></a>. Pateiktas kodas taip pat nufiltruoja netinkamus palydovinius duomenis bei pritaiko ežero klasės modelį.</p>
@@ -302,14 +302,14 @@ CHANGE TO LT: Extracting and analysing optical water quality data from satellite
 <p>Paspaudę matysite tokį dokumentą:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/ChlaGoogleColab_LT_snap.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<p><img src="images/ChlaGoogleColab_LT_snap.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
-<p>Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite <strong>Failas</strong> ir tada <strong>Išsaugoti kopiją Diske</strong>). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam kad atisiųsti vandens paviršiaus temperatūros duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal <a href="resources/coord_2.csv"><strong>čia pateiktą pavyzdį</strong></a>. Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti <a href="resources/lake_class_models.zip"><strong>čia</strong></a> (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite temperatūros palydovinius duomenis kurie atrodys kaip <a href="resources/Data_S2_class_coord_2.csv"><strong>čia pateiktas pavyzdys</strong></a>. Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, ir arčiau nei 100 metrų vienas nuo kito (nes satelito raiška yra 100 metrų).</p>
-<p>Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite <a href="scripts/SateliteChla.zip"><strong>šį R markdown kodą</strong></a> tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. <a href="resources/SateliteChlA.html"><strong>Čia</strong></a> jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai.</p>
+<p>Kai atidarote kodą, pasidarykite jo kopiją savo Google Diske (pasirinkite <strong>Failas</strong> ir tada <strong>Išsaugoti kopiją Diske</strong>). Savo kodo kopiją galite redaguoti ir keisti kaip jums patinka. Tolimesnės instrukcijos, kaip naudotis kodu, yra pateiktos pačiame kode. Tam, kad atsisiųstumėte optinius palydovinius duomenis, jums reikės paruošti jums reikalingų vietų koordinačių taškų dokumentą, pagal <a href="resources/coord_2.csv"><strong>čia pateiktą pavyzdį</strong></a>. Be to jums į Google Colab aplinką reikės įkelti mašininio algoritmo modelius, kuriuos galite atsisiųsti <a href="resources/lake_class_models.zip"><strong>čia</strong></a> (tačiau nepamirškite pirmiausia išpakuoti šiuos modelius iš .zip dokumento). Įvykdę Google Colaboratory kodą, atsiųsite palydovinius ir ežero klasės duomenis, kurie atrodys kaip <a href="resources/Data_S2_class_coord_2.csv"><strong>čia pateiktas pavyzdys</strong></a>. Šiame pavyzdyje mes naudojame tris Lietuvos ežerus, bet jūs galite pridėti tiek ežerų ar taškų ežere kiek jums reikia. Tik nepamirškite nesirinkti taškų per daug arti prie kranto, taip pat rekomenduojama rinktis taškus nutolusius vienas nuo kito daugiau nei 10 m, kadangi palydovo skiriamoji geba yra 10 m.</p>
+<p>Kai jau turėsite dokumentą su palydoviniais duomenimis, naudokite <a href="scripts/SatelliteChla.zip"><strong>šį R markdown kodą</strong></a> tam kad toliau apdoroti duomenis, sukurti tam tikrus paveikslus (kaip žemiau nurodytas pavyzdys) arba palyginti satelitų duomenis su monitoringo duomenimis. Šiame dokumente kartu su kodu yra pateikti ir palyginamieji monitoringo duomenys trims ežerams. <a href="resources/SatelliteChlA.html"><strong>Čia</strong></a> jūs galite pažiūrėti kaip atrodo šios programos sukurti rezultatai.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/sateliteChla_LT.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<p><img src="images/sateliteChla_LT.png" class="img-fluid figure-img" style="width:100.0%"></p>
 </figure>
 </div>
 </section>
